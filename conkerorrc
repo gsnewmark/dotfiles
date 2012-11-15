@@ -1,0 +1,176 @@
+// Download in background buffer.
+dowload_buffer_automatic_open_target = OPEN_NEW_WINDOW;
+remove_hook("download_added_hook", open_download_buffer_automatically);
+cwd = get_home_directory();
+cwd.append("Downloads");
+
+// Open external files in a current buffer.
+url_remoting_fn = load_url_in_new_buffer;
+// Automatically follow hints.
+//hints_auto_exit_delay = 500;
+//hints_ambiguous_auto_exit_delay = 1500;
+// Provide some info on a hinted element.
+hints_minibuffer_annotation_mode(true);
+session_pref("xpinstall.whitelist.required", false);
+// Keybinding for following a link in a background buffer.
+define_key(content_buffer_normal_keymap, "m", "follow-new-buffer-background");
+
+// buffer order
+new_buffer_position = 0;
+new_buffer_with_opener_position = buffer_position_after;
+bury_buffer_position = buffer_position_end;
+
+// Modeline customization.
+add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
+add_hook("mode_line_hook", mode_line_adder(loading_count_widget), true);
+add_hook("mode_line_hook", mode_line_adder(downloads_status_widget));
+
+// favicons.
+require("favicon");
+add_hook("mode_line_hook", mode_line_adder(buffer_icon_widget), true);
+read_buffer_show_icons = true;
+
+// webjumps.
+define_webjump("trans", "http://translate.google.com/translate_t#auto|en|%s");
+define_webjump("stackoverflow","http://stackoverflow.com/search?q=%s", $alternative="http://stackoverflow.com");
+define_webjump("python", "http://docs.python.org/search.html?q=%s");
+define_webjump("github", "http://github.com/search?q=%s&type=Everything");
+
+// Modes.
+require("github");
+
+// Password manager.
+session_pref("signon.rememberSignons", true);
+session_pref("signon.expireMasterPassword", false);
+session_pref("signon.SignonFileName", "signons.txt");
+Cc["@mozilla.org/login-manager;1"].getService(Ci.nsILoginManager); // init
+
+// Sessions.
+require("session.js");
+session_auto_save_auto_load = true;
+
+// Bookmarks.
+url_completion_use_bookmarks = true;
+
+// History commands.
+url_completion_use_history = true;
+define_browser_object_class(
+    "history-url", null,
+    function (I, prompt) {
+        check_buffer (I.buffer, content_buffer);
+        var result = yield I.buffer.window.minibuffer.read_url(
+            $prompt = prompt,  $use_webjumps = false, $use_history = true, $use_bookmarks = false);
+        yield co_return (result);
+    });
+
+interactive("find-url-from-history",
+            "Find a page from history in the current buffer",
+            "find-url",
+            $browser_object = browser_object_history_url);
+
+interactive("find-url-from-history-new-buffer",
+            "Find a page from history in the current buffer",
+            "find-url-new-buffer",
+            $browser_object = browser_object_history_url);
+
+define_key(content_buffer_normal_keymap, "h", "find-url-from-history-new-buffer");
+define_key(content_buffer_normal_keymap, "H", "find-url-from-history");
+
+// instapaper
+
+interactive("instapaper", "Send the current page to InstaPaper.",
+            function (I) {
+                check_buffer(I.buffer, content_buffer);
+		        var login_info = get_instapaper_password();
+                let posturl = 'https://www.instapaper.com/api/add?' +
+                    'username=' + login_info.username + '&' +
+                    'password=' + login_info.password + '&url=' +
+                    encodeURIComponent(I.window.content.location.href) +
+                    '&selection=' +
+                    encodeURIComponent(
+                        yield I.minibuffer.read(
+                            $prompt = "Description (optional): ",
+			                $history = "instapaper-description"
+			            ));
+                try {
+                    var content = yield send_http_request(load_spec({uri: posturl}));
+                    if (content.responseText == "201") {
+                        I.window.minibuffer.message("InstaPaper ok!");
+                    } else {
+                        I.window.minibuffer.message("Error.");
+                    }
+                } catch (e) {
+                    I.window.minibuffer.message("Error.");
+                }
+            });
+
+interactive("instapaper-link", "Send the current link to InstaPaper.",
+            function (I) {
+              bo = yield read_browser_object(I) ;
+              mylink = load_spec_uri_string(load_spec(encodeURIComponent(bo)));
+              check_buffer(I.buffer, content_buffer);
+	          var login_info = get_instapaper_password();
+              let posturl = 'https://www.instapaper.com/api/add?' +
+                    'username=' + login_info.username + '&' +
+                    'password=' + login_info.password + '&url=' + mylink +
+                    '&title=' + encodeURIComponent(
+                        yield I.minibuffer.read(
+                            $prompt = "Title (optional): ",
+				            $history = "instapaper-title",
+                            $initial_value = bo.textContent)) +
+                    '&selection=' + encodeURIComponent(
+                        yield I.minibuffer.read(
+                            $prompt = "Description (optional): ",
+				            $history = "instapaper-description",
+                            $initial_value = "From: "+ I.buffer.title +" ("+I.window.content.location.href+")"
+                        ));
+                try {
+                    var content = yield send_http_request(load_spec({uri: posturl}));
+                    if (content.responseText == "201") {
+                        I.window.minibuffer.message("InstaPaper ok!");
+                    } else {
+                        I.window.minibuffer.message("Error.");
+                    }
+                } catch (e) {
+                    I.window.minibuffer.message("Error.");
+                }
+            }, $browser_object = browser_object_links);
+
+define_key(default_global_keymap, "C-x i", "instapaper");
+define_key(default_global_keymap, "C-x I", "instapaper-link");
+
+// google(conkeror password cache) returned http://conkeror.org/PasswordManagement
+// which led to http://conkeror.org/Extensions -> http://conkeror.org/SavedPasswordEditor
+// -> https://addons.mozilla.org/en-US/firefox/files/browse/117335/
+// searching for the class name gets us https://developer.mozilla.org/En/Using_nsILoginManager
+// turns out we can use it directly...
+
+function get_instapaper_password() {
+    var myLoginManager = Components.classes["@mozilla.org/login-manager;1"].getService(Components.interfaces.nsILoginManager);
+    // dug these values out of .conkeror.mozdev.org/conkeror/*.default/signons.sqlite with sqlitebrowser
+    var logins = myLoginManager.findLogins({},
+					   "https://www.instapaper.com", // hostname
+					   "https://www.instapaper.com", // formSubmitURL
+					   ""); // realm
+    // this is just for me, so don't bother search for usernames
+    return { "username": logins[0].username, "password": logins[0].password };
+}
+
+// Change page to more eyes-friendly colours
+
+function solarize_page (I) {
+    var styles='* { background: #002b36 !important; color: #93a1a1 !important; }'+
+        ':link, :link * { color: #859900 !important; }'+
+        ':visited, :visited * { color: #2aa198 !important; }';
+    var document = I.buffer.document;
+    var newSS=document.createElement('link');
+    newSS.rel='stylesheet';
+    newSS.href='data:text/css,'+escape(styles);
+    document.getElementsByTagName("head")[0].appendChild(newSS);
+}
+
+interactive("solarize-page",
+            "Darken the page in an attempt to save your eyes.",
+            solarize_page);
+
+define_key(content_buffer_normal_keymap, "C-d", "solarize-page");
