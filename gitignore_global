@@ -1,0 +1,23 @@
+*~
+.DS_Store
+.actionScriptProperties
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# vim
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
