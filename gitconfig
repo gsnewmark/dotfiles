@@ -1,15 +1,15 @@
 [user]
-	name = gsnewmark
-	mail = gildraug@gmail.com
-	email = gildraug@gmail.com
+        name = gsnewmark
+        mail = gildraug@gmail.com
+        email = gildraug@gmail.com
 [github]
-	user = gsnewmark
-	token = !!!FILL_IN!!!
-    password = !!!FILL_IN!!!
-	oauth-token = !!!FILL_IN!!!
+        user = gsnewmark
+        token = !!!FILL_IN!!!
+        password = !!!FILL_IN!!!
+        oauth-token = !!!FILL_IN!!!
 [core]
-	editor = temacs
-	excludesfile = ~/.gitignore_global
-	autocrlf = input
+        editor = emacsclient
+        excludesfile = ~/.gitignore_global
+        autocrlf = input
 [color]
-	ui = true
+        ui = true
