@@ -1,0 +1,25 @@
+XXkb*label.text.1: EN
+XXkb*label.text.2: UA
+XXkb.mainwindow.enable: yes
+XXkb.mainwindow.appicon: no
+XXkb.mainwindow.in_tray: yes
+XXkb.mainwindow.type: tray
+XXkb.mainwindow.geometry: 19x19+0+0
+!XXkb.mainwindow.border.color
+XXkb.mainwindow.border.width: 0
+XXkb.mainwindow.label.enable: true
+XXkb.mainwindow.label.background: #4D4D4D
+XXkb.mainwindow.label.foreground: #BFBFBF
+XXkb.mainwindow.label.font: -misc-*-r-*-18-*
+
+XXkb.controls.add_when_start: yes
+XXkb.controls.add_when_create: yes
+XXkb.controls.add_when_change: yes
+XXkb.controls.focusout: no
+XXkb.controls.button_delete: no
+XXkb.controls.button_delete_and_forget: no
+XXkb.controls.two_state: yes
+XXkb.group.base: 1
+XXkb.group.alt: 2
+
+XXkb.button.enable: no

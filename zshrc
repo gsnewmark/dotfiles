@@ -38,13 +38,16 @@ source $ZSH/oh-my-zsh.sh
 # remove auto-correct
 unsetopt correct_all
 
-#export TERM=xterm-256color
+export TERM=xterm-16color
 
 # for Clojure midje
 export MIDJE_COLORIZE=true
 
+export MAILDIR=~/Mail
+
 # aliases
 alias temacs='emacsclient -c -nw'
+alias open='xdg-open'
 
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
