@@ -31,3 +31,13 @@
 ;; X clipboard compatibility
 (setq x-select-enable-clipboard t)
 (load-file "~/.live-packs/gsnewmark-pack/lib/xclip.el")
+
+;; Set font
+(add-to-list 'default-frame-alist '(font . "Menlo-10:bold"))
+
+;; Auto refresh buffers
+(global-auto-revert-mode 1)
+
+;; Also auto refresh dired, but be quiet about it
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)

@@ -7,8 +7,7 @@ xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4
 xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Middle Button Emulation" 8 1
 
 # keyboard fiddlings
-setxkbmap -layout us,ua
-setxkbmap -option grp:switch,grp:ctrl_shift_toggle us,ua
+setxkbmap -option grp:switch,grp:shift_toggle us,ua -variant ,rstu
 setxkbmap -option ctrl:nocaps
 
 xxkb &
