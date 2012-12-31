@@ -39,13 +39,11 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 export TERM=xterm-16color
+export PATH=$PATH:~/bin
+export EDITOR=temacs
 
 # for Clojure midje
 export MIDJE_COLORIZE=true
-
-# aliases
-alias temacs='emacsclient -c -nw'
-alias open='xdg-open'
 
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
