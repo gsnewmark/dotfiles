@@ -8,8 +8,8 @@ XXkb.mainwindow.geometry: 19x19+0+0
 !XXkb.mainwindow.border.color
 XXkb.mainwindow.border.width: 0
 XXkb.mainwindow.label.enable: true
-XXkb.mainwindow.label.background: #4D4D4D
-XXkb.mainwindow.label.foreground: #BFBFBF
+XXkb.mainwindow.label.background: #002b36
+XXkb.mainwindow.label.foreground: #eee8d5
 XXkb.mainwindow.label.font: -misc-*-r-*-18-*
 
 XXkb.controls.add_when_start: yes

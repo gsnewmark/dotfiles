@@ -10,12 +10,7 @@ xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Middle Button Emulation" 8 1
 setxkbmap -option grp:switch,grp:shift_toggle us,ua -variant ,rstu
 setxkbmap -option ctrl:nocaps
 
-# Start Thinkpad OSD daemon
-if [ -x /usr/bin/tpb ] &&  [ -w /dev/nvram ] && [ -r /dev/nvram ]; then
-    /usr/bin/tpb -d
-fi
-
-skype &
+# skype &
 xxkb &
 xbindkeys &
 tidybattery &
