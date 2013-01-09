@@ -1,6 +1,6 @@
 {:user
   {:plugins [[lein-marginalia "0.7.1"]
-             [jonase/kibit "0.0.7"]
+             [lein-kibit "0.0.7"]
              [lein-midje "2.0.1"]
              [lein-ring "0.7.5"]
              [lein-cljsbuild "0.2.9"]
