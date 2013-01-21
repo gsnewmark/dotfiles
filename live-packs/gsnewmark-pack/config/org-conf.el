@@ -9,31 +9,41 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+;; clocking time spent on tasks (to persist time between sessions)
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
 (setq org-log-done t)
-(setq org-startup-indented t)
+;(setq org-startup-indented t)
 
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Dropbox/org")
 
+;; Possible state sequences for TODOs
+(setq org-todo-keywords
+      '((sequence "TODO" "|" "DONE")
+        (sequence "BUG" "|" "FIXED")
+        (sequence "FEATURE" "|" "ADDED")
+        (sequence "READING" "|" "READ")
+        (sequence "HW TODO" "|" "HW DONE")
+        (sequence "IDEA" "|" "WORKING ON")))
+
 ;; org-mode agenda
 (setq org-agenda-files
-      (list (concat org-directory "/USIC.org")
-            (concat org-directory "/projects.org")
-            (concat org-directory "/university.org")
-            (concat org-directory "/todos.org")))
+      (list (concat org-directory "/gtd.org")))
 
 ;; org-capture default file
-(setq org-default-notes-file (concat org-directory "/captured.org"))
+(setq org-default-notes-file (concat org-directory "/notes.org"))
 
 ;; org-capture templates
 (setq org-capture-templates
       '(
         ("t" "Todo" entry
-         (file (concat org-directory "/todos.org"))
-         "* TODO %^{Description}\n  Added: %U\n  File: %a\n  %?")
+         (file+headline (concat org-directory "/gtd.org") "Unsorted Tasks")
+         "* TODO %^{Description}\n  Added: %U\n%?")
         ("n" "Note" entry
-         (file+datetree org-default-notes-file)
-         "* %^{Description}\n  Added: %U\n  File: %a\n  %?")
+         (file+headline org-default-notes-file "Quick notes")
+         "* %^{Description}\n  Added: %U\n%?")
         ("j" "Journal" entry
          (file+datetree (concat org-directory "/journal.org"))
-         "* %^{Description}\n  Added: %U\n  File: %a\n  %?")))
+         "* %^{Description}\n  Added: %U\n%?")))

@@ -1,3 +1,4 @@
+;; TODO should be more compact way to do this
 (add-hook 'clojure-mode-hook
           (lambda ()
             (flyspell-prog-mode)))
