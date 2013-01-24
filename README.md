@@ -1,3 +1,5 @@
 # gsnewmark's *nix configuration
-A set of configuration files I prefer to use. Slightly OS X oriented, but
-should be easily tweaked to work with a Linux.
+A set of configuration files for Emacs (using
+[Emacs Live](https://github.com/overtone/emacs-live), zsh (using
+[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh),
+[Conkeror](http://conkeror.org/).
