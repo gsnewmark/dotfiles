@@ -3,7 +3,7 @@
 (setq-default fill-column 78)
 
 ;; line numbers
-(global-linum-mode t)
+;(global-linum-mode t)
 
 ;; highlight current line (unless terminal mode)
 (if (display-graphic-p)
