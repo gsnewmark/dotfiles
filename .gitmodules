@@ -7,3 +7,6 @@
 [submodule "live-packs/gsnewmark-pack/lib/emacs-color-theme-solarized"]
 	path = live-packs/gsnewmark-pack/lib/emacs-color-theme-solarized
 	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "rbenv"]
+	path = rbenv
+	url = git://github.com/sstephenson/rbenv.git

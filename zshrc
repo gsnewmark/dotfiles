@@ -48,3 +48,10 @@ export MIDJE_COLORIZE=true
 
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
+
+# Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
