@@ -1,4 +1,5 @@
 ;; Different general emacs conf.
+
 (setq-default tab-width 4)
 (setq-default fill-column 78)
 
@@ -33,7 +34,7 @@
 (load-file "~/.live-packs/gsnewmark-pack/lib/xclip.el")
 
 ;; Set font
-(add-to-list 'default-frame-alist '(font . "Menlo-10:bold"))
+(add-to-list 'default-frame-alist '(font . "Menlo-10"))
 
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
