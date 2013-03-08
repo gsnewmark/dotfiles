@@ -1,14 +1,12 @@
 [user]
-        name = gsnewmark
+        name = Ivan Kryvoruchko
         mail = gildraug@gmail.com
         email = gildraug@gmail.com
 [github]
         user = gsnewmark
-        token = !!!FILL_IN!!!
-        password = !!!FILL_IN!!!
-        oauth-token = !!!FILL_IN!!!
+        password = secret
 [core]
-        editor = emacsclient
+        editor = temacs
         excludesfile = ~/.gitignore_global
         autocrlf = input
 [color]
