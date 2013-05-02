@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="pygmalion"
+ZSH_THEME="lukerandall"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -42,6 +42,9 @@ eval `dircolors ~/.dir_colors`
 export TERM=xterm-color
 export PATH=$PATH:~/bin
 export EDITOR=temacs
+
+# emacs with sudo
+alias E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
 
 # for Clojure midje
 export MIDJE_COLORIZE=true
