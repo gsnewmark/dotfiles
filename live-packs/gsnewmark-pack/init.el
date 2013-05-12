@@ -4,3 +4,4 @@
 (live-load-config-file "lang-conf.el")
 (live-load-config-file "org-conf.el")
 (live-load-config-file "bindings.el")
+(live-load-config-file "input-method.el")
