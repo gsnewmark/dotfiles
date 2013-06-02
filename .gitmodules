@@ -1,9 +1,15 @@
-[submodule "emacs.d"]
-	path = emacs.d
-	url = git://github.com/overtone/emacs-live
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
 [submodule "live-packs/gsnewmark-pack/lib/emacs-color-theme-solarized"]
 	path = live-packs/gsnewmark-pack/lib/emacs-color-theme-solarized
 	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "emacs.d"]
+	path = emacs.d
+	url = git://github.com/overtone/emacs-live
+[submodule "dircolors-solarized"]
+	path = dircolors-solarized
+	url = https://github.com/huyz/dircolors-solarized.git
+[submodule "gnome-terminal-colors-solarized"]
+	path = gnome-terminal-colors-solarized
+	url = git://github.com/sigurdga/gnome-terminal-colors-solarized.git

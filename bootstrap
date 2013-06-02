@@ -1,0 +1,48 @@
+#!/usr/bin/python
+
+# Creates symlinks for config files in current dir.
+
+import os
+from sets import ImmutableSet
+from shutil import rmtree
+
+FILES_TO_IGNORE = ImmutableSet(['bootstrap', 'bin', 'README.md',
+                                'dircolors-solarized'])
+DIRCOLORS_DB_FILE = 'dircolors-solarized/dircolors.ansi-universal'
+
+def remove(path):
+    '''Removes dir/file/symlink with the given path.'''
+    if os.path.exists(path) or os.path.islink(path):
+        rem = os.unlink
+	if os.path.isdir(path) and not os.path.islink(path):
+	    rem = rmtree
+        rem(path)
+
+def create_symlink(dst_dir, src, symlink_name=None):
+    '''Creates a symlink in dst_dit for src with name '.' + symlink_name.
+
+    If symlink_name is not supplied than src is used instead of it.
+    '''
+    symlink_name = symlink_name or src
+    symlink_path = os.path.join(dst_dir, '.' + symlink_name)
+    remove(symlink_path)
+    os.symlink(os.path.abspath(src), symlink_path)
+
+def create_dotfile_symlinks(dst_dir, ignored_list):
+    '''Creates dotfile symlinks.
+
+    Creates symlinks that start with '.' in dst_dir for every file and subdir
+    in current dir (except ones in the ignored_list). If file/dir/symlink
+    with such name already exists then it's deleted.
+    '''
+    for c in os.listdir('.'):
+	if c not in ignored_list and not c.startswith('.'):
+	    create_symlink(dst_dir, c)
+
+def create_dircolors_symlink(dst_dir, dircolors_db_file):
+    create_symlink(dst_dir, dircolors_db_file, 'dir_colors')
+
+if __name__ == '__main__':
+    home = os.path.expanduser('~')
+    create_dotfile_symlinks(home, FILES_TO_IGNORE)
+    create_dircolors_symlink(home, DIRCOLORS_DB_FILE)
