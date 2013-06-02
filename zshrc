@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="lukerandall"
+ZSH_THEME="pygmalion"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -44,6 +44,9 @@ eval `dircolors ~/.dir_colors`
 # set color mode of terminal
 export TERM=xterm-color
 
+# add user-specific bin to PATH
+export PATH=~/bin:$PATH
+
 # set default terminal text editor
 TE="emacsclient -t -a emacs"
 export VISUAL=$TE
@@ -55,3 +58,6 @@ alias E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
 
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
+
+# Notify when long command is finished
+[ -e $HOME/.zsh-notifier/notifyosd.zsh ] && . $HOME/.zsh-notifier/notifyosd.zsh

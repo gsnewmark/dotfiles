@@ -16,3 +16,6 @@
 [submodule "live-packs/gsnewmark-appearence-pack/lib/solarized-emacs"]
 	path = live-packs/gsnewmark-appearence-pack/lib/solarized-emacs
 	url = https://github.com/bbatsov/solarized-emacs.git
+[submodule "zsh-notifier"]
+	path = zsh-notifier
+	url = https://gist.github.com/4576452.git
