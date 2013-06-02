@@ -6,8 +6,9 @@
         user = gsnewmark
         password = secret
 [core]
-        editor = temacs
         excludesfile = ~/.gitignore_global
         autocrlf = input
 [color]
         ui = true
+[push]
+	default = simple

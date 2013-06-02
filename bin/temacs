@@ -1,1 +1,0 @@
-emacsclient -c -nw "$1"
