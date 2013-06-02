@@ -3,18 +3,11 @@
           (lambda ()
             (auto-fill-mode)))
 
-;; key bindings
-(global-set-key (kbd "C-c o l") 'org-store-link)
-(global-set-key (kbd "C-c o c") 'org-capture)
-(global-set-key (kbd "C-c o a") 'org-agenda)
-(global-set-key (kbd "C-c o b") 'org-iswitchb)
-
 ;; clocking time spent on tasks (to persist time between sessions)
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
 (setq org-log-done t)
-;(setq org-startup-indented t)
 
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Dropbox/org")
@@ -47,26 +40,3 @@
         ("j" "Journal" entry
          (file+datetree (concat org-directory "/journal.org"))
          "* %^{Description}\n  Added: %U\n%?")))
-
-;; org-babel
-(require 'ob)
-(require 'ob-tangle)
-(add-to-list 'org-babel-tangle-lang-exts '("clojure" . "clj"))
-
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((emacs-lisp . t)
-   (clojure . t)))
-(require 'ob-clojure)
-
-(eval-after-load "ob-clojure"
-  '(defun org-babel-execute:clojure (body params)
-     "Execute a block of Clojure code with Babel and nREPL."
-     (require 'nrepl)
-     (let ((result (nrepl-eval (org-babel-expand-body:clojure body params))))
-       (car (read-from-string (plist-get result :value))))))
-
-(setq org-src-fontify-natively t)
-(setq org-confirm-babel-evaluate nil)
-(setq org-export-babel-evaluate nil)
-(setq org-src-window-setup 'current-window)

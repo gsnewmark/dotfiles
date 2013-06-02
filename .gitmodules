@@ -1,9 +1,6 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
-[submodule "live-packs/gsnewmark-pack/lib/emacs-color-theme-solarized"]
-	path = live-packs/gsnewmark-pack/lib/emacs-color-theme-solarized
-	url = git://github.com/sellout/emacs-color-theme-solarized.git
 [submodule "emacs.d"]
 	path = emacs.d
 	url = git://github.com/overtone/emacs-live
@@ -16,3 +13,6 @@
 [submodule "zsh-syntax-highlighting"]
 	path = zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "live-packs/gsnewmark-appearence-pack/lib/solarized-emacs"]
+	path = live-packs/gsnewmark-appearence-pack/lib/solarized-emacs
+	url = https://github.com/bbatsov/solarized-emacs.git

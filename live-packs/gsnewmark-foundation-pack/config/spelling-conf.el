@@ -1,21 +1,6 @@
-;; TODO should be more compact way to do this
-(add-hook 'clojure-mode-hook
-          (lambda ()
-            (flyspell-prog-mode)))
+;; Enable flyspell for comments in programming languages
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-(add-hook 'actionscript-mode-hook
-          (lambda ()
-            (flyspell-prog-mode)))
-
-(add-hook 'python-mode-hook
-          (lambda ()
-            (flyspell-prog-mode)
-            (ac-flyspell-workaround)))
-(add-hook 'org-mode-hook
-          (lambda ()
-            (flyspell-mode)))
-
-;; flyspell key bindings
 ;; dictionary switching
 (defun fd-switch-dictionary()
   (interactive)
