@@ -4,11 +4,13 @@
 
 import os
 from sets import ImmutableSet
-from shutil import rmtree
+from shutil import rmtree, copytree
 
 FILES_TO_IGNORE = ImmutableSet(['bootstrap', 'bin', 'README.md',
                                 'dircolors-solarized'])
 DIRCOLORS_DB_FILE = 'dircolors-solarized/dircolors.ansi-universal'
+OH_MY_ZSH_DIR = 'oh-my-zsh'
+OH_MY_ZSH_CUSTOM_PLUGINS = ImmutableSet(['zsh-syntax-highlighting'])
 
 def remove(path):
     '''Removes dir/file/symlink with the given path.'''
@@ -28,7 +30,7 @@ def create_symlink(dst_dir, src, symlink_name=None):
     remove(symlink_path)
     os.symlink(os.path.abspath(src), symlink_path)
 
-def create_dotfile_symlinks(dst_dir, ignored_list):
+def create_dotfile_symlinks(dst_dir, ignored_set):
     '''Creates dotfile symlinks.
 
     Creates symlinks that start with '.' in dst_dir for every file and subdir
@@ -36,13 +38,22 @@ def create_dotfile_symlinks(dst_dir, ignored_list):
     with such name already exists then it's deleted.
     '''
     for c in os.listdir('.'):
-	if c not in ignored_list and not c.startswith('.'):
+	if c not in ignored_set and not c.startswith('.'):
 	    create_symlink(dst_dir, c)
 
 def create_dircolors_symlink(dst_dir, dircolors_db_file):
     create_symlink(dst_dir, dircolors_db_file, 'dir_colors')
 
+def copy_zsh_plugins(dst, srcs_set):
+    for s in srcs_set:
+        path = os.path.join(dst, s)
+        remove(path)
+        copytree(os.path.abspath(s), path)
+
+
 if __name__ == '__main__':
     home = os.path.expanduser('~')
     create_dotfile_symlinks(home, FILES_TO_IGNORE)
     create_dircolors_symlink(home, DIRCOLORS_DB_FILE)
+    omz_plugins_dst = os.path.abspath(OH_MY_ZSH_DIR + '/custom/plugins/')
+    copy_zsh_plugins(omz_plugins_dst, OH_MY_ZSH_CUSTOM_PLUGINS)

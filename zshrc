@@ -5,8 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="lukerandall"
-source $HOME/.liquidprompt
+ZSH_THEME="lukerandall"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -39,23 +38,20 @@ source $ZSH/oh-my-zsh.sh
 # remove auto-correct
 unsetopt correct_all
 
+# update dir_colors
 eval `dircolors ~/.dir_colors`
+
+# set color mode of terminal
 export TERM=xterm-color
-export PATH=$PATH:~/bin
-export EDITOR=temacs
 
-# emacs with sudo
+# set default terminal text editor
+TE="emacsclient -t -a emacs"
+export VISUAL=$TE
+
+# shortcut for terminal emacs
+alias e=$TE
+# shortcut for terminal emacs with sudo
 alias E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
-
-# for Clojure midje
-export MIDJE_COLORIZE=true
 
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
-
-# Ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
