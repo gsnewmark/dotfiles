@@ -19,3 +19,6 @@
 [submodule "zsh-notifier"]
 	path = zsh-notifier
 	url = https://gist.github.com/4576452.git
+[submodule "live-packs/gsnewmark-lang-pack/lib/Emacs-Groovy-Mode"]
+	path = live-packs/gsnewmark-lang-pack/lib/Emacs-Groovy-Mode
+	url = git://github.com/russel/Emacs-Groovy-Mode.git

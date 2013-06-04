@@ -8,3 +8,4 @@
 (live-add-packs '(~/.live-packs/gsnewmark-appearence-pack))
 (live-add-packs '(~/.live-packs/gsnewmark-foundation-pack))
 (live-add-packs '(~/.live-packs/gsnewmark-org-pack))
+(live-add-packs '(~/.live-packs/gsnewmark-lang-pack))
