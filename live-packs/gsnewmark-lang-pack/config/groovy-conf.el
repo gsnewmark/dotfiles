@@ -11,4 +11,5 @@
              (require 'groovy-electric)
              (groovy-electric-mode)
              (require 'grails-mode)
-             (grails-mode)))
+             (grails-mode)
+             (set-variable 'c-basic-offset 4)))
