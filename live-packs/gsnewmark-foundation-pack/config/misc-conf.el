@@ -24,8 +24,8 @@
                (file-writable-p buffer-file-name))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
-;; Workaround for autocompletition in terminal modes
-(add-hook 'term-mode-hook (lambda() (yas-minor-mode -1)))
+;; Workaround for auto completion in terminal modes
+(add-hook 'term-mode-hook (lambda () (yas-minor-mode -1)))
 
 ;; full screen magit-status
 (defadvice magit-status (around magit-fullscreen activate)
@@ -38,9 +38,3 @@
   (interactive)
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
-
-;; Enable autocomplete for all programming languages modes
-(add-to-list 'ac-modes 'prog-mode)
-
-;; Enable auto-fill for all programming languages modes
-(add-hook 'prog-mode-hook (lambda () (auto-fill-mode)))
