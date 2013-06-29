@@ -39,3 +39,8 @@
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
 
+;; Enable autocomplete for all programming languages modes
+(add-to-list 'ac-modes 'prog-mode)
+
+;; Enable auto-fill for all programming languages modes
+(add-hook 'prog-mode-hook (lambda () (auto-fill-mode)))
