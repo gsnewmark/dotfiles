@@ -22,3 +22,6 @@
 [submodule "live-packs/gsnewmark-lang-pack/lib/Emacs-Groovy-Mode"]
 	path = live-packs/gsnewmark-lang-pack/lib/Emacs-Groovy-Mode
 	url = git://github.com/russel/Emacs-Groovy-Mode.git
+[submodule "nvm"]
+	path = nvm
+	url = https://github.com/creationix/nvm.git
