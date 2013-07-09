@@ -63,4 +63,4 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 [ -e $HOME/.zsh-notifier/notifyosd.zsh ] && . $HOME/.zsh-notifier/notifyosd.zsh
 
 # Activate Node Version Manager
-[ -e $HOME/.nvm/nvm.zsh ] && . $HOME/.nvm/nvm.sh
+. $HOME/.nvm/nvm.sh
