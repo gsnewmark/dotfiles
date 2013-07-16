@@ -3,14 +3,23 @@
           (lambda ()
             (auto-fill-mode)))
 
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/Dropbox/org")
+
 ;; clocking time spent on tasks (to persist time between sessions)
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
 (setq org-log-done t)
 
-;; Set to the location of your Org files on your local system
-(setq org-directory "~/Dropbox/org")
+;; refile configuration
+(setq org-refile-targets '((nil :maxlevel . 5)
+                           (org-agenda-files :maxlevel . 3)))
+(setq org-refile-use-outline-path 'file)
+(setq org-refile-allow-creating-parent-nodes 'confirm)
+
+;; archive configuration
+(setq org-archive-location (concat org-directory "/archive.org::* From %s"))
 
 ;; Possible state sequences for TODOs
 (setq org-todo-keywords
