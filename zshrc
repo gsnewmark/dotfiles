@@ -64,4 +64,3 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
 # Activate Node Version Manager
 . $HOME/.nvm/nvm.sh
-nvm use 0.1
