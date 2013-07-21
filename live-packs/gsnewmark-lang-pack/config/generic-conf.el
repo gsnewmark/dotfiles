@@ -6,3 +6,7 @@
 (add-hook 'prog-mode-hook
           (lambda ()
             (auto-fill-mode)))
+
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (auto-fill-mode)))

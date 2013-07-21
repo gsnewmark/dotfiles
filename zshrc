@@ -31,6 +31,10 @@ ZSH_THEME="pygmalion"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git mercurial debian last-working-dir lein zsh-syntax-highlighting vagrant)
 
+# Activate Node Version Manager
+source $HOME/.nvm/nvm.sh
+
+# Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -62,5 +66,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 # Notify when long command is finished
 [ -e $HOME/.zsh-notifier/notifyosd.zsh ] && . $HOME/.zsh-notifier/notifyosd.zsh
 
-# Activate Node Version Manager
-. $HOME/.nvm/nvm.sh
+# Activate rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Activate Node
+nvm use 0.1 &> /dev/null

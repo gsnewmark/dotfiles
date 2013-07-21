@@ -7,11 +7,12 @@ from sets import ImmutableSet
 from shutil import rmtree, copytree
 
 FILES_TO_IGNORE = ImmutableSet(['bootstrap', 'bin', 'README.md',
-                                'dircolors-solarized', 
-                                'gnome-terminal-colors-solarized'])
+                                'dircolors-solarized',
+                                'gnome-terminal-colors-solarized',])
 DIRCOLORS_DB_FILE = 'dircolors-solarized/dircolors.ansi-universal'
 OH_MY_ZSH_DIR = 'oh-my-zsh'
-OH_MY_ZSH_CUSTOM_PLUGINS = ImmutableSet(['zsh-syntax-highlighting'])
+OH_MY_ZSH_CUSTOM_PLUGINS = ImmutableSet(['zsh-syntax-highlighting',])
+
 
 def remove(path):
     '''Removes dir/file/symlink with the given path.'''
@@ -45,7 +46,8 @@ def create_dotfile_symlinks(dst_dir, ignored_set):
 def create_dircolors_symlink(dst_dir, dircolors_db_file):
     create_symlink(dst_dir, dircolors_db_file, 'dir_colors')
 
-def copy_zsh_plugins(dst, srcs_set):
+def copy_dirs(dst, srcs_set):
+    '''Copies all directories from srcs_set to dst directory.'''
     for s in srcs_set:
         path = os.path.join(dst, s)
         remove(path)
@@ -57,4 +59,4 @@ if __name__ == '__main__':
     create_dotfile_symlinks(home, FILES_TO_IGNORE)
     create_dircolors_symlink(home, DIRCOLORS_DB_FILE)
     omz_plugins_dst = os.path.abspath(OH_MY_ZSH_DIR + '/custom/plugins/')
-    copy_zsh_plugins(omz_plugins_dst, OH_MY_ZSH_CUSTOM_PLUGINS)
+    copy_dirs(omz_plugins_dst, OH_MY_ZSH_CUSTOM_PLUGINS)
