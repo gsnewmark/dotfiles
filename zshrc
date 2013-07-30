@@ -74,6 +74,3 @@ eval "$(rbenv init -)"
 
 # Activate Node
 nvm use 0.1 &> /dev/null
-
-# Start byobu
-byobu
