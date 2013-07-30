@@ -59,6 +59,8 @@ export VISUAL=$TE
 alias e=$TE
 # shortcut for terminal emacs with sudo
 alias E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
+# disable pattern expanding for lein
+alias lein="noglob lein"
 
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
@@ -72,3 +74,6 @@ eval "$(rbenv init -)"
 
 # Activate Node
 nvm use 0.1 &> /dev/null
+
+# Start byobu
+byobu

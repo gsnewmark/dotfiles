@@ -27,8 +27,7 @@
         (sequence "BUG" "|" "FIXED")
         (sequence "FEATURE" "|" "ADDED")
         (sequence "READING" "|" "READ")
-        (sequence "HW TODO" "|" "HW DONE")
-        (sequence "IDEA" "|" "WORKING ON")))
+        (sequence "HW TODO" "|" "HW DONE")))
 
 ;; org-mode agenda
 (setq org-agenda-files

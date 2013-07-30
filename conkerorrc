@@ -2,7 +2,7 @@
 dowload_buffer_automatic_open_target = OPEN_NEW_WINDOW;
 remove_hook("download_added_hook", open_download_buffer_automatically);
 cwd = get_home_directory();
-cwd.append("Downloads");
+cwd.append("downloads");
 
 // Open external files in a current buffer.
 url_remoting_fn = load_url_in_new_buffer;
@@ -32,7 +32,8 @@ read_buffer_show_icons = true;
 
 // webjumps.
 define_webjump("trans", "http://translate.google.com/translate_t#auto|en|%s");
-define_webjump("stackoverflow","http://stackoverflow.com/search?q=%s", $alternative="http://stackoverflow.com");
+define_webjump("stackoverflow","http://stackoverflow.com/search?q=%s",
+               $alternative="http://stackoverflow.com");
 define_webjump("python", "http://docs.python.org/search.html?q=%s");
 define_webjump("github", "http://github.com/search?q=%s&type=Everything");
 

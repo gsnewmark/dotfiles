@@ -1,0 +1,8 @@
+;; From Stuart Sierra's dotfiles (https://github.com/stuartsierra/dotfiles/blob/d0d1c46ccc4fdd8d2add363615e625cc29d035b0/.emacs#L307-L312)
+(defun nrepl-reset ()
+  (interactive)
+  (set-buffer "*nrepl*")
+  (goto-char (point-max))
+  (insert "(user/reset)")
+  (nrepl-return))
+(global-set-key (kbd "C-c l r") 'nrepl-reset)
