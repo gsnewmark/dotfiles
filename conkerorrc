@@ -2,7 +2,7 @@
 dowload_buffer_automatic_open_target = OPEN_NEW_WINDOW;
 remove_hook("download_added_hook", open_download_buffer_automatically);
 cwd = get_home_directory();
-cwd.append("downloads");
+cwd.append("Downloads");
 
 // Open external files in a current buffer.
 url_remoting_fn = load_url_in_new_buffer;
