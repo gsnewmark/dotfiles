@@ -34,6 +34,10 @@ plugins=(git mercurial debian last-working-dir lein zsh-syntax-highlighting vagr
 # Activate Node Version Manager
 source $HOME/.nvm/nvm.sh
 
+# Python's virtualenv conf
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Development/tools
+
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -74,9 +78,3 @@ eval "$(rbenv init -)"
 
 # Activate Node
 nvm use 0.1 &> /dev/null
-
-# Python's virtualenv conf
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Development/tools
-source /usr/local/bin/virtualenvwrapper.sh
-cd ~
