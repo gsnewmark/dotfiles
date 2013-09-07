@@ -79,3 +79,4 @@ nvm use 0.1 &> /dev/null
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Development/tools
 source /usr/local/bin/virtualenvwrapper.sh
+cd ~
