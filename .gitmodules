@@ -22,3 +22,6 @@
 [submodule "live-packs/gsnewmark-lang-pack/lib/Emacs-Groovy-Mode"]
 	path = live-packs/gsnewmark-lang-pack/lib/Emacs-Groovy-Mode
 	url = git://github.com/russel/Emacs-Groovy-Mode.git
+[submodule "live-packs/gsnewmark-lang-pack/lib/scala-mode2"]
+	path = live-packs/gsnewmark-lang-pack/lib/scala-mode2
+	url = git://github.com/hvesalai/scala-mode2.git
