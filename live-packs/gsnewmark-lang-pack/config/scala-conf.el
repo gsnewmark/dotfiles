@@ -1,10 +1,16 @@
 (live-add-pack-lib "scala-mode2")
 (require 'scala-mode2)
 
+(live-add-pack-lib "ensime/elisp")
+(require 'ensime)
+
 (custom-set-variables
- '(scala-indent:default-run-on-strategy scala-indent:eager-strategy))
+ '(scala-indent:default-run-on-strategy scala-indent:reluctant-strategy))
+
 (add-hook 'scala-mode-hook
           '(lambda ()
+             (ensime-scala-mode-hook)
+             (flyspell-prog-mode)
              (local-set-key (kbd "RET")
                             '(lambda ()
                                (interactive)
@@ -13,5 +19,3 @@
              (local-set-key (kbd "C-M-j") 'join-line)
              (local-set-key (kbd "<backtab>")
                             'scala-indent:indent-with-reluctant-strategy)))
-
-(add-hook 'scala-mode-hook 'flyspell-prog-mode)
