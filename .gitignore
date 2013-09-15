@@ -1,0 +1,4 @@
+lein/self-installs/*
+lein/repl-history
+sbt/boot/*
+sbt/plugins/*/*
