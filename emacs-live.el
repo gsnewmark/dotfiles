@@ -6,7 +6,7 @@
                   live/git-pack
                   live/org-pack
                   live/bindings-pack))
-(live-add-packs '(~/.live-packs/gsnewmark-appearence-pack))
-(live-add-packs '(~/.live-packs/gsnewmark-foundation-pack))
-(live-add-packs '(~/.live-packs/gsnewmark-org-pack))
-(live-add-packs '(~/.live-packs/gsnewmark-lang-pack))
+(live-add-packs '(~/.live-packs/gsnewmark-appearence-pack
+                  ~/.live-packs/gsnewmark-foundation-pack
+                  ~/.live-packs/gsnewmark-org-pack
+                  ~/.live-packs/gsnewmark-lang-pack))
