@@ -22,3 +22,6 @@
 [submodule "live-packs/gsnewmark-lang-pack/lib/scala-mode2"]
 	path = live-packs/gsnewmark-lang-pack/lib/scala-mode2
 	url = git://github.com/hvesalai/scala-mode2.git
+[submodule "live-packs/tern-pack"]
+	path = live-packs/tern-pack
+	url = https://github.com/thatismatt/tern-pack

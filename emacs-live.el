@@ -9,4 +9,5 @@
 (live-add-packs '(~/.live-packs/gsnewmark-appearence-pack
                   ~/.live-packs/gsnewmark-foundation-pack
                   ~/.live-packs/gsnewmark-org-pack
-                  ~/.live-packs/gsnewmark-lang-pack))
+                  ~/.live-packs/gsnewmark-lang-pack
+                  ~/.live-packs/tern-pack))
