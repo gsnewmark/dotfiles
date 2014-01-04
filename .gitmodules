@@ -25,3 +25,6 @@
 [submodule "live-packs/tern-pack"]
 	path = live-packs/tern-pack
 	url = https://github.com/thatismatt/tern-pack
+[submodule "live-packs/gsnewmark-lang-pack/lib/geiser"]
+	path = live-packs/gsnewmark-lang-pack/lib/geiser
+	url = git://git.sv.gnu.org/geiser.git
