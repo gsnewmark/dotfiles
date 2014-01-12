@@ -44,6 +44,8 @@ alias E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
 # disable pattern expanding for lein
 alias lein="noglob lein"
 
+alias conkeror="xulrunner /usr/share/conkeror/application.ini"
+
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
