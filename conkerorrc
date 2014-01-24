@@ -34,11 +34,13 @@ read_buffer_show_icons = true;
 define_webjump("trans", "http://translate.google.com/translate_t#auto|en|%s");
 define_webjump("stackoverflow","http://stackoverflow.com/search?q=%s",
                $alternative="http://stackoverflow.com");
-define_webjump("python", "http://docs.python.org/search.html?q=%s");
 define_webjump("github", "http://github.com/search?q=%s&type=Everything");
 
 // Modes.
 require("github");
+require("duckduckgo");
+require("twitter");
+require("reddit");
 
 // Password manager.
 session_pref("signon.rememberSignons", true);
