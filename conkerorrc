@@ -87,7 +87,8 @@ interactive("instapaper", "Send the current page to InstaPaper.",
 		        var login_info = get_instapaper_password();
                 let posturl = 'https://www.instapaper.com/api/add?' +
                     'username=' + login_info.username + '&' +
-                    'password=' + login_info.password + '&url=' +
+                    'password=' + encodeURIComponent(login_info.password)
+                    + '&url=' +
                     encodeURIComponent(I.window.content.location.href) +
                     '&selection=' +
                     encodeURIComponent(
