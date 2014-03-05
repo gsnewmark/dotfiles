@@ -9,6 +9,7 @@
 (setq whitespace-style '(face lines trailing))
 (setq-default whitespace-line-column fill-column)
 (global-whitespace-mode t)
+(setq whitespace-global-modes '(not erc-mode))
 
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
