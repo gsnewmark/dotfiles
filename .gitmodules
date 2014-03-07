@@ -25,9 +25,6 @@
 [submodule "live-packs/tern-pack"]
 	path = live-packs/tern-pack
 	url = https://github.com/thatismatt/tern-pack
-[submodule "live-packs/gsnewmark-lang-pack/lib/geiser"]
-	path = live-packs/gsnewmark-lang-pack/lib/geiser
-	url = git://git.sv.gnu.org/geiser.git
 [submodule "live-packs/gsnewmark-foundation-pack/lib/erc-hl-nicks"]
 	path = live-packs/gsnewmark-foundation-pack/lib/erc-hl-nicks
 	url = git@github.com:leathekd/erc-hl-nicks.git

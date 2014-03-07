@@ -2,4 +2,3 @@
 (live-load-config-file "clojure-conf.el")
 (live-load-config-file "groovy-conf.el")
 (live-load-config-file "scala-conf.el")
-(live-load-config-file "scheme-conf.el")
