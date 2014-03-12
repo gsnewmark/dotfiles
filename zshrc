@@ -52,14 +52,5 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 # Notify when long command is finished
 [ -e $HOME/.zsh-notifier/notifyosd.zsh ] && . $HOME/.zsh-notifier/notifyosd.zsh
 
-# Activate rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # Activate Node
 nvm use 0.1 &> /dev/null
-
-# Start byobu if present
-if hash byobu 2>/dev/null; then
-    byobu "$@"
-fi
