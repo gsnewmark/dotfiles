@@ -54,3 +54,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
 # Activate Node
 nvm use 0.1 &> /dev/null
+
+# Start byobu if present
+if hash byobu 2>/dev/null; then
+    byobu "$@"
+fi
