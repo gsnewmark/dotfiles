@@ -68,24 +68,24 @@ bindsym $mod+space focus mode_toggle
 bindcode $mod+38 focus parent
 
 # switch to workspace
-bindsym $mod+1 workspace emacs
+bindsym $mod+1 workspace dev
 bindsym $mod+2 workspace web
 bindsym $mod+3 workspace media
-bindsym $mod+4 workspace ide
-bindsym $mod+5 workspace skype
-bindsym $mod+6 workspace mail
+bindsym $mod+4 workspace chat
+bindsym $mod+5 workspace mail
+bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace emacs
+bindsym $mod+Shift+1 move container to workspace dev
 bindsym $mod+Shift+2 move container to workspace web
 bindsym $mod+Shift+3 move container to workspace media
-bindsym $mod+Shift+4 move container to workspace ide
-bindsym $mod+Shift+5 move container to workspace skype
-bindsym $mod+Shift+6 move container to workspace mail
+bindsym $mod+Shift+4 move container to workspace chat
+bindsym $mod+Shift+5 move container to workspace mail
+bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
@@ -122,13 +122,20 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindcode $mod+27 mode "resize"
+
+bindcode $mod+53 [urgent=latest] focus
+
+client.urgent #2f343a #900000 #ffffff #900000
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
     status_command i3status
     position       top
+    colors {
+        urgent_workspace   #2f343a #900000 #ffffff
+    }
 }
 
 focus_follows_mouse no
