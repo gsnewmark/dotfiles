@@ -70,7 +70,7 @@ bindcode $mod+38 focus parent
 # switch to workspace
 bindsym $mod+1 workspace dev
 bindsym $mod+2 workspace web
-bindsym $mod+3 workspace media
+bindsym $mod+3 workspace music
 bindsym $mod+4 workspace chat
 bindsym $mod+5 workspace mail
 bindsym $mod+6 workspace 6
@@ -82,7 +82,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace dev
 bindsym $mod+Shift+2 move container to workspace web
-bindsym $mod+Shift+3 move container to workspace media
+bindsym $mod+Shift+3 move container to workspace music
 bindsym $mod+Shift+4 move container to workspace chat
 bindsym $mod+Shift+5 move container to workspace mail
 bindsym $mod+Shift+6 move container to workspace 6
@@ -100,26 +100,26 @@ bindcode $mod+Shift+32 exec "i3-nagbar -t warning -m 'You pressed the exit short
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindcode 44 resize shrink width 10 px or 10 ppt
-        bindcode 45 resize grow height 10 px or 10 ppt
-        bindcode 46 resize shrink height 10 px or 10 ppt
-        bindcode 47 resize grow width 10 px or 10 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindcode 44 resize shrink width 10 px or 10 ppt
+    bindcode 45 resize grow height 10 px or 10 ppt
+    bindcode 46 resize shrink height 10 px or 10 ppt
+    bindcode 47 resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindcode $mod+27 mode "resize"
