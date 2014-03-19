@@ -31,7 +31,8 @@
 
 ;; org-mode agenda
 (setq org-agenda-files
-      (list (concat org-directory "/gtd.org")))
+      (list (concat org-directory "/gtd.org")
+            (concat org-directory "/reading-review.org")))
 
 ;; org-capture default file
 (setq org-default-notes-file (concat org-directory "/notes.org"))

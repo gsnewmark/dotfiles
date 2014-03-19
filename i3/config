@@ -139,3 +139,13 @@ bar {
 }
 
 focus_follows_mouse no
+
+# App → workspace assignments
+assign [class="Emacs"] → dev
+assign [class="jetbrains-idea"] → dev
+assign [class="Chromium"] → dev
+assign [class="Conkeror"] → web
+assign [class="Corebird"] → web
+assign [class="Deadbeef"] → music
+assign [class="Skype"] → chat
+assign [class="Geary"] → mail
