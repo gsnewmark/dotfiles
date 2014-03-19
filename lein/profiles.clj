@@ -1,4 +1,4 @@
-{:user {:dependencies [[slamhound "1.5.1"]]
+{:user {:dependencies [[slamhound "1.5.2"]]
         :plugins [[lein-try "0.4.1"]
                   [lein-ancient "0.5.5-SNAPSHOT"]
                   [lein-bikeshed "0.1.6"]
