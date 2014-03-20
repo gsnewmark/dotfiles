@@ -18,7 +18,7 @@ bindsym $mod+Return exec gnome-terminal
 bindcode $mod+Shift+24 kill
 
 # start dmenu (a program launcher)
-bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -z -fn 'Menlo-10'"
+bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="xboomx"
 
 # change focus
 bindcode $mod+44 focus left

@@ -1,4 +1,6 @@
+byobu/.*
 lein/self-installs/*
 lein/repl-history
 sbt/boot/*
 sbt/plugins/*/*
+xboomx/xboomx.db
