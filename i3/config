@@ -6,7 +6,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:M+ 1mn 10
+font pango:Menlo 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -18,7 +18,7 @@ bindsym $mod+Return exec gnome-terminal
 bindcode $mod+Shift+24 kill
 
 # start dmenu (a program launcher)
-bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -z -fn 'M+ 1mn-10'"
+bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -z -fn 'Menlo-10'"
 
 # change focus
 bindcode $mod+44 focus left
