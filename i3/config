@@ -12,7 +12,7 @@ font pango:Menlo 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindcode $mod+Shift+24 kill
@@ -126,6 +126,11 @@ bindcode $mod+27 mode "resize"
 
 bindcode $mod+53 [urgent=latest] focus
 
+# shutdown menu
+bindcode $mod+Shift+33 exec xfce4-session-logout
+# xfce settings
+bindcode $mod+Shift+39 exec xfce4-settings-manager
+
 # class                 border  backgr. text    indicator
 client.focused          #859900 #859900 #fdf6e3 #2e9ef4
 client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
@@ -159,3 +164,6 @@ assign [class="Corebird"] → 2: web
 assign [class="Deadbeef"] → 3: music
 assign [class="Skype"] → 4: msg
 assign [class="Geary"] → 5: @
+
+# xfce4-notify
+for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
