@@ -167,3 +167,5 @@ assign [class="Geary"] → 5: @
 
 # xfce4-notify
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
+
+exec_always compton -CGb
