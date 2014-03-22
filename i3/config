@@ -12,7 +12,7 @@ font pango:Menlo 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec xfce4-terminal --hide-menubar --hold -e "byobu"
 
 # kill focused window
 bindcode $mod+Shift+24 kill
