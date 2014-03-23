@@ -20,6 +20,9 @@ bindcode $mod+Shift+24 kill
 # start dmenu (a program launcher)
 bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="xboomx"
 
+# choose a running program
+bindcode $mod+Shift+40 exec --no-startup-id quickswitch.py --dmenu="dmenu -b -i -z -l 20 -fn 'Menlo-10' -nb '#073642' -nf '#eee8d5' -sb '#cb4b16'"
+
 # change focus
 bindcode $mod+44 focus left
 bindcode $mod+45 focus down
