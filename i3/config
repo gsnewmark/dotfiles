@@ -21,7 +21,7 @@ bindcode $mod+Shift+24 kill
 bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="xboomx"
 
 # choose a running program
-bindcode $mod+Shift+40 exec --no-startup-id quickswitch.py --dmenu="dmenu -b -i -z -l 20 -fn 'Menlo-10' -nb '#073642' -nf '#eee8d5' -sb '#cb4b16'"
+bindcode $mod+Shift+40 exec --no-startup-id quickswitch.py --dmenu="dmenu -b -i -z -l 20 -fn 'Menlo-10' -nb '#073642' -nf '#eee8d5' -sb '#268bd2'"
 
 # change focus
 bindcode $mod+44 focus left
@@ -135,9 +135,9 @@ bindcode $mod+Shift+33 exec xfce4-session-logout
 bindcode $mod+Shift+39 exec xfce4-settings-manager
 
 # class                 border  backgr. text    indicator
-client.focused          #859900 #859900 #fdf6e3 #2e9ef4
-client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
-client.unfocused        #333333 #93a1a1 #fdf6e3 #292d2e
+client.focused          #268bd2 #268bd2 #fdf6e3 #6c71c4
+client.focused_inactive #2aa198 #2aa198 #fdf6e3 #484e50
+client.unfocused        #073642 #073642 #fdf6e3 #484e50
 client.urgent           #2f343a #900000 #ffffff #900000
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -149,10 +149,10 @@ bar {
         # solarized
         background #073642
         statusline #eee8d5
-        focused_workspace #cb4b16 #cb4b16 #eee8d5
-        active_workspace #cb4b16 #cb4b16 #eee8d5
-        inactive_workspace #b58900 #b58900 #eee8d5
-        urgent_workspace   #2f343a #900000 #ffffff
+        focused_workspace  #268bd2 #268bd2 #eee8d5
+        active_workspace   #268bd2 #268bd2 #eee8d5
+        inactive_workspace #2aa198 #2aa198 #eee8d5
+        urgent_workspace   #dc322f #dc322f #eee8d5
     }
 }
 
