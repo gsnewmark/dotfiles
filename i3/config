@@ -161,7 +161,6 @@ focus_follows_mouse no
 # App → workspace assignments
 assign [class="Emacs"] → 1: dev
 assign [class="jetbrains-idea"] → 1: dev
-assign [class="Chromium"] → 1: dev
 assign [class="Conkeror"] → 2: web
 assign [class="Corebird"] → 2: web
 assign [class="Deadbeef"] → 3: music
