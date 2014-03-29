@@ -144,6 +144,8 @@ bindcode $mod+Control+41 exec --no-startup-id thunar
 bindcode $mod+Control+54 exec --no-startup-id conkeror
 # t - Corebird
 bindcode $mod+Control+28 exec --no-startup-id corebird
+# m - Skype
+bindcode $mod+Control+58 exec --no-startup-id skype
 # g - Geary
 bindcode $mod+Control+42 exec --no-startup-id geary
 # d - Deadbeef
