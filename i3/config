@@ -134,6 +134,23 @@ bindcode $mod+Shift+33 exec xfce4-session-logout
 # xfce settings
 bindcode $mod+Shift+39 exec xfce4-settings-manager
 
+# e - Emacs
+bindcode $mod+Control+26 exec --no-startup-id emacs
+# i - Intellij Idea
+bindcode $mod+Control+31 exec --no-startup-id intellij-idea-ultimate-edition
+# f - Thunar
+bindcode $mod+Control+41 exec --no-startup-id thunar
+# c - Conkeror
+bindcode $mod+Control+54 exec --no-startup-id conkeror
+# t - Corebird
+bindcode $mod+Control+28 exec --no-startup-id corebird
+# g - Geary
+bindcode $mod+Control+42 exec --no-startup-id geary
+# d - Deadbeef
+bindcode $mod+Control+40 exec --no-startup-id deadbeef
+# r - random wallpaper
+bindcode $mod+Control+27 exec --no-startup-id feh --recursive --randomize --bg-fill ~/Dropbox/Pictures/wallpapers
+
 # class                 border  backgr. text    indicator
 client.focused          #268bd2 #268bd2 #fdf6e3 #6c71c4
 client.focused_inactive #2aa198 #2aa198 #fdf6e3 #484e50
