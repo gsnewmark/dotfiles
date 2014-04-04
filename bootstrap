@@ -11,6 +11,7 @@ FILES_TO_IGNORE = {'bootstrap', 'bin', 'README.md',
 DIRCOLORS_DB_FILE = 'dircolors-solarized/dircolors.ansi-universal'
 OH_MY_ZSH_DIR = 'oh-my-zsh'
 OH_MY_ZSH_CUSTOM_PLUGINS = {'zsh-syntax-highlighting'}
+BIN_DIR = 'bin'
 
 
 def remove(path):
@@ -21,13 +22,15 @@ def remove(path):
             rem = rmtree
         rem(path)
 
-def create_symlink(dst_dir, src, symlink_name=None):
+def create_symlink(dst_dir, src, symlink_name=None, is_dotfiles=True):
     '''Creates a symlink in dst_dit for src with name '.' + symlink_name.
 
     If symlink_name is not supplied than src is used instead of it.
     '''
     symlink_name = symlink_name or src
-    symlink_path = os.path.join(dst_dir, '.' + symlink_name)
+    if is_dotfiles:
+        symlink_name = '.' + symlink_name
+    symlink_path = os.path.join(dst_dir, symlink_name)
     remove(symlink_path)
     os.symlink(os.path.abspath(src), symlink_path)
 
@@ -57,5 +60,6 @@ if __name__ == '__main__':
     home = os.path.expanduser('~')
     create_dotfile_symlinks(home, FILES_TO_IGNORE)
     create_dircolors_symlink(home, DIRCOLORS_DB_FILE)
+    create_symlink(home, BIN_DIR, is_dotfiles = False)
     omz_plugins_dst = os.path.abspath(OH_MY_ZSH_DIR + '/custom/plugins/')
     copy_dirs(omz_plugins_dst, OH_MY_ZSH_CUSTOM_PLUGINS)

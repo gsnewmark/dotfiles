@@ -1,0 +1,5 @@
+#!/bin/sh
+while true; do
+      feh --recursive --randomize --bg-fill ~/Dropbox/Pictures/wallpapers
+      sleep 30m
+done
