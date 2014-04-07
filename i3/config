@@ -157,6 +157,11 @@ bindcode $mod+Control+40 exec --no-startup-id deadbeef
 # l - Liferea
 bindcode $mod+Control+46 exec --no-startup-id liferea
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 workspace_auto_back_and_forth yes
 
 new_window 1pixel
