@@ -154,6 +154,8 @@ bindcode $mod+Control+58 exec --no-startup-id skype
 bindcode $mod+Control+42 exec --no-startup-id geary
 # d - Deadbeef
 bindcode $mod+Control+40 exec --no-startup-id deadbeef
+# l - Liferea
+bindcode $mod+Control+46 exec --no-startup-id liferea
 
 workspace_auto_back_and_forth yes
 
@@ -188,6 +190,7 @@ assign [class="Emacs"] → 1: dev
 assign [class="jetbrains-idea"] → 1: dev
 assign [class="Conkeror"] → 2: web
 assign [class="Corebird"] → 2: web
+assign [class="Liferea"] → 2: web
 assign [class="Deadbeef"] → 3: music
 assign [class="Skype"] → 4: msg
 assign [class="Geary"] → 5: @
