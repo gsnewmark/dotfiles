@@ -81,13 +81,15 @@ define_key(content_buffer_normal_keymap, "H", "find-url-from-history");
 
 // instapaper
 
+var instapaper_username = "gildraug@gmail.com";
+var instapaper_password = "secret";
+
 interactive("instapaper", "Send the current page to InstaPaper.",
             function (I) {
                 check_buffer(I.buffer, content_buffer);
-		        var login_info = get_instapaper_password();
                 let posturl = 'https://www.instapaper.com/api/add?' +
-                    'username=' + login_info.username + '&' +
-                    'password=' + encodeURIComponent(login_info.password)
+                    'username=' + instapaper_username + '&' +
+                    'password=' + encodeURIComponent(instapaper_password)
                     + '&url=' +
                     encodeURIComponent(I.window.content.location.href) +
                     '&selection=' +
@@ -101,7 +103,7 @@ interactive("instapaper", "Send the current page to InstaPaper.",
                     if (content.responseText == "201") {
                         I.window.minibuffer.message("InstaPaper ok!");
                     } else {
-                        I.window.minibuffer.message("Error.");
+                        I.window.minibuffer.message(content.responseText);
                     }
                 } catch (e) {
                     I.window.minibuffer.message("Error.");
@@ -113,10 +115,10 @@ interactive("instapaper-link", "Send the current link to InstaPaper.",
               bo = yield read_browser_object(I) ;
               mylink = load_spec_uri_string(load_spec(encodeURIComponent(bo)));
               check_buffer(I.buffer, content_buffer);
-	          var login_info = get_instapaper_password();
               let posturl = 'https://www.instapaper.com/api/add?' +
-                    'username=' + login_info.username + '&' +
-                    'password=' + login_info.password + '&url=' + mylink +
+                    'username=' + instapaper_username + '&' +
+                    'password=' + encodeURIComponent(instapaper_password) +
+                    '&url=' + mylink +
                     '&title=' + encodeURIComponent(
                         yield I.minibuffer.read(
                             $prompt = "Title (optional): ",
@@ -142,23 +144,6 @@ interactive("instapaper-link", "Send the current link to InstaPaper.",
 
 define_key(default_global_keymap, "C-x i", "instapaper");
 define_key(default_global_keymap, "C-x I", "instapaper-link");
-
-// google(conkeror password cache) returned http://conkeror.org/PasswordManagement
-// which led to http://conkeror.org/Extensions -> http://conkeror.org/SavedPasswordEditor
-// -> https://addons.mozilla.org/en-US/firefox/files/browse/117335/
-// searching for the class name gets us https://developer.mozilla.org/En/Using_nsILoginManager
-// turns out we can use it directly...
-
-function get_instapaper_password() {
-    var myLoginManager = Components.classes["@mozilla.org/login-manager;1"].getService(Components.interfaces.nsILoginManager);
-    // dug these values out of .conkeror.mozdev.org/conkeror/*.default/signons.sqlite with sqlitebrowser
-    var logins = myLoginManager.findLogins({},
-					   "https://www.instapaper.com", // hostname
-					   "https://www.instapaper.com", // formSubmitURL
-					   ""); // realm
-    // this is just for me, so don't bother search for usernames
-    return { "username": logins[0].username, "password": logins[0].password };
-}
 
 // Change page to more eyes-friendly colours
 
