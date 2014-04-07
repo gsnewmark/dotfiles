@@ -12,7 +12,7 @@ font pango:Terminus 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal --hide-menubar --hold -e "byobu"
+bindsym $mod+Return exec xfce4-terminal --hide-menubar --hold
 
 # kill focused window
 bindcode $mod+Shift+24 kill

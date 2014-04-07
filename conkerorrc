@@ -51,9 +51,6 @@ Cc["@mozilla.org/login-manager;1"].getService(Ci.nsILoginManager); // init
 // Sessions.
 require("session.js");
 session_auto_save_auto_load = true;
-session_dir = get_home_directory();
-session_dir.append("Dropbox");
-session_dir.append("conkeror-session");
 
 // Bookmarks.
 url_completion_use_bookmarks = true;
