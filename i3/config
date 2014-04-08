@@ -73,9 +73,9 @@ bindcode $mod+38 focus parent
 # switch to workspace
 bindsym $mod+1 workspace 1: dev
 bindsym $mod+2 workspace 2: web
-bindsym $mod+4 workspace 3: msg
-bindsym $mod+5 workspace 4: @
-bindsym $mod+3 workspace 5: music
+bindsym $mod+3 workspace 3: msg
+bindsym $mod+4 workspace 4: @
+bindsym $mod+5 workspace 5: music
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -85,9 +85,9 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: dev
 bindsym $mod+Shift+2 move container to workspace 2: web
-bindsym $mod+Shift+4 move container to workspace 3: msg
-bindsym $mod+Shift+5 move container to workspace 4: @
-bindsym $mod+Shift+3 move container to workspace 5: music
+bindsym $mod+Shift+3 move container to workspace 3: msg
+bindsym $mod+Shift+4 move container to workspace 4: @
+bindsym $mod+Shift+5 move container to workspace 5: music
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -179,11 +179,11 @@ bar {
     position       top
     colors {
         # solarized
-        background #073642
+        background #002b36
         statusline #eee8d5
         focused_workspace  #268bd2 #268bd2 #eee8d5
         active_workspace   #268bd2 #268bd2 #eee8d5
-        inactive_workspace #2aa198 #2aa198 #eee8d5
+        inactive_workspace #073642 #073642 #eee8d5
         urgent_workspace   #dc322f #dc322f #eee8d5
     }
 }
