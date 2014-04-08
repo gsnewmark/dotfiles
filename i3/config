@@ -73,9 +73,9 @@ bindcode $mod+38 focus parent
 # switch to workspace
 bindsym $mod+1 workspace 1: dev
 bindsym $mod+2 workspace 2: web
-bindsym $mod+3 workspace 3: music
-bindsym $mod+4 workspace 4: msg
-bindsym $mod+5 workspace 5: @
+bindsym $mod+4 workspace 3: msg
+bindsym $mod+5 workspace 4: @
+bindsym $mod+3 workspace 5: music
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -85,9 +85,9 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: dev
 bindsym $mod+Shift+2 move container to workspace 2: web
-bindsym $mod+Shift+3 move container to workspace 3: music
-bindsym $mod+Shift+4 move container to workspace 4: msg
-bindsym $mod+Shift+5 move container to workspace 5: @
+bindsym $mod+Shift+4 move container to workspace 3: msg
+bindsym $mod+Shift+5 move container to workspace 4: @
+bindsym $mod+Shift+3 move container to workspace 5: music
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -196,9 +196,9 @@ assign [class="jetbrains-idea"] → 1: dev
 assign [class="Conkeror"] → 2: web
 assign [class="Corebird"] → 2: web
 assign [class="Liferea"] → 2: web
-assign [class="Deadbeef"] → 3: music
-assign [class="Skype"] → 4: msg
-assign [class="Geary"] → 5: @
+assign [class="Skype"] → 3: msg
+assign [class="Geary"] → 4: @
+assign [class="Deadbeef"] → 5: music
 
 # xfce4-notify
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
