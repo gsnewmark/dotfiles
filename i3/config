@@ -6,7 +6,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:Menlo, FontAwesome 10
+font pango:Menlo, FontAwesome 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -21,7 +21,7 @@ bindcode $mod+Shift+24 kill
 bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="xboomx"
 
 # choose a running program
-bindcode $mod+Shift+40 exec --no-startup-id quickswitch.py --dmenu="dmenu -b -i -z -l 20 -fn 'Menlo-10' -nb '#073642' -nf '#eee8d5' -sb '#268bd2'"
+bindcode $mod+Shift+40 exec --no-startup-id quickswitch.py --dmenu="dmenu -b -i -z -l 20 -fn 'Menlo-9' -nb '#073642' -nf '#eee8d5' -sb '#268bd2'"
 
 # change focus
 bindcode $mod+44 focus left
