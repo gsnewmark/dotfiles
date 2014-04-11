@@ -144,8 +144,8 @@ bindcode $mod+Shift+25 exec --no-startup-id feh --recursive --randomize --bg-fil
 bindcode $mod+Control+26 exec --no-startup-id emacs
 # Control+i - Intellij Idea
 bindcode $mod+Control+31 exec --no-startup-id intellij-idea-ultimate-edition
-# Control+f - Thunar
-bindcode $mod+Control+41 exec --no-startup-id thunar
+# Control+f - ranger
+bindcode $mod+Control+41 exec --no-startup-id xfce4-terminal --hide-menubar --hold -e ranger
 # Control+c - Conkeror
 bindcode $mod+Control+54 exec --no-startup-id conkeror
 # Control+t - Corebird
