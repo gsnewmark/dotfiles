@@ -4,3 +4,5 @@
 (custom-set-variables
  '(solarized-use-variable-pitch nil))
 (load-theme 'solarized-dark t)
+(custom-set-faces
+ (if (not window-system) '(default ((t (:background "nil"))))))

@@ -28,7 +28,7 @@ unsetopt correct_all
 eval `dircolors ~/.dir_colors`
 
 # set color mode of terminal
-export TERM=xterm-color
+export TERM=xterm-16color
 
 # add user-specific bin to PATH
 export PATH=~/bin:$PATH
@@ -36,6 +36,7 @@ export PATH=~/bin:$PATH
 # set default terminal text editor
 TE="emacsclient -t -a emacs"
 export VISUAL=$TE
+export EDITOR=$TE
 
 # shortcut for terminal emacs
 alias e=$TE
