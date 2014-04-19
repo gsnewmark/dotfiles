@@ -12,7 +12,7 @@ font pango:Menlo, FontAwesome 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal --hide-menubar --hold
+bindsym $mod+Return exec gnome-terminal --hide-menubar
 
 # Shift+q - kill focused window
 bindcode $mod+Shift+24 kill
@@ -145,7 +145,7 @@ bindcode $mod+Control+26 exec --no-startup-id emacs
 # Control+i - Intellij Idea
 bindcode $mod+Control+31 exec --no-startup-id intellij-idea-ultimate-edition
 # Control+f - ranger
-bindcode $mod+Control+41 exec --no-startup-id xfce4-terminal --hide-menubar --hold -e ranger
+bindcode $mod+Control+41 exec --no-startup-id gnome-terminal --hide-menubar -e ranger
 # Control+c - Conkeror
 bindcode $mod+Control+54 exec --no-startup-id conkeror
 # Control+t - Corebird
