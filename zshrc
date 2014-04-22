@@ -28,7 +28,7 @@ unsetopt correct_all
 eval `dircolors ~/.dir_colors`
 
 # set color mode of terminal
-export TERM=xterm-16color
+export TERM=xterm-256color
 
 # add user-specific bin to PATH
 export PATH=~/bin:$PATH
