@@ -141,7 +141,7 @@ bindcode $mod+Shift+55 exec pavucontrol
 bindcode $mod+Shift+25 exec --no-startup-id feh --recursive --randomize --bg-fill ~/Dropbox/Pictures/wallpapers
 
 # Control+e - Emacs
-bindcode $mod+Control+26 exec --no-startup-id emacs
+bindcode $mod+Control+26 exec --no-startup-id emacsclient -c
 # Control+i - Intellij Idea
 bindcode $mod+Control+31 exec --no-startup-id intellij-idea-ultimate-edition
 # Control+f - ranger
