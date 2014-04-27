@@ -195,11 +195,9 @@ bar {
 focus_follows_mouse no
 
 # App → workspace assignments
-assign [class="Emacs"] → 
 assign [class="jetbrains-idea"] → 
 assign [class="Chromium"] → 
 assign [class="Conkeror"] → 
-assign [class="Corebird"] → 
 assign [class="Liferea"] → 
 assign [class="Skype"] → 
 assign [class="Geary"] → 
