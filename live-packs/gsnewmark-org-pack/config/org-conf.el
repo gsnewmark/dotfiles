@@ -49,3 +49,8 @@
         ("j" "Journal" entry
          (file+datetree (concat org-directory "/journal.org"))
          "* %^{Description}\n  Added: %U\n%?")))
+
+;; List of additional LaTeX packages
+(require 'org-latex)
+(add-to-list 'org-latex-packages-alist '("" "cmap" t))
+(add-to-list 'org-latex-packages-alist '("english,ukrainian" "babel" t))
