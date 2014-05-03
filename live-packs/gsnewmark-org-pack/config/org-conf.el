@@ -54,3 +54,6 @@
 (require 'org-latex)
 (add-to-list 'org-latex-packages-alist '("" "cmap" t))
 (add-to-list 'org-latex-packages-alist '("english,ukrainian" "babel" t))
+
+;; required for odt export
+(require 'ox-odt)
