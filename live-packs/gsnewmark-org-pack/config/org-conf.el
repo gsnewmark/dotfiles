@@ -57,3 +57,6 @@
 
 ;; required for odt export
 (require 'ox-odt)
+
+;; required for correct table export
+(require 'org-table)
