@@ -47,8 +47,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# g - split in horizontal orientation
-bindcode $mod+42 split h
+# b - split in horizontal orientation
+bindcode $mod+56 split h
 
 # v - split in vertical orientation
 bindcode $mod+55 split v
@@ -79,7 +79,7 @@ bindsym $mod+5 workspace 
 bindsym $mod+6 workspace 
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+9 workspace 
 bindsym $mod+0 workspace 
 
 # move focused container to workspace
@@ -91,7 +91,7 @@ bindsym $mod+Shift+5 move container to workspace 
 bindsym $mod+Shift+6 move container to workspace 
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+9 move container to workspace 
 bindsym $mod+Shift+0 move container to workspace 
 
 # Shift+c - reload the configuration file
@@ -148,20 +148,22 @@ bindcode $mod+Control+Shift+26 exec --no-startup-id emacs
 bindcode $mod+Control+31 exec --no-startup-id intellij-idea-ultimate-edition
 # Control+f - ranger
 bindcode $mod+Control+41 exec --no-startup-id gnome-terminal --hide-menubar -e ranger
-# Control+c - Conkeror
-bindcode $mod+Control+54 exec --no-startup-id conkeror
-# Control+h - Chromium
-bindcode $mod+Control+43 exec --no-startup-id chromium
+# Control+b - Conkeror
+bindcode $mod+Control+62 exec --no-startup-id conkeror
+# Control+w - Chromium
+bindcode $mod+Control+25 exec --no-startup-id chromium
 # Control+t - Corebird
 bindcode $mod+Control+28 exec --no-startup-id corebird
-# Control+m - Skype
-bindcode $mod+Control+58 exec --no-startup-id skype
-# Control+g - Geary
-bindcode $mod+Control+42 exec --no-startup-id geary
+# Control+c - Skype
+bindcode $mod+Control+54 exec --no-startup-id skype
+# Control+m - Geary
+bindcode $mod+Control+58 exec --no-startup-id geary
 # Control+d - Deadbeef
 bindcode $mod+Control+40 exec --no-startup-id deadbeef
 # Control+l - Liferea
 bindcode $mod+Control+46 exec --no-startup-id liferea
+# Control+g - Steam
+bindcode $mod+Control+42 exec --no-startup-id steam
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -198,12 +200,12 @@ focus_follows_mouse no
 
 # App → workspace assignments
 assign [class="jetbrains-idea"] → 
-assign [class="Chromium"] → 
 assign [class="Conkeror"] → 
 assign [class="Liferea"] → 
 assign [class="Skype"] → 
 assign [class="Geary"] → 
 assign [class="Deadbeef"] → 
+assign [class="Steam"] → 
 
 # xfce4-notify
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
