@@ -35,7 +35,7 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window (h, j, k, l)
+# move focused window (Shift + h, j, k, l)
 bindcode $mod+Shift+43 move left
 bindcode $mod+Shift+44 move down
 bindcode $mod+Shift+45 move up
@@ -98,8 +98,6 @@ bindsym $mod+Shift+0 move container to workspace 
 bindcode $mod+Shift+54 reload
 # Shift+r - restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindcode $mod+Shift+27 restart
-# Shift+o - exit i3 (logs you out of your X session)
-bindcode $mod+Shift+32 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
