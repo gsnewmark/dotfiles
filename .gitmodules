@@ -28,3 +28,6 @@
 [submodule "live-packs/gsnewmark-foundation-pack/lib/erc-hl-nicks"]
 	path = live-packs/gsnewmark-foundation-pack/lib/erc-hl-nicks
 	url = git@github.com:leathekd/erc-hl-nicks.git
+[submodule "live-packs/gsnewmark-lang-pack/lib/sbt-mode"]
+	path = live-packs/gsnewmark-lang-pack/lib/sbt-mode
+	url = https://github.com/hvesalai/sbt-mode
