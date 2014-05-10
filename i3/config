@@ -146,6 +146,8 @@ bindcode $mod+Control+Shift+26 exec --no-startup-id emacs
 bindcode $mod+Control+31 exec --no-startup-id intellij-idea-ultimate-edition
 # Control+f - ranger
 bindcode $mod+Control+41 exec --no-startup-id gnome-terminal --hide-menubar -e ranger
+# Control+Shift+f - Thunar
+bindcode $mod+Control+Shift+41 exec --no-startup-id thunar
 # Control+b - Conkeror
 bindcode $mod+Control+56 exec --no-startup-id conkeror
 # Control+w - Chromium
