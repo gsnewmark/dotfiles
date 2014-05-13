@@ -23,5 +23,6 @@
              (local-set-key (kbd "<backtab>")
                             'scala-indent:indent-with-reluctant-strategy)
              (local-set-key (kbd "M-.") 'sbt-find-definitions)
-             (local-set-key (kbd "C-x '") 'sbt-run-previous-command)))
+             (local-set-key (kbd "C-x '") 'sbt-run-previous-command)
+             (electric-pair-mode)))
 (add-hook 'scala-mode-hook 'flyspell-prog-mode)
