@@ -15,9 +15,6 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git archlinux last-working-dir lein zsh-syntax-highlighting vagrant mvn sbt npm)
 
-# Activate Node Version Manager
-source $HOME/.nvm/nvm.sh
-
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -52,6 +49,3 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
 # Notify when long command is finished
 [ -e $HOME/.zsh-notifier/notifyosd.zsh ] && . $HOME/.zsh-notifier/notifyosd.zsh
-
-# Activate Node
-nvm use 0.1 &> /dev/null
