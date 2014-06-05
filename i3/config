@@ -164,6 +164,8 @@ bindcode $mod+Control+40 exec --no-startup-id deadbeef
 bindcode $mod+Control+46 exec --no-startup-id liferea
 # Control+g - Steam
 bindcode $mod+Control+42 exec --no-startup-id steam
+# Control+k - Calibre
+bindcode $mod+Control+45 exec --no-startup-id calibre
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
