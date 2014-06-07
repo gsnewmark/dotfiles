@@ -31,3 +31,6 @@
 [submodule "live-packs/gsnewmark-lang-pack/lib/sbt-mode"]
 	path = live-packs/gsnewmark-lang-pack/lib/sbt-mode
 	url = https://github.com/hvesalai/sbt-mode
+[submodule "live-packs/gsnewmark-appearence-pack/lib/smart-mode-line"]
+	path = live-packs/gsnewmark-appearence-pack/lib/smart-mode-line
+	url = https://github.com/Bruce-Connor/smart-mode-line
