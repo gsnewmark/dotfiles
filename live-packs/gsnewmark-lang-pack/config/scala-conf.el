@@ -26,3 +26,15 @@
              (local-set-key (kbd "C-x '") 'sbt-run-previous-command)
              (electric-pair-mode)))
 (add-hook 'scala-mode-hook 'flyspell-prog-mode)
+
+(setq scala-imenu-generic-expression
+      '(("Methods"   "^\\( *\\(def\\) +.+\\)"     1)
+        ("Values"    "^\\( *\\(val\\) +.+\\)"     1)
+        ("Variables" "^\\( *\\(var\\) +.+\\)"     1)
+        ("Objects"   "^\\( *\\(object\\) +.+\\)"  1)
+        ("Classes"   "^\\( *\\(class\\) +.+\\)"   1)
+        ("Types"     "^\\( *\\(type\\) +.+\\)"    1)))
+
+(add-hook 'scala-mode-hook
+          (lambda ()
+            (setq imenu-generic-expression scala-imenu-generic-expression)))
