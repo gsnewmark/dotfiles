@@ -1,9 +1,8 @@
 (live-add-pack-lib "smart-mode-line")
 
 (require 'smart-mode-line)
-(require 'smart-mode-line-respectful-theme)
 
-(setq sml/theme 'respectful)
+(setq sml/theme nil)
 (sml/setup)
 
 (setq sml/shorten-directory t)
