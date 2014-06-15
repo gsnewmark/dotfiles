@@ -4,3 +4,10 @@ lein/repl-history
 sbt/boot/*
 sbt/plugins/*/*
 xboomx/xboomx.db
+/mpd/mpd.db
+/mpd/mpd.log
+/mpd/mpd.pid
+/mpd/mpdstate
+/ncmpcpp/error.log
+/ncmpcpp/artists/*
+/config/*

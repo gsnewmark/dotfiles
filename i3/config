@@ -160,6 +160,8 @@ bindcode $mod+Control+54 exec --no-startup-id skype
 bindcode $mod+Control+58 exec --no-startup-id geary
 # Control+d - Deadbeef
 bindcode $mod+Control+40 exec --no-startup-id deadbeef
+# Control+n - ncmpcpp
+bindcode $mod+Control+57 exec --no-startup-id gnome-terminal --hide-menubar -e ncmpcpp
 # Control+l - Liferea
 bindcode $mod+Control+46 exec --no-startup-id liferea
 # Control+g - Steam
@@ -213,3 +215,4 @@ assign [class="Steam"] → 
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 
 #exec_always compton -CGb
+exec --no-startup-id mpd
