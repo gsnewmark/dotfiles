@@ -137,6 +137,8 @@ bindcode $mod+Shift+39 exec xfce4-settings-manager
 bindcode $mod+Shift+55 exec pavucontrol
 # Shift+w - random wallpaper
 bindcode $mod+Shift+25 exec --no-startup-id feh --recursive --randomize --bg-fill ~/Dropbox/Pictures/wallpapers
+# Control+Shift+l - lock screen
+bindcode $mod+Control+Shift+46 exec --no-startup-id dm-tool lock
 
 # Control+e - Emacs client
 bindcode $mod+Control+26 exec --no-startup-id emacsclient -c
