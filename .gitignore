@@ -8,6 +8,7 @@ xboomx/xboomx.db
 /mpd/mpd.log
 /mpd/mpd.pid
 /mpd/mpdstate
+mpd/playlists/*
 /ncmpcpp/error.log
 /ncmpcpp/artists/*
 /config/*
