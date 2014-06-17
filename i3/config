@@ -221,5 +221,6 @@ exec_always --no-startup-id compton -CGb
 exec --no-startup-id setxkbmap -option setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
 exec --no-startup-id mpd
 exec --no-startup-id emacs --daemon
+exec --no-startup-id dropboxd
 exec --no-startup-id unclutter
 exec --no-startup-id $HOME/bin/random_background
