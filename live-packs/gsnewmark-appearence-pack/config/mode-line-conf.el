@@ -2,7 +2,8 @@
 
 (require 'smart-mode-line)
 
-(setq sml/theme nil)
+(setq sml/no-confirm-load-theme t)
+(setq sml/theme 'respectful)
 (sml/setup)
 
 (setq sml/shorten-directory t)
