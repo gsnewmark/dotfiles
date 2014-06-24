@@ -155,7 +155,7 @@ bindcode $mod+Control+56 exec --no-startup-id conkeror
 # Control+w - Chromium
 bindcode $mod+Control+25 exec --no-startup-id chromium
 # Control+t - earthquake
-bindcode $mod+Control+28 exec --no-startup-id $HOME/bin/earthquake_term
+bindcode $mod+Control+28 exec --no-startup-id corebird
 # Control+c - Skype
 bindcode $mod+Control+54 exec --no-startup-id skype
 # Control+m - Geary
