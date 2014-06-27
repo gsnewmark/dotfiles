@@ -140,6 +140,9 @@ bindcode $mod+Shift+25 exec --no-startup-id feh --recursive --randomize --bg-fil
 # Control+Shift+l - lock screen
 bindcode $mod+Control+Shift+46 exec --no-startup-id dm-tool lock
 
+bindsym Print exec --no-startup-id xfce4-screenshooter
+bindsym Shift+Print exec --no-startup-id xfce4-screenshooter -r
+
 # Control+e - Emacs client
 bindcode $mod+Control+26 exec --no-startup-id emacsclient -c
 # Control+Shift+e - Emacs
