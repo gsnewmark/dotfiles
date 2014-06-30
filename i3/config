@@ -129,8 +129,8 @@ bindcode $mod+27 mode "resize"
 # x
 bindcode $mod+53 [urgent=latest] focus
 
-# Shift+p - shutdown menu
-bindcode $mod+Shift+33 exec xfce4-session-logout
+# Control+Shift+p - shutdown menu
+bindcode $mod+Control+Shift+33 exec xfce4-session-logout
 # Shift+s - xfce settings
 bindcode $mod+Shift+39 exec xfce4-settings-manager
 # Shift+v - sound device menu
@@ -173,6 +173,14 @@ bindcode $mod+Control+46 exec --no-startup-id liferea
 bindcode $mod+Control+42 exec --no-startup-id steam
 # Control+k - Calibre
 bindcode $mod+Control+45 exec --no-startup-id calibre
+
+# music controls
+# P - toogle stop/play
+bindcode $mod+Shift+33 exec --no-startup-id ncmpcpp toggle
+# < - previous
+bindcode $mod+Shift+59 exec --no-startup-id ncmpcpp prev
+# > - next
+bindcode $mod+Shift+60 exec --no-startup-id ncmpcpp next
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
