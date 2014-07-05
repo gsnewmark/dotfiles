@@ -34,3 +34,6 @@
 [submodule "live-packs/gsnewmark-appearence-pack/lib/smart-mode-line"]
 	path = live-packs/gsnewmark-appearence-pack/lib/smart-mode-line
 	url = https://github.com/Bruce-Connor/smart-mode-line
+[submodule "live-packs/gsnewmark-foundation-pack/lib/xclip"]
+	path = live-packs/gsnewmark-foundation-pack/lib/xclip
+	url = https://github.com/emacsmirror/xclip

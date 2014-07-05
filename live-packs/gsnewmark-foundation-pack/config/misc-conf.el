@@ -39,3 +39,8 @@
   (interactive)
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
+
+;; Integrate terminal-mode clipboard with X11 one
+(live-add-pack-lib "xclip")
+(require 'xclip)
+(turn-on-xclip)
