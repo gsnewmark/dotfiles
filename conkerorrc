@@ -42,6 +42,12 @@ require("github");
 require("duckduckgo");
 require("twitter");
 require("reddit");
+require("feedly");
+
+define_keymaps_page_mode("feedly-mode",
+    build_url_regexp($domain = "feedly"),
+    { normal: feedly_keymap },
+    $display_name = "Feedly");
 
 // Password manager.
 session_pref("signon.rememberSignons", true);
