@@ -249,7 +249,7 @@ alternative_header_second_line_format = "{{$4%a$/b$9}{ - $3%b$9}$7{ (%y)}}|{%D}"
 ##   not available.
 ##
 #
-song_columns_list_format = "(7f)[cyan]{n} (25)[yellow]{a} (40)[blue]{t|f} (25)[green]{b} (5)[green]{y} (7f)[cyan]{l}"
+song_columns_list_format = "(7f)[cyan]{n} (25)[yellow]{a} (40)[blue]{t|f} (25)[green]{b} (5)[cyan]{y} (7f)[cyan]{l}"
 #
 ##### various settings #####
 #
