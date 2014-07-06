@@ -5,4 +5,5 @@ A set of configuration files for Emacs (using
 [Conkeror](http://conkeror.org/),
 [i3 wm](http://i3wm.org/)/[i3blocks](https://github.com/vivien/i3blocks),
 [dmenu/xboomx](https://bitbucket.org/dehun/xboomx/wiki/Home),
-[mpd](http://www.musicpd.org/)/[ncmpcpp](http://ncmpcpp.rybczak.net/).
+[mpd](http://www.musicpd.org/)/[ncmpcpp](http://ncmpcpp.rybczak.net/),
+[ranger file manager](http://ranger.nongnu.org/).
