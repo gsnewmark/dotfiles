@@ -3,4 +3,4 @@
     (global-hl-line-mode))
 
 ;; Set font
-(add-to-list 'default-frame-alist '(font . "M+ 1mn Regular-9"))
+(add-to-list 'default-frame-alist '(font . "Menlo-9"))
