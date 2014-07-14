@@ -37,4 +37,5 @@
 
 (add-hook 'scala-mode-hook
           (lambda ()
+            (set-fill-column 120)
             (setq imenu-generic-expression scala-imenu-generic-expression)))
