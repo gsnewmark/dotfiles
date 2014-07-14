@@ -10,3 +10,6 @@
 (add-hook 'markdown-mode-hook
           (lambda ()
             (auto-fill-mode)))
+
+;; Enable auto-indent
+(electric-indent-mode +1)
