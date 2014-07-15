@@ -3,6 +3,8 @@ lein/self-installs/*
 lein/repl-history
 sbt/boot/*
 sbt/plugins/*/*
+sbt/0.13/plugins/project
+sbt/0.13/plugins/target
 xboomx/xboomx.db
 mpd/mpd.db
 mpd/mpd.log

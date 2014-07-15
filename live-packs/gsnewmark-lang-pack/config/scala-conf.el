@@ -1,12 +1,3 @@
-(live-add-pack-lib "sbt-mode")
-(require 'sbt-mode)
-
-(add-hook 'sbt-mode-hook
-          '(lambda ()
-             (setq compilation-skip-threshold 1)
-             (local-set-key (kbd "C-a") 'comint-bol)
-             (local-set-key (kbd "M-RET") 'comint-accumulate)))
-
 (live-add-pack-lib "scala-mode2")
 (require 'scala-mode2)
 
@@ -39,3 +30,7 @@
           (lambda ()
             (set-fill-column 120)
             (setq imenu-generic-expression scala-imenu-generic-expression)))
+
+(live-add-pack-lib "ensime-emacs")
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
