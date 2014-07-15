@@ -4,6 +4,21 @@
 (custom-set-variables
  '(scala-indent:default-run-on-strategy scala-indent:eager-strategy))
 
+;; from https://github.com/tototoshi/dotemacs/blob/master/my-scala-config.el#L28
+(setq scala-imenu-generic-expression
+      '(("var" "\\(var +\\)\\([^(): ]+\\)" 2)
+        ("val" "\\(val +\\)\\([^(): ]+\\)" 2)
+        ("override def" "^[ \\t]*\\(override\\) +\\(def +\\)\\([^(): ]+\\)" 3)
+        ("private def" "^[ \\t]*\\(private\\(\\[.*?\\]+\\)*\\) +\\(def +\\)\\([^(): ]+\\)" 4)
+        ("protected def" "^[ \\t]*\\(protected\\(\\[.*?\\]+\\)*\\) +\\(def +\\)\\([^(): ]+\\)" 4)
+        ("implicit def" "^[ \\t]*\\(implicit\\) +\\(def +\\)\\([^(): ]+\\)" 3)
+        ("def" "^[ \\t]*\\(def +\\)\\([^(): ]+\\)" 2)
+        ("trait" "\\(trait +\\)\\([^(): ]+\\)" 2)
+        ("class" "^[ \\t]*\\(class +\\)\\([^(): ]+\\)" 2)
+        ("case class" "^[ \\t]*\\(case class +\\)\\([^(): ]+\\)" 2)
+        ("abstract class" "^[ \\t]*\\(abstract class +\\)\\([^(): ]+\\)" 2)
+        ("object" "\\(object +\\)\\([^(): ]+\\)" 2)))
+
 (add-hook 'scala-mode-hook
           '(lambda ()
              (local-set-key (kbd "RET")
@@ -15,21 +30,11 @@
                             'scala-indent:indent-with-reluctant-strategy)
              (local-set-key (kbd "M-.") 'sbt-find-definitions)
              (local-set-key (kbd "C-x '") 'sbt-run-previous-command)
-             (electric-pair-mode)))
+             (local-set-key (kbd "C-c M-j") 'ensime)
+             (electric-pair-mode)
+             (set-fill-column 120)
+             (setq imenu-generic-expression scala-imenu-generic-expression)))
 (add-hook 'scala-mode-hook 'flyspell-prog-mode)
-
-(setq scala-imenu-generic-expression
-      '(("Methods"   "^\\( *\\(def\\) +.+\\)"     1)
-        ("Values"    "^\\( *\\(val\\) +.+\\)"     1)
-        ("Variables" "^\\( *\\(var\\) +.+\\)"     1)
-        ("Objects"   "^\\( *\\(object\\) +.+\\)"  1)
-        ("Classes"   "^\\( *\\(class\\) +.+\\)"   1)
-        ("Types"     "^\\( *\\(type\\) +.+\\)"    1)))
-
-(add-hook 'scala-mode-hook
-          (lambda ()
-            (set-fill-column 120)
-            (setq imenu-generic-expression scala-imenu-generic-expression)))
 
 (live-add-pack-lib "ensime-emacs")
 (require 'ensime)

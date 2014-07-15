@@ -6,10 +6,10 @@
 (setq current-input-method nil)
 
 ;; whitespace config
-(setq whitespace-style '(face lines trailing))
+(setq whitespace-style '(face lines-tail trailing))
 (setq-default whitespace-line-column fill-column)
 (global-whitespace-mode t)
-(setq whitespace-global-modes '(not erc-mode))
+(setq whitespace-global-modes '(not erc-mode scala-mode))
 
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
