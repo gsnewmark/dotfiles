@@ -229,7 +229,7 @@ for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggl
 
 exec_always --no-startup-id compton -CGb
 
-exec --no-startup-id setxkbmap -option setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
+exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
 exec --no-startup-id mpd
 exec --no-startup-id mpdscribble
 exec --no-startup-id emacs --daemon
