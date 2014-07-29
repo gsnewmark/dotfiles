@@ -1,39 +1,12 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
-[submodule "emacs.d"]
-	path = emacs.d
-	url = git://github.com/overtone/emacs-live
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = https://github.com/huyz/dircolors-solarized.git
 [submodule "zsh-syntax-highlighting"]
 	path = zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "live-packs/gsnewmark-appearence-pack/lib/solarized-emacs"]
-	path = live-packs/gsnewmark-appearence-pack/lib/solarized-emacs
-	url = https://github.com/bbatsov/solarized-emacs.git
 [submodule "zsh-notifier"]
 	path = zsh-notifier
 	url = https://gist.github.com/4576452.git
-[submodule "live-packs/gsnewmark-lang-pack/lib/Emacs-Groovy-Mode"]
-	path = live-packs/gsnewmark-lang-pack/lib/Emacs-Groovy-Mode
-	url = git://github.com/russel/Emacs-Groovy-Mode.git
-[submodule "live-packs/gsnewmark-lang-pack/lib/scala-mode2"]
-	path = live-packs/gsnewmark-lang-pack/lib/scala-mode2
-	url = git://github.com/hvesalai/scala-mode2.git
-[submodule "live-packs/tern-pack"]
-	path = live-packs/tern-pack
-	url = https://github.com/thatismatt/tern-pack
-[submodule "live-packs/gsnewmark-foundation-pack/lib/erc-hl-nicks"]
-	path = live-packs/gsnewmark-foundation-pack/lib/erc-hl-nicks
-	url = git@github.com:leathekd/erc-hl-nicks.git
-[submodule "live-packs/gsnewmark-appearence-pack/lib/smart-mode-line"]
-	path = live-packs/gsnewmark-appearence-pack/lib/smart-mode-line
-	url = https://github.com/Bruce-Connor/smart-mode-line
-[submodule "live-packs/gsnewmark-foundation-pack/lib/xclip"]
-	path = live-packs/gsnewmark-foundation-pack/lib/xclip
-	url = https://github.com/emacsmirror/xclip
-[submodule "live-packs/gsnewmark-lang-pack/lib/ensime-emacs"]
-	path = live-packs/gsnewmark-lang-pack/lib/ensime-emacs
-	url = git@github.com:ensime/ensime-emacs.git

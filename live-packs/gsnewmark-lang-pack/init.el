@@ -1,5 +1,0 @@
-(live-load-config-file "generic-conf.el")
-(live-load-config-file "clojure-conf.el")
-(live-load-config-file "groovy-conf.el")
-(live-load-config-file "scala-conf.el")
-(live-load-config-file "js-conf.el")
