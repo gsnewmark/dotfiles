@@ -10,3 +10,6 @@
 [submodule "zsh-notifier"]
 	path = zsh-notifier
 	url = https://gist.github.com/4576452.git
+[submodule "emacs.d"]
+	path = emacs.d
+	url = git@github.com:gsnewmark/prelude.git
