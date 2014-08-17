@@ -1,5 +1,5 @@
 {:user {:dependencies [[slamhound "1.5.5"]]
-        :plugins [[cider/cider-nrepl "0.7.0"]
+        :plugins [[cider/cider-nrepl "0.8.0-SNAPSHOT"]
                   [lein-try "0.4.3"]
                   [lein-ancient "0.6.0-SNAPSHOT"]
                   [lein-bikeshed "0.1.7"]
