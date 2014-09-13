@@ -440,9 +440,9 @@ display_bitrate = "yes"
 ## ncmpcpp's browser screen.
 ##
 #
-allow_physical_files_deletion = "yes"
+#allow_physical_files_deletion = "yes"
 #
-allow_physical_directories_deletion = "yes"
+#allow_physical_directories_deletion = "yes"
 #
 #external_editor = ""
 #
