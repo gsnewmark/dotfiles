@@ -18,10 +18,10 @@ bindsym $mod+Return exec gnome-terminal --hide-menubar
 bindcode $mod+Shift+24 kill
 
 # d - start dmenu (a program launcher)
-bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="xboomx"
+bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="dmenuwrapper"
 
 # Shift+d - choose a running program
-bindcode $mod+Shift+40 exec --no-startup-id quickswitch.py --dmenu="dmenu -b -i -z -l 20 -fn 'Menlo-9' -nb '#073642' -nf '#eee8d5' -sb '#268bd2'"
+bindcode $mod+Shift+40 exec --no-startup-id quickswitch.py --dmenu="dmenu -b -z -dim 0.75 -l 20 -fn 'Menlo-9' -nb '#073642' -nf '#eee8d5' -sb '#268bd2'"
 
 # change focus (h, j, k, l)
 bindcode $mod+43 focus left
