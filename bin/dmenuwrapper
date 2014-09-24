@@ -2,9 +2,35 @@
 
 // Based on https://github.com/thegnome/dotfiles/blob/master/.config/bspwm/dmenuwrapper
 
+## Get screen info
+SCREEN_1=($(xrandr | grep -w connected  | awk -F'[ +]' '{print $1,$3,$5}' |
+        head -n 1))
+SCREEN_2=($(xrandr | grep -w connected  | awk -F'[ +]' '{print $1,$3,$5}' |
+        tail -n 1))
+
+if [ ${SCREEN_2[2]} -eq 0  ]
+then
+    TOP=(${SCREEN_2[@]});
+    BOTTOM=(${SCREEN_1[@]});
+else
+    TOP=(${SCREEN_1[@]});
+    BOTTOM=(${SCREEN_2[@]});
+
+fi
+
+CURRENT_Y_POS=$(xwininfo -id $(xdotool getactivewindow) | grep "Absolute upper-left Y" |
+    awk '{print $NF}')
+
+if [ "$CURRENT_Y_POS" -gt "${BOTTOM[2]}" ]
+then
+    CURRENT_SCREEN="${BOTTOM[0]}"
+else
+    CURRENT_SCREEN="${TOP[0]}"
+fi
+
 # Figure out current screen size
-SCREENWIDTH=$(xrandr -q | grep Screen | awk '{print $8}')
-SCREENHEIGHT=$(xrandr -q | grep Screen | awk '{print $10}' | sed s/,//)
+SCREENWIDTH=$(xrandr -q | grep $CURRENT_SCREEN | awk '{print $3}' | awk -F '+' '{print $1}' | awk -F 'x' '{print $1}')
+SCREENHEIGHT=$(xrandr -q | grep $CURRENT_SCREEN | awk '{print $3}' | awk -F '+' '{print $1}' | awk -F 'x' '{print $2}')
 
 # How close to the screen edges do we begin/end?
 EDGEWIDTH=50
