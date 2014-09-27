@@ -144,15 +144,31 @@
 ##  - set_volume
 ##  - filter_playlist_on_priorities
 ##
+
+def_key "k"
+  scroll_up
+
+def_key "j"
+  scroll_down
+
+def_key "d"
+  delete_browser_items
+
+def_key "d"
+  delete_playlist_items
+
+def_key "d"
+  delete_stored_playlist
+
+def_key "l"
+  next_column
+
+def_key "h"
+  previous_column
+
 #
 #def_key "mouse"
 #  mouse_event
-#
-def_key "k"
-  scroll_up
-#
-def_key "j"
-  scroll_down
 #
 #def_key "["
 #  scroll_up_album
@@ -184,18 +200,6 @@ def_key "j"
 #def_key "enter"
 #  press_enter
 #
-def_key "delete"
-  delete_browser_items
-#
-#def_key "delete"
-#  delete_playlist_items
-#
-#def_key "delete"
-#  delete_stored_playlist
-#
-def_key "l"
-  next_column
-#
 #def_key "right"
 #  slave_screen
 #
@@ -204,9 +208,6 @@ def_key "l"
 #
 #def_key "+"
 #  volume_up
-#
-def_key "h"
-  previous_column
 #
 #def_key "left"
 #  master_screen
