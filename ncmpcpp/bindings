@@ -166,6 +166,9 @@ def_key "l"
 def_key "h"
   previous_column
 
+def_key "L"
+  show_lyrics
+
 #
 #def_key "mouse"
 #  mouse_event
@@ -406,9 +409,6 @@ def_key "h"
 #
 #def_key "g"
 #  jump_to_position_in_song
-#
-#def_key "l"
-#  show_lyrics
 #
 #def_key "v"
 #  reverse_selection
