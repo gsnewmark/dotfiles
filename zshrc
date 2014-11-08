@@ -54,3 +54,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 [ -e $HOME/.zsh-notifier/notifyosd.zsh ] && . $HOME/.zsh-notifier/notifyosd.zsh
 
 export SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"
+
+# added by travis gem
+[ -f /home/gsnewmark/.travis/travis.sh ] && source /home/gsnewmark/.travis/travis.sh
