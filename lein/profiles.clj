@@ -1,5 +1,6 @@
 {:user {:dependencies [[slamhound "1.5.5"]]
         :plugins [[cider/cider-nrepl "0.8.1"]
+                  [refactor-nrepl "0.1.0"]
                   [lein-try "0.4.3"]
                   [lein-ancient "0.6.0-SNAPSHOT" :exclusions [org.clojure/core.cache]]
                   [lein-bikeshed "0.1.8"]
