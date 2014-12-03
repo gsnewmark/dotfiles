@@ -45,4 +45,4 @@ FG="#eee8d5"
 BG="#073642"
 FONT="Menlo-9"
 
-dmenu_run -w $DMENUWIDTH -x $XPOS -y $YPOS -fn ${FONT} -nb $BG -nf $FG -sb $BGSELECT -p "D" -dim 0.75
+dmenu_run -z -w $DMENUWIDTH -x $XPOS -y $YPOS -fn ${FONT} -nb $BG -nf $FG -sb $BGSELECT -p "D" -dim 0.75
