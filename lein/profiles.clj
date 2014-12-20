@@ -6,5 +6,5 @@
                   [lein-bikeshed "0.2.0"]
                   [lein-kibit "0.0.8"]
                   [jonase/eastwood "0.2.0"]
-                  [lein-gorilla "0.3.3"]]
+                  [lein-gorilla "0.3.4"]]
         :aliases {"slamhound" ["run" "-m" "slam.hound"]}}}
