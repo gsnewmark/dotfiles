@@ -33,16 +33,18 @@ SCREENWIDTH=$(xrandr -q | grep $CURRENT_SCREEN | awk '{print $3}' | awk -F '+' '
 SCREENHEIGHT=$(xrandr -q | grep $CURRENT_SCREEN | awk '{print $3}' | awk -F '+' '{print $1}' | awk -F 'x' '{print $2}')
 
 # How close to the screen edges do we begin/end?
-EDGEWIDTH=50
+EDGEWIDTH=$(($SCREENWIDTH / 4))
 DMENUWIDTH=$(($SCREENWIDTH - $(($EDGEWIDTH + $EDGEWIDTH))))
+
+ENTRIES_COUNT=20
 
 # dmenu X/Y coordinates
 XPOS=$EDGEWIDTH
-YPOS=$(($(($SCREENHEIGHT / 2)) - 15))
+YPOS=$(($(($SCREENHEIGHT / 2)) - 15 * $ENTRIES_COUNT / 2))
 
 BGSELECT="#268bd2"
 FG="#eee8d5"
 BG="#073642"
 FONT="Menlo-9"
 
-dmenu_run -z -w $DMENUWIDTH -x $XPOS -y $YPOS -fn ${FONT} -nb $BG -nf $FG -sb $BGSELECT -p "D" -dim 0.75
+dmenu_run -z -l $ENTRIES_COUNT -w $DMENUWIDTH -x $XPOS -y $YPOS -fn ${FONT} -nb $BG -nf $FG -sb $BGSELECT -dim 0.75
