@@ -129,6 +129,11 @@ bindcode $mod+27 mode "resize"
 # x
 bindcode $mod+53 [urgent=latest] focus
 
+# o
+bindcode $mod+32 move workspace to output down
+# Shift+o
+bindcode $mod+Shift+32 move workspace to output right
+
 # Control+Shift+p - shutdown menu
 bindcode $mod+Control+Shift+33 exec xfce4-session-logout
 # Shift+s - xfce settings
