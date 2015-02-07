@@ -6,8 +6,7 @@ import os
 from shutil import rmtree, copytree
 
 FILES_TO_IGNORE = {'bootstrap', 'bin', 'README.md',
-                   'dircolors-solarized',
-                   'gnome-terminal-colors-solarized'}
+                   'dircolors-solarized'}
 DIRCOLORS_DB_FILE = 'dircolors-solarized/dircolors.ansi-universal'
 OH_MY_ZSH_DIR = 'oh-my-zsh'
 OH_MY_ZSH_CUSTOM_PLUGINS = {'zsh-syntax-highlighting'}

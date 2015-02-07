@@ -12,7 +12,7 @@ font pango:Menlo, FontAwesome 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal --hide-menubar
+bindsym $mod+Return exec termite
 
 # Shift+q - kill focused window
 bindcode $mod+Shift+24 kill
@@ -155,7 +155,7 @@ bindcode $mod+Control+Shift+26 exec --no-startup-id emacs
 # Control+i - Intellij Idea
 bindcode $mod+Control+31 exec --no-startup-id intellij-idea-ultimate-edition
 # Control+f - ranger
-bindcode $mod+Control+41 exec --no-startup-id gnome-terminal --hide-menubar -e ranger
+bindcode $mod+Control+41 exec --no-startup-id termite -e ranger
 # Control+Shift+f - Thunar
 bindcode $mod+Control+Shift+41 exec --no-startup-id thunar
 # Control+b - Conkeror
@@ -171,7 +171,7 @@ bindcode $mod+Control+58 exec --no-startup-id geary
 # Control+d - Deadbeef
 bindcode $mod+Control+40 exec --no-startup-id deadbeef
 # Control+n - ncmpcpp
-bindcode $mod+Control+57 exec --no-startup-id gnome-terminal --hide-menubar -e ncmpcpp
+bindcode $mod+Control+57 exec --no-startup-id termite -e ncmpcpp
 # Control+g - Steam
 bindcode $mod+Control+42 exec --no-startup-id steam
 # Control+k - Calibre
