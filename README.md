@@ -6,4 +6,5 @@ A set of configuration files for Emacs
 [i3 wm](http://i3wm.org/)/[i3blocks](https://github.com/vivien/i3blocks),
 dmenu, [mpd](http://www.musicpd.org/)/[ncmpcpp](http://ncmpcpp.rybczak.net/),
 [ranger file manager](http://ranger.nongnu.org/),
-[termite](https://github.com/thestinger/termite).
+[termite](https://github.com/thestinger/termite),
+[zathura](https://pwmt.org/projects/zathura/).
