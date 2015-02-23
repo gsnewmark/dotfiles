@@ -45,6 +45,6 @@ YPOS=$(($(($SCREENHEIGHT / 2)) - 15 * $ENTRIES_COUNT / 2))
 BGSELECT="#268bd2"
 FG="#eee8d5"
 BG="#073642"
-FONT="Fantasque Sans Mono-10"
+FONT="Menlo-9"
 
 dmenu_run -z -l $ENTRIES_COUNT -w $DMENUWIDTH -x $XPOS -y $YPOS -fn "$FONT" -nb $BG -nf $FG -sb $BGSELECT -dim 0.75
