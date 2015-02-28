@@ -47,6 +47,8 @@ alias lein="noglob lein"
 
 alias conkeror="xulrunner /usr/share/conkeror/application.ini"
 
+alias top-10-size="du -hsx * | sort -rh | head -10"
+
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
@@ -56,6 +58,3 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 export SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"
 
 export BOOT_JVM_OPTIONS="-Xmx2g -client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xverify:none"
-
-# added by travis gem
-[ -f /home/gsnewmark/.travis/travis.sh ] && source /home/gsnewmark/.travis/travis.sh
