@@ -47,7 +47,7 @@ alias lein="noglob lein"
 
 alias conkeror="xulrunner /usr/share/conkeror/application.ini"
 
-alias top-10-size="du -hcsx * .* | sort -rh | head -10"
+alias top-10-size="du -hcsx -- *(D) | sort -rh | head -10"
 
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
