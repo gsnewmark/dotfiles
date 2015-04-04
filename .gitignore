@@ -16,3 +16,4 @@ ncmpcpp/artists/*
 config/*
 node_modules
 config/ranger/bookmarks/*
+boot/cache/*
