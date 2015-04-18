@@ -7,4 +7,5 @@ A set of configuration files for Emacs
 dmenu, [mpd](http://www.musicpd.org/)/[ncmpcpp](http://ncmpcpp.rybczak.net/),
 [ranger file manager](http://ranger.nongnu.org/),
 [termite](https://github.com/thestinger/termite),
-[zathura](https://pwmt.org/projects/zathura/).
+[zathura](https://pwmt.org/projects/zathura/),
+[dunst](https://github.com/knopwob/dunst).
