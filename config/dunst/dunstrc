@@ -40,7 +40,7 @@
     # width is 0.
     shrink = yes
 
-    transparency = 30
+    transparency = 20
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
