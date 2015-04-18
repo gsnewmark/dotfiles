@@ -1254,7 +1254,7 @@ class extract(Command):
         from os.path import basename
         from ranger.core.loader import CommandLoader
 
-        cwd = self.fm.env.cwd
+        cwd = self.fm.thisdir
         marked_files = cwd.get_selection()
 
         if not marked_files:
@@ -1290,7 +1290,7 @@ class compress(Command):
         """
         from ranger.core.loader import CommandLoader
 
-        cwd = self.fm.env.cwd
+        cwd = self.fm.thisdir
         marked_files = cwd.get_selection()
 
         if not marked_files:
