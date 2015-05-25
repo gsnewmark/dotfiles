@@ -153,7 +153,7 @@ bindcode $mod+Control+26 exec --no-startup-id emacsclient -c
 # Control+Shift+e - Emacs
 bindcode $mod+Control+Shift+26 exec --no-startup-id emacs
 # Control+i - Intellij Idea
-bindcode $mod+Control+31 exec --no-startup-id intellij-idea-ce-eap
+bindcode $mod+Control+31 exec --no-startup-id /opt/intellij-idea-ce-eap/bin/idea.sh
 # Control+f - ranger
 bindcode $mod+Control+41 exec --no-startup-id termite -e ranger
 # Control+Shift+f - Thunar
