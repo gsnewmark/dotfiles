@@ -1,0 +1,9 @@
+gtk-icon-theme-name = "Faenza-Darkest"
+gtk-theme-name = "Numix Solarized"
+
+style "user-font"
+{
+        font_name="Helvetica Neue 10"
+}
+widget_class "*" style "user-font"
+gtk-font-name = "Helvetica Neue 10"
