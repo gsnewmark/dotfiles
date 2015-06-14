@@ -30,7 +30,9 @@
      emacs-lisp
      erc
      (git :variables
-          git-gutter-use-fringe t)
+          git-magit-status-fullscreen t
+          git-enable-github-support   t
+          git-gutter-use-fringe       t)
      haskell
      html
      javascript
@@ -157,8 +159,6 @@ before layers configuration."
    ;; specified with an installed package.
    ;; Not used for now.
    dotspacemacs-default-package-repository nil
-   git-enable-github-support t
-   git-magit-status-fullscreen t
    tab-width 4
    fill-collumn 78
    )
