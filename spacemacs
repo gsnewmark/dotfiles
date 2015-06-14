@@ -212,7 +212,10 @@ layers configuration."
           ("j" "Journal" entry
            (file+datetree (concat org-directory "/journal.org"))
            "* %^{Description}\n  Added: %U\n%?")))
+  (setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
+  (setq org-startup-indented nil)
   (evil-leader/set-key "oc" 'org-capture)
+  (evil-leader/set-key "oa" 'org-agenda)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
