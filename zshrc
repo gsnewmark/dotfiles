@@ -13,7 +13,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow archlinux last-working-dir lein zsh-syntax-highlighting vagrant mvn sbt docker)
+plugins=(git git-flow archlinux last-working-dir lein vagrant mvn sbt docker zsh-syntax-highlighting)
 
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
