@@ -179,6 +179,8 @@ bindcode $mod+Control+25 exec --no-startup-id chromium
 bindcode $mod+Control+28 exec --no-startup-id corebird
 # Control+c - Skype
 bindcode $mod+Control+54 exec --no-startup-id skype
+# Control+s - Scudcloud
+bindcode $mod+Control+39 exec --no-startup-id scudcloud
 # Control+m - Geary
 bindcode $mod+Control+58 exec --no-startup-id geary
 # Control+d - Deadbeef
