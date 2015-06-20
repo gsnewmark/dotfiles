@@ -161,6 +161,7 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    tab-width 4
    fill-collumn 78
+   whitespace-line-column fill-column
    )
   ;; User initialization goes here
   )
@@ -175,6 +176,12 @@ layers configuration."
   (custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
 
   (global-company-mode)
+
+  (spacemacs/mode-line-minor-modes-toggle)
+
+  (setq whitespace-style '(face lines-tail trailing))
+  (setq whitespace-global-modes '(not erc-mode scala-mode))
+  (global-whitespace-mode t)
 
   (setq clojure-enable-fancify-symbols t)
 
