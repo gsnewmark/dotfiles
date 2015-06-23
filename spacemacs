@@ -160,8 +160,6 @@ before layers configuration."
    ;; Not used for now.
    dotspacemacs-default-package-repository nil
    tab-width 4
-   fill-collumn 78
-   whitespace-line-column fill-column
    )
   ;; User initialization goes here
   )
@@ -171,6 +169,8 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
   (setq powerline-default-separator 'slant)
+  (setq-default fill-column 78)
+  (setq-default whitespace-line-column fill-column)
 
   (custom-set-variables '(solarized-use-variable-pitch nil))
   (custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
