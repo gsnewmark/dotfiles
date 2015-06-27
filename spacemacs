@@ -171,6 +171,7 @@ layers configuration."
   (setq powerline-default-separator 'slant)
   (setq-default fill-column 78)
   (setq-default whitespace-line-column fill-column)
+  (add-hook 'before-save-hook 'whitespace-cleanup)
 
   (custom-set-variables '(solarized-use-variable-pitch nil))
   (custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
