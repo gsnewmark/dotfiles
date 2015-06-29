@@ -185,6 +185,7 @@ layers configuration."
   (global-whitespace-mode t)
 
   (setq clojure-enable-fancify-symbols t)
+  (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
