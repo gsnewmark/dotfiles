@@ -1,6 +1,6 @@
 # gsnewmark's *nix configuration
 A set of configuration files for Emacs
-([Prelude](https://github.com/bbatsov/prelude)), zsh
+([Spacemacs](https://github.com/syl20bnr/spacemacs)), zsh
 ([oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)),
 [Conkeror](http://conkeror.org/),
 [i3 wm](http://i3wm.org/)/[i3blocks](https://github.com/vivien/i3blocks),
