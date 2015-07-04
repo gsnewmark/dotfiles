@@ -31,8 +31,8 @@
      erc
      (git :variables
           git-magit-status-fullscreen t
-          git-enable-github-support   t
           git-gutter-use-fringe       t)
+     github
      haskell
      html
      javascript
@@ -45,6 +45,7 @@
             shell-default-shell 'ansi-term
             shell-default-term-shell "/bin/zsh")
      syntax-checking
+     version-control
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
