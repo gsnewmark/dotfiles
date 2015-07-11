@@ -3,7 +3,7 @@
 (swap! boot.repl/*default-dependencies*
        concat '[[cider/cider-nrepl "0.10.0-SNAPSHOT"]
                 [org.clojure/tools.nrepl "0.2.10"]
-                [refactor-nrepl "1.0.5"]])
+                [refactor-nrepl "1.2.0-SNAPSHOT"]])
 
 (swap! boot.repl/*default-middleware*
        concat '[[cider.nrepl/cider-middleware]
