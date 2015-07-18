@@ -109,3 +109,7 @@
     history = ctrl+grave
 
     context = ctrl+shift+period
+
+[pa-applet]
+		appname = *pa-applet*
+		format = "%p"
