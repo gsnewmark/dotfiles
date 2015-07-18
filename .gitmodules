@@ -13,3 +13,6 @@
 [submodule "emacs.d"]
 	path = emacs.d
 	url = https://github.com/syl20bnr/spacemacs
+[submodule "bin/i3blocks-battery"]
+	path = bin/i3blocks-battery
+	url = git@github.com:kb100/i3blocks-battery.git
