@@ -194,6 +194,9 @@ layers configuration."
 
   (setq ediff-split-window-function 'split-window-horizontally)
 
+  (setq browse-url-browser-function 'browse-url-generic
+        browse-url-generic-program "qutebrowser")
+
   (setq org-directory "~/Dropbox/org")
   (setq org-refile-targets '((nil :maxlevel . 5)
                              (org-agenda-files :maxlevel . 3)))
