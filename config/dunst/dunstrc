@@ -1,5 +1,5 @@
 [global]
-    font = Menlo 9
+    font = Source Code Pro 9
 
     allow_markup = yes
 

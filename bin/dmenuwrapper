@@ -1,50 +1,15 @@
 #!/bin/sh
 
-// Based on https://github.com/thegnome/dotfiles/blob/master/.config/bspwm/dmenuwrapper
-
-## Get screen info
-SCREEN_1=($(xrandr | grep -w connected  | awk -F'[ +]' '{print $1,$3,$5}' |
-        head -n 1))
-SCREEN_2=($(xrandr | grep -w connected  | awk -F'[ +]' '{print $1,$3,$5}' |
-        tail -n 1))
-
-if [ ${SCREEN_2[2]} -eq 0  ]
-then
-    TOP=(${SCREEN_2[@]});
-    BOTTOM=(${SCREEN_1[@]});
-else
-    TOP=(${SCREEN_1[@]});
-    BOTTOM=(${SCREEN_2[@]});
-
-fi
-
-CURRENT_Y_POS=$(xwininfo -id $(xdotool getactivewindow) | grep "Absolute upper-left Y" |
-    awk '{print $NF}')
-
-if [ "$CURRENT_Y_POS" -gt "${BOTTOM[2]}" ]
-then
-    CURRENT_SCREEN="${BOTTOM[0]}"
-else
-    CURRENT_SCREEN="${TOP[0]}"
-fi
-
-# Figure out current screen size
-SCREENWIDTH=$(xrandr -q | grep $CURRENT_SCREEN | awk '{print $3}' | awk -F '+' '{print $1}' | awk -F 'x' '{print $1}')
-SCREENHEIGHT=$(xrandr -q | grep $CURRENT_SCREEN | awk '{print $3}' | awk -F '+' '{print $1}' | awk -F 'x' '{print $2}')
-
-# How close to the screen edges do we begin/end?
-EDGEWIDTH=$(($SCREENWIDTH / 4))
-DMENUWIDTH=$(($SCREENWIDTH - $(($EDGEWIDTH + $EDGEWIDTH))))
+COMMAND=${1:-"dmenu_run"}
+POSITION=${2:-"t"}
 
 ENTRIES_COUNT=20
-
-# dmenu X/Y coordinates
-XPOS=$EDGEWIDTH
-YPOS=$(($(($SCREENHEIGHT / 2)) - 15 * $ENTRIES_COUNT / 2))
 
 BGSELECT="#268bd2"
 FG="#eee8d5"
 BG="#073642"
-FONT="Menlo-9"
+FONT="Source Code Pro-9"
 
-dmenu_run -z -l $ENTRIES_COUNT -w $DMENUWIDTH -x $XPOS -y $YPOS -fn "$FONT" -nb $BG -nf $FG -sb $BGSELECT -dim 0.75
+${COMMAND} -${POSITION} -z -l ${ENTRIES_COUNT} \
+           -fn "$FONT" -dim 0.75\
+           -nb ${BG} -nf ${FG} -sb ${BGSELECT}

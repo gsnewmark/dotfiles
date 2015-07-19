@@ -1,4 +1,4 @@
-set font "Menlo 9"
+set font "Source Code Pro 9"
 
 set incremental-search true
 
