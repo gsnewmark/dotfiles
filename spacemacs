@@ -30,8 +30,7 @@
      emacs-lisp
      erc
      (git :variables
-          git-magit-status-fullscreen t
-          git-gutter-use-fringe       t)
+          git-magit-status-fullscreen t)
      github
      haskell
      html
