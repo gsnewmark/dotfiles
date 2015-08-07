@@ -5,5 +5,6 @@
                   [lein-try "0.4.3"]
                   [lein-ancient "0.6.7"]
                   [lein-bikeshed "0.2.0"]
-                  [lein-gorilla "0.3.4"]]
+                  [lein-gorilla "0.3.4"]
+                  [com.jakemccrary/lein-test-refresh "0.10.0"]]
         :aliases {"slamhound" ["run" "-m" "slam.hound"]}}}
