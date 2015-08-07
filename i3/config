@@ -235,7 +235,7 @@ focus_follows_mouse no
 
 # App → workspace assignments
 assign [class="jetbrains-idea"] → 
-assign [class="Conkeror"] → 
+assign [class="qutebrowser"] → 
 assign [class="Skype"] → 
 assign [class="Geary"] → 
 assign [class="Steam"] → 
