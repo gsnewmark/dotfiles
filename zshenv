@@ -8,3 +8,9 @@ export PATH="`ruby -rubygems -e 'puts Gem.user_dir'`/bin:$PATH"
 TE="emacsclient -t -a emacs"
 export VISUAL=$TE
 export EDITOR=$TE
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+    export GPG_AGENT_INFO
+fi
