@@ -1,10 +1,6 @@
-{:user {:dependencies [[slamhound "1.5.5"]
-                       [org.clojure/tools.nrepl "0.2.10"]]
+{:user {:dependencies [[org.clojure/tools.nrepl "0.2.10"]]
         :plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]
                   [refactor-nrepl "1.2.0-SNAPSHOT"]
-                  [lein-try "0.4.3"]
                   [lein-ancient "0.6.7"]
-                  [lein-bikeshed "0.2.0"]
                   [lein-gorilla "0.3.4"]
-                  [com.jakemccrary/lein-test-refresh "0.10.0"]]
-        :aliases {"slamhound" ["run" "-m" "slam.hound"]}}}
+                  [com.jakemccrary/lein-test-refresh "0.10.0"]]}}
