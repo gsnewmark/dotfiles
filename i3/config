@@ -71,28 +71,28 @@ bindsym $mod+space focus mode_toggle
 bindcode $mod+38 focus parent
 
 # switch to workspace
-bindsym $mod+1 workspace 
-bindsym $mod+2 workspace 
-bindsym $mod+3 workspace 
-bindsym $mod+4 workspace 
-bindsym $mod+5 workspace 
-bindsym $mod+6 workspace 
-bindsym $mod+7 workspace 
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 
-bindsym $mod+0 workspace 
+bindsym $mod+1 workspace 1:
+bindsym $mod+2 workspace 2:
+bindsym $mod+3 workspace 3:
+bindsym $mod+4 workspace 4:
+bindsym $mod+5 workspace 5:
+bindsym $mod+6 workspace 6:
+bindsym $mod+7 workspace 7:
+bindsym $mod+8 workspace 8:
+bindsym $mod+9 workspace 9:
+bindsym $mod+0 workspace 10:
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 
-bindsym $mod+Shift+2 move container to workspace 
-bindsym $mod+Shift+3 move container to workspace 
-bindsym $mod+Shift+4 move container to workspace 
-bindsym $mod+Shift+5 move container to workspace 
-bindsym $mod+Shift+6 move container to workspace 
-bindsym $mod+Shift+7 move container to workspace 
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 
-bindsym $mod+Shift+0 move container to workspace 
+bindsym $mod+Shift+1 move container to workspace 1:
+bindsym $mod+Shift+2 move container to workspace 2:
+bindsym $mod+Shift+3 move container to workspace 3:
+bindsym $mod+Shift+4 move container to workspace 4:
+bindsym $mod+Shift+5 move container to workspace 5:
+bindsym $mod+Shift+6 move container to workspace 6:
+bindsym $mod+Shift+7 move container to workspace 7:
+bindsym $mod+Shift+8 move container to workspace 8:
+bindsym $mod+Shift+9 move container to workspace 9:
+bindsym $mod+Shift+0 move container to workspace 10:
 
 # Shift+c - reload the configuration file
 bindcode $mod+Shift+54 reload
@@ -186,7 +186,7 @@ bindcode $mod+Control+58 exec --no-startup-id geary
 # Control+d - Deadbeef
 bindcode $mod+Control+40 exec --no-startup-id deadbeef
 # Control+n - ncmpcpp
-bindcode $mod+Control+57 exec --no-startup-id termite -e ncmpcpp
+bindcode $mod+Control+57 exec --no-startup-id termite -e ncmpcpp --class=ncmpcpp
 # Control+g - Steam
 bindcode $mod+Control+42 exec --no-startup-id steam
 # Control+k - Calibre
@@ -220,6 +220,7 @@ client.urgent           #2f343a #900000 #ffffff #900000
 bar {
     status_command i3blocks
     position       top
+    strip_workspace_numbers yes
     colors {
         # solarized
         background #002b36
@@ -227,18 +228,19 @@ bar {
         focused_workspace  #002b36 #002b36 #268bd2
         active_workspace   #002b36 #002b36 #268bd2
         inactive_workspace #002b36 #002b36 #586e75
-        urgent_workspace   #dc322f #dc322f #586e75
+        urgent_workspace   #dc322f #dc322f #93a1a1
     }
 }
 
 focus_follows_mouse no
 
 # App → workspace assignments
-assign [class="jetbrains-idea"] → 
-assign [class="qutebrowser"] → 
-assign [class="Skype"] → 
-assign [class="Geary"] → 
-assign [class="Steam"] → 
+assign [class="jetbrains-idea"] → 1:
+assign [class="Skype"] → 3:
+assign [class="Scudcloud"] → 3:
+assign [class="Geary"] → 4:
+assign [class="ncmpcpp"] → 5:
+assign [class="Steam"] → 9:
 
 exec_always --no-startup-id compton -CGb
 
