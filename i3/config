@@ -240,6 +240,7 @@ assign [class="Skype"] → 3:
 assign [class="Scudcloud"] → 3:
 assign [class="Geary"] → 4:
 assign [class="ncmpcpp"] → 5:
+assign [class="libprs500"] → 6:
 assign [class="Steam"] → 9:
 
 exec_always --no-startup-id compton -CGb
