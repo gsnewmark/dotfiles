@@ -206,8 +206,7 @@ layers configuration."
         '((sequence "TODO" "|" "DONE")
           (sequence "BUG" "|" "FIXED")
           (sequence "FEATURE" "|" "ADDED")
-          (sequence "READING" "|" "READ")
-          (sequence "HW TODO" "|" "HW DONE")))
+          (sequence "READING" "|" "READ")))
   (setq org-agenda-files
         (list (concat org-directory "/gtd.org")
               (concat org-directory "/reading-review.org")))
