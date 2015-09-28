@@ -5,6 +5,7 @@
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration."
   (setq-default
+   dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
@@ -32,7 +33,7 @@
      (git :variables
           git-magit-status-fullscreen t)
      github
-     haskell
+     (haskell :variables haskell-enable-ghc-mod-support t)
      html
      javascript
      markdown
@@ -56,7 +57,8 @@
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'
-   dotspacemacs-delete-orphan-packages t))
+   dotspacemacs-delete-orphan-packages t
+   ))
 
 (defun dotspacemacs/init ()
   "Initialization function.
@@ -158,13 +160,18 @@ before layers configuration."
    ;; The default package repository used if no explicit repository has been
    ;; specified with an installed package.
    ;; Not used for now.
-   dotspacemacs-default-package-repository nil
-   tab-width 4
-   )
-  ;; User initialization goes here
-  )
+   dotspacemacs-default-package-repository nil))
 
-(defun dotspacemacs/config ()
+(defun dotspacemacs/user-init ()
+  "Initialization function for user code.
+It is called immediately after `dotspacemacs/init'.  You are free to put any
+user code."
+  (setq-default
+   tab-width 4
+   ))
+
+
+(defun dotspacemacs/user-config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
@@ -178,7 +185,7 @@ layers configuration."
 
   (global-company-mode)
 
-  (spacemacs/mode-line-minor-modes-toggle)
+  (setq spacemacs-mode-line-minor-modesp nil)
 
   (setq whitespace-style '(face lines-tail trailing))
   (setq whitespace-global-modes '(not erc-mode scala-mode))
