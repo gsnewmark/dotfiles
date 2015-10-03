@@ -1,14 +1,16 @@
 [user]
-        name = Ivan Kryvoruchko
-        mail = gildraug@gmail.com
-        email = gildraug@gmail.com
+  name = Ivan Kryvoruchko
+  mail = gildraug@gmail.com
+  email = gildraug@gmail.com
 [github]
-        user = gsnewmark
-        password = secret
+  user = gsnewmark
+  password = secret
 [core]
-        excludesfile = ~/.gitignore_global
-        autocrlf = input
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
 [color]
-        ui = true
+  ui = true
 [push]
 	default = simple
+[commit]
+	template = /home/gsnewmark/.git_commit_msg
