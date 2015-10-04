@@ -177,6 +177,8 @@ user code."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
   (setq powerline-default-separator 'slant)
   (setq-default fill-column 78)
   (setq-default whitespace-line-column fill-column)
