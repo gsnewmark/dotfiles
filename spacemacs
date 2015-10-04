@@ -45,6 +45,7 @@
             shell-default-shell 'ansi-term
             shell-default-term-shell "/bin/zsh")
      syntax-checking
+     spell-checking
      version-control
      )
    ;; List of additional packages that will be installed wihout being
@@ -168,6 +169,8 @@ It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
   (setq-default
    tab-width 4
+   js2-basic-offset 2
+   ispell-dictionary "english"
    ))
 
 (defun dotspacemacs/user-config ()
@@ -190,7 +193,6 @@ layers configuration."
   (setq whitespace-global-modes '(not erc-mode scala-mode))
   (global-whitespace-mode t)
 
-  (setq clojure-enable-fancify-symbols t)
   (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 
   (setq erc-autojoin-channels-alist
