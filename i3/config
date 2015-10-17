@@ -246,7 +246,7 @@ assign [class="ncmpcpp"] → 5:
 assign [class="libprs500"] → 6:
 assign [class="Steam"] → 9:
 
-exec_always --no-startup-id compton -config $HOME/.compton.conf -CGb
+exec_always compton -CGb
 
 exec --no-startup-id xfsettingsd
 exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
