@@ -30,8 +30,7 @@
      dockerfile
      emacs-lisp
      erc
-     (git :variables
-          git-magit-status-fullscreen t)
+     git
      github
      (haskell :variables haskell-enable-ghc-mod-support t)
      html
@@ -171,6 +170,7 @@ user code."
    tab-width 4
    js2-basic-offset 2
    ispell-dictionary "english"
+   git-magit-status-fullscreen t
    ))
 
 (defun dotspacemacs/user-config ()
