@@ -67,6 +67,9 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# toggle sticky window
+bindsym $mod+Control+Shift+space sticky toggle
+
 # a - focus the parent container
 bindcode $mod+38 focus parent
 
@@ -243,7 +246,7 @@ assign [class="ncmpcpp"] → 5:
 assign [class="libprs500"] → 6:
 assign [class="Steam"] → 9:
 
-exec_always --no-startup-id compton -CGb
+exec_always --no-startup-id compton -config $HOME/.compton.conf -CGb
 
 exec --no-startup-id xfsettingsd
 exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
