@@ -1,4 +1,4 @@
-{:user {:dependencies [[org.clojure/tools.nrepl "0.2.11"]
+{:user {:dependencies [[org.clojure/tools.nrepl "0.2.12"]
                        [criterium "0.4.3"]]
         :plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]
                   [refactor-nrepl "2.0.0-SNAPSHOT"]
