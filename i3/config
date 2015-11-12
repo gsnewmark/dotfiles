@@ -182,8 +182,8 @@ bindcode $mod+Control+25 exec --no-startup-id chromium
 bindcode $mod+Control+28 exec --no-startup-id corebird
 # Control+c - Skype
 bindcode $mod+Control+54 exec --no-startup-id skype
-# Control+s - Scudcloud
-bindcode $mod+Control+39 exec --no-startup-id scudcloud
+# Control+s - Slack
+bindcode $mod+Control+39 exec --no-startup-id slack
 # Control+m - Geary
 bindcode $mod+Control+58 exec --no-startup-id geary
 # Control+d - Deadbeef
@@ -240,7 +240,7 @@ focus_follows_mouse no
 # App → workspace assignments
 assign [class="jetbrains-idea"] → 1:
 assign [class="Skype"] → 3:
-assign [class="Scudcloud"] → 3:
+assign [class="Slack"] → 3:
 assign [class="Geary"] → 4:
 assign [class="ncmpcpp"] → 5:
 assign [class="libprs500"] → 6:
