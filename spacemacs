@@ -30,6 +30,7 @@
      dockerfile
      emacs-lisp
      erc
+     erlang
      git
      github
      (haskell :variables haskell-enable-ghc-mod-support t)
