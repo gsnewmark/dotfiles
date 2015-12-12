@@ -8,6 +8,7 @@ urgent_on_bell = true
 clickable_url = true
 font = M+ 1mn 9
 font = Source Code Pro 9
+font = Hack 9
 scrollback_lines = 99999
 search_wrap = true
 cursor_blink = off

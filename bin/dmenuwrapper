@@ -8,7 +8,7 @@ ENTRIES_COUNT=20
 BGSELECT="#268bd2"
 FG="#eee8d5"
 BG="#073642"
-FONT="Source Code Pro-9"
+FONT="Hack-9"
 
 ${COMMAND} -${POSITION} -z -l ${ENTRIES_COUNT} \
            -fn "$FONT" -dim 0.75\
