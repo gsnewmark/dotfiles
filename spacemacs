@@ -33,7 +33,8 @@
      erlang
      git
      github
-     (haskell :variables haskell-enable-ghc-mod-support t)
+     (haskell :variables
+              haskell-enable-ghc-mod-support t)
      html
      javascript
      markdown
@@ -47,6 +48,7 @@
      syntax-checking
      spell-checking
      version-control
+     spacemacs-layouts
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
@@ -180,7 +182,7 @@ user code."
 layers configuration."
   (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-  (setq powerline-default-separator 'slant)
+  (setq powerline-default-separator nil)
   (setq-default fill-column 78)
   (setq-default whitespace-line-column fill-column)
   (add-hook 'before-save-hook 'whitespace-cleanup)
@@ -190,7 +192,7 @@ layers configuration."
 
   (global-company-mode)
 
-  (setq spacemacs-mode-line-minor-modesp nil)
+  (spacemacs/toggle-mode-line-minor-modes-off)
 
   (setq whitespace-style '(face lines-tail trailing))
   (setq whitespace-global-modes '(not erc-mode scala-mode))
@@ -236,8 +238,8 @@ layers configuration."
            "* %^{Description}\n  Added: %U\n%?")))
   (setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
   (setq org-startup-indented nil)
-  (evil-leader/set-key "oc" 'org-capture)
-  (evil-leader/set-key "oa" 'org-agenda)
+  (spacemacs/set-leader-keys "oc" 'org-capture)
+  (spacemacs/set-leader-keys "oa" 'org-agenda)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
