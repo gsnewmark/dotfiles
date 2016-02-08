@@ -199,6 +199,10 @@ layers configuration."
   (global-whitespace-mode t)
 
   (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
+  (setq cider-cljs-lein-repl
+        "(do (require 'figwheel-sidecar.repl-api)
+             (figwheel-sidecar.repl-api/start-figwheel!)
+             (figwheel-sidecar.repl-api/cljs-repl))")
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
