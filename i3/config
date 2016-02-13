@@ -137,8 +137,6 @@ bindcode $mod+32 move workspace to output down
 # Shift+o
 bindcode $mod+Shift+32 move workspace to output right
 
-# Control+Shift+p - shutdown menu
-bindcode $mod+Control+Shift+33 exec xfce4-session-logout
 # Shift+s - xfce settings
 bindcode $mod+Shift+39 exec xfce4-settings-manager
 # Shift+v - sound device menu
