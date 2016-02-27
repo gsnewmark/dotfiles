@@ -3,4 +3,4 @@
         :plugins [[cider/cider-nrepl "0.11.0-SNAPSHOT"]
                   [refactor-nrepl "2.2.0-SNAPSHOT"]
                   [lein-ancient "0.6.8"]
-                  [com.jakemccrary/lein-test-refresh "0.13.0"]]}}
+                  [com.jakemccrary/lein-test-refresh "0.14.0"]]}}
