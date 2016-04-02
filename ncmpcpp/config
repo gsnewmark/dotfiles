@@ -257,10 +257,7 @@ song_columns_list_format = "(7f)[cyan]{n} (25)[yellow]{a} (40)[blue]{t|f} (25)[g
 ## Note: Custom command that will be executed each
 ## time song changes. Useful for notifications etc.
 ##
-## Attention: It doesn't support song format anymore.
-## Use `ncmpcpp --now-playing SONG_FORMAT` instead.
-##
-#execute_on_song_change = ""
+execute_on_song_change = "~/bin/on_song_change"
 #
 #playlist_show_remaining_time = "no"
 #

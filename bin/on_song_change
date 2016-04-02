@@ -1,0 +1,3 @@
+#!/bin/sh
+
+notify-send "$(mpc | head -n 1)"
