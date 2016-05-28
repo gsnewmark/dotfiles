@@ -98,7 +98,7 @@ before layers configuration."
                                :size 12
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -183,6 +183,7 @@ layers configuration."
   (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
   (setq powerline-default-separator nil)
+  (spaceline-compile)
   (setq-default fill-column 78)
   (setq-default whitespace-line-column fill-column)
   (add-hook 'before-save-hook 'whitespace-cleanup)
