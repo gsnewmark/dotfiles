@@ -42,6 +42,8 @@ alias lein="noglob lein"
 
 alias top-10-size="du -hcsx -- *(D) | sort -rh | head -10"
 
+alias stream-mpd="mpv -idle --cache=no http://localhost:8000"
+
 # ZSH highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
