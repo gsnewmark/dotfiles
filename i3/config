@@ -238,7 +238,6 @@ bar {
 focus_follows_mouse no
 
 # App → workspace assignments
-assign [class="jetbrains-idea"] → 1:
 assign [class="Skype"] → 3:
 assign [class="Slack"] → 3:
 assign [class="Geary"] → 4:
