@@ -166,8 +166,6 @@ bindsym Shift+Print exec --no-startup-id xfce4-screenshooter -r
 bindcode $mod+Control+26 exec --no-startup-id emacsclient -c
 # Control+Shift+e - Emacs
 bindcode $mod+Control+Shift+26 exec --no-startup-id emacs
-# Control+i - Intellij Idea
-bindcode $mod+Control+31 exec --no-startup-id /opt/intellij-idea-ce-eap/bin/idea.sh
 # Control+f - ranger
 bindcode $mod+Control+41 exec --no-startup-id termite -e ranger
 # Control+Shift+f - Thunar
@@ -210,6 +208,8 @@ workspace_auto_back_and_forth yes
 
 new_window 1pixel
 
+smart_borders on
+
 # class                 border  backgr. text    indicator
 client.focused          #268bd2 #268bd2 #fdf6e3 #6c71c4
 client.focused_inactive #2aa198 #2aa198 #fdf6e3 #484e50
@@ -236,7 +236,6 @@ bar {
 focus_follows_mouse no
 
 # App → workspace assignments
-assign [class="jetbrains-idea"] → 1:
 assign [class="Skype"] → 3:
 assign [class="Slack"] → 3:
 assign [class="Geary"] → 4:
