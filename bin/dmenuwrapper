@@ -11,5 +11,5 @@ BG="#073642"
 FONT="Hack-9"
 
 ${COMMAND} -${POSITION} -z -l ${ENTRIES_COUNT} \
-           -fn "$FONT" -dim 0.75\
+           -fn "$FONT" \
            -nb ${BG} -nf ${FG} -sb ${BGSELECT}
