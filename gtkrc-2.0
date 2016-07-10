@@ -1,5 +1,5 @@
 gtk-icon-theme-name = "Faenza-Darkest"
-gtk-theme-name = "Numix Solarized"
+gtk-theme-name = "NumixSolarizedDark"
 
 style "user-font"
 {
