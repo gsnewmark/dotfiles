@@ -54,7 +54,7 @@
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(string-edit)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -176,6 +176,13 @@ user code."
    git-magit-status-fullscreen t
    ))
 
+(defun gsnewmark/clojure-reset-reloaded-repl ()
+  (interactive)
+  (save-some-buffers)
+  (with-current-buffer (cider-current-repl-buffer)
+    (cider-interactive-eval
+     "(reset)")))
+
 (defun dotspacemacs/user-config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
@@ -205,6 +212,10 @@ layers configuration."
              (figwheel-sidecar.repl-api/start-figwheel!)
              (figwheel-sidecar.repl-api/cljs-repl))")
   (setq cider-repl-display-help-banner nil)
+
+  (dolist (m '(clojure-mode clojurec-mode clojurex-mode cider-repl-mode))
+    (spacemacs/set-leader-keys-for-major-mode m
+      "sX" 'gsnewmark/clojure-reset-reloaded-repl))
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
@@ -246,6 +257,7 @@ layers configuration."
   (setq org-startup-indented nil)
   (spacemacs/set-leader-keys "oc" 'org-capture)
   (spacemacs/set-leader-keys "oa" 'org-agenda)
+  (spacemacs/set-leader-keys "os" 'string-edit-at-point)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
