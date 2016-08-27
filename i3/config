@@ -235,7 +235,7 @@ bar {
 focus_follows_mouse no
 
 # App → workspace assignments
-assign [class="Skype"] → 3:
+assign [class="skypeforlinux"] → 3:
 assign [class="Slack"] → 3:
 assign [class="Geary"] → 4:
 assign [class="ncmpcpp"] → 5:
