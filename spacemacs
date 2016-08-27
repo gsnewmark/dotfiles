@@ -174,6 +174,7 @@ user code."
    js2-basic-offset 2
    ispell-dictionary "english"
    git-magit-status-fullscreen t
+   git-link-use-commit t
    ))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
