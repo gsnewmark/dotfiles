@@ -54,7 +54,7 @@
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(string-edit)
+   dotspacemacs-additional-packages '(string-edit flycheck-clojure)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -175,6 +175,7 @@ user code."
    ispell-dictionary "english"
    git-magit-status-fullscreen t
    git-link-use-commit t
+   flycheck-disabled-checkers '(clojure-cider-typed)
    ))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
@@ -217,6 +218,8 @@ layers configuration."
   (dolist (m '(clojure-mode clojurec-mode clojurex-mode cider-repl-mode))
     (spacemacs/set-leader-keys-for-major-mode m
       "sX" 'gsnewmark/clojure-reset-reloaded-repl))
+
+  (eval-after-load 'flycheck '(flycheck-clojure-setup))
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
