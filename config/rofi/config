@@ -1,0 +1,18 @@
+rofi.bw: 1
+rofi.opacity: 100
+rofi.location: 0
+rofi.terminal: termite
+rofi.ssh-command: {terminal} -e "{ssh-client} {host}"
+rofi.threads: 0
+rofi.scroll-method: 1
+rofi.display-drun: app
+rofi.modi: run,window,ssh
+
+! ------------------------------------------------------------------------------
+! Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #002b36, #268bd2, #003642
+rofi.color-normal: #002b36, #657b83, #073642, #268bd2, #ffffff
+rofi.color-active: #002b36, #268bd2, #073642, #268bd2, #ffffff
+rofi.color-urgent: #002b36, #da4281, #073642, #268bd2, #ffffff

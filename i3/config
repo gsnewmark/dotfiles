@@ -17,11 +17,8 @@ bindsym $mod+Return exec termite
 # Shift+q - kill focused window
 bindcode $mod+Shift+24 kill
 
-# d - start dmenu (a program launcher)
-bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop --dmenu="dmenuwrapper"
-
-# Shift+d - choose a running program
-bindcode $mod+Shift+40 exec --no-startup-id quickswitch.py --dmenu="dmenuwrapper dmenu b"
+# d - start rofi (a program launcher)
+bindcode $mod+40 exec --no-startup-id "rofi -combi-modi window,drun,ssh -show combi"
 
 # change focus (h, j, k, l)
 bindcode $mod+43 focus left
