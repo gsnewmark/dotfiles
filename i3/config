@@ -177,7 +177,7 @@ bindcode $mod+Control+25 exec --no-startup-id chromium
 # Control+t - earthquake
 bindcode $mod+Control+28 exec --no-startup-id corebird
 # Control+c - Skype
-bindcode $mod+Control+54 exec --no-startup-id skype
+bindcode $mod+Control+54 exec --no-startup-id skypeforlinux
 # Control+s - Slack
 bindcode $mod+Control+39 exec --no-startup-id slack
 # Control+m - Geary
