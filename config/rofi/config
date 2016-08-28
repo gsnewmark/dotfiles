@@ -1,13 +1,21 @@
-rofi.bw: 1
-rofi.opacity: 100
 rofi.location: 0
 rofi.terminal: termite
 rofi.ssh-command: {terminal} -e "{ssh-client} {host}"
 rofi.threads: 0
 rofi.scroll-method: 1
 rofi.display-drun: app
+rofi.display-combi: open
 rofi.modi: run,window,ssh
 rofi.font: Hack 12
+
+rofi.fullscreen: true
+rofi.opacity: 90
+rofi.width: 100
+rofi.padding: 300
+rofi.bw: 0
+rofi.separator-style: none
+rofi.window-format: {c} {t}
+rofi.hide-scrollbar: true
 
 ! ------------------------------------------------------------------------------
 ! Color theme
