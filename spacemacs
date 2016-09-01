@@ -41,6 +41,7 @@
      (org :variables
           org-enable-github-support t)
      python
+     rust
      scala
      (shell :variables
             shell-default-shell 'ansi-term
@@ -176,6 +177,7 @@ user code."
    git-magit-status-fullscreen t
    git-link-use-commit t
    flycheck-disabled-checkers '(clojure-cider-typed)
+   rust-enable-racer t
    ))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
@@ -220,6 +222,8 @@ layers configuration."
       "sX" 'gsnewmark/clojure-reset-reloaded-repl))
 
   (eval-after-load 'flycheck '(flycheck-clojure-setup))
+
+  (setq racer-rust-src-path "/usr/src/rust/src/")
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
