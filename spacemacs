@@ -27,6 +27,7 @@
      better-defaults
      colors
      clojure
+     csv
      dockerfile
      emacs-lisp
      erc
@@ -36,20 +37,22 @@
      (haskell :variables
               haskell-enable-ghc-mod-support t)
      html
+     ivy
      javascript
      markdown
      (org :variables
           org-enable-github-support t)
      python
-     rust
+     (rust :variables
+           rust-format-on-save t)
      scala
      (shell :variables
             shell-default-shell 'ansi-term
             shell-default-term-shell "/bin/zsh")
      syntax-checking
      spell-checking
+     toml
      version-control
-     spacemacs-layouts
      )
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
@@ -84,8 +87,8 @@ before layers configuration."
    ;; If the value is nil then no banner is displayed.
    dotspacemacs-startup-banner 'official
    ;; List of items to show in the startup buffer. If nil it is disabled.
-   ;; Possible values are: `recents' `bookmarks' `projects'."
-   dotspacemacs-startup-lists '(recents projects)
+   ;; Possible values are: `recents' `bookmarks' `projects' `agenda' `todo'."
+   dotspacemacs-startup-lists '(agenda recents projects)
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
@@ -177,7 +180,6 @@ user code."
    git-magit-status-fullscreen t
    git-link-use-commit t
    flycheck-disabled-checkers '(clojure-cider-typed)
-   rust-enable-racer t
    ))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
