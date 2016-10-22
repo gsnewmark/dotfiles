@@ -28,7 +28,6 @@
      colors
      clojure
      csv
-     dockerfile
      emacs-lisp
      erc
      erlang
@@ -51,7 +50,6 @@
             shell-default-term-shell "/bin/zsh")
      syntax-checking
      spell-checking
-     toml
      version-control
      )
    ;; List of additional packages that will be installed wihout being
