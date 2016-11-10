@@ -198,8 +198,6 @@ layers configuration."
   (setq powerline-default-separator nil)
   (spaceline-compile)
   (setq-default fill-column 78)
-  (setq-default whitespace-line-column fill-column)
-  (add-hook 'before-save-hook 'whitespace-cleanup)
 
   (custom-set-variables '(solarized-use-variable-pitch nil))
   (custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
@@ -211,6 +209,11 @@ layers configuration."
   (setq whitespace-style '(face lines-tail trailing))
   (setq whitespace-global-modes '(not erc-mode scala-mode))
   (global-whitespace-mode t)
+  (setq-default whitespace-line-column fill-column)
+  (add-hook 'before-save-hook 'whitespace-cleanup)
+
+  (add-to-list 'aggressive-indent-excluded-modes 'python-mode)
+  (global-aggressive-indent-mode 1)
 
   (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
   (setq cider-cljs-lein-repl
@@ -267,8 +270,7 @@ layers configuration."
   (setq org-startup-indented nil)
   (spacemacs/set-leader-keys "oc" 'org-capture)
   (spacemacs/set-leader-keys "oa" 'org-agenda)
-  (spacemacs/set-leader-keys "os" 'string-edit-at-point)
-)
+  (spacemacs/set-leader-keys "os" 'string-edit-at-point))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
