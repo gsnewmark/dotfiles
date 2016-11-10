@@ -212,7 +212,6 @@ layers configuration."
   (setq-default whitespace-line-column fill-column)
   (add-hook 'before-save-hook 'whitespace-cleanup)
 
-  (add-to-list 'aggressive-indent-excluded-modes 'python-mode)
   (global-aggressive-indent-mode 1)
 
   (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
