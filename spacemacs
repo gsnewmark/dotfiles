@@ -225,7 +225,10 @@ layers configuration."
     (spacemacs/set-leader-keys-for-major-mode m
       "sX" 'gsnewmark/clojure-reset-reloaded-repl))
 
-  (eval-after-load 'flycheck '(flycheck-clojure-setup))
+  (with-eval-after-load 'cider
+    (flycheck-clojure-setup))
+  (dolist (m '(clojure-mode clojurec-mode clojurex-mode clojurescript-mode))
+    (spacemacs/add-flycheck-hook m))
 
   (setq racer-rust-src-path "/usr/src/rust/src/")
 
