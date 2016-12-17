@@ -217,7 +217,6 @@ bar {
     status_command i3blocks
     position       top
     strip_workspace_numbers yes
-    tray_output primary
     colors {
         # solarized
         background #002b36
