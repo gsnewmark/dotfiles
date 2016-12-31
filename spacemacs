@@ -212,8 +212,6 @@ layers configuration."
   (setq-default whitespace-line-column fill-column)
   (add-hook 'before-save-hook 'whitespace-cleanup)
 
-  (global-aggressive-indent-mode 1)
-
   (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
   (setq cider-cljs-lein-repl
         "(do (require 'figwheel-sidecar.repl-api)
