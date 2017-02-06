@@ -13,7 +13,6 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     nginx
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -34,12 +33,14 @@
      erlang
      git
      github
+     go
      (haskell :variables
               haskell-enable-ghc-mod-support t)
      html
      ivy
      javascript
      markdown
+     nginx
      (org :variables
           org-enable-github-support t)
      python
