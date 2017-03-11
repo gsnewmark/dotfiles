@@ -1,7 +1,7 @@
 (require 'boot.repl)
 
 (swap! boot.repl/*default-dependencies*
-       concat '[[refactor-nrepl "2.3.0-SNAPSHOT"]
+       concat '[[refactor-nrepl "2.3.0"]
                 [cider/cider-nrepl "0.15.0-SNAPSHOT"]
                 [criterium "0.4.4"]])
 
