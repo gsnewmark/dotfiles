@@ -8,7 +8,7 @@ ZSH_THEME="pygmalion"
 DISABLE_AUTO_UPDATE="true"
 
 # zsh-syntax-highlighting should be last!
-plugins=(git archlinux last-working-dir lein vagrant mvn sbt docker vi-mode zsh-syntax-highlighting)
+plugins=(archlinux last-working-dir lein vagrant mvn sbt docker vi-mode zsh-syntax-highlighting)
 
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
