@@ -130,9 +130,9 @@ bindcode $mod+27 mode "resize"
 bindcode $mod+53 [urgent=latest] focus
 
 # o
-bindcode $mod+32 move workspace to output down
+bindcode $mod+32 move workspace to output right
 # Shift+o
-bindcode $mod+Shift+32 move workspace to output right
+bindcode $mod+Shift+32 exec /home/gsnewmark/bin/swap_workspaces.py
 
 # Shift+s - xfce settings
 bindcode $mod+Shift+39 exec xfce4-settings-manager
