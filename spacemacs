@@ -383,7 +383,7 @@ layers configuration."
   (setq org-agenda-files
         (list (concat org-directory "/gtd.org")
               (concat org-directory "/reading-review.org")))
-  (setq org-agenda-restore-windows-after-quit t)
+  (setq org-agenda-restore-windows-after-quit nil)
   (setq org-default-notes-file (concat org-directory "/notes.org"))
   (setq org-capture-templates
         '(
