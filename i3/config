@@ -193,6 +193,10 @@ bindcode $mod+Shift+33 exec --no-startup-id mpc toggle
 bindcode $mod+Shift+59 exec --no-startup-id mpc prev
 # > - next
 bindcode $mod+Shift+60 exec --no-startup-id mpc next
+# I - love current song on Last.FM
+bindcode $mod+Shift+31 exec mpc sendmessage mpdas love
+# U - unlove current song on Last.FM
+bindcode $mod+Shift+30 exec mpc sendmessage mpdas unlove
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -246,7 +250,7 @@ exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle 
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
 exec --no-startup-id mpd
-exec --no-startup-id mpdscribble
+exec --no-startup-id mpdas
 exec --no-startup-id dropbox
 exec --no-startup-id transmission-gtk -m
 exec --no-startup-id unclutter -idle 3
