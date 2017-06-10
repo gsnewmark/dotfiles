@@ -249,8 +249,7 @@ exec --no-startup-id xfsettingsd
 exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
-exec --no-startup-id mpd
-exec --no-startup-id mpdas
+exec --no-startup-id mpd && mpdas
 exec --no-startup-id dropbox
 exec --no-startup-id transmission-gtk -m
 exec --no-startup-id unclutter -idle 3
