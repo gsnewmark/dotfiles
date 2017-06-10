@@ -358,8 +358,6 @@ layers configuration."
   (dolist (m '(clojure-mode clojurec-mode clojurex-mode clojurescript-mode))
     (spacemacs/add-flycheck-hook m))
 
-  (setq racer-rust-src-path "/usr/src/rust/src/")
-
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
   (setq erc-hide-list '("JOIN" "NICK" "PART" "QUIT" "MODE"))
