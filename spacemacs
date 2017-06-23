@@ -310,6 +310,7 @@ user code."
    git-link-use-commit t
    github-browse-file-show-line-at-point t
    flycheck-disabled-checkers '(clojure-cider-typed)
+   clojure-align-forms-automatically t
    ))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
@@ -357,6 +358,7 @@ layers configuration."
     (flycheck-clojure-setup))
   (dolist (m '(clojure-mode clojurec-mode clojurex-mode clojurescript-mode))
     (spacemacs/add-flycheck-hook m))
+  (put-clojure-indent 'lete 1)
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
