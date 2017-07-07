@@ -311,6 +311,8 @@ user code."
    github-browse-file-show-line-at-point t
    flycheck-disabled-checkers '(clojure-cider-typed)
    clojure-align-forms-automatically t
+   cljr-warn-on-eval nil
+   cljr-eagerly-build-asts-on-startup t
    ))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
