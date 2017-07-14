@@ -14,6 +14,7 @@ tramp
 
 # Org-mode
 .org-id-locations
+notes.org
 
 # vim
 .*.sw[a-z]
