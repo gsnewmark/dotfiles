@@ -1,5 +1,7 @@
 lock() {
-    i3lock-wrapper
+    suspend_notifications
+    i3lock-wrapper -n
+    resume_notifications
 }
 
 case "$1" in
