@@ -178,7 +178,7 @@ bindcode $mod+Control+54 exec --no-startup-id skypeforlinux
 # Control+s - Slack
 bindcode $mod+Control+39 exec --no-startup-id slack
 # Control+m - Geary
-bindcode $mod+Control+58 exec --no-startup-id geary
+bindcode $mod+Control+58 exec --no-startup-id thunderbird
 # Control+n - ncmpcpp
 bindcode $mod+Control+57 exec --no-startup-id termite -e ncmpcpp --class=ncmpcpp
 # Control+g - Steam
