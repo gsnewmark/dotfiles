@@ -1,6 +1,9 @@
 lock() {
     suspend_notifications
+    local current_layout=$(xkb-switch)
+    setxkbmap us
     i3lock-wrapper -n
+    setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
     resume_notifications
 }
 
