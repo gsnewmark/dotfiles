@@ -242,8 +242,8 @@ assign [class="Steam"] → 9:
 
 exec_always compton -CGb
 
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && notify-send "Backlight: $(xbacklight)%"
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && notify-send "Backlight: $(xbacklight)%"
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && notify-send "Backlight: $(xbacklight | cut -c1-2)%"
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && notify-send "Backlight: $(xbacklight | cut -c1-2)%"
 
 exec --no-startup-id xfsettingsd
 exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
