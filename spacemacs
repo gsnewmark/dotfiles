@@ -403,7 +403,6 @@ layers configuration."
   (setq org-startup-indented nil)
   (spacemacs/set-leader-keys "oc" 'org-capture)
   (spacemacs/set-leader-keys "oa" 'org-agenda)
-  (spacemacs/set-leader-keys "os" 'string-edit-at-point))
+  (spacemacs/set-leader-keys "os" 'string-edit-at-point)
 
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
+  (defvaralias 'counsel--git-grep-dir 'counsel--git-dir))
