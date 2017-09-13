@@ -313,14 +313,8 @@ user code."
    clojure-align-forms-automatically t
    cljr-warn-on-eval nil
    cljr-eagerly-build-asts-on-startup t
-   ))
-
-(defun gsnewmark/clojure-reset-reloaded-repl ()
-  (interactive)
-  (save-some-buffers)
-  (with-current-buffer (cider-current-repl-buffer)
-    (cider-interactive-eval
-     "(reset)")))
+   cider-refresh-before-fn "reloaded.repl/stop"
+   cider-refresh-after-fn "reloaded.repl/go"))
 
 (defun dotspacemacs/user-config ()
   "Configuration function.
@@ -351,10 +345,6 @@ layers configuration."
              (figwheel-sidecar.repl-api/start-figwheel!)
              (figwheel-sidecar.repl-api/cljs-repl))")
   (setq cider-repl-display-help-banner nil)
-
-  (dolist (m '(clojure-mode clojurec-mode clojurex-mode cider-repl-mode))
-    (spacemacs/set-leader-keys-for-major-mode m
-      "sX" 'gsnewmark/clojure-reset-reloaded-repl))
 
   (with-eval-after-load 'cider
     (flycheck-clojure-setup))
@@ -405,4 +395,8 @@ layers configuration."
   (spacemacs/set-leader-keys "oa" 'org-agenda)
   (spacemacs/set-leader-keys "os" 'string-edit-at-point)
 
+  ;; HACK temporary workaround for counsel's breaking change https://github.com/syl20bnr/spacemacs/issues/9552
   (defvaralias 'counsel--git-grep-dir 'counsel--git-dir))
+
+;; Do not write anything past this comment. This is where Emacs will
+;; auto-generate custom variable definitions.
