@@ -9,18 +9,8 @@ rofi.modi: run,window,ssh
 rofi.font: Hack 12
 
 rofi.fullscreen: true
-rofi.width: 100
-rofi.padding: 300
-rofi.bw: 0
 rofi.separator-style: none
 rofi.window-format: {c} {t}
 rofi.hide-scrollbar: true
 
-! ------------------------------------------------------------------------------
-! Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #E6002b36, #E6268bd2, #E6003642
-rofi.color-normal: #002b36, #657b83, #073642, #268bd2, #ffffff
-rofi.color-active: #002b36, #268bd2, #073642, #268bd2, #ffffff
-rofi.color-urgent: #002b36, #da4281, #073642, #268bd2, #ffffff
+rofi.theme: solarized_alternate
