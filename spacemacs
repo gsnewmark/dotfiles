@@ -312,9 +312,7 @@ user code."
    flycheck-disabled-checkers '(clojure-cider-typed)
    clojure-align-forms-automatically t
    cljr-warn-on-eval nil
-   cljr-eagerly-build-asts-on-startup t
-   cider-refresh-before-fn "reloaded.repl/stop"
-   cider-refresh-after-fn "reloaded.repl/go"))
+   cljr-eagerly-build-asts-on-startup t))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
   (interactive)
