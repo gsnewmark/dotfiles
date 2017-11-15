@@ -2,6 +2,8 @@ set font "Hack 9"
 
 set incremental-search true
 
+set selection-clipboard clipboard
+
 set default-bg "#002b36"
 set statusbar-bg "#073642"
 set statusbar-fg "#93a1a1"
