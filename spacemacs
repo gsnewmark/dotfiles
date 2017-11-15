@@ -52,6 +52,7 @@ values."
      (haskell :variables
               haskell-enable-ghc-mod-support t)
      html
+     idris
      ivy
      javascript
      markdown
