@@ -169,8 +169,8 @@ bindcode $mod+Control+41 exec --no-startup-id termite -e ranger
 bindcode $mod+Control+Shift+41 exec --no-startup-id thunar
 # Control+b - qutebrowser
 bindcode $mod+Control+56 exec --no-startup-id qutebrowser
-# Control+w - Chromium
-bindcode $mod+Control+25 exec --no-startup-id chromium
+# Control+w - Firefox
+bindcode $mod+Control+25 exec --no-startup-id firefox
 # Control+t - corebird
 bindcode $mod+Control+28 exec --no-startup-id corebird
 # Control+c - Skype
