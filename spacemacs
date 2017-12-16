@@ -361,7 +361,8 @@ layers configuration."
   (dolist (m '(clojure-mode clojurec-mode clojurex-mode clojurescript-mode))
     (spacemacs/add-flycheck-hook m))
   (with-eval-after-load 'clojure-mode
-    (put-clojure-indent 'lete 1))
+    (put-clojure-indent 'lete 1)
+    (put-clojure-indent 'match 1))
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
