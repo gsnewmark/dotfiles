@@ -156,8 +156,8 @@ mode "$power_management_menu" {
 }
 bindsym $mod+Pause mode "$power_management_menu"
 
-bindsym Print exec --no-startup-id xfce4-screenshooter -f
-bindsym Shift+Print exec --no-startup-id xfce4-screenshooter -r
+bindsym Print exec --no-startup-id flameshot full -p ~/Downloads
+bindsym Shift+Print exec --no-startup-id flameshot gui -p ~/Downloads
 
 # Control+e - Emacs client
 bindcode $mod+Control+26 exec --no-startup-id emacsclient -c
