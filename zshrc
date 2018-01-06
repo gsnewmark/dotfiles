@@ -26,7 +26,7 @@ export TERM=xterm-256color
 export PATH=~/bin:$PATH
 
 # add Ruby gems to PATH
-export PATH="`ruby -rubygems -e 'puts Gem.user_dir'`/bin:$PATH"
+export PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
 
 # add Rust cargo binaries to PATH
 export PATH=~/.cargo/bin:$PATH
