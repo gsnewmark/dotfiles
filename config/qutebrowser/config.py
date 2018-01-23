@@ -6,14 +6,12 @@ c.completion.shrink = True
 
 c.content.cache.size = 52428800
 c.content.default_encoding = 'utf-8'
-c.content.developer_extras = True
 c.content.plugins = True
 
 c.downloads.position = 'bottom'
 
 c.editor.command = ['emacsclient "{}"',]
 
-c.hints.find_implementation = 'javascript'
 c.hints.scatter = False
 
 c.input.partial_timeout = 10000
@@ -58,6 +56,8 @@ c.colors.completion.scrollbar.fg = solarized_base02
 c.colors.completion.scrollbar.bg = solarized_base03
 c.colors.statusbar.command.bg = solarized_base02
 c.colors.statusbar.command.fg = solarized_base3
+c.colors.statusbar.passthrough.bg = solarized_base02
+c.colors.statusbar.passthrough.fg = solarized_cyan
 c.colors.statusbar.normal.fg = solarized_base1
 c.colors.statusbar.normal.bg = solarized_base02
 c.colors.statusbar.insert.bg = solarized_green
