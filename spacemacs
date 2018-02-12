@@ -322,6 +322,9 @@ user code."
     (cider-interactive-eval
      "(reset)")))
 
+(defun gsnewmark/prevent-whitespace-mode-for-magit ()
+  (not (derived-mode-p 'magit-mode)))
+
 (defun dotspacemacs/user-config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
@@ -407,7 +410,9 @@ layers configuration."
   (spacemacs/set-leader-keys "os" 'string-edit-at-point)
 
   ;; HACK temporary workaround for counsel's breaking change https://github.com/syl20bnr/spacemacs/issues/9552
-  (defvaralias 'counsel--git-grep-dir 'counsel--git-dir))
+  (defvaralias 'counsel--git-grep-dir 'counsel--git-dir)
+
+  (add-function :before-while whitespace-enable-predicate 'gsnewmark/prevent-whitespace-mode-for-magit))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
