@@ -8,7 +8,7 @@ rofi.display-combi: open
 rofi.modi: run,window,ssh
 rofi.font: Hack 12
 
-rofi.fullscreen: true
+rofi.fullscreen: false
 rofi.separator-style: none
 rofi.window-format: {c} {t}
 rofi.hide-scrollbar: true
