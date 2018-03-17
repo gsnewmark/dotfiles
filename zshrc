@@ -32,14 +32,14 @@ export PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
 export PATH=~/.cargo/bin:$PATH
 
 # set default terminal text editor
-TE="emacsclient -t -a emacs"
+TE="emacsclient -c -t -a vim"
 export VISUAL=$TE
 export EDITOR=$TE
 
 # shortcut for terminal emacs
 alias e=$TE
 # shortcut for terminal emacs with sudo
-alias E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
+alias E="SUDO_EDITOR=\"emacsclient -c -t -a vim\" sudoedit"
 # disable pattern expanding for lein
 alias lein="noglob lein"
 

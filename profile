@@ -8,7 +8,7 @@ export PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
 export PATH=~/.cargo/bin:$PATH
 
 # set default terminal text editor
-TE="emacsclient -t -a emacs"
+TE="emacsclient -c -t -a vim"
 export VISUAL=$TE
 export EDITOR=$TE
 
