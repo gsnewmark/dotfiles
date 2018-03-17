@@ -22,6 +22,8 @@ yellow = #b58900
 violet = #6c71c4
 cyan = #2aa198
 green = #859900
+orange = #cb4b16
+magenta = #d33682
 
 [bar/top]
 monitor = ${env:MONITOR:}
@@ -54,9 +56,9 @@ font-2 = Font Awesome 5 Free:style=Regular:pixelsize=9;3
 font-3 = Font Awesome 5 Free:style=Solid:pixelsize=9;3
 font-4 = Font Awesome 5 Brands:pixelsize=9;3
 
-modules-left = mpd
-modules-center = i3
-modules-right = xkeyboard memory battery date
+modules-left = i3
+modules-center = mpd
+modules-right = xkeyboard memory date battery
 
 tray-position = right
 tray-padding = 2
@@ -125,28 +127,40 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+label-charging = %percentage%% (%time%)
+label-charging-foreground = ${colors.green}
+format-charging-underline = ${self.label-charging-foreground}
+animation-charging-0-foreground = ${self.label-charging-foreground}
+animation-charging-1-foreground = ${self.label-charging-foreground}
+animation-charging-2-foreground = ${self.label-charging-foreground}
+animation-charging-3-foreground = ${self.label-charging-foreground}
+animation-charging-4-foreground = ${self.label-charging-foreground}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+label-discharging = %percentage%% (%time%)
+label-discharging-foreground = ${colors.orange}
+format-discharging-underline = ${self.label-discharging-foreground}
+ramp-capacity-0-foreground = ${self.label-discharging-foreground}
+ramp-capacity-1-foreground = ${self.label-discharging-foreground}
+ramp-capacity-2-foreground = ${self.label-discharging-foreground}
+ramp-capacity-3-foreground = ${self.label-discharging-foreground}
+ramp-capacity-4-foreground = ${self.label-discharging-foreground}
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+label-full =  %percentage%%
+label-full-foreground = ${self.format-charging-underline}
+format-full-underline = ${self.label-full-foreground}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
 [module/date]
@@ -165,7 +179,8 @@ label-foreground = ${self.format-underline}
 [module/memory]
 type = internal/memory
 interval = 2
-format-foreground = ${colors.green}
+format = <label>
+format-foreground = ${colors.magenta}
 format-underline = ${self.format-foreground}
 label = RAM %gb_used%/%gb_total%
 
