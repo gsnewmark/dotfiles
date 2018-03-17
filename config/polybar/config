@@ -167,7 +167,7 @@ animation-charging-framerate = 750
 type = internal/date
 interval = 5
 
-date = "%d/%m/%Y"
+date = %d/%m/%Y
 
 time = %H:%M
 
