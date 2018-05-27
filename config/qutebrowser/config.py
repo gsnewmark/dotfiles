@@ -24,6 +24,10 @@ c.url.searchengines['trans'] = 'https://translate.google.com/#auto/en/{}'
 c.url.searchengines['so'] = 'https://stackoverflow.com/search?q={}'
 c.url.searchengines['gh'] = 'https://github.com/search?q={}&type=Everything'
 
+c.aliases['pocket'] = 'jseval --quiet !function(){var e=function(t,n,r,o,a){var c,f,i=[1821164,3796156,2087206,9104461,3458541,2658722,3733737,5219248,4180149,5171216],d=(o=o||0,0),h=(n=n||[],r=r||0,{a:97,b:98,c:99,d:100,e:101,f:102,g:103,h:104,i:105,j:106,k:107,l:108,m:109,n:110,o:111,p:112,q:113,r:114,s:115,t:116,u:117,v:118,w:119,x:120,y:121,z:122,A:65,B:66,C:67,D:68,E:69,F:70,G:71,H:72,I:73,J:74,K:75,L:76,M:77,N:78,O:79,P:80,Q:81,R:82,S:83,T:84,U:85,V:86,W:87,X:88,Y:89,Z:90,0:48,1:49,2:50,3:51,4:52,5:53,6:54,7:55,8:56,9:57,"/":47,":":58,"?":63,"=":61,"-":45,_:95,"&":38,$:36,"!":33,".":46});(a=a||0)&&0!=a||(t=i[0]+t);for(var l=0;l<t.length;l++){var m=h[(c=t)[f=l]]?h[c[f]]:c.charCodeAt(f);1*!m&&(m=3);var p=m*(i[o]+m*i[d%i.length]);n[r]=(n[r]?n[r]+p:p)+a+d;var u=p%50;if(n[u]){var v=n[r];n[r]=n[u],n[u]=v}d+=p,r=50==r?0:r+1,o=o==i.length-1?0:o+1}if(282==a){var g="";for(l=0;l<n.length;l++)g+=String.fromCharCode(n[l]%25+97);return i=function(){},g+"160eea979c"}return e(d+"",n,r,o,a+1)},t=document,n=t.location.href,r=t.title,o=e(n),a=t.createElement("script");a.type="text/javascript",a.src="https://getpocket.com/b/r4.js?h="+o+"&u="+encodeURIComponent(n)+"&t="+encodeURIComponent(r),e=o=function(){},(t.getElementsByTagName("head")[0]||t.documentElement).appendChild(a)}();'
+
+config.bind('zp', 'pocket')
+
 # Colors
 
 solarized_base03 = '#002b36'
