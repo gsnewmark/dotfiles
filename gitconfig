@@ -2,6 +2,7 @@
   name = Ivan Kryvoruchko
   mail = gildraug@gmail.com
   email = gildraug@gmail.com
+	signingkey = 41EF9C7DEE72758A
 [github]
   user = gsnewmark
 [core]
@@ -13,3 +14,6 @@
 	default = simple
 [commit]
 	template = /home/gsnewmark/.git_commit_msg
+	gpgsign = true
+[magit]
+	hideCampaign = true
