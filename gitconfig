@@ -11,9 +11,9 @@
 [color]
   ui = true
 [push]
-	default = simple
+  default = simple
 [commit]
-	template = /home/gsnewmark/.git_commit_msg
-	gpgsign = true
+  template = /home/gsnewmark/.git_commit_msg
+  gpgsign = true
 [magit]
-	hideCampaign = true
+  hideCampaign = true
