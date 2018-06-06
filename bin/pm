@@ -1,8 +1,10 @@
+#!/bin/sh -
+
 lock() {
-    suspend_notifications
+    $HOME/bin/suspend_notifications
     i3lock-wrapper -n
     setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
-    resume_notifications
+    $HOME/bin/resume_notifications
 }
 
 case "$1" in
