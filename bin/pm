@@ -15,7 +15,7 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        i3lock-wrapper && systemctl suspend
+        systemctl suspend
         ;;
     reboot)
         systemctl reboot
