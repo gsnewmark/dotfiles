@@ -75,7 +75,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(string-edit flycheck-clojure)
+   dotspacemacs-additional-packages '(string-edit flycheck-clojure meghanada)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(orgit)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -366,6 +366,12 @@ layers configuration."
   (with-eval-after-load 'clojure-mode
     (put-clojure-indent 'lete 1)
     (put-clojure-indent 'match 1))
+
+  (require 'meghanada)
+  (add-hook 'java-mode-hook
+            (lambda ()
+              (meghanada-mode t)
+              (flycheck-mode +1)))
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
