@@ -371,7 +371,8 @@ layers configuration."
   (add-hook 'java-mode-hook
             (lambda ()
               (meghanada-mode t)
-              (flycheck-mode +1)))
+              (flycheck-mode +1)
+              (subword-mode +1)))
 
   (setq erc-autojoin-channels-alist
         '(("freenode.net" "#clojure" "#clojurescript" "#haskell" "#scala")))
