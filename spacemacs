@@ -57,6 +57,7 @@ values."
      javascript
      markdown
      nginx
+     octave
      (org :variables
           org-enable-github-support t)
      python
