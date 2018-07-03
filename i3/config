@@ -213,6 +213,21 @@ client.focused_inactive #2aa198 #2aa198 #fdf6e3 #484e50
 client.unfocused        #073642 #073642 #fdf6e3 #484e50
 client.urgent           #2f343a #900000 #ffffff #900000
 
+bar {
+    status_command i3blocks
+    position       top
+    strip_workspace_numbers yes
+    colors {
+        # solarized
+        background #002b36
+        statusline #eee8d5
+        focused_workspace  #002b36 #002b36 #268bd2
+        active_workspace   #002b36 #002b36 #268bd2
+        inactive_workspace #002b36 #002b36 #586e75
+        urgent_workspace   #dc322f #dc322f #93a1a1
+    }
+}
+
 focus_follows_mouse no
 
 # App → workspace assignments
@@ -223,8 +238,6 @@ assign [class="Thunderbird"] → 4:IV
 assign [class="ncmpcpp"] → 5:V
 assign [class="libprs500"] → 6:VI
 assign [class="Steam"] → 9:IX
-
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec_always compton -CGb
 
