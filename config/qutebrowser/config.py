@@ -102,11 +102,11 @@ c.colors.prompts.bg = solarized_base02
 
 # Fonts
 
-c.fonts.monospace = 'Hack, Source Code Pro, Menlo, Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Liberation Mono", "Courier New", Courier, monospace, Fixed, Consolas, Terminal'
-c.fonts.completion.category = 'bold 9pt monospace'
-c.fonts.completion.entry = '9pt monospace'
-c.fonts.tabs = '9pt monospace'
-c.fonts.statusbar = '9pt monospace'
-c.fonts.downloads = '9pt monospace'
+c.fonts.monospace = '"Fantasque Sans Mono", "M+ 1mn", Menlo, Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Liberation Mono", "Courier New", Courier, monospace, Fixed, Consolas, Terminal'
+c.fonts.completion.category = 'bold 10pt monospace'
+c.fonts.completion.entry = '10pt monospace'
+c.fonts.tabs = '10pt monospace'
+c.fonts.statusbar = '10pt monospace'
+c.fonts.downloads = '10pt monospace'
 c.fonts.hints = 'bold 12px monospace'
-c.fonts.debug_console = '9pt monospace'
+c.fonts.debug_console = '10pt monospace'

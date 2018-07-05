@@ -1,4 +1,4 @@
-set font "Hack 9"
+set font "Fantasque Sans Mono 12"
 
 set incremental-search true
 
