@@ -1,5 +1,5 @@
 [global]
-    font = Hack 9
+    font = Fantasque Sans Mono 12
 
     markup = yes
 
