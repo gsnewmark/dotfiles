@@ -251,7 +251,6 @@ exec --no-startup-id pa-applet
 exec --no-startup-id cbatticon -i symbolic
 exec --no-startup-id mpd && mpdas
 exec --no-startup-id dropbox
-exec --no-startup-id transmission-gtk -m
 exec --no-startup-id unclutter -idle 3
 exec --no-startup-id $HOME/bin/random_background
 exec --no-startup-id udiskie
