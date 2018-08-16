@@ -54,6 +54,7 @@ values."
      html
      idris
      ivy
+     ipython-notebook
      javascript
      markdown
      nginx
@@ -419,6 +420,9 @@ layers configuration."
 
   ;; HACK temporary workaround for counsel's breaking change https://github.com/syl20bnr/spacemacs/issues/9552
   (defvaralias 'counsel--git-grep-dir 'counsel--git-dir)
+  ;; HACK temporary workaround for projectile's breaking change https://github.com/syl20bnr/spacemacs/issues/11152
+  (setq projectile-keymap-prefix (kbd "C-c C-p"))
+
 
   (add-function :before-while whitespace-enable-predicate 'gsnewmark/prevent-whitespace-mode-for-magit))
 
