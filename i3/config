@@ -171,8 +171,6 @@ bindcode $mod+Control+Shift+41 exec --no-startup-id thunar
 bindcode $mod+Control+56 exec --no-startup-id qutebrowser
 # Control+w - Firefox
 bindcode $mod+Control+25 exec --no-startup-id firefox
-# Control+c - Skype
-bindcode $mod+Control+54 exec --no-startup-id skypeforlinux
 # Control+s - Slack
 bindcode $mod+Control+39 exec --no-startup-id slack
 # Control+t - Telegram
@@ -231,7 +229,6 @@ bar {
 focus_follows_mouse no
 
 # App → workspace assignments
-assign [class="Skype"] → 3:III
 assign [class="Slack"] → 3:III
 assign [class="TelegramDesktop"] → 3:III
 assign [class="Thunderbird"] → 4:IV
