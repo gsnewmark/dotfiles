@@ -424,8 +424,10 @@ layers configuration."
   ;; HACK temporary workaround for projectile's breaking change https://github.com/syl20bnr/spacemacs/issues/11152
   (setq projectile-keymap-prefix (kbd "C-c C-p"))
 
+  (add-function :before-while whitespace-enable-predicate 'gsnewmark/prevent-whitespace-mode-for-magit)
 
-  (add-function :before-while whitespace-enable-predicate 'gsnewmark/prevent-whitespace-mode-for-magit))
+  (add-hook 'ein:notebook-multilang-mode-hook
+            #'(lambda () (spacemacs/toggle-whitespace-cleanup-off))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
