@@ -99,10 +99,10 @@ c.colors.prompts.bg = solarized_base02
 # Fonts
 
 c.fonts.monospace = '"Iosevka Term Medium", "M+ 1mn", Menlo, Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Liberation Mono", "Courier New", Courier, monospace, Fixed, Consolas, Terminal'
-c.fonts.completion.category = 'bold 11pt monospace'
-c.fonts.completion.entry = '11pt monospace'
-c.fonts.tabs = '11pt monospace'
-c.fonts.statusbar = '11pt monospace'
-c.fonts.downloads = '11pt monospace'
-c.fonts.hints = 'bold 11pt monospace'
-c.fonts.debug_console = '11pt monospace'
+c.fonts.completion.category = 'bold 12pt monospace'
+c.fonts.completion.entry = '12pt monospace'
+c.fonts.tabs = '12pt monospace'
+c.fonts.statusbar = '12pt monospace'
+c.fonts.downloads = '12pt monospace'
+c.fonts.hints = 'bold 12pt monospace'
+c.fonts.debug_console = '12pt monospace'
