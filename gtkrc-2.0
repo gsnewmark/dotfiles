@@ -3,7 +3,7 @@ gtk-theme-name = "NumixSolarizedDark"
 
 style "user-font"
 {
-        font_name="Overpass 12"
+        font_name="Source Sans Pro 12"
 }
 widget_class "*" style "user-font"
-gtk-font-name = "Overpass 12"
+gtk-font-name = "Source Sans Pro 12"
