@@ -6,7 +6,7 @@ rofi.scroll-method: 1
 rofi.display-drun: app
 rofi.display-combi: open
 rofi.modi: run,window,ssh
-rofi.font: Iosevka Term 11
+rofi.font: Iosevka Term Medium 11
 
 rofi.fullscreen: false
 rofi.separator-style: none

@@ -98,7 +98,7 @@ c.colors.prompts.bg = solarized_base02
 
 # Fonts
 
-c.fonts.monospace = '"Iosevka Term", "M+ 1mn", Menlo, Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Liberation Mono", "Courier New", Courier, monospace, Fixed, Consolas, Terminal'
+c.fonts.monospace = '"Iosevka Term Medium", "M+ 1mn", Menlo, Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Liberation Mono", "Courier New", Courier, monospace, Fixed, Consolas, Terminal'
 c.fonts.completion.category = 'bold 11pt monospace'
 c.fonts.completion.entry = '11pt monospace'
 c.fonts.tabs = '11pt monospace'
