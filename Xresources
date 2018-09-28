@@ -2,3 +2,4 @@ Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle:  hintnone
+Xft.lcdfilter: lcddefault
