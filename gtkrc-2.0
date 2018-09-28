@@ -3,7 +3,7 @@ gtk-theme-name = "NumixSolarizedDark"
 
 style "user-font"
 {
-        font_name="SFNS Display 10"
+        font_name="Overpass 11"
 }
 widget_class "*" style "user-font"
-gtk-font-name = "SFNS Display 10"
+gtk-font-name = "Overpass 11"
