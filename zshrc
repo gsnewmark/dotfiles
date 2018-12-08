@@ -7,17 +7,13 @@ ZSH_THEME="pygmalion"
 # Comment this out to disable weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
 
-# zsh-syntax-highlighting should be last!
-plugins=(archlinux last-working-dir lein vagrant mvn sbt docker vi-mode zsh-syntax-highlighting)
+plugins=(last-working-dir vi-mode)
 
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # remove auto-correct
 unsetopt correct_all
-
-# update dir_colors
-eval `dircolors ~/.dir_colors`
 
 # set color mode of terminal
 export TERM=xterm-256color
@@ -46,9 +42,6 @@ alias lein="noglob lein"
 alias top-10-size="du -hcsx -- *(D) | sort -rh | head -10"
 
 alias stream-mpd="mpv -idle --cache=no http://localhost:8000"
-
-# ZSH highlighter
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
 # Notify when long command is finished
 [ -e $HOME/.zsh-notifier/notifyosd.zsh ] && . $HOME/.zsh-notifier/notifyosd.zsh

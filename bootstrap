@@ -5,11 +5,8 @@
 import os
 from shutil import rmtree, copytree
 
-FILES_TO_IGNORE = {'bootstrap', 'bin', 'README.md',
-                   'dircolors-solarized'}
-DIRCOLORS_DB_FILE = 'dircolors-solarized/dircolors.ansi-universal'
+FILES_TO_IGNORE = {'bootstrap', 'bin', 'README.md',}
 OH_MY_ZSH_DIR = 'oh-my-zsh'
-OH_MY_ZSH_CUSTOM_PLUGINS = {'zsh-syntax-highlighting'}
 BIN_DIR = 'bin'
 
 
@@ -44,9 +41,6 @@ def create_dotfile_symlinks(dst_dir, ignored_set):
         if c not in ignored_set and not c.startswith('.'):
             create_symlink(dst_dir, c)
 
-def create_dircolors_symlink(dst_dir, dircolors_db_file):
-    create_symlink(dst_dir, dircolors_db_file, 'dir_colors')
-
 def copy_dirs(dst, srcs_set):
     '''Copies all directories from srcs_set to dst directory.'''
     for s in srcs_set:
@@ -58,7 +52,6 @@ def copy_dirs(dst, srcs_set):
 if __name__ == '__main__':
     home = os.path.expanduser('~')
     create_dotfile_symlinks(home, FILES_TO_IGNORE)
-    create_dircolors_symlink(home, DIRCOLORS_DB_FILE)
     create_symlink(home, BIN_DIR, is_dotfiles = False)
     omz_plugins_dst = os.path.abspath(OH_MY_ZSH_DIR + '/custom/plugins/')
     copy_dirs(omz_plugins_dst, OH_MY_ZSH_CUSTOM_PLUGINS)
