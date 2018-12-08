@@ -6,7 +6,6 @@ import os
 from shutil import rmtree, copytree
 
 FILES_TO_IGNORE = {'bootstrap', 'bin', 'README.md',}
-OH_MY_ZSH_DIR = 'oh-my-zsh'
 BIN_DIR = 'bin'
 
 
@@ -41,17 +40,8 @@ def create_dotfile_symlinks(dst_dir, ignored_set):
         if c not in ignored_set and not c.startswith('.'):
             create_symlink(dst_dir, c)
 
-def copy_dirs(dst, srcs_set):
-    '''Copies all directories from srcs_set to dst directory.'''
-    for s in srcs_set:
-        path = os.path.join(dst, s)
-        remove(path)
-        copytree(os.path.abspath(s), path)
-
 
 if __name__ == '__main__':
     home = os.path.expanduser('~')
     create_dotfile_symlinks(home, FILES_TO_IGNORE)
     create_symlink(home, BIN_DIR, is_dotfiles = False)
-    omz_plugins_dst = os.path.abspath(OH_MY_ZSH_DIR + '/custom/plugins/')
-    copy_dirs(omz_plugins_dst, OH_MY_ZSH_CUSTOM_PLUGINS)
