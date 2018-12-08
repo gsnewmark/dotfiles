@@ -72,3 +72,6 @@ bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
 
 source /etc/profile.d/conda.sh
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda/lib64"
+export CUDA_HOME=/opt/cuda/
