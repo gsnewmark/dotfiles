@@ -41,6 +41,10 @@ set fish_cursor_insert      line
 set fish_cursor_replace_one underscore
 set fish_cursor_visual      block
 
+function fish_default_mode_prompt
+  # NOOP to disable mode indicator
+end
+
 ## fzf
 
 set -U FZF_LEGACY_KEYBINDINGS 0
