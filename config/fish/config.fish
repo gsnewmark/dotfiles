@@ -2,7 +2,7 @@
 
 set -gx TERM xterm-256color
 
-set -gx PATH ~/bin ~/.cargo/bin (ruby -e 'puts Gem.user_dir')/bin $PATH
+set -gx PATH ~/bin ~/.cargo/bin (ruby -e 'puts Gem.user_dir')/bin ~/.emacs.d/bin $PATH
 
 set -l TE "emacsclient -c -t -a vim"
 set -gx VISUAL $TE
