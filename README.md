@@ -1,7 +1,7 @@
 # gsnewmark's *nix configuration
 
 A set of configuration files for Emacs
-([Spacemacs](https://github.com/syl20bnr/spacemacs)), [Fish
+([Doom Emacs](https://github.com/hlissner/doom-emacs)), [Fish
 shell](https://fishshell.com/),
 [qutebrowser](https://github.com/The-Compiler/qutebrowser),
 [i3 wm](http://i3wm.org/)/[i3blocks](https://github.com/vivien/i3blocks),
@@ -23,3 +23,11 @@ git submodule init
 git submodule update
 ./bootstrap
 ```
+
+## License
+
+Configuration is licensed under the MIT license, available at
+[MIT](http://opensource.org/licenses/MIT) and also in the LICENSE file. 
+
+[Doom Emacs](https://github.com/hlissner/doom-emacs) is licensed under the MIT
+license (Copyright (c) 2016-2017 Henrik Lissner)
