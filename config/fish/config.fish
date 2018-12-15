@@ -53,7 +53,7 @@ set -U FZF_LEGACY_KEYBINDINGS 0
 
 # Expose gnome-keyring as SSH agent
 if [ -n "$DESKTOP_SESSION" ]
-  set -gx SSH_AUTH_SOCK (gnome-keyring-daemon --start | awk -F "=" '$1 == "SSH_AUTH_SOCK" { print $2 }')
+    set -gx SSH_AUTH_SOCK (gnome-keyring-daemon --start | awk -F "=" '$1 == "SSH_AUTH_SOCK" { print $2 }')
 end
 
 ## Color Theme
