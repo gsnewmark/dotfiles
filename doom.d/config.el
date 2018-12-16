@@ -44,11 +44,10 @@
                                  "* %^{Description}\n  Added: %U\n%?")
                                 ("j" "Journal" entry
                                  (file+datetree (concat org-directory "/journal.org"))
-                                 "* %^{Description}\n  Added: %U\n%?")))
+                                 "* %^{Description}\n  Added: %U\n%?"))
+        org-startup-indented nil)
 
-  ;; TODO doesn't seem to work, file still opens indented
-  (setq org-startup-indented nil)
-  (remove-hook! org-mode #'(org-indent-mode)))
+  (add-hook! :append 'org-mode-hook (org-indent-mode -1)))
 
 ;; Make Magit status fill whole frame
 (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
