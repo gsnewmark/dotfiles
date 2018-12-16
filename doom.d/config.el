@@ -19,6 +19,11 @@
 
 (setq ediff-split-window-function 'split-window-horizontally)
 
+;; Make Magit status fill whole frame
+(setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+
+(setq git-link-use-commit t)
+
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "qutebrowser")
 
@@ -48,6 +53,3 @@
         org-startup-indented nil)
 
   (add-hook! :append 'org-mode-hook (org-indent-mode -1)))
-
-;; Make Magit status fill whole frame
-(setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
