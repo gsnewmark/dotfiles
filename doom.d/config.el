@@ -50,6 +50,7 @@
                                 ("j" "Journal" entry
                                  (file+datetree (concat org-directory "/journal.org"))
                                  "* %^{Description}\n  Added: %U\n%?"))
-        org-startup-indented nil)
+        org-startup-indented nil
+        org-imenu-depth 5)
 
   (add-hook! :append 'org-mode-hook (org-indent-mode -1)))
