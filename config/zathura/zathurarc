@@ -23,6 +23,6 @@ set completion-fg               "#EBCB8B"
 set completion-highlight-fg     "#8FBCBB"
 set completion-highlight-bg     "#EBCB8B"
 set recolor-lightcolor          "#3B4252"
-set recolor-darkcolor           "#ECEFF4"
+set recolor-darkcolor           "#D8DEE9"
 
 set recolor                     "true"
