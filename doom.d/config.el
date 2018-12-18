@@ -54,3 +54,6 @@
         org-imenu-depth 5)
 
   (add-hook! :append 'org-mode-hook (org-indent-mode -1)))
+
+(after! cider-mode
+  (add-hook 'cider-mode-hook 'subword-mode))
