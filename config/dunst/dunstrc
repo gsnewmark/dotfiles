@@ -40,7 +40,7 @@
     # width is 0.
     shrink = no
 
-    transparency = 20
+    transparency = 10
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -83,21 +83,21 @@
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
     frame_width = 1
-    frame_color = "#859900"
+    frame_color = "#1C2028"
 
 [urgency_low]
-    background = "#002b36"
-    foreground = "#657b83"
+    background = "#2E3440"
+    foreground = "#A3BE8C"
     timeout = 6
 
 [urgency_normal]
-    background = "#002b36"
-    foreground = "#839496"
+    background = "#2E3440"
+    foreground = "#EBCB8B"
     timeout = 10
 
 [urgency_critical]
-    background = "#002b36"
-    foreground = "#dc322f"
+    background = "#2E3440"
+    foreground = "#BF616A"
     timeout = 0
 
 [shortcuts]
