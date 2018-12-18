@@ -231,12 +231,14 @@ set_from_resource $foreground i3wm.foreground $base00
 set_from_resource $lighterbg  i3wm.lighterbg  $base02
 set_from_resource $separator  i3wm.separator  $lighterbg
 
-# class                     border      background   text         indicator
-client.focused              $cyan       $cyan        $background  $green
-client.focused_inactive     $cyan       $cyan        $background  $cyan
-client.unfocused            $background $background  $foreground  $background
-client.urgent               $red        $red         $foreground  $red
-client.placeholder          $background $background  $foreground  $background
+set_from_resource $indicator  i3wm.color8     $base3
+
+# class                     border       background   text         indicator   child_border
+client.focused              $cyan        $cyan        $background  $indicator  #1C2028
+client.focused_inactive     $cyan        $cyan        $background  $indicator  #1C2028
+client.unfocused            $background  $background  $foreground  $indicator
+client.urgent               $red         $red         $foreground  $indicator
+client.placeholder          $background  $background  $foreground  $indicator
 
 bar {
     status_command i3blocks
