@@ -232,7 +232,7 @@ set_from_resource $lighterbg  i3wm.lighterbg  $base02
 set_from_resource $separator  i3wm.separator  $lighterbg
 
 # class                     border      background   text         indicator
-client.focused              $cyan       $cyan        $background  $cyan
+client.focused              $cyan       $cyan        $background  $green
 client.focused_inactive     $cyan       $cyan        $background  $cyan
 client.unfocused            $background $background  $foreground  $background
 client.urgent               $red        $red         $foreground  $red
