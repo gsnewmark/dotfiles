@@ -31,3 +31,6 @@ Configuration is licensed under the MIT license, available at
 
 [Doom Emacs](https://github.com/hlissner/doom-emacs) is licensed under the MIT
 license (Copyright (c) 2016-2017 Henrik Lissner)
+
+[nord-xresources](https://github.com/arcticicestudio/nord-xresources) is
+licensed under the MIT license (Copyright (c) 2016-present Arctic Ice Studio) 

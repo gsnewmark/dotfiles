@@ -207,25 +207,52 @@ workspace_auto_back_and_forth yes
 
 new_window 1pixel
 
-# class                 border  backgr. text    indicator
-client.focused          #268bd2 #268bd2 #fdf6e3 #6c71c4
-client.focused_inactive #2aa198 #2aa198 #fdf6e3 #484e50
-client.unfocused        #073642 #073642 #fdf6e3 #484e50
-client.urgent           #2f343a #900000 #ffffff #900000
+# Colors based on https://github.com/devdevdevdevdeo/dotfiles/blob/master/i3/config
+set_from_resource $base02   i3wm.color0     #073642
+set_from_resource $base01   i3wm.color10    #586e75
+set_from_resource $base00   i3wm.color11    #657b83
+set_from_resource $base0    i3wm.color12    #839496
+set_from_resource $base1    i3wm.color14    #93a1a1
+set_from_resource $base2    i3wm.color7     #eee8d5
+set_from_resource $base3    i3wm.color15    #fdf6e3
+
+set_from_resource $yellow   i3wm.color3     #b58900
+set_from_resource $orange   i3wm.color9     #cb4b16
+set_from_resource $red      i3wm.color1     #dc322f
+set_from_resource $magenta  i3wm.color5     #d33682
+set_from_resource $violet   i3wm.color13    #6c71c4
+set_from_resource $blue     i3wm.color4     #268bd2
+set_from_resource $cyan     i3wm.color6     #2aa198
+set_from_resource $green    i3wm.color2     #859900
+
+set_from_resource $background i3wm.background $base3
+set_from_resource $foreground i3wm.foreground $base00
+
+set_from_resource $lighterbg  i3wm.lighterbg  $base02
+set_from_resource $separator  i3wm.separator  $lighterbg
+
+# class                     border      background   text         indicator
+client.focused              $cyan       $cyan        $background  $cyan
+client.focused_inactive     $cyan       $cyan        $background  $cyan
+client.unfocused            $background $background  $foreground  $background
+client.urgent               $red        $red         $foreground  $red
+client.placeholder          $background $background  $foreground  $background
 
 bar {
     status_command i3blocks
     position       top
     strip_workspace_numbers yes
     colors {
-        # solarized
-        background #002b36
-        statusline #eee8d5
-        focused_workspace  #002b36 #002b36 #268bd2
-        active_workspace   #002b36 #002b36 #268bd2
-        inactive_workspace #002b36 #002b36 #586e75
-        urgent_workspace   #dc322f #dc322f #93a1a1
-    }
+        background  $background
+        statusline  $foreground
+        separator   $background
+
+        #Type              border      background  text
+        focused_workspace  $cyan       $cyan       $background
+        active_workspace   $background $background $foreground
+        inactive_workspace $background $background $foreground
+        urgent_workspace   $red        $red        $foreground
+   }
 }
 
 focus_follows_mouse no
