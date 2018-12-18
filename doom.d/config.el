@@ -57,3 +57,5 @@
 
 (after! cider-mode
   (add-hook 'cider-mode-hook 'subword-mode))
+
+(setq clojure-align-forms-automatically t)
