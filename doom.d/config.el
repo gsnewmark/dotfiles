@@ -60,3 +60,15 @@
   (add-hook 'cider-mode-hook 'subword-mode))
 
 (setq clojure-align-forms-automatically t)
+
+(defun gsnewmark/clojure-reset-reloaded-repl ()
+  (interactive)
+  (save-some-buffers)
+  (with-current-buffer (cider-current-repl-buffer)
+    (cider-interactive-eval
+     "(reset)")))
+
+(after! clojure-mode
+  (map! (:localleader
+          (:map cider-mode-map
+            (:prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)))))
