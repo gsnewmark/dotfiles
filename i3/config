@@ -234,8 +234,8 @@ set_from_resource $separator  i3wm.separator  $lighterbg
 set_from_resource $indicator  i3wm.color8     $base3
 
 # class                     border       background   text         indicator   child_border
-client.focused              $base02      $base02      $foreground  $indicator  #1C2028
-client.focused_inactive     $base02      $base02      $foreground  $indicator  #1C2028
+client.focused              $indicator   $indicator   $foreground  $indicator  #1C2028
+client.focused_inactive     $indicator   $indicator   $foreground  $indicator  #1C2028
 client.unfocused            $background  $background  $foreground  $indicator
 client.urgent               $red         $red         $foreground  $indicator
 client.placeholder          $background  $background  $foreground  $indicator
@@ -250,7 +250,7 @@ bar {
         separator   $background
 
         #Type              border      background  text
-        focused_workspace  $base02     $base02     $foreground
+        focused_workspace  $indicator  $indicator  $foreground
         active_workspace   $background $background $foreground
         inactive_workspace $background $background $foreground
         urgent_workspace   $red        $red        $foreground
