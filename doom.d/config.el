@@ -2,6 +2,8 @@
 
 ;; Place your private configuration here
 
+;; UI
+
 (setq doom-theme 'doom-nord)
 
 (setq doom-font (font-spec :family "Iosevka Term Medium" :size 12.0)
@@ -13,9 +15,11 @@
 
 (setq display-line-numbers-type nil)
 
-(require 'company)
-(setq company-idle-delay 0.2
-      company-minimum-prefix-length 3)
+(def-modeline-segment! +modeline-indent-style
+  :on-set (indent-tabs-mode tab-width)
+  "")
+
+;; VCS
 
 (setq ediff-split-window-function 'split-window-horizontally)
 
@@ -24,8 +28,7 @@
 
 (setq git-link-use-commit t)
 
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "qutebrowser")
+;; Org Mode
 
 (after! org
   (setq org-directory "~/Dropbox/org"
@@ -56,6 +59,8 @@
 
   (add-hook! :append 'org-mode-hook (org-indent-mode -1)))
 
+;; Clojure
+
 (after! cider-mode
   (add-hook 'cider-mode-hook 'subword-mode))
 
@@ -72,3 +77,12 @@
   (map! (:localleader
           (:map cider-mode-map
             (:prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)))))
+
+;; Misc.
+
+(require 'company)
+(setq company-idle-delay 0.2
+      company-minimum-prefix-length 3)
+
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "qutebrowser")
