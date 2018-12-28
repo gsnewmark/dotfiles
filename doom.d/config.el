@@ -55,7 +55,8 @@
                                  "* %^{Description}\n  Added: %U\n%?"))
         org-startup-indented nil
         org-imenu-depth 5
-        org-log-done 'time)
+        org-log-done 'time
+        org-tags-column -80)
 
   (add-hook! :append 'org-mode-hook (org-indent-mode -1)))
 
