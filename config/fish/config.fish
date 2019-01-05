@@ -4,8 +4,8 @@ set -gx TERM xterm-256color
 
 set -gx PATH ~/bin ~/.cargo/bin (ruby -e 'puts Gem.user_dir')/bin ~/.emacs.d/bin $PATH
 
-set -l TE "emacsclient -c -t -a vim"
-set -gx VISUAL $TE
+set -l TE "emacs -nw"
+set -gx VISUAL emacs
 set -gx EDITOR $TE
 
 set -gx SBT_OPTS "-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"
