@@ -81,9 +81,5 @@
 
 ;; Misc.
 
-(require 'company)
-(setq company-idle-delay 0.2
-      company-minimum-prefix-length 3)
-
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "qutebrowser")
