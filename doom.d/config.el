@@ -15,9 +15,7 @@
 
 (setq display-line-numbers-type nil)
 
-(def-modeline-segment! +modeline-indent-style
-  :on-set (indent-tabs-mode tab-width)
-  "")
+(delq '+modeline-indent-style (cadr (alist-get :main +modeline--alist)))
 
 ;; VCS
 
