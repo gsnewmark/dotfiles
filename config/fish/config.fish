@@ -2,6 +2,9 @@
 
 set -gx TERM xterm-256color
 
+set -gx QT_QPA_PLATFORMTHEME gtk2
+set -gx CALIBRE_USE_SYSTEM_THEME 1
+
 set -gx PATH ~/bin ~/.cargo/bin (ruby -e 'puts Gem.user_dir')/bin ~/.emacs.d/bin $PATH
 
 set -l TE "emacs -nw"
