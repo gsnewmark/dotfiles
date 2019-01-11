@@ -274,7 +274,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && notify-send "Backlight:
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && notify-send "Backlight: $(xbacklight | cut -c1-2)%"
 
 exec --no-startup-id xfsettingsd
-exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:switch,grp:win_space_toggle us,ua
+exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:lwin_switch,grp:shifts_toggle us,ua
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
 exec --no-startup-id cbatticon -i symbolic
