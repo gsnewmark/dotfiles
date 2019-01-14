@@ -77,6 +77,15 @@
           (:map cider-mode-map
             (:prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)))))
 
+;; Rust
+
+(setq rust-format-on-save t)
+
+(add-hook 'rust-mode-hook
+          (lambda ()
+            (setq-local flycheck-checker 'rust-clippy)
+            (setq-local flycheck-check-syntax-automatically '(mode-enabled save))))
+
 ;; Misc.
 
 (setq browse-url-browser-function 'browse-url-generic
