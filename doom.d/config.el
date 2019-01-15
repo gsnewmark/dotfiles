@@ -86,6 +86,29 @@
             (setq-local flycheck-checker 'rust-clippy)
             (setq-local flycheck-check-syntax-automatically '(mode-enabled save))))
 
+;; Bindings
+
+(map!
+ ;; Easier window movement (from https://github.com/hlissner/doom-emacs-private)
+ :n "C-h" 'evil-window-left
+ :n "C-j" 'evil-window-down
+ :n "C-k" 'evil-window-up
+ :n "C-l" 'evil-window-right
+
+ (:map evil-treemacs-state-map
+   "C-h" 'evil-window-left
+   "C-l" 'evil-window-right)
+
+ (:map org-agenda-mode-map
+   "C-h" 'evil-window-left
+   "C-l" 'evil-window-right)
+
+ ;; Quick jumps
+ :leader
+ (:prefix ("j" . "jump")
+   :desc "Jump to subword" "s" #'evil-avy-goto-subword-1
+   :desc "Jump to line" "l" #'evil-avy-goto-line))
+
 ;; Misc.
 
 (setq browse-url-browser-function 'browse-url-generic
