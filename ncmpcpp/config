@@ -249,7 +249,7 @@ now_playing_suffix = "$/b"
 ##   not available.
 ##
 #
-song_columns_list_format = "(1f){} (7f)[white]{n} (25)[blue]{a} (40)[magenta]{t|f} (25)[cyan]{b} (5)[white]{y} (7f)[white]{l}"
+song_columns_list_format = "(1f){} (7f)[white]{n} (25)[blue]{a} (40)[magenta]{t|f} (25)[cyan]{b} (5)[white]{yr} (7f)[white]{lr}"
 #
 ##### various settings #####
 #
