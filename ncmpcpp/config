@@ -451,7 +451,7 @@ use_console_editor = "yes" (set to yes, if your editor is console app)
 #
 #colors_enabled = "yes"
 #
-#empty_tag_color = "cyan"
+empty_tag_color = "red"
 #
 #header_window_color = "default"
 #
@@ -467,7 +467,7 @@ main_window_color = "default"
 #
 #color2 = "green"
 #
-#main_window_highlight_color = "yellow"
+main_window_highlight_color = "cyan"
 #
 #progressbar_color = "default"
 #
