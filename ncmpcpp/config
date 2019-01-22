@@ -107,7 +107,7 @@ mpd_music_dir = "/mnt/storage/Music"
 #
 ## delay after playlist highlighting will be disabled (0 = don't disable)
 #
-#playlist_disable_highlight_delay = "5"
+playlist_disable_highlight_delay = "3"
 #
 ## defines how long various messages are supposed to be visible
 #
@@ -279,9 +279,9 @@ search_engine_display_mode = "columns" #(classic/columns)
 #
 #seek_time = "1"
 #
-#autocenter_mode = "no"
+autocenter_mode = "yes"
 #
-#centered_cursor = "no"
+centered_cursor = "yes"
 #
 ##
 ## Note: You can specify third character which will
