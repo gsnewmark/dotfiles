@@ -167,7 +167,7 @@ mpd_music_dir = "/mnt/storage/Music"
 #
 #song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
 #
-#song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+song_status_format = "{{$5%a$9 - }{$6%t$9} ({{%y - }$7%b$9})}|{%f}"
 #
 #song_library_format = "{%n - }{%t}|{%f}"
 #
@@ -249,7 +249,7 @@ now_playing_suffix = "$/b"
 ##   not available.
 ##
 #
-song_columns_list_format = "(1f){} (7f)[white]{n} (25)[blue]{a} (40)[magenta]{t|f} (25)[cyan]{b} (5)[white]{yr} (7f)[white]{lr}"
+song_columns_list_format = "(4f)[white]{nr} (25)[blue]{a} (40)[magenta]{t|f} (25)[cyan]{b} (5)[white]{yr} (7f)[white]{lr}"
 #
 ##### various settings #####
 #
@@ -291,7 +291,7 @@ search_engine_display_mode = "columns" #(classic/columns)
 #
 #default_place_to_search_in = "database" (database/playlist)
 #
-user_interface = "alternative" #(classic/alternative)
+user_interface = "classic" #(classic/alternative)
 #
 #media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
 #
@@ -461,7 +461,7 @@ use_console_editor = "yes" (set to yes, if your editor is console app)
 #
 #state_flags_color = "default"
 #
-#main_window_color = "yellow"
+main_window_color = "default"
 #
 #color1 = "white"
 #
