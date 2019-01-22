@@ -199,9 +199,9 @@ alternative_header_second_line_format = "{{$5%a$/b$9}{ - $7%b$9}$8{ (%y)}}|{%D}"
 ## text attributes listed above.
 ##
 #
-#now_playing_prefix = "$b"
+now_playing_prefix = "$b$6⇒"
 #
-#now_playing_suffix = "$/b"
+now_playing_suffix = "$/b"
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
@@ -249,7 +249,7 @@ alternative_header_second_line_format = "{{$5%a$/b$9}{ - $7%b$9}$8{ (%y)}}|{%D}"
 ##   not available.
 ##
 #
-song_columns_list_format = "(7f)[white]{n} (25)[blue]{a} (40)[magenta]{t|f} (25)[cyan]{b} (5)[white]{y} (7f)[white]{l}"
+song_columns_list_format = "(1f){} (7f)[white]{n} (25)[blue]{a} (40)[magenta]{t|f} (25)[cyan]{b} (5)[white]{y} (7f)[white]{l}"
 #
 ##### various settings #####
 #
@@ -307,7 +307,7 @@ user_interface = "alternative" #(classic/alternative)
 #
 #statusbar_visibility = "yes"
 #
-#titles_visibility = "yes"
+titles_visibility = "no"
 #
 #header_text_scrolling = "yes"
 #
