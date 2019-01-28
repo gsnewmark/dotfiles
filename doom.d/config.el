@@ -17,6 +17,8 @@
 
 (delq '+modeline-indent-style (cadr (alist-get :main +modeline--alist)))
 
+(set-face-background 'ein:cell-input-area "#3B4252")
+
 ;; VCS
 
 (setq ediff-split-window-function 'split-window-horizontally)
