@@ -17,7 +17,8 @@
 
 (delq '+modeline-indent-style (cadr (alist-get :main +modeline--alist)))
 
-(set-face-background 'ein:cell-input-area "#3B4252")
+(custom-set-faces
+ '(ein:cell-input-area ((t (:background "#3B4252" :foreground "#ECEFF4")))))
 
 ;; VCS
 
