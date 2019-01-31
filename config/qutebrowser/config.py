@@ -73,6 +73,7 @@ c.colors.statusbar.url.success.https.fg = nord_green
 c.colors.statusbar.url.error.fg = nord_orange
 c.colors.statusbar.url.warn.fg = nord_yellow
 c.colors.statusbar.url.hover.fg = nord_cyan
+c.colors.tabs.bar.bg = nord_base03
 c.colors.tabs.odd.fg = nord_base3
 c.colors.tabs.odd.bg = nord_base03
 c.colors.tabs.even.fg = nord_base3
