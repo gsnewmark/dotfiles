@@ -89,6 +89,15 @@
             (setq-local flycheck-checker 'rust-clippy)
             (setq-local flycheck-check-syntax-automatically '(mode-enabled save))))
 
+;; Misc.
+
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "qutebrowser")
+
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(remove-hook 'flyspell-mode-hook #'+spellcheck|immediately)
+
 ;; Bindings
 
 (map!
@@ -111,12 +120,3 @@
  (:prefix ("j" . "jump")
    :desc "Jump to subword" "s" #'evil-avy-goto-subword-1
    :desc "Jump to line" "l" #'evil-avy-goto-line))
-
-;; Misc.
-
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "qutebrowser")
-
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
-(add-hook 'text-mode-hook 'flyspell-mode)
-(remove-hook 'flyspell-mode-hook #'+spellcheck|immediately)
