@@ -89,6 +89,12 @@
             (setq-local flycheck-checker 'rust-clippy)
             (setq-local flycheck-check-syntax-automatically '(mode-enabled save))))
 
+;; Go
+
+(after! go-mode
+  (setq gomft-command "goimports")
+  (add-hook 'before-save-hook #'gofmt-before-save))
+
 ;; Misc.
 
 (setq browse-url-browser-function 'browse-url-generic
