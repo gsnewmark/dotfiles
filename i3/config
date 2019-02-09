@@ -283,4 +283,3 @@ exec --no-startup-id dropbox
 exec --no-startup-id unclutter -idle 3
 exec --no-startup-id $HOME/bin/random_background
 exec --no-startup-id udiskie
-exec --no-startup-id solaar
