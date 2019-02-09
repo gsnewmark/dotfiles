@@ -269,7 +269,6 @@ assign [class="libprs500"] → 6:VI
 assign [class="Steam"] → 9:IX
 
 exec_always compton -CGb
-exec_always --no-startup-id xfce4-power-manager
 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && notify-send "Backlight: $(xbacklight | cut -c1-2)%"
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && notify-send "Backlight: $(xbacklight | cut -c1-2)%"
@@ -278,8 +277,10 @@ exec --no-startup-id xfsettingsd
 exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:shifts_toggle us,ua
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
+exec --no-startup-id cbatticon -i symbolic
 exec --no-startup-id mpd && mpdas
 exec --no-startup-id dropbox
 exec --no-startup-id unclutter -idle 3
 exec --no-startup-id $HOME/bin/random_background
 exec --no-startup-id udiskie
+exec --no-startup-id solaar
