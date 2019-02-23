@@ -8,8 +8,6 @@
        file-templates    ; auto-snippets for empty files
        lookup            ; helps you navigate your code and documentation
        snippets          ; my elves. They type so I don't have to
-       spellcheck        ; tasing you for misspelling mispelling
-       syntax-checker    ; tasing you for every semicolon you forget
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
@@ -46,6 +44,7 @@
         +ace-window)
 
        :editor
+       fold              ; (nigh) universal code folding
        format            ; automated prettiness
        lispy             ; vim for lisp, for people who dont like vim
        multiple-cursors  ; editing in many places at once
@@ -57,10 +56,8 @@
         +ranger         ; bringing the goodness of ranger to dired
         +icons          ; colorful icons for dired-mode
         )
-       ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
        ;;eshell            ; a consistent, cross-platform shell (WIP)
-       hideshow          ; basic code-folding support
        imenu             ; an imenu sidebar and searchable code index
        ;;term              ; terminals in Emacs
        vc                ; version-control and Emacs, sitting in a tree
@@ -70,10 +67,12 @@
        docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
+       flycheck          ; tasing you for every semicolon you forget
        ;;gist              ; interacting with github gists
+       ;;lsp
        ;;macos             ; MacOS-specific commands
-       ;;make              ; run make tasks from Emacs
        magit             ; a git porcelain for Emacs
+       ;;make              ; run make tasks from Emacs
        ;;password-store    ; password manager for nerds
        ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
@@ -82,6 +81,7 @@
        ;;tmux              ; an API for interacting with tmux
        ;;upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
+       ;;vterm             ; another terminals in Emacs
 
        :lang
        ;;assembly          ; assembly for fun or debugging
