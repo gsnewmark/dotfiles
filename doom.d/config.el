@@ -126,3 +126,8 @@
  (:prefix ("j" . "jump")
    :desc "Jump to subword" "s" #'evil-avy-goto-subword-1
    :desc "Jump to line" "l" #'evil-avy-goto-line))
+
+(after! org
+  (map! :map evil-org-mode-map
+        :localleader
+        :desc "Archive Subtree" :m "a" #'org-archive-subtree))
