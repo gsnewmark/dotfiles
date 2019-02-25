@@ -131,3 +131,8 @@
   (map! :map evil-org-mode-map
         :localleader
         :desc "Archive Subtree" :m "a" #'org-archive-subtree))
+
+(after! ein
+  (map! :map ein:notebook-mode-map
+        :localleader
+        :map ein:notebook-mode-map "," #'+ein-hydra/body))
