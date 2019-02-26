@@ -1,7 +1,7 @@
 # gsnewmark's *nix configuration
 
 A set of configuration files for Emacs
-([Doom Emacs](https://github.com/hlissner/doom-emacs)), [Fish
+([Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop)), [Fish
 shell](https://fishshell.com/),
 [qutebrowser](https://github.com/The-Compiler/qutebrowser),
 [i3 wm](http://i3wm.org/)/[i3blocks](https://github.com/vivien/i3blocks),
@@ -29,8 +29,8 @@ git submodule update
 Configuration is licensed under the MIT license, available at
 [MIT](http://opensource.org/licenses/MIT) and also in the LICENSE file. 
 
-[Doom Emacs](https://github.com/hlissner/doom-emacs) is licensed under the MIT
-license (Copyright (c) 2016-2017 Henrik Lissner).
+[Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop) is licensed under the MIT
+license (Copyright (c) 2016-2019 Henrik Lissner).
 
 [nord-xresources](https://github.com/arcticicestudio/nord-xresources),
 [nord-termite](https://github.com/arcticicestudio/nord-termite) are licensed
