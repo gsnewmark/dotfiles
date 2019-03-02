@@ -119,13 +119,7 @@
 
  (:map org-agenda-mode-map
    "C-h" 'evil-window-left
-   "C-l" 'evil-window-right)
-
- ;; Quick jumps
- :leader
- (:prefix ("j" . "jump")
-   :desc "Jump to subword" "s" #'evil-avy-goto-subword-1
-   :desc "Jump to line" "l" #'evil-avy-goto-line))
+   "C-l" 'evil-window-right))
 
 (after! org
   (map! :map evil-org-mode-map
