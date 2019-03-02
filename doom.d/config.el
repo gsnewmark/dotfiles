@@ -15,8 +15,6 @@
 
 (setq display-line-numbers-type nil)
 
-(delq '+modeline-indent-style (cadr (alist-get :main +modeline--alist)))
-
 (custom-set-faces
  '(ein:cell-input-area ((t (:background "#3B4252" :foreground "#ECEFF4")))))
 
