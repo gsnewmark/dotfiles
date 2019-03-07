@@ -15,6 +15,9 @@
 
 (setq display-line-numbers-type nil)
 
+(setq doom-modeline-major-mode-icon t
+      doom-modeline-major-mode-color-icon t)
+
 (custom-set-faces
  '(ein:cell-input-area ((t (:background "#3B4252" :foreground "#ECEFF4")))))
 
