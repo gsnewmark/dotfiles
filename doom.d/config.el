@@ -117,7 +117,7 @@
    "C-l" 'evil-window-right))
 
 (after! org
-  (map! :map evil-org-mode-map
+  (map! :map org-mode-map
         :localleader
         :desc "Archive Subtree" :m "a" #'org-archive-subtree))
 
