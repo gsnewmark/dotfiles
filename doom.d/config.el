@@ -59,7 +59,7 @@
         org-log-done 'time
         org-tags-column -80)
 
-  (add-hook! :append 'org-mode-hook (org-indent-mode -1)))
+  (add-hook! 'org-mode-hook (org-indent-mode -1)))
 
 ;; Clojure
 
@@ -74,11 +74,6 @@
   (with-current-buffer (cider-current-repl-buffer)
     (cider-interactive-eval
      "(reset)")))
-
-(after! clojure-mode
-  (map! (:localleader
-          (:map cider-mode-map
-            (:prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)))))
 
 ;; Rust
 
@@ -130,3 +125,8 @@
   (map! :map ein:notebook-mode-map
         :localleader
         :map ein:notebook-mode-map "," #'+ein-hydra/body))
+
+(after! clojure-mode
+  (map! (:localleader
+          (:map cider-mode-map
+            (:prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)))))
