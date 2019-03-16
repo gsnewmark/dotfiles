@@ -12,12 +12,10 @@
 
        :completion
        (company        ; the ultimate code completion backend
-        +auto
-        +childframe)
+        +auto)
        ;;helm            ; the *other* search engine for love and life
        ;;ido             ; the other *other* search engine...
-       (ivy            ; a search engine for love and life
-        +childframe)
+       (ivy)            ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -27,6 +25,7 @@
        evil-goggles      ; display visual hints when editing in evil
        ;;fci               ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
+       indent-guides     ; highlighted indent columns
        modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink the current line after jumping
        ;;neotree           ; a project drawer, like NERDTree for vim
