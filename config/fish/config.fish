@@ -113,8 +113,6 @@ set pure_color_yellow (set_color $nord13)
 
 ## Prompt
 
-set pure_symbol_prompt "⇒"
-
 set pure_username_color $fish_color_user
 set pure_host_color $fish_color_host
 
