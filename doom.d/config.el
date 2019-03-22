@@ -59,7 +59,7 @@
         org-log-done 'time
         org-tags-column -80)
 
-  (add-hook! 'org-mode-hook (org-indent-mode -1)))
+  (add-hook! :append 'org-mode-hook (org-indent-mode -1)))
 
 ;; Clojure
 
