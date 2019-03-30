@@ -136,6 +136,12 @@
       :map cider-mode-map
       :prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)
 
+(map! :after cider-repl-mode
+      :localleader
+      :map cider-repl-mode-map
+      "c" #'cider-repl-clear-buffer
+      "x" #'gsnewmark/clojure-reset-reloaded-repl)
+
 (map! :after python
       :localleader
       :map python-mode-map
