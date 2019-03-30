@@ -124,7 +124,8 @@
 (map! :after org
       :localleader
       :map org-mode-map
-      :desc "Archive Subtree" "a" #'org-archive-subtree)
+      :desc "Archive Subtree" "a" #'org-archive-subtree
+      "i" #'org-time-stamp-inactive)
 
 (map! :after ein
       :localleader
