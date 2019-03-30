@@ -90,6 +90,11 @@
   (setq gomft-command "goimports")
   (add-hook 'before-save-hook #'gofmt-before-save))
 
+;; Python
+
+(custom-set-variables
+ '(conda-anaconda-home "~/.conda"))
+
 ;; Misc.
 
 (setq browse-url-browser-function 'browse-url-generic
@@ -130,3 +135,11 @@
   (map! (:localleader
           (:map cider-mode-map
             (:prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)))))
+
+(map! :after python
+      :localleader
+      :map python-mode-map
+      :prefix ("c" . "conda")
+      :desc "List environments" "l" #'conda-env-list
+      :desc "Activate environment" "a" #'conda-env-activate
+      :desc "Deactivate environment" "d" #'conda-env-deactivate)
