@@ -121,20 +121,20 @@
    "C-h" 'evil-window-left
    "C-l" 'evil-window-right))
 
-(after! org
-  (map! :map org-mode-map
-        :localleader
-        :desc "Archive Subtree" :m "a" #'org-archive-subtree))
+(map! :after org
+      :localleader
+      :map org-mode-map
+      :desc "Archive Subtree" "a" #'org-archive-subtree)
 
-(after! ein
-  (map! :map ein:notebook-mode-map
-        :localleader
-        :map ein:notebook-mode-map "," #'+ein-hydra/body))
+(map! :after ein
+      :localleader
+      :map ein:notebook-mode-map
+      "," #'+ein-hydra/body)
 
-(after! clojure-mode
-  (map! (:localleader
-          (:map cider-mode-map
-            (:prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)))))
+(map! :after clojure-mode
+      :localleader
+      :map cider-mode-map
+      :prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)
 
 (map! :after python
       :localleader
