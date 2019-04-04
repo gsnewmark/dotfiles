@@ -35,6 +35,8 @@ alias top-10-size "du -hcx --max-depth=1 | sort -rh | head -10"
 
 alias stream-mpd "mpv -idle --cache=no http://localhost:8000"
 
+alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
+
 ## vi mode
 
 fish_vi_key_bindings
