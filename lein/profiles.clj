@@ -4,4 +4,4 @@
                        [com.clojure-goes-fast/clj-java-decompiler "0.2.1"]
                        [com.hypirion/clj-xchart "0.2.0"]]
         :plugins [[lein-ancient "0.6.15"]
-                  [com.jakemccrary/lein-test-refresh "0.24.0"]]}}
+                  [com.jakemccrary/lein-test-refresh "0.24.1"]]}}
