@@ -1,4 +1,4 @@
-{:user {:dependencies [[criterium "0.4.4"]
+{:user {:dependencies [[criterium "0.4.5"]
                        [com.clojure-goes-fast/clj-memory-meter "0.1.2"]
                        [com.clojure-goes-fast/clj-async-profiler "0.3.1"]
                        [com.clojure-goes-fast/clj-java-decompiler "0.2.1"]

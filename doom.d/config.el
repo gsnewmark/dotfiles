@@ -77,8 +77,6 @@
 
 ;; Rust
 
-(setq rust-format-on-save t)
-
 (add-hook 'rust-mode-hook
           (lambda ()
             (setq-local flycheck-checker 'rust-clippy)
@@ -87,8 +85,7 @@
 ;; Go
 
 (after! go-mode
-  (setq gomft-command "goimports")
-  (add-hook 'before-save-hook #'gofmt-before-save))
+  (setq gomft-command "goimports"))
 
 ;; Python
 
@@ -103,6 +100,12 @@
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (remove-hook 'flyspell-mode-hook #'+spellcheck|immediately)
+
+(setq +format-on-save-enabled-modes
+      '(not emacs-lisp-mode
+            sql-mode
+            clojure-mode
+            cider-mode))
 
 ;; Bindings
 
@@ -122,30 +125,29 @@
    "C-l" 'evil-window-right))
 
 (map! :after org
-      :localleader
       :map org-mode-map
+      :localleader
       :desc "Archive Subtree" "a" #'org-archive-subtree
       "i" #'org-time-stamp-inactive)
 
 (map! :after ein
-      :localleader
       :map ein:notebook-mode-map
+      :localleader
       "," #'+ein-hydra/body)
 
 (map! :after clojure-mode
-      :localleader
       :map cider-mode-map
+      :localleader
       :prefix "r" "x" #'gsnewmark/clojure-reset-reloaded-repl)
 
-(map! :after cider-repl-mode
-      :localleader
+(map! :after cider-mode
       :map cider-repl-mode-map
-      "c" #'cider-repl-clear-buffer
+      :localleader
       "x" #'gsnewmark/clojure-reset-reloaded-repl)
 
 (map! :after python
-      :localleader
       :map python-mode-map
+      :localleader
       :prefix ("c" . "conda")
       :desc "List environments" "l" #'conda-env-list
       :desc "Activate environment" "a" #'conda-env-activate
