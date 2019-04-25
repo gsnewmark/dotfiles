@@ -99,7 +99,7 @@
 
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
-(remove-hook 'flyspell-mode-hook #'+spellcheck|immediately)
+(remove-hook 'flyspell-mode-hook #'+flyspell|immediately)
 
 (setq +format-on-save-enabled-modes
       '(not emacs-lisp-mode
