@@ -14,7 +14,8 @@ shell](https://fishshell.com/),
 
 ## Installation
 
-git and Python 3 are required for the installation.
+git, Python 3, and [Fisher](https://github.com/jorgebucaran/fisher) are required
+for the installation.
 
 ```
 git clone git@gitlab.com:gsnewmark/dotfiles.git
@@ -22,6 +23,7 @@ cd dotfiles
 git submodule init
 git submodule update
 ./bootstrap
+fisher
 ```
 
 ## License
@@ -29,8 +31,8 @@ git submodule update
 Configuration is licensed under the MIT license, available at
 [MIT](http://opensource.org/licenses/MIT) and also in the LICENSE file.
 
-[Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop) is licensed under the MIT
-license (Copyright (c) 2016-2019 Henrik Lissner).
+[Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop) is licensed
+under the MIT license (Copyright (c) 2016-2019 Henrik Lissner).
 
 [nord-xresources](https://github.com/arcticicestudio/nord-xresources),
 [nord-termite](https://github.com/arcticicestudio/nord-termite) are licensed
