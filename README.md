@@ -27,7 +27,7 @@ git submodule update
 ## License
 
 Configuration is licensed under the MIT license, available at
-[MIT](http://opensource.org/licenses/MIT) and also in the LICENSE file. 
+[MIT](http://opensource.org/licenses/MIT) and also in the LICENSE file.
 
 [Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop) is licensed under the MIT
 license (Copyright (c) 2016-2019 Henrik Lissner).
