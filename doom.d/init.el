@@ -9,8 +9,7 @@
 ;; found in modules/README.org.
 
 (doom! :completion
-       (company          ; the ultimate code completion backend
-        +auto)
+       company           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        (ivy              ; a search engine for love and life
@@ -149,11 +148,16 @@
        web               ; the tubes
        ;;vala              ; GObjective-C
 
+       :email
+       ;;(mu4e +gmail)       ; WIP
+       ;;notmuch             ; WIP
+       ;;(wanderlust +gmail) ; WIP
+      
        ;; Applications are complex and opinionated modules that transform Emacs
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-       ;;(email +gmail)    ; emacs as an email client
+       ;;calendar
        ;;irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader
        ;;twitter           ; twitter client https://twitter.com/vnought
