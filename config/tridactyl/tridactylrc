@@ -1,0 +1,15 @@
+colourscheme nord
+
+set searchurls.go https://www.google.com/search?q=%s
+set searchurls.trans https://translate.google.com/#auto/en/%s
+set searchurls.so https://stackoverflow.com/search?q=%s
+set searchurls.gh https://github.com/search?q=%s&type=Everything
+
+set editorcmd emacsclient -c %f
+
+set smoothscroll false
+bind j scrollline 3
+bind k scrollline -3
+
+bind J tabnext
+bind K tabprev

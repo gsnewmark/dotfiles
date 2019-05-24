@@ -3,7 +3,7 @@
 A set of configuration files for Emacs
 ([Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop)), [Fish
 shell](https://fishshell.com/),
-[qutebrowser](https://github.com/The-Compiler/qutebrowser),
+[Firefox](https://www.mozilla.org/en-US/firefox/new/)/[Tridactyl](https://github.com/tridactyl/tridactyl),
 [i3 wm](http://i3wm.org/)/[i3blocks](https://github.com/vivien/i3blocks),
 [rofi](https://github.com/DaveDavenport/rofi),
 [mpd](http://www.musicpd.org/)/[ncmpcpp](http://ncmpcpp.rybczak.net/),
@@ -37,3 +37,7 @@ under the MIT license (Copyright (c) 2016-2019 Henrik Lissner).
 [nord-xresources](https://github.com/arcticicestudio/nord-xresources),
 [nord-termite](https://github.com/arcticicestudio/nord-termite) are licensed
 under the MIT license (Copyright (c) 2016-present Arctic Ice Studio).
+
+[Tridactyl theme](config/tridactyl/themes/base16-nord.css) is based on Chris
+Kempson's (http://chriskempson.com)
+[base16-nord](https://github.com/bezmi/base16-tridactyl/blob/092a88c2233c10a1b28cad647b2bf3fd667aaa84/base16-nord.css).

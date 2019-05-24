@@ -167,10 +167,8 @@ bindcode $mod+Control+Shift+26 exec --no-startup-id emacs
 bindcode $mod+Control+41 exec --no-startup-id termite -e ranger
 # Control+Shift+f - Thunar
 bindcode $mod+Control+Shift+41 exec --no-startup-id thunar
-# Control+b - qutebrowser
-bindcode $mod+Control+56 exec --no-startup-id qutebrowser
-# Control+w - Firefox
-bindcode $mod+Control+25 exec --no-startup-id firefox
+# Control+b - Firefox
+bindcode $mod+Control+56 exec --no-startup-id firefox
 # Control+s - Slack
 bindcode $mod+Control+39 exec --no-startup-id slack
 # Control+t - Telegram
