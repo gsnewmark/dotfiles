@@ -12,7 +12,6 @@ scrollback_lines = 99999
 search_wrap = true
 cursor_blink = off
 cursor_shape = block
-browser = qutebrowser
 
 # Copied from https://github.com/arcticicestudio/nord-termite
 [colors]
