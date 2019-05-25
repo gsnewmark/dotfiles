@@ -73,9 +73,6 @@
 
     dmenu = /usr/bin/dmenu -p dunst:
 
-    # Browser for opening urls in context menu.
-    browser = qutebrowser
-
     # Align icons left/right/off
     icon_position = off
 
