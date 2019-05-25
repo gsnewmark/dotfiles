@@ -10,7 +10,7 @@ shell](https://fishshell.com/),
 [ranger file manager](http://ranger.nongnu.org/),
 [termite](https://github.com/thestinger/termite),
 [zathura](https://pwmt.org/projects/zathura/),
-[dunst](https://github.com/knopwob/dunst).
+[dunst](https://github.com/knopwob/dunst) and other tools.
 
 ## Installation
 
