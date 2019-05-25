@@ -7,6 +7,8 @@ set searchurls.gh https://github.com/search?q=%s&type=Everything
 
 set editorcmd emacsclient -c %f
 
+set allowautofocus false
+
 set smoothscroll false
 bind j scrollline 3
 bind k scrollline -3
