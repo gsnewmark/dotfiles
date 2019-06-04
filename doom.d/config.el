@@ -66,7 +66,8 @@
 (after! cider-mode
   (add-hook 'cider-mode-hook 'subword-mode))
 
-(setq clojure-align-forms-automatically t)
+(setq clojure-align-forms-automatically t
+      cider-repl-result-prefix "")
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
   (interactive)
