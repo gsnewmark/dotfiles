@@ -165,8 +165,6 @@ bindcode $mod+Control+26 exec --no-startup-id emacsclient -c -a vim
 bindcode $mod+Control+Shift+26 exec --no-startup-id emacs
 # Control+f - ranger
 bindcode $mod+Control+41 exec --no-startup-id termite -e ranger
-# Control+Shift+f - Thunar
-bindcode $mod+Control+Shift+41 exec --no-startup-id thunar
 # Control+w - Firefox
 bindcode $mod+Control+25 exec --no-startup-id firefox
 # Control+s - Slack
