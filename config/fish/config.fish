@@ -61,6 +61,12 @@ if [ -n "$DESKTOP_SESSION" ]
     set -gx SSH_AUTH_SOCK (gnome-keyring-daemon --start | awk -F "=" '$1 == "SSH_AUTH_SOCK" { print $2 }')
 end
 
+## pyenv
+
+if command -v pyenv 1>/dev/null 2>&1
+    pyenv init - | source
+end
+
 ## Color Theme
 
 # Nord colors are taken from the https://github.com/arcticicestudio/nord/issues/102
