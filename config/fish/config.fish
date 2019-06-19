@@ -15,9 +15,6 @@ set -gx SBT_OPTS "-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"
 
 set -gx BOOT_JVM_OPTIONS "-Xmx2g -client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xverify:none"
 
-set -gx WORKON_HOME ~/.virtualenvs
-eval (python -m virtualfish compat_aliases)
-
 set -gx CARGO_HOME ~/.cargo
 
 set -gx LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/opt/cuda/lib64"
