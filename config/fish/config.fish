@@ -39,7 +39,7 @@ alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
 
 ## vi mode
 
-fish_vi_key_bindings
+fish_vi_key_bindings 2>/dev/null
 
 set fish_cursor_default     block
 set fish_cursor_insert      line
