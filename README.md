@@ -14,16 +14,28 @@ shell](https://fishshell.com/),
 
 ## Installation
 
-git, Python 3, and [Fisher](https://github.com/jorgebucaran/fisher) are required
-for the installation.
+git, [GNU Stow](https://www.gnu.org/software/stow/), and
+[Fisher](https://github.com/jorgebucaran/fisher) are required for the
+installation:
 
-```
-git clone git@gitlab.com:gsnewmark/dotfiles.git
+```shell
+git clone --recursive git@gitlab.com:gsnewmark/dotfiles.git
 cd dotfiles
-git submodule init
-git submodule update
-./bootstrap
+
+stow foundation
+stow desktop_environment
+stow development
+stow web
+stow media
+stow extras
+
 fisher
+```
+
+To remove a particular configuration module use stow's `-D` option:
+
+``` shell
+stow -D foundation
 ```
 
 ## License

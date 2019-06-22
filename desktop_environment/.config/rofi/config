@@ -13,4 +13,4 @@ rofi.separator-style: none
 rofi.window-format: {c} {t}
 rofi.hide-scrollbar: true
 
-rofi.theme: /home/gsnewmark/.custom-nord.rasi
+rofi.theme: /home/gsnewmark/.config/rofi/custom-nord.rasi

@@ -1,0 +1,11 @@
+Videos
+tmp
+quicklisp
+vamp
+Templates
+certs.ini
+certs.xml
+.*
+Desktop
+go
+

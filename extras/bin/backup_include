@@ -1,0 +1,12 @@
+.git
+.gitignore
+.gitmodules
+.gitkeep
+.fonts
+.IdeaIC12
+.IdeaIC13
+.IntelliJIdea12
+.IntelliJIdea13
+.travis.yml
+.ssh
+.gnupg
