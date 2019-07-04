@@ -24,8 +24,6 @@
 
 (setq ediff-split-window-function 'split-window-horizontally)
 
-(setq git-link-use-commit t)
-
 ;; Org Mode
 
 (after! org
