@@ -24,9 +24,6 @@
 
 (setq ediff-split-window-function 'split-window-horizontally)
 
-;; Make Magit status fill whole frame
-(setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
-
 (setq git-link-use-commit t)
 
 ;; Org Mode
