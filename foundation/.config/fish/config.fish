@@ -26,7 +26,7 @@ set -gx CUDA_HOME /opt/cuda/
 alias e $TE
 
 # shortcut for terminal emacs with sudo
-alias E "SUDO_EDITOR=\"emacsclient -c -t -a vim\" sudoedit"
+alias E "env SUDO_EDITOR=\"emacs -nw\" sudoedit"
 
 alias top-10-size "du -hcx --max-depth=1 | sort -rh | head -10"
 
