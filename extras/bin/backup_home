@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -av --no-compress --progress --delete --include-from='/home/gsnewmark/bin/backup_include' --exclude-from='/home/gsnewmark/bin/backup_exclude' ~/ "/media/veracrypt1/orithena"
+rsync -av --no-compress --progress --delete --include-from="/home/$(whoami)/bin/backup_include" --exclude-from="/home/$(whoami)/bin/backup_exclude" ~/ "/media/veracrypt1/$(hostname)"
