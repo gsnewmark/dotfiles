@@ -18,7 +18,7 @@
 (setq doom-modeline-major-mode-icon t)
 
 (custom-set-faces
- '(ein:cell-input-area ((t (:background "#3B4252" :foreground "#ECEFF4")))))
+ '(ein:cell-input-area ((t (:background "#3B4252" :foreground nil)))))
 
 ;; VCS
 
