@@ -61,7 +61,8 @@
 (after! cider
   (add-hook 'cider-mode-hook 'subword-mode)
   (setq clojure-align-forms-automatically t
-        cider-repl-result-prefix ""))
+        cider-repl-result-prefix "")
+  (set-popup-rule! "^\\*cider-repl" :side 'right :size 0.5 :quit nil))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
   (interactive)
