@@ -215,6 +215,37 @@ bar {
     swaybar_command waybar
 }
 
+### Appearance configuration
+#
+# Font
+font Iosevka Term,M+ 1mn,Font Awesome 5 Free,Font Awesome 5 Brands 12
+
+# Borders
+exec_always swaymsg "border pixel 1"
+default_border pixel 1
+default_floating_border pixel 1
+
+# Misc
+workspace_auto_back_and_forth yes
+focus_follows_mouse no
+
+# Colors
+set $nord3 #4C566A
+set $nord4 #D8DEE9
+set $nord6 #ECEFF4
+set $nord11 #BF616A
+set $nord1 #3B4252
+
+# class                     border       background   text         indicator   child_border
+client.focused              $nord3       $nord3       $nord4       $nord1      $nord3
+client.focused_inactive     $nord1       $nord3       $nord4       $nord3      $nord1
+client.unfocused            #1C2028      $nord6       $nord4       $nord3      #1C2028
+client.urgent               $nord11      $nord11      $nord4       $nord3      $nord11
+client.placeholder          #1C2028      $nord6       $nord4       $nord3      #1C2028
+
+### Misc. configuration
+#
+# Set GTK theme
 exec_always import-gsettings \
     gtk-theme:gtk-theme-name \
     icon-theme:gtk-icon-theme-name
