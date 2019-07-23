@@ -218,7 +218,7 @@ bar {
 ### Appearance configuration
 #
 # Font
-font Iosevka Term,M+ 1mn,Font Awesome 5 Free,Font Awesome 5 Brands 12
+font Iosevka Term SS05,Font Awesome 5 Free,Font Awesome 5 Brands 12
 
 # Borders
 default_border pixel 1
