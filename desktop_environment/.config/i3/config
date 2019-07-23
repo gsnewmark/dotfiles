@@ -183,12 +183,15 @@ bindcode $mod+Control+42 exec --no-startup-id steam
 bindcode $mod+Control+45 exec --no-startup-id calibre
 
 # music controls
-# P - toogle stop/play
+# P & Play - toogle stop/play
 bindcode $mod+Shift+33 exec --no-startup-id mpc toggle
-# < - previous
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
+# < & Prev - previous
 bindcode $mod+Shift+59 exec --no-startup-id mpc prev
-# > - next
+bindsym XF86AudioPrev exec --no-startup-id mpc prev
+# > & Next - next
 bindcode $mod+Shift+60 exec --no-startup-id mpc next
+bindsym XF86AudioNext exec --no-startup-id mpc next
 # I - love current song on Last.FM
 bindcode $mod+Shift+31 exec mpc sendmessage mpdas love && notify-send "Liked $(mpc | head -n 1)"
 # U - unlove current song on Last.FM
