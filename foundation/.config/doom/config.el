@@ -93,12 +93,6 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (remove-hook 'flyspell-mode-hook #'+flyspell|immediately)
 
-(setq +format-on-save-enabled-modes
-      '(not emacs-lisp-mode
-            sql-mode
-            clojure-mode
-            cider-mode))
-
 ;; Bindings
 
 (map!
