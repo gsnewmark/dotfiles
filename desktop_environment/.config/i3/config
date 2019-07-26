@@ -251,7 +251,7 @@ bar {
         #Type              border      background  text
         focused_workspace  $indicator  $indicator  $foreground
         active_workspace   $background $background $foreground
-        inactive_workspace $background $background $foreground
+        inactive_workspace #272C36     #272C36     $foreground
         urgent_workspace   $red        $red        $foreground
    }
 }
