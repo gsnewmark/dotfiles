@@ -18,10 +18,12 @@
 
     --separator: #1c2028;
 
+    --darker-base02: #272C36;
+
     --tridactyl-fg: var(--base04);
-    --tridactyl-bg: var(--base02);
+    --tridactyl-bg: var(--darker-base02);
     --tridactyl-url-fg: var(--base08);
-    --tridactyl-url-bg: var(--base02);
+    --tridactyl-url-bg: var(--darker-base02);
     --tridactyl-highlight-box-bg: var(--base01);
     --tridactyl-highlight-box-fg: var(--base04);
 
