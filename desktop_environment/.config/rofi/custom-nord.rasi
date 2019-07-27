@@ -1,9 +1,9 @@
 // Based on https://github.com/devdevdevdevdeo/dotfiles/blob/c4566c6c7781f045d055e9afae2d639ba168bd23/custom-nord.rasi
 
 * {
-    backgroundcolor: #272C36;
+    backgroundcolor: #2e3440;
     bg1: #3b4252;
-    backgroundcoloralternate: #272C36;
+    backgroundcoloralternate: #2e3440;
     separatorcolor: #1c2028;
     scrollbarcolor: #4c566A;
     foregroundcolor: #d8dee9;

@@ -244,7 +244,7 @@ bar {
     position       top
     strip_workspace_numbers yes
     colors {
-        background  #272C36
+        background  $background
         statusline  $foreground
         separator   $background
 
