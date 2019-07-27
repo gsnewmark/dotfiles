@@ -233,8 +233,8 @@ set_from_resource $separator  i3wm.separator  $lighterbg
 set_from_resource $indicator  i3wm.color8     $base3
 
 # class                     border       background   text         indicator   child_border
-client.focused              $base02      $indicator   $foreground  $indicator  $base02
-client.focused_inactive     $base02      $background  $foreground  $background $base02
+client.focused              $base02      $background  $foreground  $base02     $background
+client.focused_inactive     $base02      $indicator   $foreground  $indicator  $base02
 client.unfocused            #1C2028      #272C36      $foreground  $indicator  #1C2028
 client.urgent               $red         $red         $foreground  $indicator  $red
 client.placeholder          #1C2028      $background  $foreground  $indicator  #1C2028
