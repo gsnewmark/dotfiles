@@ -235,6 +235,7 @@ set $nord6 #ECEFF4
 set $nord11 #BF616A
 set $nord1 #3B4252
 
+# TODO update colors to match i3
 # class                     border       background   text         indicator   child_border
 client.focused              $nord3       $nord3       $nord4       $nord1      $nord3
 client.focused_inactive     $nord1       $nord3       $nord4       $nord3      $nord1
