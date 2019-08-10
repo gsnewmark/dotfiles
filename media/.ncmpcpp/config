@@ -199,7 +199,7 @@ alternative_header_second_line_format = "{{$5%a$/b$9}{ - $7%b$9}$8{ (%y)}}|{%D}"
 ## text attributes listed above.
 ##
 #
-now_playing_prefix = "$b$6⇒"
+now_playing_prefix = "$b$6❯"
 #
 now_playing_suffix = "$/b"
 #
