@@ -181,6 +181,8 @@ bindcode $mod+Control+57 exec --no-startup-id termite -e ncmpcpp --class=ncmpcpp
 bindcode $mod+Control+42 exec --no-startup-id steam
 # Control+k - Calibre
 bindcode $mod+Control+45 exec --no-startup-id calibre
+# Control+p - PlayStationDiscord
+bindcode $mod+Control+33 exec --no-startup-id psn_discord
 
 # music controls
 # P & Play - toogle stop/play
@@ -267,6 +269,7 @@ assign [class="Thunderbird"] → 4:IV
 assign [class="ncmpcpp"] → 5:V
 assign [class="libprs500"] → 6:VI
 assign [class="Steam"] → 9:IX
+assign [class="playstationdiscord"] → 9:IX
 
 exec_always compton -CGb
 
