@@ -9,7 +9,7 @@ set searchurls.yt https://www.youtube.com/results?search_query=%s
 set searchurls.bc https://bandcamp.com/search?q=%s
 set searchurls.dg https://www.discogs.com/search/?q=%s&type=all
 set searchurls.lf https://www.last.fm/search?q=%s
-set searchurls.gp https://play.google.com/store/search?q=%s
+set searchurls.gp https://play.google.com/store/search?q=%s&c=music
 set searchurls.lgg https://www.light.gg/db/search/?q=%s
 set searchurls.gr https://www.goodreads.com/search?q=%s
 set searchurls.aur https://aur.archlinux.org/packages/?O=0&K=%s
