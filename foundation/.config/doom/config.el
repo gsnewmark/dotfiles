@@ -113,10 +113,6 @@
       :desc "Archive Subtree" "a" #'org-archive-subtree
       "i" #'org-time-stamp-inactive)
 
-(map! :map ein:notebook-mode-map
-      :localleader
-      "," #'+ein/hydra/body)
-
 (map! :after clojure-mode
       :map cider-mode-map
       :localleader
