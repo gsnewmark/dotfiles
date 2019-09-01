@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+modprobe -r brcmfmac
+sleep 10
+modprobe brcmfmac
