@@ -287,4 +287,4 @@ exec --no-startup-id mpd && mpdas
 exec --no-startup-id dropbox
 exec --no-startup-id unclutter -idle 3
 exec --no-startup-id udiskie
-exec_always --no-startup-id $HOME/bin/random_background
+exec_always --no-startup-id $HOME/bin/rotate_random_background
