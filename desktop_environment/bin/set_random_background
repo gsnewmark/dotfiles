@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+betterlockscreen -u ~/Dropbox/Pictures/wallpapers/ && feh --bg-fill ~/.cache/i3lock/current/wall.png

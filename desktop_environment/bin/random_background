@@ -1,5 +1,5 @@
 #!/bin/sh
 while true; do
-      feh --recursive --randomize --bg-fill ~/Dropbox/Pictures/wallpapers
+      $HOME/bin/set_random_background
       sleep 15m
 done

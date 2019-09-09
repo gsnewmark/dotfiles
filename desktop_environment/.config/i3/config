@@ -137,7 +137,7 @@ bindcode $mod+Shift+39 exec xfce4-settings-manager
 # Shift+v - sound device menu
 bindcode $mod+Shift+55 exec pavucontrol
 # Shift+w - random wallpaper
-bindcode $mod+Shift+25 exec --no-startup-id feh --recursive --randomize --bg-fill ~/Dropbox/Pictures/wallpapers
+bindcode $mod+Shift+25 exec --no-startup-id $HOME/bin/set_random_background
 
 # Power menu
 set $power_management_menu System (l) lock, (L) logout, (r) reboot, (s) shutdown, (S) suspend
@@ -286,5 +286,5 @@ exec --no-startup-id cbatticon -i symbolic
 exec --no-startup-id mpd && mpdas
 exec --no-startup-id dropbox
 exec --no-startup-id unclutter -idle 3
-exec --no-startup-id $HOME/bin/random_background
 exec --no-startup-id udiskie
+exec_always --no-startup-id $HOME/bin/random_background
