@@ -1,4 +1,6 @@
 #!/bin/sh
+betterlockscreen -w
+
 while true; do
       $HOME/bin/set_random_background
       sleep 15m
