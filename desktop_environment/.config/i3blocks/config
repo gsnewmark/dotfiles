@@ -12,13 +12,12 @@ interval=1
 color=#88C0D0
 
 [memory]
-command=/usr/lib/i3blocks/memory
-label=RAM
+command=/usr/lib/i3blocks/memory/memory
 separator=false
-interval=5
+interval=10
 color=#D08770
 
 [datetime]
 command=echo $(date '+%d/%m/%Y %H:%M')
-interval=60
+interval=5
 color=#5E81AC
