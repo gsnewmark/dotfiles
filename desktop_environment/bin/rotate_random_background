@@ -1,4 +1,5 @@
 #!/bin/sh
+
 betterlockscreen -w
 
 while true; do
