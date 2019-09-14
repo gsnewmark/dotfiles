@@ -50,9 +50,7 @@
         org-imenu-depth 5
         org-log-done 'time
         org-tags-column -80
-        org-adapt-indentation nil)
-
-  (add-hook! org-mode :append (org-indent-mode -1)))
+        org-adapt-indentation nil))
 
 ;; Clojure
 
