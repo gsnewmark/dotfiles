@@ -87,7 +87,6 @@
 ;; Misc.
 
 (add-hook 'text-mode-hook 'flyspell-mode)
-(remove-hook 'flyspell-mode-hook #'+flyspell-immediately-h)
 
 ;; Bindings
 
