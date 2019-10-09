@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo "Xft.dpi: 96" | xrdb -merge && echo "rofi.dpi: 96" | xrdb -merge && xrandr --dpi 96
