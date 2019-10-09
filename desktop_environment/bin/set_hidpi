@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+xset dpms 600 0 0
 echo "Xft.dpi: 192" | xrdb -merge && echo "rofi.dpi: 192" | xrdb -merge && xrandr --dpi 192
