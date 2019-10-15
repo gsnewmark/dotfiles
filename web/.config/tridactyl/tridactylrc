@@ -14,7 +14,6 @@ set searchurls.lgg https://www.light.gg/db/search/?q=%s
 set searchurls.gr https://www.goodreads.com/search?q=%s
 set searchurls.aur https://aur.archlinux.org/packages/?O=0&K=%s
 set searchurls.aw https://wiki.archlinux.org/index.php?search=%s&title=Special%3ASearch&go=Go
-set searchurls.wow https://classic.wowhead.com/search?q=%s
 
 set editorcmd emacsclient -c %f
 
