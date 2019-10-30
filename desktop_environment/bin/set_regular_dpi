@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-xset dpms 600 600 600
 echo "Xft.dpi: 96" | xrdb -merge && echo "rofi.dpi: 96" | xrdb -merge && xrandr --dpi 96
