@@ -9,8 +9,10 @@
 ;; found in modules/README.org.
 
 (doom! :completion
-       company           ; the ultimate code completion backend
+       (company          ; the ultimate code completion backend
+        +childframe)
        (ivy              ; a search engine for love and life
+        +childframe
         +icons)
 
        :ui
@@ -63,7 +65,8 @@
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
        eval              ; run code, run (also, repls)
-       flycheck          ; tasing you for every semicolon you forget
+       (flycheck         ; tasing you for every semicolon you forget
+        +childframe)
        (flyspell         ; tasing you for misspelling mispelling
         +prog)
        ;;gist              ; interacting with github gists
