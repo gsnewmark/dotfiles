@@ -121,5 +121,7 @@ set pure_color_yellow (set_color $nord13)
 
 set pure_username_color $fish_color_user
 set pure_host_color $fish_color_host
+set pure_symbol_prompt ">"
+set pure_symbol_reverse_prompt "<"
 
 set pure_user_host_location 1
