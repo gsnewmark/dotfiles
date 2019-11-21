@@ -28,10 +28,6 @@
 
 (after! org
   (setq org-directory "~/Dropbox/org"
-        org-todo-keywords '((sequence "TODO" "|" "DONE")
-                            (sequence "BUG" "|" "FIXED")
-                            (sequence "FEATURE" "|" "ADDED")
-                            (sequence "READING" "|" "READ"))
         org-refile-targets '((nil :maxlevel . 5)
                              (org-agenda-files :maxlevel . 3))
         org-refile-use-outline-path 'file
@@ -50,7 +46,9 @@
         org-imenu-depth 5
         org-log-done 'time
         org-tags-column -80
-        org-adapt-indentation nil))
+        org-adapt-indentation nil)
+
+  (add-to-list 'org-todo-keywords '(sequence "READING" "|" "READ")))
 
 ;; Clojure
 
