@@ -218,7 +218,7 @@ bar {
 ### Appearance configuration
 #
 # Font
-font Fantasque Sans Mono,Font Awesome 5 Free,Font Awesome 5 Brands 12
+font M+ 1m,Font Awesome 5 Free,Font Awesome 5 Brands 12
 
 # Borders
 default_border pixel 1

@@ -36,9 +36,9 @@
     --tridactyl-hint-bg: none;
     --tridactyl-hint-outline: none;
 
-    --tridactyl-font-family: "Fantasque Sans Mono";
-    --tridactyl-cmplt-font-family: "Fantasque Sans Mono";
-    --tridactyl-hintspan-font-family: "Fantasque Sans Mono";
+    --tridactyl-font-family: "M+ 1mn";
+    --tridactyl-cmplt-font-family: "M+ 1mn";
+    --tridactyl-hintspan-font-family: "M+ 1mn";
 }
 
 #command-line-holder {
