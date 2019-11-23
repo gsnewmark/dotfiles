@@ -273,7 +273,7 @@ assign [class="libprs500"] → 6:VI
 assign [class="Steam"] → 9:IX
 assign [class="playstationdiscord"] → 9:IX
 
-exec_always compton -CGb
+exec_always picom -CGb
 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && notify-send "Backlight: $(xbacklight | cut -c1-2)%"
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && notify-send "Backlight: $(xbacklight | cut -c1-2)%"
