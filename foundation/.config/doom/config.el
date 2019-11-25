@@ -6,10 +6,10 @@
 
 (setq doom-theme 'doom-nord)
 
-(setq doom-font (font-spec :family "M+ 1mn" :size 11.0)
+(setq doom-font (font-spec :family "Iosevka SS07" :size 11.0)
       doom-variable-pitch-font (font-spec :family "Source Sans Pro")
       doom-unicode-font (font-spec :family "Source Sans Pro")
-      doom-big-font (font-spec :family "M+ 1mn" :size 17.0))
+      doom-big-font (font-spec :family "Iosevka SS07" :size 17.0))
 
 (setq which-key-idle-delay 0.4)
 

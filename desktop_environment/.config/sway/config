@@ -218,7 +218,7 @@ bar {
 ### Appearance configuration
 #
 # Font
-font M+ 1m,Font Awesome 5 Free,Font Awesome 5 Brands 12
+font Iosevka SS07 1m,Font Awesome 5 Free,Font Awesome 5 Brands 12
 
 # Borders
 default_border pixel 1
