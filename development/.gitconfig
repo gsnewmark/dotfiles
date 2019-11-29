@@ -14,6 +14,6 @@
   default = simple
 [commit]
   template = /home/gsnewmark/.git_commit_msg
-  # gpgsign = true
+  gpgsign = true
 [magit]
   hideCampaign = true
