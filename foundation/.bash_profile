@@ -18,3 +18,10 @@ fi
 TE="emacs -nw"
 export VISUAL=$TE
 export EDITOR=$TE
+
+export MOZ_ENABLE_WAYLAND=1
+export _JAVA_AWT_WM_NONREPARENTING=1
+export SDL_VIDEODRIVER=wayland
+export QT_QPA_PLATFORM=wayland-egl
+export QT_WAYLAND_FORCE_DPI=96
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1

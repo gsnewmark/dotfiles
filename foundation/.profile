@@ -22,3 +22,10 @@ export EDITOR=$TE
 if [ -n "$DESKTOP_SESSION" ]; then
     export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 fi
+
+export MOZ_ENABLE_WAYLAND=1
+export _JAVA_AWT_WM_NONREPARENTING=1
+export SDL_VIDEODRIVER=wayland
+export QT_QPA_PLATFORM=wayland-egl
+export QT_WAYLAND_FORCE_DPI=96
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1

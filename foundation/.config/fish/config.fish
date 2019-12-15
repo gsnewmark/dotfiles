@@ -20,6 +20,13 @@ set -gx CARGO_HOME ~/.cargo
 set -gx LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/opt/cuda/lib64"
 set -gx CUDA_HOME /opt/cuda/
 
+set -gx MOZ_ENABLE_WAYLAND 1
+set -gx _JAVA_AWT_WM_NONREPARENTING 1
+set -gx SDL_VIDEODRIVER wayland
+set -gx QT_QPA_PLATFORM wayland-egl
+set -gx QT_WAYLAND_FORCE_DPI physical
+set -gx QT_WAYLAND_DISABLE_WINDOWDECORATION 1
+
 ## Aliases
 
 # shortcut for terminal emacs
@@ -38,13 +45,13 @@ alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
 
 fish_vi_key_bindings 2>/dev/null
 
-set fish_cursor_default     block
-set fish_cursor_insert      line
+set fish_cursor_default block
+set fish_cursor_insert line
 set fish_cursor_replace_one underscore
-set fish_cursor_visual      block
+set fish_cursor_visual block
 
 function fish_default_mode_prompt
-  # NOOP to disable mode indicator
+    # NOOP to disable mode indicator
 end
 
 ## fzf
