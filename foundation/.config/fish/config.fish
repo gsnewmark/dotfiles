@@ -20,7 +20,7 @@ set -gx CARGO_HOME ~/.cargo
 set -gx LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/opt/cuda/lib64"
 set -gx CUDA_HOME /opt/cuda/
 
-set -gx MOZ_ENABLE_WAYLAND 1
+#set -gx MOZ_ENABLE_WAYLAND 1
 set -gx _JAVA_AWT_WM_NONREPARENTING 1
 set -gx SDL_VIDEODRIVER wayland
 set -gx QT_QPA_PLATFORM "wayland;xcb"
