@@ -23,8 +23,7 @@ set -gx CUDA_HOME /opt/cuda/
 set -gx MOZ_ENABLE_WAYLAND 1
 set -gx _JAVA_AWT_WM_NONREPARENTING 1
 set -gx SDL_VIDEODRIVER wayland
-set -gx QT_QPA_PLATFORM wayland-egl
-set -gx QT_WAYLAND_FORCE_DPI physical
+set -gx QT_QPA_PLATFORM "wayland;xcb"
 set -gx QT_WAYLAND_DISABLE_WINDOWDECORATION 1
 
 ## Aliases
