@@ -125,8 +125,11 @@
       :desc "Activate environment" "a" #'conda-env-activate
       :desc "Deactivate environment" "d" #'conda-env-deactivate)
 
-(after! lispy
-  (define-key lispy-mode-map-lispy "[" 'lispy-brackets)
-  (define-key lispy-mode-map-lispy "]" 'lispy-brackets)
-  (define-key lispy-mode-map-lispy "}" 'lispy-braces)
-  (define-key lispy-mode-map-lispy ")" 'lispy-parens))
+(map! :after smartparens
+      :map smartparens-mode-map
+      :leader
+      :prefix ("k" . "smartparens")
+      "s" #'sp-forward-slurp-sexp
+      "b" #'sp-forward-barf-sexp
+      "S" #'sp-backward-slurp-sexp
+      "B" #'sp-backward-barf-sexp)
