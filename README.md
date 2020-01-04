@@ -43,6 +43,10 @@ stow -D foundation
 Configuration is licensed under the MIT license, available at
 [MIT](http://opensource.org/licenses/MIT) and also in the LICENSE file.
 
+NixOS deploy script and some of the configs are based on the Henrik Lissner's
+[dotfiles](https://github.com/hlissner/dotfiles/tree/nixos) which is licensed
+under the MIT license (Copyright (c) 2016-2019 Henrik Lissner).
+
 [Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop) is licensed
 under the MIT license (Copyright (c) 2016-2019 Henrik Lissner).
 
