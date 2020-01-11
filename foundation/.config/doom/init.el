@@ -24,6 +24,7 @@
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
        workspaces        ; tab emulation, persistence & separate workspaces
+       zen               ; distraction-free coding or writing
 
        :editor
        (evil +everywhere); come to the dark side, we have cookies
@@ -44,14 +45,17 @@
        electric          ; smarter, keyword-based electric-indent
        vc                ; version-control and Emacs, sitting in a tree
 
+       :checkers
+       (syntax           ; tasing you for every semicolon you forget
+        +childframe)
+       (spell
+        +everywhere)     ; tasing you for misspelling mispelling
+       grammar           ; tasing grammar mistake every you make
+
        :tools
        docker
        ein               ; tame Jupyter notebooks with emacs
        eval              ; run code, run (also, repls)
-       (flycheck         ; tasing you for every semicolon you forget
-        +childframe)
-       (flyspell         ; tasing you for misspelling mispelling
-        +prog)
        lookup            ; helps you navigate your code and documentation
 
        magit             ; a git porcelain for Emacs
@@ -72,7 +76,6 @@
         +pandoc          ; pandoc integration into org's exporter
         +present)        ; Emacs for presentations
        (python           ; beautiful is better than ugly
-        +conda
         +pyenv)
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        scala             ; java, but good

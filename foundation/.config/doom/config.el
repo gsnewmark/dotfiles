@@ -117,14 +117,6 @@
       :localleader
       "x" #'gsnewmark/clojure-reset-reloaded-repl)
 
-(map! :after python
-      :map python-mode-map
-      :localleader
-      :prefix ("c" . "conda")
-      :desc "List environments" "l" #'conda-env-list
-      :desc "Activate environment" "a" #'conda-env-activate
-      :desc "Deactivate environment" "d" #'conda-env-deactivate)
-
 (map! :after smartparens
       :map smartparens-mode-map
       :leader
