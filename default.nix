@@ -20,7 +20,6 @@
     trustedUsers = [ "root" "@wheel" ];
   };
   nixpkgs.config = {
-    # Forgive me Stallman senpai
     allowUnfree = true;
 
     packageOverrides = pkgs: {
@@ -30,15 +29,12 @@
     };
   };
 
-  # Nothing in /tmp should survive a reboot
   boot.cleanTmpDir = true;
-  # Use simple bootloader; I prefer the on-demand BIOs boot menu
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   environment = {
     systemPackages = with pkgs; [
-      # Just the bear necessities~
       coreutils
       git
       killall
@@ -47,7 +43,6 @@
       vim
       wget
 
-      # Support for extra filesystems
       sshfs
       exfat
       ntfs3g
@@ -68,7 +63,6 @@
     longitude = 30.5234;
   };
 
-  # Set up gsnewmark user account
   users.users.gsnewmark = {
     isNormalUser = true;
     uid = 1000;
