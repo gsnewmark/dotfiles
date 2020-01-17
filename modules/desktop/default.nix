@@ -25,10 +25,22 @@
     youtube-dl
 
     # document viewers
+    # TODO install foliate, mcomix
     calibre
-    libreoffice-fresh
     zotero
+
+    # misc.
+    mitmproxy
+    networkmanager-openvpn
+    nmap
+    thunderbird
+    transmission
+    transmission-gtk
+    wireshark
   ];
+
+  networking.networkmanager.enable = true;
+  users.users.gsnewmark.extraGroups = [ "networkmanager" ];
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -50,6 +62,7 @@
       source-sans-pro
       source-serif-pro
       symbola
+      veracrypt
       ubuntu_font_family
     ];
 

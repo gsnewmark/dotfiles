@@ -39,6 +39,7 @@
       git
       killall
       openssh
+      stow
       unzip
       vim
       wget
@@ -66,7 +67,7 @@
   users.users.gsnewmark = {
     isNormalUser = true;
     uid = 1000;
-    extraGroups = [ "wheel" "video" "networkmanager" "vboxusers" ];
+    extraGroups = [ "wheel" "video" ];
     shell = pkgs.fish;
   };
 
