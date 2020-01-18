@@ -2,7 +2,7 @@ separator_block_width=8
 separator=false
 
 [mpd current track]
-command=/usr/lib/i3blocks/mediaplayer/mediaplayer
+command=/run/current-system/sw/libexec/i3blocks/mediaplayer/mediaplayer
 instance=mpd
 interval=1
 signal=10
@@ -14,7 +14,7 @@ interval=1
 color=#88C0D0
 
 [memory]
-command=/usr/lib/i3blocks/memory/memory
+command=/run/current-system/sw/libexec/i3blocks/memory/memory
 separator=false
 interval=10
 color=#D08770

@@ -8,7 +8,7 @@
     <nixpkgs/nixos/modules/installer/virtualbox-demo.nix>
 
     # Desktop Environment
-    ./modules/desktop/gnome.nix
+    ./modules/desktop/i3.nix
 
     # Applications
     ./modules/browser.nix
@@ -28,6 +28,7 @@
     ./modules/services/dropbox.nix
     ./modules/services/haveged.nix
     ./modules/services/tlp.nix
+    ./modules/services/unclutter.nix
   ];
 
   services.xserver.desktopManager.plasma5.enable = lib.mkForce false;

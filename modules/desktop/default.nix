@@ -13,6 +13,10 @@
     # terminal emulator
     termite
 
+    # screen recorders
+    flameshot
+    peek
+
     # music player
     mpc_cli
     mpd
@@ -27,6 +31,8 @@
     # document viewers
     # TODO install foliate, mcomix
     calibre
+    gnome3.eog
+    zathura
     zotero
 
     # misc.
