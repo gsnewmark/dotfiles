@@ -4,7 +4,8 @@
   environment.systemPackages = with pkgs; [
     discord
     slack
-    skypeforlinux
+    # stable one is couldn't be downloaded anymore
+    unstable.skypeforlinux
     tdesktop
     zoom
   ];
