@@ -8,10 +8,11 @@
     <nixpkgs/nixos/modules/installer/virtualbox-demo.nix>
 
     # Desktop Environment
-    ./modules/desktop/i3.nix
+    ./modules/desktop/gnome.nix
 
     # Applications
     ./modules/browser.nix
+    ./modules/chat.nix
     ./modules/daw.nix
     ./modules/dev
     ./modules/editors/emacs.nix
