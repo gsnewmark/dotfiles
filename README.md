@@ -19,7 +19,7 @@ git, [GNU Stow](https://www.gnu.org/software/stow/), and
 installation:
 
 ```shell
-git clone --recursive git@gitlab.com:gsnewmark/dotfiles.git
+git clone --recursive git@github.com:gsnewmark/dotfiles.git
 cd dotfiles
 
 stow foundation
