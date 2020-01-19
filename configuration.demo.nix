@@ -18,7 +18,6 @@
     ./modules/editors/emacs.nix
     ./modules/editors/office.nix
     ./modules/gaming/steam.nix
-    ./modules/gaming/wine.nix
     ./modules/graphics.nix
     ./modules/hw.nix
     ./modules/music.nix
