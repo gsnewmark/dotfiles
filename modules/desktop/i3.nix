@@ -5,10 +5,13 @@
     ./.
   ];
 
+  # Enable better support for GNOME applications
+  programs.dconf.enable = true;
+
   # XFCE has some problem's with audio if this is not specified
   nixpkgs.config.pulseaudio = true;
 
-  # it's needed to circumvent issues with hardcode path in the i3blocks
+  # It's needed to circumvent issues with hardcode path in the i3blocks
   environment.pathsToLink = [ "/libexec" ];
 
   services = {
@@ -47,6 +50,7 @@
           i3blocks
           i3lock
           libnotify
+          libsForQt5.qtstyleplugins
           notify-desktop
           # TODO replace with (text) indicator for panel
           pa_applet

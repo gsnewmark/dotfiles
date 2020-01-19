@@ -10,7 +10,7 @@ case "$1" in
         lock
         ;;
     logout)
-        i3-msg exit
+        xfce4-session-logout --logout
         ;;
     suspend)
         systemctl suspend
