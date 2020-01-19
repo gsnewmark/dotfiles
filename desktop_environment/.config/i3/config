@@ -280,7 +280,6 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && notify-send "Backlight: $
 
 exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:shifts_toggle us,ua
 exec --no-startup-id pa-applet
-exec --no-startup-id cbatticon -i symbolic
 exec --no-startup-id mpd && mpdas
 exec --no-startup-id dropbox
 exec --no-startup-id udiskie
