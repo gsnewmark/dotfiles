@@ -42,6 +42,7 @@
     thunderbird
     transmission
     transmission-gtk
+    truecrypt
     wireshark
   ];
 
@@ -56,7 +57,6 @@
     enableGhostscriptFonts = true;
 
     fonts = with pkgs; [
-      corefonts
       dejavu_fonts
       font-awesome
       # TODO use SS07 stylistic set https://unix.stackexchange.com/questions/485982/is-there-a-iosevka-term-package-available-on-nixos
