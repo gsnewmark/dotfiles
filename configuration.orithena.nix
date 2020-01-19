@@ -32,7 +32,10 @@
   ];
 
   networking.wireless.enable = true;
+
+  # Support dGPU & iGPU
   hardware.opengl.enable = true;
+  hardware.bumblebee.enable = true;
 
   # Optimize power use
   environment.systemPackages = [ pkgs.acpi ];
