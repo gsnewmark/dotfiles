@@ -13,7 +13,15 @@
     ./modules/browser.nix
     ./modules/chat.nix
     ./modules/daw.nix
-    ./modules/dev
+    ./modules/dev/aws.nix
+    ./modules/dev/clojure.nix
+    ./modules/dev/gdb.nix
+    ./modules/dev/haskell.nix
+    ./modules/dev/java.nix
+    ./modules/dev/js.nix
+    ./modules/dev/python.nix
+    ./modules/dev/rust.nix
+    ./modules/dev/scala.nix
     ./modules/editors/emacs.nix
     ./modules/editors/office.nix
     ./modules/gaming/steam.nix

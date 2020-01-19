@@ -54,6 +54,8 @@
         xclip
         xdotool
         xkb-switch
+        xorg.xbacklight
+        xorg.xev
 
         # ranger file manager
         ranger
