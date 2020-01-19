@@ -45,6 +45,7 @@
         gtk-engine-murrine
         i3blocks
         i3lock
+        libnotify
         notify-desktop
         # TODO replace with (text) indicator for panel
         pa_applet
@@ -54,7 +55,6 @@
         xclip
         xdotool
         xkb-switch
-        xorg.xbacklight
         xorg.xev
 
         # ranger file manager
