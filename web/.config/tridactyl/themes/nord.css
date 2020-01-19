@@ -36,9 +36,9 @@
     --tridactyl-hint-bg: none;
     --tridactyl-hint-outline: none;
 
-    --tridactyl-font-family: "Iosevka SS07";
-    --tridactyl-cmplt-font-family: "Iosevka SS07";
-    --tridactyl-hintspan-font-family: "Iosevka SS07";
+    --tridactyl-font-family: "Iosevka";
+    --tridactyl-cmplt-font-family: "Iosevka";
+    --tridactyl-hintspan-font-family: "Iosevka";
 }
 
 #command-line-holder {

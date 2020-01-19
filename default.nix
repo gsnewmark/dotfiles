@@ -8,7 +8,6 @@
 {
   imports = [
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-    <home-manager/nixos>
   ];
 
   nix = {
@@ -70,12 +69,6 @@
     uid = 1000;
     extraGroups = [ "wheel" "video" ];
     shell = pkgs.fish;
-  };
-
-  home-manager.users.gsnewmark = {
-    xdg.enable = true;
-    # TODO move all scripts to bin
-    # home.file."bin" = { source = ./bin; recursive = true; };
   };
 
   networking.firewall.enable = true;

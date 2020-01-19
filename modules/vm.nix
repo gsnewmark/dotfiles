@@ -8,5 +8,5 @@
 
   virtualisation.docker.enable = true;
 
-  users.users.gsnewmark.extraGroups = [ "docker", "vboxusers" ];
+  users.users.gsnewmark.extraGroups = [ "docker" "vboxusers" ];
 }

@@ -5,7 +5,7 @@ set -gx TERM xterm-256color
 set -gx QT_QPA_PLATFORMTHEME gtk2
 set -gx CALIBRE_USE_SYSTEM_THEME 1
 
-set -gx PATH ~/bin ~/.cargo/bin (ruby -e 'puts Gem.user_dir')/bin ~/.emacs.d/bin ~/go/bin $PATH
+set -gx PATH ~/bin ~/.cargo/bin ~/.emacs.d/bin ~/go/bin $PATH
 
 set -l TE "emacs -nw"
 set -gx VISUAL emacs
@@ -13,18 +13,7 @@ set -gx EDITOR $TE
 
 set -gx SBT_OPTS "-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"
 
-set -gx BOOT_JVM_OPTIONS "-Xmx2g -client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xverify:none"
-
 set -gx CARGO_HOME ~/.cargo
-
-set -gx LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/opt/cuda/lib64"
-set -gx CUDA_HOME /opt/cuda/
-
-#set -gx MOZ_ENABLE_WAYLAND 1
-set -gx _JAVA_AWT_WM_NONREPARENTING 1
-set -gx SDL_VIDEODRIVER wayland
-set -gx QT_QPA_PLATFORM "wayland;xcb"
-set -gx QT_WAYLAND_DISABLE_WINDOWDECORATION 1
 
 ## Aliases
 

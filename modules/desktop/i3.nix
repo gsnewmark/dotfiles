@@ -18,9 +18,9 @@
     displayManager.lightdm = {
         enable = true;
         background = "#2e3440";
-        greeters.mini = {
+        greeters.gtk = {
           enable = true;
-          user = "gsnewmark";
+          #user = "gsnewmark";
         };
       };
 

@@ -31,7 +31,7 @@
     ./modules/services/unclutter.nix
   ];
 
-  networking.wireless.enable = true;
+  networking.hostName = "orithena";
 
   # Support dGPU & iGPU
   hardware.opengl.enable = true;
