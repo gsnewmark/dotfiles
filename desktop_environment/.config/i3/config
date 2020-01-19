@@ -273,11 +273,10 @@ assign [class="libprs500"] → 6:VI
 assign [class="Steam"] → 9:IX
 assign [class="playstationdiscord"] → 9:IX
 
-exec_always picom -CGb
-
 bindsym XF86MonBrightnessDown exec light -U 10 && notify-desktop -r 14 "Backlight: $(light | cut -d'.' -f1)% "
 bindsym XF86MonBrightnessUp exec light -A 10 && notify-desktop -r 14 "Backlight: $(light | cut -d'.' -f1)%"
 
+exec --no-startup-id cbatticon -i symbolic
 exec --no-startup-id setxkbmap -option ctrl:nocaps,grp:shifts_toggle us,ua
 exec --no-startup-id pa-applet
 exec --no-startup-id mpd && mpdas

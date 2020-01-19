@@ -1,10 +1,8 @@
 ;;; init.el -*- lexical-binding: t; -*-
 
 (doom! :completion
-       (company          ; the ultimate code completion backend
-        +childframe)
+       company           ; the ultimate code completion backend
        (ivy              ; a search engine for love and life
-        +childframe
         +icons)
 
        :ui
@@ -47,8 +45,7 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :checkers
-       (syntax           ; tasing you for every semicolon you forget
-        +childframe)
+       syntax            ; tasing you for every semicolon you forget
        (spell
         +everywhere)     ; tasing you for misspelling mispelling
        grammar           ; tasing grammar mistake every you make

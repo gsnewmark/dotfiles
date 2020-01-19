@@ -11,62 +11,70 @@
   # it's needed to circumvent issues with hardcode path in the i3blocks
   environment.pathsToLink = [ "/libexec" ];
 
-  services.gnome3.gnome-keyring.enable = true;
-  services.xserver = {
-    enable = true;   
+  services = {
+    gnome3.gnome-keyring.enable = true;
 
-    displayManager.lightdm = {
+    xserver = {
+      enable = true;
+
+      displayManager.lightdm = {
         enable = true;
         background = "#2e3440";
         greeters.gtk = {
           enable = true;
-          #user = "gsnewmark";
         };
       };
 
-    desktopManager = {
-      default = "xfce";
-      xterm.enable = false;
-      xfce = {
+      desktopManager = {
+        default = "xfce";
+        xterm.enable = false;
+        xfce = {
+          enable = true;
+          noDesktop = true;
+          enableXfwm = false;
+        };
+      };
+
+      windowManager.i3 = {
         enable = true;
-        noDesktop = true;
-        enableXfwm = false;
+        extraPackages = with pkgs; [
+          betterlockscreen
+          # TODO replace with (text) indicator for panel?
+          cbatticon
+          dunst
+          feh
+          gtk-engine-murrine
+          i3blocks
+          i3lock
+          libnotify
+          notify-desktop
+          # TODO replace with (text) indicator for panel
+          pa_applet
+          rofi
+          udiskie
+          udisks
+          xclip
+          xdotool
+          xkb-switch
+          xorg.xev
+
+          # ranger file manager
+          ranger
+          atool
+          ffmpegthumbnailer
+          highlight
+          imlib2
+          mediainfo
+          poppler
+          w3m
+        ];
       };
     };
 
-    windowManager.i3 = {
+    compton = {
       enable = true;
-      extraPackages = with pkgs; [
-        betterlockscreen
-        # TODO replace with (text) indicator for panel?
-        cbatticon
-        dunst
-        feh
-        gtk-engine-murrine
-        i3blocks
-        i3lock
-        libnotify
-        notify-desktop
-        # TODO replace with (text) indicator for panel
-        pa_applet
-        rofi
-        udiskie
-        udisks
-        xclip
-        xdotool
-        xkb-switch
-        xorg.xev
-
-        # ranger file manager
-        ranger
-        atool
-        ffmpegthumbnailer
-        highlight
-        imlib2
-        mediainfo
-        poppler
-        w3m
-     ];
+      backend = "glx";
+      vSync = true;
     };
   };
 }
