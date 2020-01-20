@@ -3,6 +3,6 @@
 betterlockscreen -w
 
 while true; do
-      $HOME/bin/set_random_background
+      $HOME/bin/set-random-background
       sleep 15m
 done
