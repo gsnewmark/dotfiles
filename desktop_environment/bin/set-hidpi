@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
 echo "Xft.dpi: 192" | xrdb -merge && echo "rofi.dpi: 192" | xrdb -merge && xrandr --dpi 192
+xfconf-query -c xsettings -p /Xft/DPI -s 192
+i3-msg restart
