@@ -28,4 +28,15 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  systemd.user.services.gpg-agent.serviceConfig.ExecStart = [
+    "" ''
+       ${pkgs.gnupg}/bin/gpg-agent \
+            --supervised \
+            --allow-emacs-pinentry \
+            --enable-ssh-support \
+            --default-cache-ttl 1800 \
+            --pinentry-program ${pkgs.pinentry}/bin/pinentry-gnome3
+       ''
+  ];
 }
