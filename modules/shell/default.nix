@@ -29,6 +29,8 @@
     enableSSHSupport = true;
   };
 
+  # TODO there's actually a config var for it `programs.gnupg.agent.pinentryFlavor`,
+  #      but it's not yet in the stable release
   systemd.user.services.gpg-agent.serviceConfig.ExecStart = [
     "" ''
        ${pkgs.gnupg}/bin/gpg-agent \
