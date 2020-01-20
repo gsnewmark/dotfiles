@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Based on http://linux-bash.ru/mtext/98-translit.html
 
 shopt -s nullglob

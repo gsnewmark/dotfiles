@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # usage: import-gsettings <gsettings key>:<settings.ini key> <gsettings key>:<settings.ini key> ...
 
