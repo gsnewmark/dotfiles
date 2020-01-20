@@ -54,6 +54,7 @@
           notify-desktop
           # TODO replace with (text) indicator for panel
           pa_applet
+          pinentry_gnome
           rofi
           udiskie
           udisks
