@@ -257,7 +257,7 @@ song_columns_list_format = "(4f)[white]{nr} (25)[blue]{a} (40)[magenta]{t|f} (25
 ## Note: Custom command that will be executed each
 ## time song changes. Useful for notifications etc.
 ##
-execute_on_song_change = "~/bin/on_song_change"
+execute_on_song_change = "~/bin/on-song-change"
 #
 #playlist_show_remaining_time = "no"
 #
