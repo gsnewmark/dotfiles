@@ -26,7 +26,6 @@
     ./modules/editors/office.nix
     ./modules/gaming/steam.nix
     ./modules/graphics.nix
-    ./modules/hw.nix
     ./modules/music.nix
     ./modules/shell/fish.nix
     ./modules/vm.nix
@@ -34,6 +33,7 @@
     # Services
     ./modules/services/cron.nix
     ./modules/services/dropbox.nix
+    ./modules/services/fwupd.nix
     ./modules/services/haveged.nix
     ./modules/services/tlp.nix
     ./modules/services/unclutter.nix

@@ -19,7 +19,6 @@
     ./modules/editors/office.nix
     ./modules/gaming/steam.nix
     ./modules/graphics.nix
-    ./modules/hw.nix
     ./modules/music.nix
     ./modules/shell/fish.nix
 
