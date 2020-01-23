@@ -15,5 +15,4 @@ export EDITOR=$TE
 
 if [ -n "$DESKTOP_SESSION" ]; then
     export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
-    export GPG_TTY=$(tty)
 fi
