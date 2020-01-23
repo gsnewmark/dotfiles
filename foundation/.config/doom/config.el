@@ -76,10 +76,11 @@
 
 (map!
  ;; Easier window movement (from https://github.com/hlissner/doom-emacs-private)
- :n "C-h" 'evil-window-left
- :n "C-j" 'evil-window-down
- :n "C-k" 'evil-window-up
- :n "C-l" 'evil-window-right
+ (:map general-override-mode-map
+   :n "C-h" 'evil-window-left
+   :n "C-j" 'evil-window-down
+   :n "C-k" 'evil-window-up
+   :n "C-l" 'evil-window-right)
 
  (:map evil-treemacs-state-map
    "C-h" 'evil-window-left
