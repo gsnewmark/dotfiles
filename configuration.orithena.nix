@@ -41,6 +41,9 @@
 
   networking.hostName = "orithena";
 
+  # Fix X freezing
+  boot.kernelParams = ["acpi_rev_override=1"];
+
   # Support dGPU & iGPU
   hardware.opengl.enable = true;
   hardware.bumblebee.enable = true;
