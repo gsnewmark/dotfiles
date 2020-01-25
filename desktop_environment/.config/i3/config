@@ -170,7 +170,7 @@ bindcode $mod+Control+39 exec --no-startup-id slack
 # Control+t - Telegram
 bindcode $mod+Control+28 exec --no-startup-id telegram-desktop
 # Control+d - Discord
-bindcode $mod+Control+40 exec --no-startup-id discord
+bindcode $mod+Control+40 exec --no-startup-id Discord
 # Control+t - Skype
 bindcode $mod+Control+54 exec --no-startup-id skypeforlinux
 # Control+m - Thunderbird
