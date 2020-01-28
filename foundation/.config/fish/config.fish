@@ -50,8 +50,8 @@ set -gx FZF_DEFAULT_OPTS '--color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,b
 ## SSH agent
 
 # Expose gnome-keyring as SSH agent
-if [ -n "$DESKTOP_SESSION" ]
-    set -gx SSH_AUTH_SOCK (gnome-keyring-daemon --start | awk -F "=" '$1 == "SSH_AUTH_SOCK" { print $2 }')
+if test -n "$DESKTOP_SESSION"
+    set (gnome-keyring-daemon --start | string split "=")
 end
 
 ## pyenv
