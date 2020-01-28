@@ -60,6 +60,10 @@ if command -v pyenv 1>/dev/null 2>&1
     pyenv init - | source
 end
 
+## direnv integration
+
+direnv hook fish | source
+
 ## Color Theme
 
 # Nord colors are taken from the https://github.com/arcticicestudio/nord/issues/102

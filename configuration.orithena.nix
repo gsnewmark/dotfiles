@@ -12,6 +12,7 @@
     # Applications
     ./modules/browser.nix
     ./modules/chat.nix
+    ./modules/crypto.nix
     ./modules/daw.nix
     ./modules/dev/aws.nix
     ./modules/dev/clojure.nix
@@ -35,6 +36,7 @@
     ./modules/services/dropbox.nix
     ./modules/services/fwupd.nix
     ./modules/services/haveged.nix
+    ./modules/services/lorri.nix
     ./modules/services/tlp.nix
     ./modules/services/unclutter.nix
   ];

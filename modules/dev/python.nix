@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./. ];
-
   # TODO make package for pyenv
   environment.systemPackages = with pkgs; [
     python27Packages.Fabric

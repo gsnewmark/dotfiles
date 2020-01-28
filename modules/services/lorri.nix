@@ -1,8 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
+  services.lorri = {
+    enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
-    # common libs
-    openssl
+    direnv
   ];
 }

@@ -51,6 +51,7 @@
        grammar           ; tasing grammar mistake every you make
 
        :tools
+       direnv
        docker
        ein               ; tame Jupyter notebooks with emacs
        eval              ; run code, run (also, repls)
