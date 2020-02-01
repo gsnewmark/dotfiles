@@ -11,7 +11,7 @@ shell](https://fishshell.com/),
 file manager](http://ranger.nongnu.org/),
 [termite](https://github.com/thestinger/termite),
 [zathura](https://pwmt.org/projects/zathura/),
-[dunst](https://github.com/knopwob/dunst) and other tools. 
+[dunst](https://github.com/knopwob/dunst) and other tools.
 
 ## Installation
 
