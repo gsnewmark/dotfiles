@@ -1,5 +1,8 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
+(setq user-full-name "Ivan Kryvoruchko"
+      user-mail-address "gsnewmark@pm.me")
+
 ;; UI
 
 (setq doom-theme 'doom-nord)

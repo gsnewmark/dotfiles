@@ -14,23 +14,20 @@
     # Optional dependencies
     fd
     gnutls
-    (lib.mkIf (config.programs.gnupg.agent.enable)
-      pinentry_emacs)
     zstd
 
     # Module dependencies
-
-    # Spell checker
     aspell
     aspellDicts.en
     aspellDicts.en-computers
     discount # for Markdown
     languagetool
     proselint
+    rustfmt
     rustracer
     sqlite
     texlive.combined.scheme-medium
-    rustfmt
+    wordnet
   ];
 
   fonts.fonts = [

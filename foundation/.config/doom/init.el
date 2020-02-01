@@ -11,8 +11,7 @@
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        hydra
        (modeline         ; snazzy, Atom-inspired modeline, plus API
-        ;+light
-        )
+        +light)
        nav-flash         ; blink the current line after jumping
        ophints           ; highlight the region an operation acts on
        (popup            ; tame sudden yet inevitable temporary windows
@@ -56,7 +55,8 @@
        ein               ; tame Jupyter notebooks with emacs
        eval              ; run code, run (also, repls)
        (lookup           ; helps you navigate your code and documentation
-        +dictionary)
+        +dictionary
+        +offline)
 
        magit             ; a git porcelain for Emacs
 
