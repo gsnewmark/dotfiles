@@ -2,7 +2,7 @@
 
 set -gx TERM xterm-256color
 
-set -gx QT_QPA_PLATFORMTHEME gtk2
+set -gx QT_STYLE_OVERRIDE gtk2
 set -gx CALIBRE_USE_SYSTEM_THEME 1
 
 set -gx PATH ~/bin ~/.cargo/bin ~/.emacs.d/bin ~/go/bin $PATH
