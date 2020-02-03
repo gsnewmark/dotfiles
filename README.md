@@ -30,7 +30,7 @@ stow web
 stow media
 stow extras
 
-fisher
+# TODO fisher
 ```
 
 To remove a particular configuration module use stow's `-D` option:
