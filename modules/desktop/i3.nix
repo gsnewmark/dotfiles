@@ -14,9 +14,13 @@
   # It's needed to circumvent issues with hardcode path in the i3blocks
   environment.pathsToLink = [ "/libexec" ];
 
-  services = {
-    gnome3.gnome-keyring.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    # TODO set pinentry flavor to gnome3 in next release
+  };
 
+  services = {
     xserver = {
       enable = true;
 
