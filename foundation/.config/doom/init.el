@@ -11,7 +11,10 @@
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        hydra
        (modeline         ; snazzy, Atom-inspired modeline, plus API
-        +light)
+        ;; TODO after some time it starts throwing Symbol's function definition is void: set-modeline!
+        ;;      when I try to open the magit status
+        ;+light
+        )
        nav-flash         ; blink the current line after jumping
        ophints           ; highlight the region an operation acts on
        (popup            ; tame sudden yet inevitable temporary windows
