@@ -16,7 +16,7 @@
     ./modules/dev.nix
     ./modules/editors/emacs.nix
     ./modules/editors/office.nix
-    ./modules/gaming/steam.nix
+    ./modules/gaming.nix
     ./modules/graphics.nix
     ./modules/music.nix
     ./modules/shell/fish.nix
