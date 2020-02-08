@@ -14,8 +14,7 @@
     ./modules/chat.nix
     ./modules/daw.nix
     ./modules/dev.nix
-    ./modules/editors/emacs.nix
-    ./modules/editors/office.nix
+    ./modules/emacs.nix
     ./modules/gaming.nix
     ./modules/graphics.nix
     ./modules/music.nix

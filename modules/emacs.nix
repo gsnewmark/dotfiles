@@ -3,8 +3,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./. ];
-
   environment.systemPackages = with pkgs; [
     # Doom dependencies
     emacs
@@ -20,6 +18,7 @@
     aspell
     aspellDicts.en
     aspellDicts.en-computers
+    aspellDicts.uk
     discount # for Markdown
     languagetool
     proselint

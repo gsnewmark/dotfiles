@@ -26,18 +26,29 @@
     # TODO install foliate, mcomix
     calibre
     gnome3.eog
+    libreoffice-still
     zathura
     zotero
 
-    # misc.
-    mitmproxy
+    # spell checker
+    aspell
+    aspellDicts.en
+    aspellDicts.en-computers
+    aspellDicts.uk
+
+    # web
     networkmanager-openvpn
-    nmap
     thunderbird
     transmission
     transmission-gtk
-    truecrypt
+
+    # network
+    mitmproxy
+    nmap
     wireshark
+
+    # encryption
+    truecrypt
   ];
 
   networking.networkmanager.enable = true;
