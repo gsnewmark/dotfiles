@@ -1,4 +1,0 @@
-pkgs_dirs:
-  - ~/.conda/pkgs
-envs_dirs:
-  - ~/.conda/envs

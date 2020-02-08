@@ -15,20 +15,22 @@ file manager](http://ranger.nongnu.org/),
 
 ## Installation
 
-git, [GNU Stow](https://www.gnu.org/software/stow/), and
-[Fisher](https://github.com/jorgebucaran/fisher) are required for the
-installation:
-
-```shell
+``` shell
 git clone --recursive git@github.com:gsnewmark/dotfiles.git
 cd dotfiles
+```
 
-stow foundation
-stow desktop_environment
-stow development
-stow web
-stow media
-stow extras
+I use [GNU Stow](https://www.gnu.org/software/stow/) to manage the dotfiles:
+
+```shell
+mkdir -p ~/{bin,.config}
+stow --target=/home/gsnewmark/bin bin
+stow --dir=config --target=/home/gsnewmark browser
+stow --dir=config --target=/home/gsnewmark desktop
+stow --dir=config --target=/home/gsnewmark dev
+stow --dir=config --target=/home/gsnewmark emacs
+stow --dir=config --target=/home/gsnewmark music
+stow --dir=config --target=/home/gsnewmark shell
 
 # TODO fisher
 ```
@@ -36,7 +38,13 @@ stow extras
 To remove a particular configuration module use stow's `-D` option:
 
 ``` shell
-stow -D foundation
+stow --target=/home/gsnewmark/bin -D bin
+stow --dir=config --target=/home/gsnewmark -D browser
+stow --dir=config --target=/home/gsnewmark -D desktop
+stow --dir=config --target=/home/gsnewmark -D dev
+stow --dir=config --target=/home/gsnewmark -D emacs
+stow --dir=config --target=/home/gsnewmark -D music
+stow --dir=config --target=/home/gsnewmark -D shell
 ```
 
 ## License
@@ -46,10 +54,10 @@ Configuration is licensed under the MIT license, available at
 
 NixOS deploy script and some of the configs are based on the Henrik Lissner's
 [dotfiles](https://github.com/hlissner/dotfiles/tree/nixos) which is licensed
-under the MIT license (Copyright (c) 2016-2019 Henrik Lissner).
+under the MIT license (Copyright (c) 2016-2020 Henrik Lissner).
 
 [Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop) is licensed
-under the MIT license (Copyright (c) 2016-2019 Henrik Lissner).
+under the MIT license (Copyright (c) 2016-2020 Henrik Lissner).
 
 [nord-xresources](https://github.com/arcticicestudio/nord-xresources),
 [nord-termite](https://github.com/arcticicestudio/nord-termite) are licensed

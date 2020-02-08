@@ -1,7 +1,7 @@
 [submodule "emacs.d"]
-	path = foundation/.emacs.d
-	url = git@github.com:hlissner/doom-emacs.git
+	path = config/emacs/.emacs.d
+	url = https://github.com/hlissner/doom-emacs.git
 	branch = develop
 [submodule "nord-xresources"]
-	path = desktop_environment/.nord-xresources
-	url = git@github.com:arcticicestudio/nord-xresources.git
+	path = config/desktop/.nord-xresources
+	url = https://github.com/arcticicestudio/nord-xresources.git
