@@ -17,12 +17,6 @@
     flameshot
     peek
 
-    # music player
-    mpc_cli
-    mpd
-    mpdas
-    ncmpcpp
-
     # video player
     ffmpeg
     mpv
