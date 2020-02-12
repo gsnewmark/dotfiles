@@ -36,6 +36,9 @@
   # Fix X freezing
   boot.kernelParams = ["acpi_rev_override=1"];
 
+  # Update CPU microcode
+  hardware.cpu.intel.updateMicrocode  = true;
+
   # Support dGPU & iGPU
   hardware.opengl.enable = true;
   hardware.bumblebee.enable = true;
