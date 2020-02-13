@@ -168,7 +168,7 @@ bindcode $mod+Control+25 exec --no-startup-id firefox
 # Control+s - Slack
 bindcode $mod+Control+39 exec --no-startup-id slack
 # Control+t - Telegram
-bindcode $mod+Control+28 exec --no-startup-id telegram-desktop
+bindcode $mod+Control+28 exec --no-startup-id QT_STYLE_OVERRIDE= telegram-desktop
 # Control+d - Discord
 bindcode $mod+Control+40 exec --no-startup-id Discord
 # Control+t - Skype
