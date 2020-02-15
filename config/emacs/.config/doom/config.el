@@ -9,6 +9,7 @@
 
 (setq doom-font (font-spec :family "Iosevka" :size 12.0)
       doom-variable-pitch-font (font-spec :family "Source Sans Pro")
+      ;; TODO switch to Noto Color Emoji when Emacs gets ability to show it
       doom-unicode-font (font-spec :family "Source Sans Pro")
       doom-big-font (font-spec :family "Iosevka" :size 18.0))
 
