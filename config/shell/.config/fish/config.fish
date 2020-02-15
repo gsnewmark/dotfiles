@@ -108,6 +108,8 @@ set pure_color_yellow (set_color $nord13)
 
 ## Prompt
 
+set fish_greeting
+
 set pure_username_color $fish_color_user
 set pure_host_color $fish_color_host
 
