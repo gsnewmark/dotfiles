@@ -50,6 +50,7 @@
           cbatticon
           dunst
           feh
+          gnome3.gnome-disk-utility
           gtk-engine-murrine
           i3blocks
           i3lock
