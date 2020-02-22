@@ -1,2 +1,7 @@
 #!/usr/bin/env sh
+
+# better option is
+# firefox --no-remote -P default --class Deezer --kiosk https://www.deezer.com/uk/
+# but it doesn't work for some reason: Firefox is already running, but not responding
+
 firefox --new-window --kiosk https://www.deezer.com/uk/
