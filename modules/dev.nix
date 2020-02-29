@@ -8,7 +8,7 @@
 
     # Clojure
     clojure
-    joker
+    clj-kondo
     leiningen
 
     # Go
