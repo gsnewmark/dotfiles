@@ -34,7 +34,7 @@
   networking.hostName = "orithena";
 
   # Fix X freezing
-  boot.kernelParams = ["acpi_rev_override=1 acpi_osi=Linux nouveau.modeset=0 nouveau.runpm=0"];
+  boot.kernelParams = ["acpi_osi=Linux" "acpi_rev_override=1" "iommu=soft" "idle=nomwait" "nouveau.modeset=0" "nouveau.runpm=0"];
   boot.blacklistedKernelModules = [ "nouveau" ];
 
   # Update CPU microcode
