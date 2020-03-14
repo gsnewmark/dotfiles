@@ -8,8 +8,6 @@
     audio-recorder
 
     ardour
-    # stable is broken https://github.com/NixOS/nixpkgs/issues/76074
-    unstable.lmms
 
     # synthesizers
     helm

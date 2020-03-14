@@ -6,7 +6,6 @@
   environment.systemPackages = with pkgs; [
     firefox-bin
     chromium
-    # stable one is not available on the Tor servers anymore
-    unstable.tor-browser-bundle-bin
+    tor-browser-bundle-bin
   ];
 }
