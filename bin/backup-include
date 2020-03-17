@@ -2,12 +2,11 @@
 .gitignore
 .gitmodules
 .gitkeep
-.IdeaIC12
-.IdeaIC13
-.IntelliJIdea12
-.IntelliJIdea13
 .travis.yml
 .ssh
 .gnupg
 .zsh_history
 .mpdasrc
+.s3cfg
+.dotfiles
+.lein-env
