@@ -15,10 +15,66 @@ file manager](http://ranger.nongnu.org/),
 
 ## Installation
 
+### Preparing encrypted partition
+
+Start with adding boot and root partitions with `gdisk /dev/nvme0n1` and then
+- `o` (create new empty partition table)
+- `n` (add partition, 500M, type ef00 EFI)
+- `n` (add partition, remaining space, type 8300 Linux LVM)
+- `w` (write partition table and exit)
+
+Follow it by encrypting the root one:
+
 ``` shell
-git clone --recursive git@github.com:gsnewmark/dotfiles.git
-cd dotfiles
+cryptsetup -y -v luksFormat /dev/nvme0n1p2
+cryptsetup open /dev/nvme0n1p2 cryptroot
+mkfs.ext4 -L root /dev/mapper/cryptroot
+mount /dev/mapper/cryptroot /mnt
 ```
+
+And finish by creating a filesystem on the boot partition and mounting it:
+
+``` shell
+mkfs.fat -F32 /dev/nvme0n1p1
+mkdir /mnt/boot
+mount /dev/nvme0n1p1 /mnt/boot
+```
+
+### Installing
+
+Checkout dotfiles:
+
+TODO check if this actually works :see_no_evil:
+``` shell
+mkdir -p /mnt/home/gsnewmark/
+cd /mnt/home/gsnewmark/
+git clone -b nixos --recursive git@github.com:gsnewmark/dotfiles.git .dotfiles
+cd .dotfiles
+ln -s .dotfiles /etc/dotfiles
+```
+
+Generate default config to adjust the hardware configuration in dotfiles:
+
+``` shell
+nixos-generate-config --root /mnt
+```
+
+Install the system:
+
+``` shell
+./mnt/etc/dotfiles/deploy
+```
+
+Reboot and add a user:
+
+``` shell
+useradd -m gsnewmark
+passwd gsnewmark
+chown gsnewmark:users /home/gsnewmark/
+chown -R gsnewmark:users /home/gsnewmark/.dotfiles
+```
+
+### Linking dotfiles
 
 I use [GNU Stow](https://www.gnu.org/software/stow/) to manage the dotfiles:
 
@@ -34,6 +90,8 @@ stow --dir=config --target=/home/gsnewmark shell
 
 # TODO fisher
 ```
+
+### Unlinking dotfiles
 
 To remove a particular configuration module use stow's `-D` option:
 
@@ -51,6 +109,12 @@ stow --dir=config --target=/home/gsnewmark -D shell
 
 Configuration is licensed under the MIT license, available at
 [MIT](http://opensource.org/licenses/MIT) and also in the LICENSE file.
+
+Installation instructions are based on the [@martijnvermaat
+post](https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134#partitioning),
+[ArchLinux
+wiki](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#LUKS_on_a_partition)
+and [NixOS manual](https://nixos.org/nixos/manual/).
 
 NixOS deploy script and some of the configs are based on the Henrik Lissner's
 [dotfiles](https://github.com/hlissner/dotfiles/tree/nixos) which is licensed
