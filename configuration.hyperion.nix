@@ -24,10 +24,8 @@
     # Services
     ./modules/services/cron.nix
     ./modules/services/dropbox.nix
-    ./modules/services/fwupd.nix
     ./modules/services/haveged.nix
     ./modules/services/lorri.nix
-    ./modules/services/tlp.nix
     ./modules/services/unclutter.nix
   ];
 
