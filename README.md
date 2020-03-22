@@ -19,8 +19,8 @@ file manager](http://ranger.nongnu.org/),
 
 Start with adding boot and root partitions with `gdisk /dev/nvme0n1` and then
 - `o` (create new empty partition table)
-- `n` (add partition, 500M, type ef00 EFI)
-- `n` (add partition, remaining space, type 8300 Linux LVM)
+- `n` (add partition, start at default, end at +512M, type ef00 EFI)
+- `n` (add partition, start at default and use all remaining space, type 8300 Linux LVM)
 - `w` (write partition table and exit)
 
 Follow it by encrypting the root one:
@@ -48,6 +48,7 @@ TODO check if this actually works :see_no_evil:
 ``` shell
 mkdir -p /mnt/home/gsnewmark/
 cd /mnt/home/gsnewmark/
+nix-env -iA nixos.git
 git clone -b nixos --recursive git@github.com:gsnewmark/dotfiles.git .dotfiles
 cd .dotfiles
 ln -s .dotfiles /etc/dotfiles
@@ -62,15 +63,14 @@ nixos-generate-config --root /mnt
 Install the system:
 
 ``` shell
-./mnt/etc/dotfiles/deploy
+./mnt/etc/dotfiles/deploy <orithena/hyperion>
 ```
 
-Reboot and add a user:
+Chroot and set password for the created user:
 
 ``` shell
-useradd -m gsnewmark
+nixos-enter
 passwd gsnewmark
-chown gsnewmark:users /home/gsnewmark/
 chown -R gsnewmark:users /home/gsnewmark/.dotfiles
 ```
 
