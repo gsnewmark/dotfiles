@@ -5,18 +5,17 @@
 
 {
   imports =
-    [ <nixpkgs/nixos/modules/hardware/network/broadcom-43xx.nix>
-      <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
+    [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ];
 
   # Kernel
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   # CPU
-  nix.maxJobs = lib.mkDefault 12;
+  nix.maxJobs = lib.mkDefault 24;
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
 
   # SSD
@@ -40,4 +39,8 @@
       allowDiscards = true;
     }
   ];
+
+  # High-DPI console
+  i18n.consoleFont = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+  boot.earlyVconsoleSetup = true;
 }
