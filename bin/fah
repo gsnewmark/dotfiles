@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/.local/share/fah
+cd ~/.local/share/fah
+FAHClient & FAHControl

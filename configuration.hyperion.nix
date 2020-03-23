@@ -15,6 +15,7 @@
     ./modules/daw.nix
     ./modules/dev.nix
     ./modules/emacs.nix
+    ./modules/fah.nix
     ./modules/gaming.nix
     ./modules/graphics.nix
     ./modules/music.nix

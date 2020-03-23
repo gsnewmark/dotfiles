@@ -5,3 +5,6 @@
 [submodule "nord-xresources"]
 	path = config/desktop/.nord-xresources
 	url = https://github.com/arcticicestudio/nord-xresources.git
+[submodule "overlays/nixos-rocm"]
+	path = overlays/nixos-rocm
+	url = https://github.com/nixos-rocm/nixos-rocm.git
