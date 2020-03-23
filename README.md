@@ -26,52 +26,61 @@ Start with adding boot and root partitions with `gdisk /dev/nvme0n1` and then
 Follow it by encrypting the root one:
 
 ``` shell
-cryptsetup -y -v luksFormat /dev/nvme0n1p2
-cryptsetup open /dev/nvme0n1p2 cryptroot
-mkfs.ext4 -L root /dev/mapper/cryptroot
-mount /dev/mapper/cryptroot /mnt
+sudo cryptsetup -y -v luksFormat /dev/nvme0n1p2
+sudo cryptsetup open /dev/nvme0n1p2 cryptroot
+sudo mkfs.ext4 -L root /dev/mapper/cryptroot
+sudo mount /dev/mapper/cryptroot /mnt
 ```
 
 And finish by creating a filesystem on the boot partition and mounting it:
 
 ``` shell
-mkfs.fat -F32 /dev/nvme0n1p1
-mkdir /mnt/boot
-mount /dev/nvme0n1p1 /mnt/boot
+sudo mkfs.fat -F32 /dev/nvme0n1p1
+sudo mkdir /mnt/boot
+sudo mount /dev/nvme0n1p1 /mnt/boot
 ```
 
-### Installing
+### Installing NixOS
 
-Checkout dotfiles:
+Checkout dotfiles without sub-modules for the initial installation:
 
-TODO check if this actually works :see_no_evil:
 ``` shell
-mkdir -p /mnt/home/gsnewmark/
-cd /mnt/home/gsnewmark/
-nix-env -iA nixos.git
-git clone -b nixos --recursive git@github.com:gsnewmark/dotfiles.git .dotfiles
-cd .dotfiles
-ln -s .dotfiles /etc/dotfiles
+sudo nix-env -iA nixos.git
+cd /mnt/etc
+sudo git clone -b nixos https://github.com/gsnewmark/dotfiles.git
 ```
 
-Generate default config to adjust the hardware configuration in dotfiles:
+Generate default config to check the hardware config and adjust the one in
+the dotfiles:
 
 ``` shell
-nixos-generate-config --root /mnt
+sudo nixos-generate-config --root /mnt
 ```
 
 Install the system:
 
 ``` shell
-./mnt/etc/dotfiles/deploy <orithena/hyperion>
+sudo ./mnt/etc/dotfiles/deploy <orithena/hyperion>
 ```
+
+### Post-installation cleanup
 
 Chroot and set password for the created user:
 
 ``` shell
-nixos-enter
+sudo nixos-enter
 passwd gsnewmark
-chown -R gsnewmark:users /home/gsnewmark/.dotfiles
+```
+
+Actually check out dotfiles _for the created user_ and link them to the system's
+`configuration.nix`:
+
+``` shell
+cd ~
+git clone -b nixos --recursive git@github.com:gsnewmark/dotfiles.git .dotfiles
+cp /etc/dotfiles/hardware-configuration.<host>.nix dotfiles/hardware-configuration.<host>.nix
+sudo rm -rf /etc/dotfiles
+sudo ln -s /home/gsnewmark/.dotfiles /etc/dotfiles
 ```
 
 ### Linking dotfiles
