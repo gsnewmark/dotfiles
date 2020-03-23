@@ -16,7 +16,7 @@
 
   # CPU
   nix.maxJobs = lib.mkDefault 24;
-  powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
+  powerManagement.cpuFreqGovernor = lib.mkDefault "schedutil";
 
   # SSD
   fileSystems."/" =
