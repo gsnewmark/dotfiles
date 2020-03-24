@@ -139,6 +139,3 @@ under the MIT license (Copyright (c) 2016-present Arctic Ice Studio).
 [Tridactyl theme](config/tridactyl/themes/base16-nord.css) is based on Chris
 Kempson's (http://chriskempson.com)
 [base16-nord](https://github.com/bezmi/base16-tridactyl/blob/092a88c2233c10a1b28cad647b2bf3fd667aaa84/base16-nord.css).
-
-[nixos-rocm](https://github.com/nixos-rocm/nixos-rocm) overlay (Copyright (c)
-2017-2018 Peter Amidon and all other contributers to this overlay)

@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  # requires nixos-rocm overlay https://github.com/nixos-rocm/nixos-rocm
   nixpkgs.overlays = [ (import ./../overlays/nixos-rocm) ];
 
   hardware.opengl = {
