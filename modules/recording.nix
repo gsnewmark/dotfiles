@@ -1,11 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
-  # TODO install vcvrack
   environment.systemPackages = with pkgs; [
-    ardour
+    # audio
+    audacity
+    audio-recorder
 
-    # synthesizers
-    helm
+    # video/stream
+    obs-studio
   ];
 }

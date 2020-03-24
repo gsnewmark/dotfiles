@@ -18,6 +18,7 @@
     ./modules/gaming.nix
     ./modules/graphics.nix
     ./modules/music.nix
+    ./modules/recording.nix
     ./modules/shell/fish.nix
     ./modules/vm.nix
 
