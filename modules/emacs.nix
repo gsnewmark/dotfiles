@@ -22,8 +22,6 @@
     discount # for Markdown
     languagetool
     proselint
-    rustfmt
-    rustracer
     sqlite
     texlive.combined.scheme-medium
     wordnet

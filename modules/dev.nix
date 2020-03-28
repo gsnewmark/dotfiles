@@ -36,12 +36,13 @@
     python37Packages.virtualenv
     python37Packages.virtualenvwrapper
     tk
-    # TODO make package for pyenv? Not sure it's needed given we have shell.nix
 
     # Rust
     musl
     rustup
-    # TODO switch to latest stable Rust and install clippy, rustfmt, rust-src
+    rustfmt
+    rustracer
+    # TODO switch to latest stable Rust and install clippy, rust-src
 
     # Scala
     sbt
