@@ -118,24 +118,3 @@ stow --dir=config --target=/home/gsnewmark -D shell
 
 Configuration is licensed under the MIT license, available at
 [MIT](http://opensource.org/licenses/MIT) and also in the [LICENSE](LICENSE) file.
-
-Installation instructions are based on the [@martijnvermaat
-post](https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134#partitioning),
-[ArchLinux
-wiki](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#LUKS_on_a_partition)
-and [NixOS manual](https://nixos.org/nixos/manual/).
-
-NixOS deploy script and some of the configs are based on the Henrik Lissner's
-[dotfiles](https://github.com/hlissner/dotfiles/tree/nixos) which is licensed
-under the MIT license (Copyright (c) 2016-2020 Henrik Lissner).
-
-[Doom Emacs](https://github.com/hlissner/doom-emacs/tree/develop) is licensed
-under the MIT license (Copyright (c) 2016-2020 Henrik Lissner).
-
-[nord-xresources](https://github.com/arcticicestudio/nord-xresources),
-[nord-termite](https://github.com/arcticicestudio/nord-termite) are licensed
-under the MIT license (Copyright (c) 2016-present Arctic Ice Studio).
-
-[Tridactyl theme](config/tridactyl/themes/base16-nord.css) is based on Chris
-Kempson's (http://chriskempson.com)
-[base16-nord](https://github.com/bezmi/base16-tridactyl/blob/092a88c2233c10a1b28cad647b2bf3fd667aaa84/base16-nord.css).
