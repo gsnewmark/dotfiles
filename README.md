@@ -117,7 +117,7 @@ stow --dir=config --target=/home/gsnewmark -D shell
 ## License
 
 Configuration is licensed under the MIT license, available at
-[MIT](http://opensource.org/licenses/MIT) and also in the LICENSE file.
+[MIT](http://opensource.org/licenses/MIT) and also in the [LICENSE](LICENSE) file.
 
 Installation instructions are based on the [@martijnvermaat
 post](https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134#partitioning),
