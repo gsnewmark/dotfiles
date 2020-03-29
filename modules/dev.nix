@@ -43,6 +43,10 @@
     rustfmt
     rustracer
     # TODO switch to latest stable Rust and install clippy, rust-src
+    # rustup toolchain install stable
+    # rustup default stable
+    # rustup component add clippy
+    # rustup component add rust-src
 
     # Scala
     sbt
