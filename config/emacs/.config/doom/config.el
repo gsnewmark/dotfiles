@@ -46,7 +46,35 @@
   (add-hook 'cider-mode-hook 'subword-mode)
   (setq clojure-align-forms-automatically t
         cider-repl-result-prefix "")
-  (set-popup-rule! "^\\*cider-repl" :side 'right :size 0.33 :quit nil))
+  (set-popup-rule! "^\\*cider-repl" :side 'right :size 0.33 :quit nil)
+
+  ;; workaround for a somewhat broken completions navigation when using Cider
+  ;; https://github.com/hlissner/doom-emacs/issues/1335
+  (add-hook 'company-completion-started-hook 'ans/set-company-maps)
+  (add-hook 'company-completion-finished-hook 'ans/unset-company-maps)
+  (add-hook 'company-completion-cancelled-hook 'ans/unset-company-maps)
+
+  (defun ans/unset-company-maps (&rest unused)
+    (general-def
+      :states 'insert
+      :keymaps 'override
+      "<up>" nil
+      "<down>" nil
+      "C-j" nil
+      "C-k" nil
+      "RET" nil
+      [return] nil))
+
+  (defun ans/set-company-maps (&rest unused)
+    (general-def
+      :states 'insert
+      :keymaps 'override
+      "<down>" 'company-select-next
+      "<up>" 'company-select-previous
+      "C-j" 'company-select-next
+      "C-k" 'company-select-previous
+      "RET" 'company-complete
+      [return] 'company-complete)))
 
 (defun gsnewmark/clojure-reset-reloaded-repl ()
   (interactive)
