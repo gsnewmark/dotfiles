@@ -41,6 +41,7 @@
     thunderbird
     transmission
     transmission-gtk
+    unstable.protonmail-bridge
 
     # network
     mitmproxy
@@ -56,6 +57,8 @@
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+
+  services.gnome3.gnome-keyring.enable = true;
 
   fonts = {
     enableFontDir = true;
