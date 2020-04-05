@@ -64,6 +64,13 @@
     longitude = 30.5234;
   };
 
+  i18n.defaultLocale = "uk_UA.UTF-8";
+
+  services.xserver = {
+    layout = "us, ua";
+    xkbOptions = "ctrl:nocaps, grp:shifts_toggle";
+  };
+
   users.users.gsnewmark = {
     isNormalUser = true;
     uid = 1000;
