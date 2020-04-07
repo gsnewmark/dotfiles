@@ -284,4 +284,3 @@ exec --no-startup-id cbatticon -i symbolic
 exec --no-startup-id mpd && mpdas
 exec --no-startup-id udiskie
 exec_always --no-startup-id $HOME/bin/rotate-random-background
-exec --no-startup-id protonmail-bridge --no-window
