@@ -29,6 +29,9 @@
 ;; Org Mode
 
 (setq org-directory "~/Dropbox/org")
+(setq org-roam-directory (concat org-directory "/notes"))
+(setq deft-directory org-roam-directory)
+
 (after! org
   (setq org-archive-location (concat org-directory "/archive/archive.org::* From %s")
         org-refile-allow-creating-parent-nodes 'confirm

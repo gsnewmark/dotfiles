@@ -53,6 +53,7 @@
     sbt
 
     # Common libraries & tools
+    clang
     gdb
     openssl
     rlwrap

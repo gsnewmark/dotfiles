@@ -6,6 +6,7 @@
         +icons)
 
        :ui
+       deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
@@ -78,7 +79,8 @@
        nix               ; I hereby declare "nix geht mehr!"
        (org              ; organize your plain life in plain text
         +pandoc          ; pandoc integration into org's exporter
-        +present)        ; Emacs for presentations
+        +present         ; Emacs for presentations
+        +roam)
        (python           ; beautiful is better than ugly
         +pyenv)
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
