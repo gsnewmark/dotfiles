@@ -271,6 +271,7 @@ assign [class="discord"] → 3:III
 assign [class="Skype"] → 3:III
 assign [class="Daily"] → 4:IV
 assign [class="ncmpcpp"] → 5:V
+assign [class="Deezer"] → 5:V
 assign [class="libprs500"] → 6:VI
 assign [class="Steam"] → 9:IX
 assign [class="playstationdiscord"] → 9:IX
