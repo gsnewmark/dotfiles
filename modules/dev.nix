@@ -8,7 +8,8 @@
 
     # Clojure
     clojure
-    clj-kondo
+    # TODO it transitively requires GraalVM which fails to build on my machine
+    # clj-kondo
     leiningen
 
     # Go

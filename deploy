@@ -26,7 +26,7 @@ cat << EOF > "$NIXOSPREFIX/configuration.nix"
 }
 EOF
 
-nix-channel --add https://nixos.org/channels/nixos-19.09 nixos
+nix-channel --add https://nixos.org/channels/nixos-20.03 nixos
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs-unstable
 nix-channel --update
 

@@ -41,7 +41,7 @@
     thunderbird
     transmission
     transmission-gtk
-    unstable.protonmail-bridge
+    protonmail-bridge
 
     # network
     mitmproxy
@@ -67,7 +67,6 @@
     fonts = with pkgs; [
       dejavu_fonts
       font-awesome
-      # TODO use SS07 stylistic set https://unix.stackexchange.com/questions/485982/is-there-a-iosevka-term-package-available-on-nixos
       iosevka
       noto-fonts-emoji
       source-han-sans-japanese

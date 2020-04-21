@@ -17,7 +17,7 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    # TODO set pinentry flavor to gnome3 in next release
+    pinentryFlavor = "gnome3";
   };
 
   services = {
@@ -33,7 +33,6 @@
       };
 
       desktopManager = {
-        default = "xfce";
         xterm.enable = false;
         xfce = {
           enable = true;
@@ -80,6 +79,8 @@
           w3m
         ];
       };
+
+      displayManager.defaultSession = "xfce+i3";
     };
 
     compton = {

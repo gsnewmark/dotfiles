@@ -32,15 +32,13 @@
 
   swapDevices = [ ];
 
-  boot.initrd.luks.devices = [
-    { name = "root";
-      device = "/dev/nvme0n1p2";
+  boot.initrd.luks.devices."root" =
+    { device = "/dev/nvme0n1p2";
       preLVM = true;
       allowDiscards = true;
-    }
-  ];
+    };
 
   # High-DPI console
-  i18n.consoleFont = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
-  boot.earlyVconsoleSetup = true;
+  console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+  console.earlySetup = true;
 }
