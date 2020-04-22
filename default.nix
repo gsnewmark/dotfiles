@@ -34,6 +34,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   environment = {
+    homeBinInPath = true;
     systemPackages = with pkgs; [
       coreutils
       git
