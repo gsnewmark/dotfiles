@@ -125,12 +125,6 @@
    "C-h" 'evil-window-left
    "C-l" 'evil-window-right))
 
-(map! :after org
-      :map org-mode-map
-      :localleader
-      :desc "Archive Subtree" "a" #'org-archive-subtree
-      "i" #'org-time-stamp-inactive)
-
 (map! :after clojure-mode
       :map cider-mode-map
       :localleader

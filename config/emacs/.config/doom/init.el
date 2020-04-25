@@ -73,6 +73,7 @@
        go                ; the hipster dialect
        (haskell +dante)  ; a language that's lazier than I am
        idris             ;
+       json              ; At least it ain't XML
        (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        kotlin            ; a better, slicker Java(Script)
@@ -88,6 +89,7 @@
        scala             ; java, but good
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
        web               ; the tubes
+       yaml              ; JSON, but readable
 
        :config
        ;; The default module sets reasonable defaults for Emacs. It also
