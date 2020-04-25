@@ -1,4 +1,4 @@
-# gsnewmark's *nix configuration
+# My dotfiles
 
 A set of [NixOS](https://nixos.org/)-based system definitions & configuration
 files for Emacs ([Doom
