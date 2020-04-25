@@ -1,7 +1,7 @@
 # Based on https://github.com/hlissner/dotfiles/blob/f0642a0f56c37029507b7ae2f67a2ec4d7974f5c/default.nix
-
+#
 # Common configuration across systems. This should be required by
-# configuration.$HOSTNAME.nix files.
+# ./$HOSTNAME/default.nix files.
 
 { config, pkgs, options, ... }:
 

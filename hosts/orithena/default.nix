@@ -4,32 +4,33 @@
 
 {
   imports = [
-    ./.
+    ../personal.nix
+    ./hardware-configuration.nix
 
     # Desktop Environment
-    ./modules/desktop/i3.nix
+    ../../modules/desktop/i3.nix
 
     # Applications
-    ./modules/browser.nix
-    ./modules/chat.nix
-    ./modules/daw.nix
-    ./modules/dev.nix
-    ./modules/emacs.nix
-    ./modules/gaming.nix
-    ./modules/graphics.nix
-    ./modules/music.nix
-    ./modules/recording.nix
-    ./modules/shell/fish.nix
-    ./modules/vm.nix
+    ../../modules/browser.nix
+    ../../modules/chat.nix
+    ../../modules/daw.nix
+    ../../modules/dev.nix
+    ../../modules/emacs.nix
+    ../../modules/gaming.nix
+    ../../modules/graphics.nix
+    ../../modules/music.nix
+    ../../modules/recording.nix
+    ../../modules/shell/fish.nix
+    ../../modules/vm.nix
 
     # Services
-    ./modules/services/cron.nix
-    ./modules/services/dropbox.nix
-    ./modules/services/fwupd.nix
-    ./modules/services/haveged.nix
-    ./modules/services/lorri.nix
-    ./modules/services/tlp.nix
-    ./modules/services/unclutter.nix
+    ../../modules/services/cron.nix
+    ../../modules/services/dropbox.nix
+    ../../modules/services/fwupd.nix
+    ../../modules/services/haveged.nix
+    ../../modules/services/lorri.nix
+    ../../modules/services/tlp.nix
+    ../../modules/services/unclutter.nix
   ];
 
   networking.hostName = "orithena";

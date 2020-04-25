@@ -10,21 +10,13 @@ NIXOSPREFIX="${PREFIX}/etc/nixos"
 NIXOSFLAGS="-I 'config=$DOTFILES/config' -I 'modules=$DOTFILES/modules' -I 'packages=$DOTFILES/packages'"
 HOST=${1:-${HOST:-orithena}}
 
-if [ ! -f "$DOTFILES/configuration.$HOST.nix" ]; then
+if [ ! -f "$DOTFILES/hosts/$HOST/default.nix" ]; then
   >&2 echo "No configuration exists for host '$HOST'"
   exit 1
 fi
 
 mkdir -p "$NIXOSPREFIX"
-cat << EOF > "$NIXOSPREFIX/configuration.nix"
-{ config, ... }:
-{
-  imports = [
-    ../dotfiles/configuration.$HOST.nix
-    ../dotfiles/hardware-configuration.$HOST.nix
-  ];
-}
-EOF
+echo "import ../dotfiles/hosts/$HOST" > "$NIXOSPREFIX/configuration.nix"
 
 nix-channel --add https://nixos.org/channels/nixos-20.03 nixos
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs-unstable
