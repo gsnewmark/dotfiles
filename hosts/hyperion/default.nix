@@ -1,6 +1,6 @@
 # hyperion - my desktop
 
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
    imports = [

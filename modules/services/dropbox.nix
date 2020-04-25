@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # From NixOS Wiki https://nixos.wiki/wiki/Dropbox

@@ -1,6 +1,6 @@
 # orithena - my laptop
 
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [

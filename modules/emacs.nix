@@ -1,6 +1,6 @@
 # I'm using Doom Emacs for everything text-related
 # https://github.com/hlissner/doom-emacs
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
