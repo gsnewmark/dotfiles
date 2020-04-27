@@ -78,7 +78,7 @@ Actually check out dotfiles _for the created user_ and link them to the system's
 ``` shell
 cd ~
 git clone -b nixos --recursive git@github.com:gsnewmark/dotfiles.git .dotfiles
-cp /etc/dotfiles/hardware-configuration.<host>.nix dotfiles/hardware-configuration.<host>.nix
+cp /etc/dotfiles/hardware-configuration.<host>.nix dotfiles/hosts/<host>/hardware-configuration.nix
 sudo rm -rf /etc/dotfiles
 sudo ln -s /home/gsnewmark/.dotfiles /etc/dotfiles
 ```
