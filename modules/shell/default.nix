@@ -13,10 +13,11 @@
     httpie
     iftop
     iotop
+    jq
     links
     lm_sensors
     lsof
-    (ripgrep.override {withPCRE2 = true;})
+    (ripgrep.override { withPCRE2 = true; })
     rsync
     tcpdump
     time
