@@ -29,6 +29,9 @@
     nodejs
     # TODO install gulp
 
+    # Nix
+    nixfmt
+
     # Python
     python37
     python37Packages.black
