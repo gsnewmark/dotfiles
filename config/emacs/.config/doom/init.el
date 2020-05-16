@@ -95,5 +95,4 @@
        (default +bindings +smartparens))
 
 (when noninteractive
-  (setq doom-env-ignored-vars (delete "^SSH_AGENT_PID$" doom-env-ignored-vars))
-  (setq doom-env-ignored-vars (delete "^SSH_AUTH_SOCK$" doom-env-ignored-vars)))
+  (setq doom-env-blacklist (delete "^SSH_\\(AUTH_SOCK\\|AGENT_PID\\)$" doom-env-blacklist)))
