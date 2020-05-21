@@ -95,4 +95,4 @@
        (default +bindings +smartparens))
 
 (when noninteractive
-  (setq doom-env-blacklist (delete "^SSH_\\(AUTH_SOCK\\|AGENT_PID\\)$" doom-env-blacklist)))
+  (add-to-list 'doom-env-whitelist "^SSH_"))
