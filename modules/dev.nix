@@ -25,10 +25,6 @@
     visualvm
     # TODO create package for the eclipse mat
 
-    # Javascript
-    nodejs
-    # TODO install gulp
-
     # Nix
     nixfmt
 
