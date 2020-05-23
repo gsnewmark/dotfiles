@@ -11,6 +11,7 @@
        doom-dashboard    ; a nifty splash screen for Emacs
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        hydra
+       minimap           ; show a map of the code on the side
        (modeline         ; snazzy, Atom-inspired modeline, plus API
         +light)
        nav-flash         ; blink the current line after jumping
