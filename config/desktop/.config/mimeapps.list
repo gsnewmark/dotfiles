@@ -13,6 +13,7 @@ application/x-extension-xht=firefox.desktop
 x-scheme-handler/mailto=userapp-Daily-7DB4H0.desktop
 message/rfc822=userapp-Daily-7DB4H0.desktop
 application/pdf=org.pwmt.zathura.desktop
+application/epub+zip=org.pwmt.zathura.desktop
 image/jpg=eog.desktop
 image/png=eog.desktop
 application/vnd.oasis.opendocument.text=writer.desktop
