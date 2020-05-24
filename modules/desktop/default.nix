@@ -23,7 +23,6 @@
     youtube-dl
 
     # document viewers
-    # TODO install foliate, mcomix
     calibre
     gnome3.eog
     libreoffice-still
@@ -88,9 +87,9 @@
         autohint = true;
       };
       defaultFonts = {
-        sansSerif = ["Source Sans Pro"];
-        serif = ["Source Serif Pro"];
-        monospace = ["Iosevka"];
+        sansSerif = [ "Source Sans Pro" ];
+        serif = [ "Source Serif Pro" ];
+        monospace = [ "Iosevka" ];
       };
     };
   };
