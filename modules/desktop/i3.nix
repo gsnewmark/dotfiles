@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./.
-  ];
+  imports = [ ./. ];
 
   # Enable better support for GNOME applications
   programs.dconf.enable = true;
@@ -27,9 +25,7 @@
       displayManager.lightdm = {
         enable = true;
         background = "#2e3440";
-        greeters.gtk = {
-          enable = true;
-        };
+        greeters.gtk = { enable = true; };
       };
 
       desktopManager = {
@@ -45,8 +41,6 @@
         enable = true;
         extraPackages = with pkgs; [
           betterlockscreen
-          # TODO replace with (text) indicator for panel?
-          cbatticon
           dunst
           feh
           gnome3.cheese

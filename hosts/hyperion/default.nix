@@ -3,7 +3,7 @@
 { pkgs, ... }:
 
 {
-   imports = [
+  imports = [
     ../personal.nix
     ./hardware-configuration.nix
 
@@ -35,10 +35,10 @@
 
   # At least 5.2 kernel is needed to support the WiFi adapter
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = ["acpi_osi=Linux" "iommu=soft"];
+  boot.kernelParams = [ "acpi_osi=Linux" "iommu=soft" ];
 
   # Update CPU microcode
-  hardware.cpu.amd.updateMicrocode  = true;
+  hardware.cpu.amd.updateMicrocode = true;
 
   # Support dGPU
   hardware.opengl.enable = true;

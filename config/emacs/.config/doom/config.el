@@ -8,21 +8,16 @@
 (setq doom-theme 'doom-nord)
 
 (setq doom-font (font-spec :family "Iosevka" :size 12.0)
-      doom-variable-pitch-font (font-spec :family "Source Sans Pro")
-      ;; TODO switch to Noto Color Emoji when Emacs gets ability to show it
-      doom-unicode-font (font-spec :family "Source Sans Pro")
-      doom-big-font (font-spec :family "Iosevka" :size 18.0))
+      doom-variable-pitch-font (font-spec :family "Source Sans Pro"))
 
 (setq which-key-idle-delay 0.4)
 
 (setq display-line-numbers-type nil)
 
-(setq doom-modeline-major-mode-icon t)
+(setq ivy-read-action-function #'ivy-hydra-read-action)
 
 (custom-set-faces
  '(ein:cell-input-area ((t (:background "#2E3440" :foreground nil)))))
-
-;; VCS
 
 (setq ediff-split-window-function 'split-window-horizontally)
 
@@ -38,8 +33,7 @@
         org-startup-indented nil
         org-imenu-depth 5
         org-log-done 'time
-        org-adapt-indentation nil
-        +org-enable-centralized-exports nil)
+        org-adapt-indentation nil)
 
   (add-to-list 'org-todo-keywords '(sequence "READING" "|" "READ")))
 

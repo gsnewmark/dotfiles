@@ -36,18 +36,29 @@
   networking.hostName = "orithena";
 
   # Fix X freezing
-  boot.kernelParams = ["acpi_osi=Linux" "acpi_rev_override=1" "iommu=soft" "idle=nomwait" "nouveau.modeset=0" "nouveau.runpm=0"];
+  boot.kernelParams = [
+    "acpi_osi=Linux"
+    "acpi_rev_override=1"
+    "iommu=soft"
+    "idle=nomwait"
+    "nouveau.modeset=0"
+    "nouveau.runpm=0"
+  ];
   boot.blacklistedKernelModules = [ "nouveau" ];
 
   # Update CPU microcode
-  hardware.cpu.intel.updateMicrocode  = true;
+  hardware.cpu.intel.updateMicrocode = true;
 
   # Support dGPU & iGPU
   hardware.opengl.enable = true;
   hardware.bumblebee.enable = true;
 
-  # Optimize power use
-  environment.systemPackages = [ pkgs.acpi ];
+  # Optimize power use & add battery indicator
+  environment.systemPackages = [
+    pkgs.acpi
+    # TODO replace with (text) indicator for panel?
+    pkgs.cbatticon
+  ];
   powerManagement.enable = true;
 
   # Monitor backlight control
