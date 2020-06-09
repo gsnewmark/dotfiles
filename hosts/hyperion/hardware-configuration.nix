@@ -4,12 +4,11 @@
 { lib, pkgs, ... }:
 
 {
-  imports =
-    [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-    ];
+  imports = [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix> ];
 
   # Kernel
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules =
+    [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
@@ -19,26 +18,39 @@
   powerManagement.cpuFreqGovernor = lib.mkDefault "schedutil";
 
   # SSD
-  fileSystems."/" =
-    { device = "/dev/disk/by-label/root";
-      fsType = "ext4";
-      options = [ "noatime" "nodiratime" "discard" ];
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-label/root";
+    fsType = "ext4";
+    options = [ "noatime" "nodiratime" "discard" ];
+  };
 
-  fileSystems."/boot" =
-    { device = "/dev/nvme0n1p1";
-      fsType = "vfat";
-    };
+  fileSystems."/boot" = {
+    device = "/dev/nvme0n1p1";
+    fsType = "vfat";
+  };
+
+  fileSystems."/mnt/data" = {
+    device = "/dev/disk/by-label/data";
+    fsType = "ext4";
+    options = [ "noatime" "nodiratime" "discard" ];
+  };
 
   swapDevices = [ ];
 
-  boot.initrd.luks.devices."root" =
-    { device = "/dev/nvme0n1p2";
-      preLVM = true;
-      allowDiscards = true;
-    };
+  boot.initrd.luks.devices."root" = {
+    device = "/dev/nvme0n1p2";
+    preLVM = true;
+    allowDiscards = true;
+  };
+
+  boot.initrd.luks.devices."data" = {
+    device = "/dev/sda";
+    preLVM = true;
+    allowDiscards = true;
+  };
 
   # High-DPI console
-  console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+  console.font =
+    lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
   console.earlySetup = true;
 }
