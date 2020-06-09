@@ -80,8 +80,7 @@
         +pandoc          ; pandoc integration into org's exporter
         +present         ; Emacs for presentations
         +roam)
-       (python           ; beautiful is better than ugly
-        +pyenv)
+       python            ; beautiful is better than ugly
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        scala             ; java, but good
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
