@@ -24,7 +24,12 @@
 
       displayManager.lightdm = {
         enable = true;
-        greeters.gtk = { enable = true; };
+        greeters.gtk = {
+          enable = true;
+          extraConfig = ''
+            background = #2e3440
+          '';
+        };
       };
 
       desktopManager = {
