@@ -24,7 +24,6 @@
 
       displayManager.lightdm = {
         enable = true;
-        background = "#2e3440";
         greeters.gtk = { enable = true; };
       };
 
