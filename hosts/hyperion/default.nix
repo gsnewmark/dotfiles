@@ -23,12 +23,8 @@
     ../../modules/shell/fish.nix
     ../../modules/vm.nix
 
-    # Services
-    ../../modules/services/cron.nix
+    # Additional services
     ../../modules/services/dropbox.nix
-    ../../modules/services/haveged.nix
-    ../../modules/services/lorri.nix
-    ../../modules/services/unclutter.nix
   ];
 
   networking.hostName = "hyperion";

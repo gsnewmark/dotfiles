@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./. ];
+  imports = [ ./. ../services/unclutter.nix ];
 
   # Enable better support for GNOME applications
   programs.dconf.enable = true;

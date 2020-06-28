@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  imports = [ services/lorri.nix ];
+
   environment.systemPackages = with pkgs; [
     # AWS
     awscli

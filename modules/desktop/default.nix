@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  imports = [ ../services/cron.nix ../services/haveged.nix ];
+
   environment.systemPackages = with pkgs; [
     # additional sound settings
     alsaUtils

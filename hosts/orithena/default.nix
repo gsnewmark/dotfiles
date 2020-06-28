@@ -23,14 +23,10 @@
     ../../modules/shell/fish.nix
     ../../modules/vm.nix
 
-    # Services
-    ../../modules/services/cron.nix
+    # Additional services
     ../../modules/services/dropbox.nix
     ../../modules/services/fwupd.nix
-    ../../modules/services/haveged.nix
-    ../../modules/services/lorri.nix
     ../../modules/services/tlp.nix
-    ../../modules/services/unclutter.nix
   ];
 
   networking.hostName = "orithena";
