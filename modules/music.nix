@@ -18,19 +18,20 @@
     shntool
   ];
 
-  # THINK default mpd files & dirs? better configure mpd service instead
+  # THINK default mpd files & dirs?
+  # better configure mpd service instead - service MPD can't connect to pulse :thinking:
   # mkdir -p $HOME/.mpd/playlists
   # touch $HOME/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
   # cp /etc/mpdasrc $HOME/.mpdasrc
 
   # THINK do I need mpd logrotate?
-# echo '/home/gsnewmark/.config/mpd/*.log {
-#   weekly
-#   missingok
-#   rotate 7
-#   compress
-#   notifempty
-#   copytruncate
-#   create 600
-# }' | sudo tee /etc/logrotate.d/mpd
+  # echo '/home/gsnewmark/.config/mpd/*.log {
+  #   weekly
+  #   missingok
+  #   rotate 7
+  #   compress
+  #   notifempty
+  #   copytruncate
+  #   create 600
+  # }' | sudo tee /etc/logrotate.d/mpd
 }
