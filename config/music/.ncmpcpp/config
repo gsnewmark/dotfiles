@@ -25,7 +25,7 @@
 #
 #mpd_port = "6600"
 #
-mpd_music_dir = "/run/media/gsnewmark/Storage/Music"
+mpd_music_dir = "/mnt/data/raw-music"
 #
 #mpd_connection_timeout = "5"
 #
@@ -263,7 +263,7 @@ execute_on_song_change = "~/bin/on-song-change"
 #
 #playlist_shorten_total_times = "no"
 #
-playlist_separate_albums = "yes"
+playlist_separate_albums = "no"
 #
 playlist_display_mode = "columns" #(classic/columns)
 #
@@ -291,7 +291,7 @@ centered_cursor = "yes"
 #
 #default_place_to_search_in = "database" (database/playlist)
 #
-user_interface = "classic" #(classic/alternative)
+user_interface = "alternative" #(classic/alternative)
 #
 #media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
 #
