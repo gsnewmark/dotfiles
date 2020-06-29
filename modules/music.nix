@@ -20,6 +20,7 @@
 
   # THINK default mpd files & dirs?
   # better configure mpd service instead - service MPD can't connect to pulse :thinking:
+  # most probably it should be started as a *user* service (check spotifyd for inspiration)
   # mkdir -p $HOME/.mpd/playlists
   # touch $HOME/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
   # cp /etc/mpdasrc $HOME/.mpdasrc
