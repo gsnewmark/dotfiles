@@ -1,13 +1,16 @@
 { pkgs, ... }:
 
 {
+  imports = [ services/mpd.nix ];
+
   # TODO install pulseaudio-dlna
   environment.systemPackages = with pkgs; [
     # player
     mpc_cli
-    mpd
-    mpdas
     ncmpcpp
+
+    # scrobbler
+    mpdas
 
     # additional codecs
     mac # APE
@@ -18,21 +21,5 @@
     shntool
   ];
 
-  # THINK default mpd files & dirs?
-  # better configure mpd service instead - service MPD can't connect to pulse :thinking:
-  # most probably it should be started as a *user* service (check spotifyd for inspiration)
-  # mkdir -p $HOME/.mpd/playlists
-  # touch $HOME/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
   # cp /etc/mpdasrc $HOME/.mpdasrc
-
-  # THINK do I need mpd logrotate?
-  # echo '/home/gsnewmark/.config/mpd/*.log {
-  #   weekly
-  #   missingok
-  #   rotate 7
-  #   compress
-  #   notifempty
-  #   copytruncate
-  #   create 600
-  # }' | sudo tee /etc/logrotate.d/mpd
 }

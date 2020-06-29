@@ -40,4 +40,7 @@
   hardware.opengl.enable = true;
   hardware.opengl.driSupport = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
+
+  # Set MPD music directory
+  services.mpd.musicDirectory = "/mnt/data/raw-music";
 }
