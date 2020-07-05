@@ -171,8 +171,10 @@ bindcode $mod+Control+39 exec --no-startup-id slack
 bindcode $mod+Control+28 exec --no-startup-id QT_STYLE_OVERRIDE= telegram-desktop
 # Control+d - Discord
 bindcode $mod+Control+40 exec --no-startup-id Discord
-# Control+t - Skype
+# Control+c - Skype
 bindcode $mod+Control+54 exec --no-startup-id skypeforlinux
+# Control+Shift+s - Signal
+bindcode $mod+Control+Shift+39 exec --no-startup-id signal-desktop
 # Control+m - Thunderbird
 bindcode $mod+Control+58 exec --no-startup-id thunderbird
 # Control+n - ncmpcpp
@@ -269,6 +271,7 @@ assign [class="Slack"] → 3:III
 assign [class="TelegramDesktop"] → 3:III
 assign [class="discord"] → 3:III
 assign [class="Skype"] → 3:III
+assign [class="Signal"] → 3:III
 assign [class="Daily"] → 4:IV
 assign [class="ncmpcpp"] → 5:V
 assign [class="Deezer"] → 5:V
