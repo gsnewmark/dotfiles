@@ -181,6 +181,8 @@ bindcode $mod+Control+58 exec --no-startup-id thunderbird
 bindcode $mod+Control+57 exec --no-startup-id termite -e ncmpcpp --class=ncmpcpp
 # Control+Shift+d - Deezer
 bindcode $mod+Control+Shift+40 exec --no-startup-id deezer
+# Control+Shift+m - Spotify
+bindcode $mod+Control+Shift+58 exec --no-startup-id spotify --force-device-scale-factor=2.0
 # Control+g - Steam
 bindcode $mod+Control+42 exec --no-startup-id steam
 # Control+k - Calibre
@@ -275,6 +277,7 @@ assign [class="Signal"] → 3:III
 assign [class="Daily"] → 4:IV
 assign [class="ncmpcpp"] → 5:V
 assign [class="Deezer"] → 5:V
+for_window [class="Spotify"] move --no-auto-back-and-forth to workspace 5:V
 assign [class="libprs500"] → 6:VI
 assign [class="Steam"] → 9:IX
 assign [class="playstationdiscord"] → 9:IX

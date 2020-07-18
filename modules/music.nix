@@ -8,6 +8,7 @@
     # player
     mpc_cli
     ncmpcpp
+    spotify
 
     # scrobbler
     mpdas
