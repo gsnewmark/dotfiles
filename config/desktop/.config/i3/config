@@ -290,3 +290,4 @@ exec --no-startup-id pa-applet
 exec --no-startup-id mpdas
 exec --no-startup-id udiskie
 exec_always --no-startup-id $HOME/bin/rotate-random-background
+exec --no-startup-id protonmail-bridge --no-window
