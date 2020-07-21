@@ -193,18 +193,18 @@ bindcode $mod+Control+33 exec --no-startup-id psn-discord
 bindcode $mod+Control+52 exec --no-startup-id zotero
 
 # music controls
-# P & Play - toogle stop/play
-bindcode $mod+Shift+33 exec --no-startup-id mpc toggle
+# P (spotify) & Play (mpd) - toogle stop/play
+bindcode $mod+Shift+33 exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 bindsym XF86AudioPlay exec --no-startup-id mpc toggle
-# < & Prev - previous
-bindcode $mod+Shift+59 exec --no-startup-id mpc prev
+# < (spotify) & Prev (mpd) - previous
+bindcode $mod+Shift+59 exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 bindsym XF86AudioPrev exec --no-startup-id mpc prev
-# > & Next - next
-bindcode $mod+Shift+60 exec --no-startup-id mpc next
+# > (spotify) & Next (mpd) - next
+bindcode $mod+Shift+60 exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 bindsym XF86AudioNext exec --no-startup-id mpc next
-# I - love current song on Last.FM
+# I - love current song on Last.FM (via mpdas)
 bindcode $mod+Shift+31 exec mpc sendmessage mpdas love && notify-send "Liked $(mpc | head -n 1)"
-# U - unlove current song on Last.FM
+# U - unlove current song on Last.FM (via mpdas)
 bindcode $mod+Shift+30 exec mpc sendmessage mpdas unlove && notify-send "Unliked $(mpc | head -n 1)"
 
 # Make the currently focused window a scratchpad
