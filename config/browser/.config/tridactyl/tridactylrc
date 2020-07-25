@@ -1,5 +1,6 @@
 colourscheme nord
 
+set searchurls.q https://www.qwant.com/?q=%s
 set searchurls.go https://www.google.com/search?q=%s
 set searchurls.trans https://translate.google.com/#auto/en/%s
 set searchurls.so https://stackoverflow.com/search?q=%s
@@ -10,7 +11,6 @@ set searchurls.bc https://bandcamp.com/search?q=%s
 set searchurls.dg https://www.discogs.com/search/?q=%s&type=all
 set searchurls.lf https://www.last.fm/search?q=%s
 set searchurls.gp https://play.google.com/store/search?q=%s&c=music
-set searchurls.lgg https://www.light.gg/db/search/?q=%s
 set searchurls.gr https://www.goodreads.com/search?q=%s
 set searchurls.aw https://wiki.archlinux.org/index.php?search=%s&title=Special%3ASearch&go=Go
 set searchurls.npkg https://nixos.org/nixos/packages.html?query=%s
