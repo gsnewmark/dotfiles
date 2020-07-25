@@ -1,9 +1,8 @@
 separator_block_width=8
 separator=false
 
-[mpd current track]
-command=playerctl --player=spotify,mpd metadata --format "{{ artist }} - {{ title }}"
-instance=mpd
+[current track]
+command=playerctl --player=spotify,mpd metadata --format "{{ artist }} - {{ title }} ({{ status }})" | sed 's/ (Playing)//'
 interval=1
 signal=10
 color=#B48EAD
