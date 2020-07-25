@@ -2,7 +2,7 @@ separator_block_width=8
 separator=false
 
 [mpd current track]
-command=/run/current-system/sw/libexec/i3blocks/mediaplayer/mediaplayer
+command=playerctl --player=spotify,mpd metadata --format "{{ artist }} - {{ title }}"
 instance=mpd
 interval=1
 signal=10

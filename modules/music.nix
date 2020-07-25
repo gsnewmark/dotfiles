@@ -7,8 +7,10 @@
   environment.systemPackages = with pkgs; [
     # player
     mpc_cli
+    mpd-mpris
     ncmpcpp
     spotify
+    playerctl
 
     # scrobbler
     mpdas
