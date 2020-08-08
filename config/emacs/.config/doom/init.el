@@ -60,8 +60,10 @@
        (lookup           ; helps you navigate your code and documentation
         +dictionary
         +offline)
-
        magit             ; a git porcelain for Emacs
+
+       :os
+       tty               ; improve the terminal Emacs experience
 
        :lang
        (clojure          ; java with a lisp
