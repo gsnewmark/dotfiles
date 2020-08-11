@@ -26,6 +26,8 @@ alias stream-mpd "mpv -idle --cache=no http://localhost:8000"
 
 alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
 
+alias pvpn "sudo protonvpn"
+
 ## vi mode
 
 fish_vi_key_bindings 2>/dev/null
