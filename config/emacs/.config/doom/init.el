@@ -1,8 +1,10 @@
 ;;; init.el -*- lexical-binding: t; -*-
 
 (doom! :completion
-       company           ; the ultimate code completion backend
+       (company          ; the ultimate code completion backend
+        +childframe)
        (ivy              ; a search engine for love and life
+        +childframe
         +icons)
 
        :ui
@@ -19,6 +21,7 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
+       pretty-code       ; ligatures or substitute text with pretty symbols
        treemacs          ; a project drawer, like neotree but cooler
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -47,7 +50,8 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :checkers
-       syntax            ; tasing you for every semicolon you forget
+       (syntax           ; tasing you for every semicolon you forget
+        +childframe)
        (spell
         +everywhere)     ; tasing you for misspelling mispelling
        grammar           ; tasing grammar mistake every you make

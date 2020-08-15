@@ -6,15 +6,11 @@
 { config, pkgs, options, ... }:
 
 {
-  imports = [
-    <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-  ];
+  imports = [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix> ];
 
   nix = {
-    nixPath = options.nix.nixPath.default ++ [
-      "config=/etc/dotfiles/config"
-      "packages=/etc/dotfiles/packages"
-    ];
+    nixPath = options.nix.nixPath.default
+      ++ [ "config=/etc/dotfiles/config" "packages=/etc/dotfiles/packages" ];
     autoOptimiseStore = true;
     trustedUsers = [ "root" "@wheel" ];
   };
@@ -22,11 +18,15 @@
     allowUnfree = true;
 
     packageOverrides = pkgs: {
-      unstable = import <nixpkgs-unstable> {
-        config = config.nixpkgs.config;
-      };
+      unstable = import <nixpkgs-unstable> { config = config.nixpkgs.config; };
     };
   };
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url =
+        "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
+    }))
+  ];
 
   boot.cleanTmpDir = true;
   boot.loader.systemd-boot.enable = true;
