@@ -81,7 +81,7 @@
       displayManager.defaultSession = "xfce+i3";
     };
 
-    compton = {
+    picom = {
       enable = true;
       backend = "glx";
       vSync = true;
