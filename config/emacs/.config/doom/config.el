@@ -101,6 +101,8 @@
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook #'auto-fill-mode)
+;; FIXME magit stopped working without the explicitly specifying gitk :thinking:
+(setq magit-gitk-executable "")
 
 ;; Bindings
 

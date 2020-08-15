@@ -26,9 +26,6 @@
     visualvm
     # TODO create package for the eclipse mat
 
-    # Nix
-    nixfmt
-
     # Python
     python37
     python37Packages.black
@@ -41,14 +38,11 @@
     # Rust
     musl
     rustup
-    rustfmt
-    rustracer
     # TODO switch to latest stable Rust and install clippy, rust-src, rustfmt
     # rustup toolchain install stable
     # rustup default stable
     # rustup component add clippy
     # rustup component add rust-src
-    # rustup component add rustfmt
 
     # Scala
     sbt
