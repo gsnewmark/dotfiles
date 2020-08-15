@@ -10,7 +10,6 @@
 
     # Clojure
     clojure
-    clj-kondo
     leiningen
 
     # Go
