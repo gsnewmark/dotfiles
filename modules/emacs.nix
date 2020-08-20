@@ -19,7 +19,7 @@
     aspellDicts.en
     aspellDicts.en-computers
     aspellDicts.uk
-    unstable.clj-kondo
+    my.clj-kondo
     discount # for Markdown
     languagetool
     nixfmt
