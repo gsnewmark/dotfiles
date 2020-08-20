@@ -1,6 +1,6 @@
 # hyperion - my desktop
 
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   imports = [
@@ -43,4 +43,12 @@
 
   # Set MPD music directory
   services.mpd.musicDirectory = "/mnt/data/raw-music";
+
+  # High-DPI console
+  console.font =
+    lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+  console.earlySetup = true;
+
+  # Host-specific packages
+  environment.systemPackages = with pkgs; [ unstable.openrgb ];
 }
