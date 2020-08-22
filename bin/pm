@@ -2,7 +2,6 @@
 
 lock() {
     betterlockscreen -l dimblur
-    setxkbmap -option ctrl:nocaps,grp:switch,grp:shifts_toggle us,ua
 }
 
 case "$1" in
