@@ -13,6 +13,7 @@
        doom-dashboard    ; a nifty splash screen for Emacs
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        hydra
+       ligatures         ; ligatures and symbols to make your code pretty again
        minimap           ; show a map of the code on the side
        (modeline         ; snazzy, Atom-inspired modeline, plus API
         +light)
@@ -21,7 +22,6 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       pretty-code       ; ligatures or substitute text with pretty symbols
        treemacs          ; a project drawer, like neotree but cooler
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -52,8 +52,8 @@
        :checkers
        (syntax           ; tasing you for every semicolon you forget
         +childframe)
-       (spell
-        +everywhere)     ; tasing you for misspelling mispelling
+       (spell            ; tasing you for misspelling mispelling
+        +everywhere)
        grammar           ; tasing grammar mistake every you make
 
        :tools
