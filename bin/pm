@@ -13,7 +13,7 @@ case "$1" in
         xfce4-session-logout --logout
         ;;
     suspend)
-        systemctl suspend
+        lock & systemctl suspend
         ;;
     reboot)
         systemctl reboot
