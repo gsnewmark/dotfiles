@@ -1,9 +1,8 @@
 { pkgs, ... }:
 
 {
-  services.unclutter = {
+  services.unclutter-xfixes = {
     enable = true;
     timeout = 3;
-    package = pkgs.unclutter-xfixes;
   };
 }
