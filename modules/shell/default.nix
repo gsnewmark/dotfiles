@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     bat
-    cloc
     curl
     exa
     fd
@@ -21,6 +20,7 @@
     rsync
     tcpdump
     time
+    tokei
     tree
     tmux
   ];
