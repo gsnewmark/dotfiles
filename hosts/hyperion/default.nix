@@ -40,6 +40,7 @@
   hardware.opengl.enable = true;
   hardware.opengl.driSupport = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
+  environment.systemPackages = with pkgs; [ vulkan-tools ];
 
   # Set MPD music directory
   services.mpd.musicDirectory = "/mnt/data/raw-music";

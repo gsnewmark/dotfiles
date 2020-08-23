@@ -183,6 +183,8 @@ bindcode $mod+Control+57 exec --no-startup-id termite -e ncmpcpp --class=ncmpcpp
 bindcode $mod+Control+Shift+58 exec --no-startup-id spotify --force-device-scale-factor=2.0
 # Control+g - Steam
 bindcode $mod+Control+42 exec --no-startup-id steam
+# Control+l - Lutris
+bindcode $mod+Control+46 exec --no-startup-id lutris
 # Control+k - Calibre
 bindcode $mod+Control+45 exec --no-startup-id calibre
 # Control+p - PlayStationDiscord
@@ -277,6 +279,7 @@ assign [class="ncmpcpp"] → 5:V
 for_window [class="Spotify"] move --no-auto-back-and-forth to workspace 5:V
 assign [class="libprs500"] → 6:VI
 assign [class="Steam"] → 9:IX
+assign [class="Lutris"] → 9:IX
 assign [class="playstationdiscord"] → 9:IX
 
 bindsym XF86MonBrightnessDown exec light -U 10 && notify-desktop -r 14 "Backlight: $(light | cut -d'.' -f1)% "
