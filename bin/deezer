@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-firefox -P deezer --class Deezer --no-remote --kiosk https://www.deezer.com/uk/
