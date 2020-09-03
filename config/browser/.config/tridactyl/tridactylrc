@@ -11,7 +11,7 @@ set searchurls.dg https://www.discogs.com/search/?q=%s&type=all
 set searchurls.lf https://www.last.fm/search?q=%s
 set searchurls.gr https://www.goodreads.com/search?q=%s
 set searchurls.aw https://wiki.archlinux.org/index.php?search=%s&title=Special%3ASearch&go=Go
-set searchurls.npkg https://nixos.org/nixos/packages.html?query=%s
+set searchurls.npkg https://search.nixos.org/packages?query=%s
 
 set editorcmd emacsclient -c %f
 
