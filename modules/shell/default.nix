@@ -3,25 +3,31 @@
 {
   environment.systemPackages = with pkgs; [
     bat
+    bandwhich
     curl
+    du-dust
     exa
     fd
     fzf
     gnupg
     htop
     httpie
-    iftop
+    hyperfine
     iotop
     jq
     links
     lm_sensors
     lsof
+    procs
     (ripgrep.override { withPCRE2 = true; })
     rsync
+    sd
     tcpdump
+    tealdeer
     time
     tokei
     tree
     tmux
+    unstable.zoxide
   ];
 }
