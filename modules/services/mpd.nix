@@ -8,7 +8,7 @@
       replaygain "auto"
       replaygain_preamp "0"
       replaygain_limit "yes"
-      volume_normalization "yes"
+      volume_normalization "no"
 
       audio_output {
         type "pulse"
