@@ -102,9 +102,6 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook #'auto-fill-mode)
 
-;; FIXME spell-fu highlights everything as error if dictionary is not set explicitly
-(setq ispell-dictionary "en_US")
-
 ;; Bindings
 
 (map!
