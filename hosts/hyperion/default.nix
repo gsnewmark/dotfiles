@@ -29,11 +29,9 @@
 
   networking.hostName = "hyperion";
 
-  # At least 5.2 kernel is needed to support the WiFi adapter
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [ "acpi_osi=Linux" "iommu=soft" ];
 
-  # Update CPU microcode
   hardware.cpu.amd.updateMicrocode = true;
 
   # Support dGPU
