@@ -20,7 +20,6 @@
 
     # track split & tags edit
     cuetools
-    kid3
     shntool
   ];
 
