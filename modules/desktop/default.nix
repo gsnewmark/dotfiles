@@ -11,6 +11,7 @@
     # UI theme & icons
     arc-theme
     papirus-icon-theme
+    libsForQt5.qtstyleplugins
 
     # terminal emulator
     termite
@@ -52,6 +53,16 @@
 
     # encryption
     truecrypt
+
+    # ranger file manager
+    ranger
+    atool
+    ffmpegthumbnailer
+    highlight
+    imlib2
+    mediainfo
+    poppler
+    w3m
   ];
 
   networking.networkmanager.enable = true;

@@ -53,7 +53,6 @@
           i3blocks
           i3lock
           libnotify
-          libsForQt5.qtstyleplugins
           notify-desktop
           # TODO replace with (text) indicator for panel
           pa_applet
@@ -65,16 +64,6 @@
           xdotool
           xkb-switch
           xorg.xev
-
-          # ranger file manager
-          ranger
-          atool
-          ffmpegthumbnailer
-          highlight
-          imlib2
-          mediainfo
-          poppler
-          w3m
         ];
       };
 
