@@ -274,7 +274,7 @@ assign [class="TelegramDesktop"] → 3:III
 assign [class="discord"] → 3:III
 assign [class="Skype"] → 3:III
 assign [class="Signal"] → 3:III
-assign [class="Thunderbird"] → 4:IV
+assign [class="Daily"] → 4:IV
 assign [class="ncmpcpp"] → 5:V
 for_window [class="Spotify"] move --no-auto-back-and-forth to workspace 5:V
 assign [class="libprs500"] → 6:VI
@@ -290,5 +290,4 @@ exec --no-startup-id pa-applet
 exec --no-startup-id mpdas
 exec --no-startup-id mpd-mpris
 exec --no-startup-id udiskie
-exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/bin/rotate-random-background

@@ -18,6 +18,7 @@
     allowUnfree = true;
 
     packageOverrides = pkgs: {
+      unstable = import <nixpkgs-unstable> { config = config.nixpkgs.config; };
       # Custom packages
       my = { clj-kondo = (pkgs.callPackage ../packages/clj-kondo.nix { }); };
     };

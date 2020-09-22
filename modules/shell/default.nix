@@ -28,6 +28,6 @@
     tokei
     tree
     tmux
-    zoxide
+    unstable.zoxide
   ];
 }
