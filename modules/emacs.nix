@@ -15,10 +15,7 @@
     zstd
 
     # Module dependencies
-    aspell
-    aspellDicts.en
-    aspellDicts.en-computers
-    aspellDicts.uk
+    (aspellWithDicts (ds: with ds; [ en en-computers uk ]))
     my.clj-kondo
     discount # for Markdown
     languagetool

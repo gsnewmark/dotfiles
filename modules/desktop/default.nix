@@ -33,10 +33,7 @@
     zotero
 
     # spell checker
-    aspell
-    aspellDicts.en
-    aspellDicts.en-computers
-    aspellDicts.uk
+    (aspellWithDicts (ds: with ds; [ en en-computers uk ]))
 
     # web
     networkmanager-openvpn
