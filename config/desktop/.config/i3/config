@@ -290,4 +290,5 @@ exec --no-startup-id pa-applet
 exec --no-startup-id mpdas
 exec --no-startup-id mpd-mpris
 exec --no-startup-id udiskie
+exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/bin/rotate-random-background
