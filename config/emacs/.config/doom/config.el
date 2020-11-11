@@ -31,6 +31,7 @@
   (setq org-archive-location (concat org-directory "/archive/archive.org::* From %s")
         org-refile-allow-creating-parent-nodes 'confirm
         org-startup-indented nil
+        org-startup-folded 'content
         org-imenu-depth 5
         org-log-done 'time
         org-adapt-indentation nil)
