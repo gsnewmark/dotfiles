@@ -15,9 +15,9 @@ license (Copyright (c) 2016-2020 Henrik Lissner).
 [Doom Emacs](https://github.com/hlissner/doom-emacs) is licensed under the MIT
 license (Copyright (c) 2016-2020 Henrik Lissner).
 
-[nord-xresources](https://github.com/arcticicestudio/nord-xresources),
-[nord-termite](https://github.com/arcticicestudio/nord-termite) are licensed
-under the MIT license (Copyright (c) 2016-present Arctic Ice Studio).
+[Nord color theme](https://github.com/arcticicestudio/nord) and
+[nord-xresources](https://github.com/arcticicestudio/nord-xresources) are
+licensed under the MIT license (Copyright (c) 2016-present Arctic Ice Studio).
 
 [Tridactyl theme](config/tridactyl/themes/base16-nord.css) is based on Chris
 Kempson's (http://chriskempson.com)

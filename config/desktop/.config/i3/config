@@ -12,7 +12,7 @@ font pango:Iosevka,Font Awesome 5 Free,Font Awesome 5 Brands 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # Shift+q - kill focused window
 bindcode $mod+Shift+24 kill
@@ -162,7 +162,7 @@ bindcode $mod+Control+26 exec --no-startup-id emacsclient -c -a vim
 # Control+Shift+e - Emacs
 bindcode $mod+Control+Shift+26 exec --no-startup-id emacs
 # Control+f - ranger
-bindcode $mod+Control+41 exec --no-startup-id termite -e "fish -c ranger"
+bindcode $mod+Control+41 exec --no-startup-id alacritty -t Ranger -e fish -c ranger
 # Control+w - Firefox
 bindcode $mod+Control+25 exec --no-startup-id firefox
 # Control+s - Slack
@@ -178,7 +178,7 @@ bindcode $mod+Control+Shift+39 exec --no-startup-id signal-desktop
 # Control+m - Thunderbird
 bindcode $mod+Control+58 exec --no-startup-id thunderbird
 # Control+n - ncmpcpp
-bindcode $mod+Control+57 exec --no-startup-id termite -e ncmpcpp --class=ncmpcpp
+bindcode $mod+Control+57 exec --no-startup-id alacritty --class=ncmpcpp -e ncmpcpp
 # Control+Shift+m - Spotify
 bindcode $mod+Control+Shift+58 exec --no-startup-id spotify --force-device-scale-factor=2.0
 # Control+g - Steam

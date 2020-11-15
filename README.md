@@ -9,7 +9,7 @@ shell](https://fishshell.com/),
 [rofi](https://github.com/DaveDavenport/rofi),
 [mpd](http://www.musicpd.org/)/[ncmpcpp](http://ncmpcpp.rybczak.net/), [ranger
 file manager](http://ranger.nongnu.org/),
-[termite](https://github.com/thestinger/termite),
+[alacritty](https://github.com/alacritty/alacritty),
 [zathura](https://pwmt.org/projects/zathura/),
 [dunst](https://github.com/knopwob/dunst) and other tools.
 

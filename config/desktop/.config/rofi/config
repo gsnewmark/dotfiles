@@ -1,5 +1,5 @@
 rofi.location: 0
-rofi.terminal: termite
+rofi.terminal: alacritty
 rofi.ssh-command: {terminal} -e "{ssh-client} {host}"
 rofi.threads: 0
 rofi.scroll-method: 1

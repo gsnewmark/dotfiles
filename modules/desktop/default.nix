@@ -14,7 +14,7 @@
     libsForQt5.qtstyleplugins
 
     # terminal emulator
-    termite
+    alacritty
 
     # screen recorders
     flameshot
