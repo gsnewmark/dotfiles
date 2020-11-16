@@ -37,9 +37,10 @@ set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
-function fish_default_mode_prompt
-    # NOOP to disable mode indicator
-end
+# TODO uncomments when fish 3.2.0 is released https://github.com/fish-shell/fish-shell/issues/7458
+# function fish_default_mode_prompt
+#     # NOOP to disable mode indicator
+# end
 
 ## fzf
 
