@@ -8,7 +8,7 @@
     ./hardware-configuration.nix
 
     # Desktop Environment
-    ../../modules/desktop/i3.nix
+    ../../modules/desktop/gnome.nix
 
     # Applications
     ../../modules/browser.nix

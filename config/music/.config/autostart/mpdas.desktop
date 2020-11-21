@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=mpdas
+X-GNOME-Autostart-enabled=true
+Name=mpdas
+Comment=Scrobbling support for the MPD

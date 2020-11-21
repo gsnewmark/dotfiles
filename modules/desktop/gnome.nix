@@ -3,8 +3,27 @@
 {
   imports = [ ./. ];
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome3.enable = true;
+  services = {
+    xserver = {
+      enable = true;
 
-  environment.systemPackages = with pkgs; [ gnome3.gnome-tweaks ];
+      displayManager.gdm = { enable = true; };
+
+      desktopManager = { gnome3 = { enable = true; }; };
+    };
+
+    udev.packages = with pkgs; [ gnome3.gnome-settings-daemon ];
+  };
+
+  environment.gnome3.excludePackages = with pkgs;
+    [ pkgs.gnome3.gnome-terminal ];
+
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.appindicator
+    gnomeExtensions.caffeine
+    unstable.gnomeExtensions.paperwm
+    gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.system-monitor
+    gnome3.gnome-tweaks
+  ];
 }

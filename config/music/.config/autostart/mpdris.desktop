@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=mpd-mpris
+X-GNOME-Autostart-enabled=true
+Name=MPDRIS
+Comment=MPRIS support for the MPD
