@@ -19,11 +19,13 @@
     [ pkgs.gnome3.gnome-terminal ];
 
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.appindicator
+    unstable.gnomeExtensions.appindicator
     gnomeExtensions.caffeine
-    unstable.gnomeExtensions.paperwm
+    # TODO install Material Shell when it's available in packages
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.system-monitor
     gnome3.gnome-tweaks
   ];
+
+  services.gnome3.chrome-gnome-shell.enable = true;
 }
