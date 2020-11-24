@@ -28,5 +28,10 @@
     pinentry_gnome
   ];
 
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+
   services.gnome3.chrome-gnome-shell.enable = true;
 }
