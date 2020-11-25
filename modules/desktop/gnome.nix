@@ -26,6 +26,7 @@
     gnomeExtensions.system-monitor
     gnome3.gnome-tweaks
     libnotify
+    notify-desktop
     pinentry_gnome
   ];
 
