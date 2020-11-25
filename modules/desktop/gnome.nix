@@ -25,6 +25,7 @@
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.system-monitor
     gnome3.gnome-tweaks
+    libnotify
     pinentry_gnome
   ];
 
