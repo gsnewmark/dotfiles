@@ -5,7 +5,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Doom dependencies
-    emacsGcc
+    emacsGit
     git
     (ripgrep.override { withPCRE2 = true; })
 

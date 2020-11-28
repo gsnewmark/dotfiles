@@ -5,13 +5,11 @@ files for Emacs ([Doom
 Emacs](https://github.com/hlissner/doom-emacs/tree/develop)), [Fish
 shell](https://fishshell.com/),
 [Firefox](https://www.mozilla.org/en-US/firefox/new/)/[Tridactyl](https://github.com/tridactyl/tridactyl),
-[i3 wm](http://i3wm.org/)/[i3blocks](https://github.com/vivien/i3blocks),
-[rofi](https://github.com/DaveDavenport/rofi),
+Gnome-based [Material Shell](https://material-shell.com/),
 [mpd](http://www.musicpd.org/)/[ncmpcpp](http://ncmpcpp.rybczak.net/), [ranger
 file manager](http://ranger.nongnu.org/),
 [alacritty](https://github.com/alacritty/alacritty),
-[zathura](https://pwmt.org/projects/zathura/),
-[dunst](https://github.com/knopwob/dunst) and other tools.
+[zathura](https://pwmt.org/projects/zathura/), and other tools.
 
 ## Installation
 
