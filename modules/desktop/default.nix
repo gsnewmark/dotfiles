@@ -12,6 +12,7 @@
     arc-theme
     papirus-icon-theme
     libsForQt5.qtstyleplugins
+    qt5ct
 
     # terminal emulator
     alacritty
