@@ -8,7 +8,7 @@
     ./hardware-configuration.nix
 
     # Desktop Environment
-    ../../modules/desktop/i3.nix
+    ../../modules/desktop/gnome.nix
 
     # Applications
     ../../modules/browser.nix
@@ -50,11 +50,7 @@
   hardware.bumblebee.enable = true;
 
   # Optimize power use & add battery indicator
-  environment.systemPackages = [
-    pkgs.acpi
-    # TODO replace with (text) indicator for panel?
-    pkgs.cbatticon
-  ];
+  environment.systemPackages = [ pkgs.acpi ];
   powerManagement.enable = true;
 
   # Monitor backlight control
