@@ -94,8 +94,6 @@ stow --dir=config --target=/home/gsnewmark dev
 stow --dir=config --target=/home/gsnewmark emacs
 stow --dir=config --target=/home/gsnewmark music
 stow --dir=config --target=/home/gsnewmark shell
-
-# TODO fisher
 ```
 
 ### Unlinking dotfiles

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./. ];
+  imports = [ ./. ../services/unclutter.nix ];
 
   services = {
     xserver = {

@@ -17,3 +17,5 @@
   gpgsign = true
 [magit]
   hideCampaign = true
+[pull]
+  rebase = false
