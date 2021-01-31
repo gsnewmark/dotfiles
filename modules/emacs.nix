@@ -5,8 +5,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Doom dependencies
-    # TODO switch back to emacsUnstable/emacsGcc when packages are updated to work with it
-    emacs
+    emacsGit
     git
     (ripgrep.override { withPCRE2 = true; })
 
