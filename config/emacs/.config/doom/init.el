@@ -96,6 +96,9 @@
        web               ; the tubes
        yaml              ; JSON, but readable
 
+       :app
+       everywhere        ; *leave* Emacs!? You must be joking
+
        :config
        ;; The default module sets reasonable defaults for Emacs. It also
        ;; provides a Spacemacs-inspired keybinding scheme and a smartparens

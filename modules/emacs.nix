@@ -5,7 +5,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Doom dependencies
-    emacsGit
+    emacsGcc
     git
     (ripgrep.override { withPCRE2 = true; })
 
@@ -26,6 +26,9 @@
     sqlite
     texlive.combined.scheme-medium
     wordnet
+    xclip
+    xdotool
+    xorg.xwininfo
   ];
 
   fonts.fonts = [ pkgs.emacs-all-the-icons-fonts ];
