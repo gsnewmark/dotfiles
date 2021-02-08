@@ -67,7 +67,16 @@
   users.users.gsnewmark.extraGroups = [ "networkmanager" ];
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+    extraModules = [ pkgs.pulseaudio-modules-bt ];
+  };
+
+  hardware.bluetooth = {
+    enable = true;
+    config = { General = { Enable = "Source,Sink,Media,Socket"; }; };
+  };
 
   services.gnome3.gnome-keyring.enable = true;
 
