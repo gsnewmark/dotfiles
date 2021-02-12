@@ -12,6 +12,8 @@ set -gx SBT_OPTS "-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"
 
 set -gx CARGO_HOME ~/.cargo
 
+set -gx GOPATH ~/.go
+
 ## Aliases
 
 # shortcut for terminal emacs
