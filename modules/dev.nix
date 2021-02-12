@@ -10,29 +10,13 @@
 
     # Clojure
     clojure
-    leiningen
-
-    # Go
-    go
-    go-tools
-
-    # Haskell
-    stack
-
-    # Java
     jdk
-    maven
+    leiningen
     visualvm
     # TODO create package for the eclipse mat
 
     # Python
     python37
-    python37Packages.black
-    python37Packages.pip
-    python37Packages.setuptools
-    python37Packages.virtualenv
-    python37Packages.virtualenvwrapper
-    tk
 
     # Rust
     musl
@@ -42,9 +26,6 @@
     # rustup default stable
     # rustup component add clippy
     # rustup component add rust-src
-
-    # Scala
-    sbt
 
     # Common libraries & tools
     clang
