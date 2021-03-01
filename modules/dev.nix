@@ -10,7 +10,7 @@
 
     # Clojure
     clojure
-    jdk
+    jdk11
     leiningen
     visualvm
     # TODO create package for the eclipse mat
