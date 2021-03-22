@@ -6,7 +6,7 @@ let
   inherit (stdenv.hostPlatform) system;
 
   pname = "clj-kondo";
-  version = "2021.02.28";
+  version = "2021.03.22";
   plat = {
     x86_64-linux = "linux";
     x86_64-darwin = "macos";
@@ -17,7 +17,7 @@ in stdenv.mkDerivation rec {
   src = fetchurl {
     url =
       "https://github.com/borkdude/clj-kondo/releases/download/v${version}/clj-kondo-${version}-${plat}-amd64.zip";
-    sha256 = "14slr14spwd6qyyfg73j9h8rmrxrx434apa8fj5j4p7rwi3hkgf5";
+    sha256 = "0rj7s7q69g8vrxqpjwqgi7f05lidcgq1b6jz6pgb462fmyx3frs4";
   };
 
   nativeBuildInputs = [ unzip autoPatchelfHook ];
