@@ -101,19 +101,6 @@ set fish_pager_color_description $nord10
 set fish_pager_color_progress $nord12
 set fish_pager_color_secondary $nord1
 
-set pure_color_blue (set_color $nord8)
-set pure_color_cyan (set_color $nord7)
-set pure_color_gray (set_color $nord15)
-set pure_color_green (set_color $nord14)
-set pure_color_normal (set_color $nord4)
-set pure_color_red (set_color $nord11)
-set pure_color_yellow (set_color $nord13)
-
 ## Prompt
 
 set fish_greeting
-
-set pure_username_color $fish_color_user
-set pure_host_color $fish_color_host
-
-set pure_user_host_location 1
