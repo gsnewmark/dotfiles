@@ -1,5 +1,6 @@
 colourscheme nord
 
+set searchurls.sp https://www.startpage.com/do/dsearch?query=%s
 set searchurls.q https://www.qwant.com/?q=%s
 set searchurls.go https://www.google.com/search?q=%s
 set searchurls.trans https://translate.google.com/#auto/en/%s
