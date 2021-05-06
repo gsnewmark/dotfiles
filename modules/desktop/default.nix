@@ -27,7 +27,7 @@
     youtube-dl
 
     # document viewers
-    calibre
+    unstable.calibre
     gnome3.eog
     libreoffice-still
     zathura
