@@ -16,7 +16,7 @@
     # TODO create package for the eclipse mat
 
     # Python
-    python37
+    python3
 
     # Rust
     musl
