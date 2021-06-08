@@ -27,8 +27,8 @@
     youtube-dl
 
     # document viewers
-    calibre-py2
-    gnome3.eog
+    calibre
+    gnome.eog
     libreoffice-still
     zathura
     zotero
@@ -73,15 +73,12 @@
     extraModules = [ pkgs.pulseaudio-modules-bt ];
   };
 
-  hardware.bluetooth = {
-    enable = true;
-    config = { General = { Enable = "Source,Sink,Media,Socket"; }; };
-  };
+  hardware.bluetooth = { enable = true; };
 
-  services.gnome3.gnome-keyring.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   fonts = {
-    enableFontDir = true;
+    fontDir.enable = true;
     enableGhostscriptFonts = true;
 
     fonts = with pkgs; [

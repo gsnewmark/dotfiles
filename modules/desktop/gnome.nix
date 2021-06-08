@@ -9,23 +9,22 @@
 
       displayManager.gdm = { enable = true; };
 
-      desktopManager = { gnome3 = { enable = true; }; };
+      desktopManager = { gnome = { enable = true; }; };
     };
 
-    udev.packages = with pkgs; [ gnome3.gnome-settings-daemon ];
+    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   };
 
-  environment.gnome3.excludePackages = with pkgs;
-    [ pkgs.gnome3.gnome-terminal ];
+  environment.gnome.excludePackages = with pkgs; [ pkgs.gnome.gnome-terminal ];
 
   environment.systemPackages = with pkgs; [
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
-    # TODO install Material Shell when it's available in packages
-    # unstable.gnomeExtensions.material-shell
+    # TODO install Material Shell when its package is updated to support Gnome 40
+    # gnomeExtensions.material-shell
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.system-monitor
-    gnome3.gnome-tweaks
+    gnome.gnome-tweaks
     libnotify
     notify-desktop
     pinentry_gnome
@@ -36,5 +35,5 @@
     enableSSHSupport = true;
   };
 
-  services.gnome3.chrome-gnome-shell.enable = true;
+  services.gnome.chrome-gnome-shell.enable = true;
 }
