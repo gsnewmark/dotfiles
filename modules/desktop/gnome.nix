@@ -18,15 +18,13 @@
   environment.gnome.excludePackages = with pkgs; [ pkgs.gnome.gnome-terminal ];
 
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
-    gnomeExtensions.pixel-saver
     gnomeExtensions.sound-output-device-chooser
+    gnome.gnome-tweaks
     libnotify
     notify-desktop
     pinentry_gnome
-    xorg.xprop
   ];
 
   programs.gnupg.agent = {
