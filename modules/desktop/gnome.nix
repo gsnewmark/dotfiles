@@ -20,10 +20,7 @@
   environment.systemPackages = with pkgs; [
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
-    # TODO install Material Shell when its package is updated to support Gnome 40
-    # gnomeExtensions.material-shell
     gnomeExtensions.sound-output-device-chooser
-    gnomeExtensions.system-monitor
     gnome.gnome-tweaks
     libnotify
     notify-desktop
