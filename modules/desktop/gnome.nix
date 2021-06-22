@@ -18,9 +18,10 @@
   environment.gnome.excludePackages = with pkgs; [ pkgs.gnome.gnome-terminal ];
 
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.appindicator
-    gnomeExtensions.caffeine
-    gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.gnome-shell-extension-appindicator-support
+    gnomeExtensions.gnome-shell-extension-blur-my-shell
+    gnomeExtensions.gnome-shell-extension-caffeine
+    gnomeExtensions.gnome-shell-extension-sound-output-device-chooser
     gnome.gnome-tweaks
     libnotify
     notify-desktop
@@ -31,6 +32,4 @@
     enable = true;
     enableSSHSupport = true;
   };
-
-  services.gnome.chrome-gnome-shell.enable = true;
 }
