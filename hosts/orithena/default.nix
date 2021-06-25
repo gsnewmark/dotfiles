@@ -26,7 +26,6 @@
     # Additional services
     ../../modules/services/dropbox.nix
     ../../modules/services/fwupd.nix
-    ../../modules/services/tlp.nix
   ];
 
   networking.hostName = "orithena";
