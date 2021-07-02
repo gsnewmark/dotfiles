@@ -22,6 +22,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
     gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.tiling-assistant
     gnome.gnome-tweaks
     libnotify
     notify-desktop
