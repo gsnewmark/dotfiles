@@ -73,7 +73,10 @@
     extraModules = [ pkgs.pulseaudio-modules-bt ];
   };
 
-  hardware.bluetooth = { enable = true; };
+  hardware.bluetooth = {
+    enable = true;
+    settings = { General = { Enable = "Source,Sink,Media,Socket"; }; };
+  };
 
   services.gnome.gnome-keyring.enable = true;
 
