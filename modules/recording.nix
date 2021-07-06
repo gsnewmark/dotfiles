@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     # audio
-    audacity
     audio-recorder
 
     # video/stream
