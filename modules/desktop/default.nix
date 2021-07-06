@@ -3,6 +3,16 @@
 {
   imports = [ ../services/cron.nix ../services/haveged.nix ];
 
+  nixpkgs.overlays = [
+    (self: super: {
+      calibre = super.calibre.overrideAttrs (oldAttrs: {
+        # DeDRM dependency
+        nativeBuildInputs = oldAttrs.nativeBuildInputs
+          ++ [ self.python3Packages.pycryptodome ];
+      });
+    })
+  ];
+
   environment.systemPackages = with pkgs; [
     # additional sound settings
     alsaUtils
