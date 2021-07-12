@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-pkill -u "$USER" -USR1 dunst

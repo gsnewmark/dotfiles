@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-betterlockscreen -w
-
-while true; do
-      $HOME/bin/set-random-background
-      sleep 15m
-done

@@ -1,7 +1,6 @@
 #include "/home/gsnewmark/.nord-xresources/src/nord"
 
 Xft.dpi: 96
-rofi.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb

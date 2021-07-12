@@ -5,10 +5,3 @@ config/desktop/.config/ranger/tagged
 config/shell/.config/fish/conf.d
 config/shell/.config/fish/functions
 config/shell/.config/fish/fish_variables
-config/music/.config/mpd/mpd.db
-config/music/.config/mpd/mpd.log*
-config/music/.config/mpd/mpd.pid
-config/music/.config/mpd/mpdstate
-config/music/.config/mpd/playlists/*
-config/music/.ncmpcpp/error.log
-config/music/.ncmpcpp/artists/*

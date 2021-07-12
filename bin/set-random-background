@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-betterlockscreen -u ~/Dropbox/Pictures/wallpapers/ && betterlockscreen -w
