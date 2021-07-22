@@ -39,10 +39,22 @@ set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
-# TODO uncomments when fish cursor config works in alacritty https://github.com/fish-shell/fish-shell/issues/7458
-# function fish_default_mode_prompt
-#     # NOOP to disable mode indicator
-# end
+# NOTE fix vim mode fish cursor in alacritty https://github.com/fish-shell/fish-shell/issues/7458
+function fish_mode_prompt
+    switch $fish_bind_mode
+        case default
+            echo -en "\e[2 q"
+        case insert
+            echo -en "\e[6 q"
+        case replace_one
+            echo -en "\e[4 q"
+        case visual
+            echo -en "\e[2 q"
+        case '*'
+            echo -en "\e[2 q"
+    end
+    set_color normal
+end
 
 ## fzf
 
