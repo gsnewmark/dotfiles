@@ -18,6 +18,7 @@
     links
     lm_sensors
     lsof
+    mcfly
     procs
     (ripgrep.override { withPCRE2 = true; })
     rsync
