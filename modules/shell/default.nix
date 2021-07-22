@@ -6,6 +6,7 @@
     bandwhich
     bottom
     curl
+    dogdns
     du-dust
     exa
     fd
