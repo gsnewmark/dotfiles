@@ -24,8 +24,6 @@ alias E "env SUDO_EDITOR=\"emacs -nw\" sudoedit"
 
 alias top-10-size "du -hcx --max-depth=1 | sort -rh | head -10"
 
-alias stream-mpd "mpv -idle --cache=no http://localhost:8000"
-
 alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
 
 alias pvpn "sudo protonvpn"
@@ -55,11 +53,6 @@ function fish_mode_prompt
     end
     set_color normal
 end
-
-## fzf
-
-set -U FZF_LEGACY_KEYBINDINGS 0
-set -gx FZF_DEFAULT_OPTS '--color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C --color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B'
 
 ## direnv integration
 

@@ -8,7 +8,6 @@
     du-dust
     exa
     fd
-    fzf
     gnupg
     htop
     httpie
