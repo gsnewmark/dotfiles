@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     bat
     bandwhich
+    bottom
     curl
     du-dust
     exa
