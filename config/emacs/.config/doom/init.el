@@ -3,12 +3,10 @@
 (doom! :completion
        (company          ; the ultimate code completion backend
         +childframe)
-       (ivy              ; a search engine for love and life
-        +childframe
+       (vertico          ; the search engine of the future
         +icons)
 
        :ui
-       deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        (emoji
@@ -88,7 +86,7 @@
        (org              ; organize your plain life in plain text
         +pandoc          ; pandoc integration into org's exporter
         +present         ; Emacs for presentations
-        +roam)
+        +roam2)
        python            ; beautiful is better than ugly
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        scala             ; java, but good
