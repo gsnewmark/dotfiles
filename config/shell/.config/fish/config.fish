@@ -62,12 +62,6 @@ direnv hook fish | source
 
 zoxide init fish | source
 
-## McFly integration
-
-mcfly init fish | source
-set -gx MCFLY_KEY_SCHEME vim
-set -gx MCFLY_FUZZY true
-
 ## Color Theme
 
 # Nord colors are taken from the https://github.com/arcticicestudio/nord/issues/102
