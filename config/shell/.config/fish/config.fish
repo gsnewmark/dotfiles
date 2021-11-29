@@ -26,8 +26,6 @@ alias top-10-size "du -hcx --max-depth=1 | sort -rh | head -10"
 
 alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
 
-alias pvpn "sudo protonvpn"
-
 ## vi mode
 
 fish_vi_key_bindings 2>/dev/null
