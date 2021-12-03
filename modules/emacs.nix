@@ -16,7 +16,7 @@
 
     # Module dependencies
     (aspellWithDicts (ds: with ds; [ en en-computers uk ]))
-    my.clj-kondo
+    unstable.clj-kondo
     discount # for Markdown
     languagetool
     nixfmt
