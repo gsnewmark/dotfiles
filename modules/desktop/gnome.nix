@@ -18,7 +18,7 @@
   environment.gnome.excludePackages = with pkgs; [ pkgs.gnome.gnome-terminal ];
 
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.appindicator-support
+    gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
     gnomeExtensions.sound-output-device-chooser

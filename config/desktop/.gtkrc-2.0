@@ -3,7 +3,7 @@ gtk-theme-name = "Arc-Dark-solid"
 
 style "user-font"
 {
-        font_name="Source Sans Pro 11"
+        font_name="Source Sans 3 11"
 }
 widget_class "*" style "user-font"
-gtk-font-name = "Source Sans Pro 11"
+gtk-font-name = "Source Sans 3 11"

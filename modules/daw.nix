@@ -1,5 +1,5 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ unstable.bitwig-studio ];
+  environment.systemPackages = with pkgs; [ bitwig-studio ];
 }

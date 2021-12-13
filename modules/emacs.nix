@@ -16,13 +16,14 @@
 
     # Module dependencies
     (aspellWithDicts (ds: with ds; [ en en-computers uk ]))
-    unstable.clj-kondo
+    clj-kondo
     discount # for Markdown
     languagetool
     nixfmt
     proselint
     rustfmt
-    rustracer
+    # TODO broken package
+    # rustracer
     sqlite
     texlive.combined.scheme-medium
     wordnet

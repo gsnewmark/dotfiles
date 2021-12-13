@@ -117,8 +117,8 @@
         autohint = true;
       };
       defaultFonts = {
-        sansSerif = [ "Source Sans Pro" ];
-        serif = [ "Source Serif Pro" ];
+        sansSerif = [ "Source Sans 3" ];
+        serif = [ "Source Serif 4" ];
         monospace = [ "Iosevka" ];
       };
     };

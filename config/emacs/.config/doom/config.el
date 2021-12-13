@@ -8,7 +8,7 @@
 (setq doom-theme 'doom-nord)
 
 (setq doom-font (font-spec :family "Iosevka" :size 12.0)
-      doom-variable-pitch-font (font-spec :family "Source Sans Pro"))
+      doom-variable-pitch-font (font-spec :family "Source Sans 3"))
 
 (setq which-key-idle-delay 0.4)
 
