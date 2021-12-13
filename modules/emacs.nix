@@ -26,7 +26,6 @@
     # rustracer
     sqlite
     texlive.combined.scheme-medium
-    wordnet
     xclip
     xdotool
     xorg.xwininfo

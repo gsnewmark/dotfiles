@@ -62,9 +62,7 @@
        docker
        ein               ; tame Jupyter notebooks with emacs
        eval              ; run code, run (also, repls)
-       (lookup           ; helps you navigate your code and documentation
-        +dictionary
-        +offline)
+       lookup            ; helps you navigate your code and documentation
        magit             ; a git porcelain for Emacs
 
        :os
