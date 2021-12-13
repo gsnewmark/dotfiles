@@ -52,6 +52,7 @@
     transmission
     transmission-gtk
     protonmail-bridge
+    protonvpn-gui
 
     # network
     mitmproxy
