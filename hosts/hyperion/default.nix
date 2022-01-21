@@ -22,6 +22,7 @@
     ../../modules/recording.nix
     ../../modules/shell/fish.nix
     ../../modules/vm.nix
+    ../../modules/yubikey.nix
 
     # Additional services
     ../../modules/services/dropbox.nix
