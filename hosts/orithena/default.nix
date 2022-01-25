@@ -2,6 +2,15 @@
 
 { pkgs, ... }:
 
+let
+  nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
+    export __NV_PRIME_RENDER_OFFLOAD=1
+    export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    export __VK_LAYER_NV_optimus=NVIDIA_only
+    exec -a "$0" "$@"
+  '';
+in
 {
   imports = [
     ../personal.nix
@@ -45,13 +54,17 @@
   # Update CPU microcode
   hardware.cpu.intel.updateMicrocode = true;
 
-  # Support dGPU & iGPU
-  hardware.opengl.enable = true;
-  hardware.bumblebee.enable = true;
-
-  # Optimize power use & add battery indicator
-  environment.systemPackages = [ pkgs.acpi ];
+  # Support dGPU & iGPU & power management
+  environment.systemPackages = [ nvidia-offload pkgs.acpi ];
   powerManagement.enable = true;
+  hardware.opengl.enable = true;
+  hardware.nvidia.modesetting.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.prime = {
+    offload.enable = true;
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
 
   # Monitor backlight control
   programs.light.enable = true;
