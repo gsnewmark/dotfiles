@@ -60,7 +60,7 @@
     wireshark
 
     # encryption
-    truecrypt
+    veracrypt
 
     # ranger file manager
     ranger

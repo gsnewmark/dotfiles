@@ -11,8 +11,10 @@
   nix = {
     nixPath = options.nix.nixPath.default
       ++ [ "config=/etc/dotfiles/config" "packages=/etc/dotfiles/packages" ];
-    autoOptimiseStore = true;
-    trustedUsers = [ "root" "@wheel" ];
+    settings = {
+      auto-optimise-store = true;
+      trusted-users = [ "root" "@wheel" ];
+    };
   };
   nixpkgs.config = {
     allowUnfree = true;

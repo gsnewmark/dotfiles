@@ -17,7 +17,7 @@
     hyperfine
     iotop
     jq
-    links
+    links2
     lm_sensors
     lsof
     procs
