@@ -14,6 +14,8 @@ set -gx CARGO_HOME ~/.cargo
 
 set -gx GOPATH ~/.go
 
+set -gx XDG_DATA_HOME "$HOME/.local/share"
+
 ## Aliases
 
 # shortcut for terminal emacs
