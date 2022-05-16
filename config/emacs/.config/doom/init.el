@@ -25,7 +25,6 @@
        treemacs          ; a project drawer, like neotree but cooler
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
-       window-select     ; visually switch windows
        workspaces        ; tab emulation, persistence & separate workspaces
        zen               ; distraction-free coding or writing
 
@@ -34,8 +33,6 @@
        file-templates    ; auto-snippets for empty files
        fold              ; (nigh) universal code folding
        (format +onsave)  ; automated prettiness
-       ;;lispy             ; vim for lisp, for people who dont like vim
-       multiple-cursors  ; editing in many places at once
        rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        word-wrap         ; soft wrapping with language-aware indent
@@ -60,7 +57,6 @@
        :tools
        direnv
        docker
-       ein               ; tame Jupyter notebooks with emacs
        eval              ; run code, run (also, repls)
        lookup            ; helps you navigate your code and documentation
        magit             ; a git porcelain for Emacs
@@ -74,11 +70,9 @@
        data              ; config/data formats
        emacs-lisp        ; drown in parentheses
        go                ; the hipster dialect
-       haskell           ; a language that's lazier than I am
        json              ; At least it ain't XML
        (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
-       kotlin            ; a better, slicker Java(Script)
        markdown          ; writing docs for people to ignore
        nix               ; I hereby declare "nix geht mehr!"
        (org              ; organize your plain life in plain text
@@ -86,6 +80,7 @@
         +present         ; Emacs for presentations
         +roam2)
        python            ; beautiful is better than ugly
+       (ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        scala             ; java, but good
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
