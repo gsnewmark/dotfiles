@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    spotify
+    (spotify.override { deviceScaleFactor = 2.0; })
 
     # additional codecs
     mac # APE
