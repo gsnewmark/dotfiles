@@ -64,7 +64,7 @@ direnv hook fish | source
 
 ## zoxide integration
 
-zoxide init fish | source
+zoxide init fish --cmd g | source
 
 ## Color Theme
 
