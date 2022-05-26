@@ -5,6 +5,7 @@
 
   environment.systemPackages = with pkgs; [
     # AWS
+    aws-mfa
     awscli
     s3cmd
 
