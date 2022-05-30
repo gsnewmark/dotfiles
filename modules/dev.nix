@@ -6,7 +6,7 @@
   environment.systemPackages = with pkgs; [
     # AWS
     aws-mfa
-    awscli
+    awscli2
     s3cmd
 
     # Clojure
