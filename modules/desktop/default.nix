@@ -14,6 +14,8 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    flatpak
+
     # additional sound settings
     alsaUtils
     pavucontrol
