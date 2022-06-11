@@ -12,7 +12,7 @@
     # Clojure
     clojure
     eclipse-mat
-    jdk11
+    jdk
     leiningen
     visualvm
 
