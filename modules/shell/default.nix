@@ -8,6 +8,7 @@
     curl
     dogdns
     du-dust
+    duf
     exa
     fd
     fzf
@@ -25,11 +26,10 @@
     rsync
     sd
     tcpdump
-    tealdeer
     time
     tokei
     tree
-    tmux
+    viddy
     zoxide
   ];
 }
