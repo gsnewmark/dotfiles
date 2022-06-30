@@ -60,6 +60,7 @@
        eval              ; run code, run (also, repls)
        lookup            ; helps you navigate your code and documentation
        magit             ; a git porcelain for Emacs
+       tree-sitter       ; syntax and parsing, sitting in a tree...
 
        :os
        tty               ; improve the terminal Emacs experience
@@ -69,22 +70,33 @@
         +syntax-checker)
        data              ; config/data formats
        emacs-lisp        ; drown in parentheses
-       go                ; the hipster dialect
+       (go               ; the hipster dialect
+        +tree-sitter)
        json              ; At least it ain't XML
-       (java +meghanada) ; the poster child for carpal tunnel syndrome
-       javascript        ; all(hope(abandon(ye(who(enter(here))))))
+       (java             ; the poster child for carpal tunnel syndrome
+        +meghanada
+        +tree-sitter)
+       (javascript       ; all(hope(abandon(ye(who(enter(here))))))
+        +tree-sitter)
        markdown          ; writing docs for people to ignore
-       nix               ; I hereby declare "nix geht mehr!"
+       (nix              ; I hereby declare "nix geht mehr!"
+        +tree-sitter)
        (org              ; organize your plain life in plain text
         +pandoc          ; pandoc integration into org's exporter
         +present         ; Emacs for presentations
         +roam2)
-       python            ; beautiful is better than ugly
-       (ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
-       rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
-       scala             ; java, but good
+       (python           ; beautiful is better than ugly
+        +tree-sitter)
+       (ruby             ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
+        +rails
+        +tree-sitter)
+       (rust             ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+        +tree-sitter)
+       (scala            ; java, but good
+        +tree-sitter)
        (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
-       web               ; the tubes
+       (web              ; the tubes
+        +tree-sitter)
        yaml              ; JSON, but readable
 
        :app
@@ -96,5 +108,5 @@
        ;; config. Use it as a reference for your own modules.
        (default +bindings +smartparens))
 
-(when noninteractive
-  (add-to-list 'doom-env-whitelist "^SSH_"))
+;; (when noninteractive
+;;   (add-to-list 'doom-env-allow "^SSH_"))
