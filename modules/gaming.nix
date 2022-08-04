@@ -1,7 +1,12 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ minecraft protontricks steam ];
+  environment.systemPackages = with pkgs; [
+    grapejuice
+    minecraft
+    protontricks
+    steam
+  ];
 
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
