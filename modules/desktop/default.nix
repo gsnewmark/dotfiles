@@ -55,6 +55,7 @@
     transmission-gtk
     protonmail-bridge
     protonvpn-gui
+    bitwarden
 
     # network
     mitmproxy
