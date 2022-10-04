@@ -18,9 +18,7 @@ set editorcmd emacsclient -c %f
 
 set allowautofocus false
 
-set smoothscroll false
-bind j scrollline 3
-bind k scrollline -3
+set smoothscroll true
 
 bind J tabnext
 bind K tabprev
