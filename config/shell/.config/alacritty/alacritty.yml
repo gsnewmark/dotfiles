@@ -5,7 +5,10 @@ scrolling:
   history: 99999
 
 font:
-  size: 12
+  normal:
+    family: Iosevka
+    style: Regular
+  size: 13
 
 cursor:
   vi_mode_style: Underline
