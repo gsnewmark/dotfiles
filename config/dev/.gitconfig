@@ -13,7 +13,7 @@
 [push]
   default = simple
 [commit]
-  template = /home/gsnewmark/.git_commit_msg
+  template = ~/.git_commit_msg
   gpgsign = true
 [magit]
   hideCampaign = true
