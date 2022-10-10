@@ -23,6 +23,7 @@
     lsof
     procs
     (ripgrep.override { withPCRE2 = true; })
+    rclone
     rsync
     sd
     tcpdump
