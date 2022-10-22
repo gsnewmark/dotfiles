@@ -1,5 +1,0 @@
-{
-  services.haveged = {
-    enable = true;
-  };
-}

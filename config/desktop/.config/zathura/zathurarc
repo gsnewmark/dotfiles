@@ -1,5 +1,3 @@
-set font "Iosevka 12"
-
 set incremental-search true
 
 set selection-clipboard clipboard

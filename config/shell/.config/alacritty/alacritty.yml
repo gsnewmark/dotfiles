@@ -5,9 +5,6 @@ scrolling:
   history: 99999
 
 font:
-  normal:
-    family: Iosevka
-    style: Regular
   size: 13
 
 cursor:

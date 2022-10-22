@@ -35,10 +35,6 @@
     --tridactyl-hint-active-outline: none;
     --tridactyl-hint-bg: none;
     --tridactyl-hint-outline: none;
-
-    --tridactyl-font-family: "Iosevka";
-    --tridactyl-cmplt-font-family: "Iosevka";
-    --tridactyl-hintspan-font-family: "Iosevka";
 }
 
 #command-line-holder {

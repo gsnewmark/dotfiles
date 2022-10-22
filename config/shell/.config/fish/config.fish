@@ -8,11 +8,7 @@ set -l TE "emacs -nw"
 set -gx VISUAL emacs
 set -gx EDITOR $TE
 
-set -gx SBT_OPTS "-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"
-
 set -gx CARGO_HOME ~/.cargo
-
-set -gx GOPATH ~/.go
 
 set -gx XDG_DATA_HOME "$HOME/.local/share"
 

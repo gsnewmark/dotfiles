@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-modprobe -r brcmfmac
-sleep 10
-modprobe brcmfmac
-sleep 1
-systemctl restart NetworkManager.service
