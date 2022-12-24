@@ -1,5 +1,3 @@
-#include "/home/gsnewmark/.nord-xresources/src/nord"
-
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
