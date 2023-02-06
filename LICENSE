@@ -1,12 +1,15 @@
 The MIT License (MIT)
 
-Copyright (c) 2018-2022 Ivan Kryvoruchko
+Copyright (c) 2018-2023 Ivan Kryvoruchko
 
 [Doom Emacs](https://github.com/hlissner/doom-emacs) is licensed under the MIT
 license (Copyright (c) 2014-2022 Henrik Lissner).
 
 [Nord color theme](https://github.com/arcticicestudio/nord) is licensed under
 the MIT license (Copyright (c) 2016-present Arctic Ice Studio).
+
+[Catppuccin color theme](https://github.com/catppuccin/catppuccin) is licensed
+under the MIT license (Copyright (c) 2021-present Catppuccin Org).
 
 [Tridactyl theme](config/tridactyl/themes/base16-nord.css) is based on Chris
 Kempson's (http://chriskempson.com)
