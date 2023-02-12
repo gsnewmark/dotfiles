@@ -106,6 +106,7 @@ flatpak=(
     com.slack.Slack
     com.spotify.Client
     com.transmissionbt.Transmission
+    md.obsidian.Obsidian
     net.brinkervii.grapejuice
     org.chromium.Chromium
     org.gimp.GIMP
