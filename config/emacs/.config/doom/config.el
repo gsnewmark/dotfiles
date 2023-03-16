@@ -7,6 +7,8 @@
 
 (setq doom-theme 'doom-nord)
 
+(setq doom-font (font-spec :family "Iosevka" :size 13.0))
+
 (setq which-key-idle-delay 0.4)
 
 (setq display-line-numbers-type nil)

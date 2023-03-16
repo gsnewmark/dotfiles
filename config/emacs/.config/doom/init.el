@@ -99,6 +99,9 @@
         +tree-sitter)
        yaml              ; JSON, but readable
 
+       :os
+       (:if IS-MAC macos); improve compatibility with macOS
+
        :app
        everywhere        ; *leave* Emacs!? You must be joking
 
