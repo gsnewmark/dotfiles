@@ -55,10 +55,14 @@
        grammar           ; tasing grammar mistake every you make
 
        :tools
+       (debug            ; stepping through code, to help you add bugsger
+        +lsp)
        direnv
        docker
        eval              ; run code, run (also, repls)
        lookup            ; helps you navigate your code and documentation
+       (lsp              ; M-x vscode
+        +peek)
        magit             ; a git porcelain for Emacs
        tree-sitter       ; syntax and parsing, sitting in a tree...
 
@@ -74,7 +78,7 @@
         +tree-sitter)
        json              ; At least it ain't XML
        (java             ; the poster child for carpal tunnel syndrome
-        +meghanada
+        +lsp
         +tree-sitter)
        (javascript       ; all(hope(abandon(ye(who(enter(here))))))
         +tree-sitter)
@@ -86,6 +90,8 @@
         +present         ; Emacs for presentations
         +roam2)
        (python           ; beautiful is better than ugly
+        +lsp
+        +pyright
         +tree-sitter)
        (ruby             ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
         +rails
