@@ -1,0 +1,6 @@
+xcode-select --install
+brew tap homebrew/cask-fonts
+brew install --cask arc warp raycast slack bitwarden veracrypt protonvpn dropbox telegram visualvm spotify bluesnooze font-iosevka
+brew tap railwaycat/emacsmacport
+brew install emacs-mac --with-imagemagick --with-librsvg --with-native-comp
+brew install git openssh stow vim wget bat bandwhich bottom dog dust duf exa fd gnupg htop httpie hyperfine jq links procs ripgrep rsync sd tcpdump tokei tree viddy zoxide node fish direnv openjdk@17 fzf pinentry-mac
