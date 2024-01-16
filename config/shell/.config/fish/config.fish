@@ -65,6 +65,10 @@ direnv hook fish | source
 
 zoxide init fish --cmd g | source
 
+## atuin integration
+
+atuin init fish | source
+
 ## Prompt
 
 set fish_greeting
