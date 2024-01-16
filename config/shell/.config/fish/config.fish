@@ -33,7 +33,7 @@ set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
-# NOTE fix vim mode fish cursor in alacritty https://github.com/fish-shell/fish-shell/issues/7458
+# NOTE fix vim mode fish cursor in terminal https://github.com/fish-shell/fish-shell/issues/7458
 function fish_mode_prompt
     switch $fish_bind_mode
         case default
