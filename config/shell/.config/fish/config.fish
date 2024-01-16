@@ -67,7 +67,7 @@ zoxide init fish --cmd g | source
 
 ## atuin integration
 
-atuin init fish | source
+atuin init fish --disable-up-arrow | source
 
 ## Prompt
 
