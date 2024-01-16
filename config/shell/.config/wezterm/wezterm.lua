@@ -11,9 +11,10 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-
--- For example, changing the color scheme:
 config.color_scheme = 'Gruvbox Material (Gogh)'
+config.font = wezterm.font('Iosevka Nerd Font', { weight = 'Bold' })
+config.font_size = 13.0
+config.line_height = 0.8
 
 -- and finally, return the configuration to wezterm
 return config
