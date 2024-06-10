@@ -4,25 +4,15 @@ set -o errexit   # abort on nonzero exitstatus
 set -o nounset   # abort on unbound variable
 set -o pipefail  # don't hide errors within pipes
 
-function setup_ppas() {
-    local ppas=("$@")
-
-    for ppa in "${ppas[@]}";
-    do
-        sudo add-apt-repository -y "$ppa"
-    done
-
-    sudo apt update
-}
-
-function install_apt_packages() {
+function install_packages() {
     local packages=("$@")
 
     for package in "${packages[@]}";
     do
-        sudo apt -y install "$package"
+        sudo zypper install --non-interactive --auto-agree-with-licenses "$package"
     done
 }
+
 
 function install_flatpak_packages() {
     local packages=("$@")
@@ -42,95 +32,82 @@ core=(
     openssh-client
     stow
     unzip
-    vim
+    neovim
     wget
 )
 
-ppas=(
-    ppa:kelleyk/emacs
-    ppa:peek-developers/stable
-    ppa:unit193/encryption # veracrypt
-)
-
-# TODO iosevka protonvpn
+# TODO iosevka-nerd gnome-tweaks yubikey-personalization-gui
 desktop=(
-    emacs28-nativecomp
-    flameshot
-    gnome-tweaks
-    peek
-    steam
-    ubuntu-restricted-extras
-    yubikey-personalization
+    bitwarden
+    calibre
+    emacs
+    extension-manager
+    iosevka-fonts
+    mpv
+    obsidian
+    protonvpn-gui
+    signal-desktop
+    transmission
+    veracrypt
     zathura
+    zotero
 )
 
-# TODO bandwhich bottom dogdns du-dust duf hyperfine languagetool nixfmt procs sd tokei viddy
+# TODO bandwhich joshuto
 shell=(
-    alacritty
+    wezterm
     fish
 
+    atuin
     bat
+    bottom
     direnv
-    discount
+    dog
+    dust
+    duf
     exa
-    fd-find
+    fd
     fzf
-    gnutls-bin
+    gnupg
     htop
+    httpie
+    hyperfine
     jq
-    links2
-    lsof
-    python3
-    python3-proselint
-    rclone
+    lazygit
+    links
+    procs
     ripgrep
     rsync
-    time
+    sd
+    tcpdump
+    tokei
     tree
-    x11-utils
-    xclip
-    xdotool
+    viddy
     zoxide
-    zstd
 )
 
 flatpak=(
-    com.bitwarden.desktop
-    com.calibre_ebook.calibre
-    com.discordapp.Discord
     com.dropbox.Client
-    com.github.johnfactotum.Foliate
-    com.mattjakeman.ExtensionManager
-    com.mojang.Minecraft
     com.slack.Slack
     com.spotify.Client
-    com.transmissionbt.Transmission
-    io.mpv.Mpv
-    md.obsidian.Obsidian
-    net.brinkervii.grapejuice
-    org.chromium.Chromium
-    org.gimp.GIMP
-    org.signal.Signal
-    org.telegram.desktop
-    org.zotero.Zotero
-    us.zoom.Zoom
 )
 
-# TODO docker
-# TODO nix + lorri
+sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
+sudo zypper addrepo https://download.opensuse.org/repositories/editors/openSUSE_Tumbleweed/editors.repo
+sudo zypper addrepo https://download.opensuse.org/repositories/openSUSE:Factory/standard/openSUSE:Factory.repo
 
-sudo apt update
-sudo apt upgrade
+sudo zypper ref --non-interactive
+sudo zypper dup --non-interactive --auto-agree-with-licenses
+sudo zypper dist-upgrade --from packman --allow-vendor-change --non-interactive --auto-agree-with-licenses
+
+# codecs
+sudo zypper install --from packman --non-interactive --auto-agree-with-licenses ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec vlc-codecs
+install_packages "${core[@]}"
+install_packages "${shell[@]}"
+install_packages "${desktop[@]}"
+
 flatpak update
-
-install_apt_packages "${core[@]}"
-setup_ppas "${ppas[@]}"
-install_apt_packages "${desktop[@]}"
-install_apt_packages "${shell[@]}"
 install_flatpak_packages "${flatpak[@]}"
-
-sudo apt clean
-sudo apt autoremove --purge
 
 mkdir -p ~/{bin,.config}
 stow --target=/home/gsnewmark/bin bin
