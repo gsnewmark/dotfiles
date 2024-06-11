@@ -9,7 +9,7 @@ function install_packages() {
 
     for package in "${packages[@]}";
     do
-        sudo zypper install --non-interactive --auto-agree-with-licenses "$package"
+        sudo zypper install --auto-agree-with-licenses "$package"
     done
 }
 
@@ -24,19 +24,19 @@ function install_flatpak_packages() {
 }
 
 core=(
+    fish
     ca-certificates
     coreutils
     curl
     git
     gnupg
-    openssh-client
     stow
     unzip
     neovim
     wget
 )
 
-# TODO iosevka-nerd gnome-tweaks yubikey-personalization-gui
+# TODO iosevka-nerd gnome-tweaks yubikey-personalization-gui obsidian signal-desktop veracrypt zotero
 desktop=(
     bitwarden
     calibre
@@ -44,19 +44,14 @@ desktop=(
     extension-manager
     iosevka-fonts
     mpv
-    obsidian
     protonvpn-gui
-    signal-desktop
     transmission
-    veracrypt
     zathura
-    zotero
 )
 
 # TODO bandwhich joshuto
 shell=(
     wezterm
-    fish
 
     atuin
     bat
@@ -94,22 +89,23 @@ flatpak=(
 
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
 sudo zypper addrepo https://download.opensuse.org/repositories/editors/openSUSE_Tumbleweed/editors.repo
-sudo zypper addrepo https://download.opensuse.org/repositories/openSUSE:Factory/standard/openSUSE:Factory.repo
 
-sudo zypper ref --non-interactive
-sudo zypper dup --non-interactive --auto-agree-with-licenses
-sudo zypper dist-upgrade --from packman --allow-vendor-change --non-interactive --auto-agree-with-licenses
+sudo zypper ref
+sudo zypper dup --auto-agree-with-licenses
+sudo zypper dist-upgrade --from packman --allow-vendor-change --auto-agree-with-licenses
 
 # codecs
-sudo zypper install --from packman --non-interactive --auto-agree-with-licenses ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec vlc-codecs
+sudo zypper install --from packman --auto-agree-with-licenses ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec vlc-codecs
 install_packages "${core[@]}"
 install_packages "${shell[@]}"
 install_packages "${desktop[@]}"
 
+
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 
 flatpak update
 install_flatpak_packages "${flatpak[@]}"
 
-mkdir -p ~/{bin,.config}
+#mkdir -p ~/{bin,.config}
 stow --target=/home/gsnewmark/bin bin
 stow --dir=config --target=/home/gsnewmark browser
 stow --dir=config --target=/home/gsnewmark desktop
