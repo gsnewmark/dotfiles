@@ -36,7 +36,7 @@ core=(
     wget
 )
 
-# TODO iosevka-nerd gnome-tweaks yubikey-personalization-gui obsidian signal-desktop veracrypt zotero
+# TODO iosevka-nerd gnome-tweaks yubikey-personalization-gui obsidian veracrypt zotero
 desktop=(
     bitwarden
     calibre
@@ -85,6 +85,7 @@ flatpak=(
     com.dropbox.Client
     com.slack.Slack
     com.spotify.Client
+    org.signal.Signal
 )
 
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
