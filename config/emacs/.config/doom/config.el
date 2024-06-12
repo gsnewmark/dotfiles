@@ -13,29 +13,7 @@
 
 (setq display-line-numbers-type nil)
 
-(setq ivy-read-action-function #'ivy-hydra-read-action)
-
-(custom-set-faces
- '(ein:cell-input-area ((t (:background "#2E3440" :foreground nil)))))
-
 (setq ediff-split-window-function 'split-window-horizontally)
-
-;; Org Mode
-
-(setq org-directory "~/Dropbox/org")
-(setq org-roam-directory (concat org-directory "/notes"))
-(setq deft-directory org-roam-directory)
-
-(after! org
-  (setq org-archive-location (concat org-directory "/archive/archive.org::* From %s")
-        org-refile-allow-creating-parent-nodes 'confirm
-        org-startup-indented nil
-        org-startup-folded 'content
-        org-imenu-depth 5
-        org-log-done 'time
-        org-adapt-indentation nil)
-
-  (add-to-list 'org-todo-keywords '(sequence "READING" "|" "READ")))
 
 ;; Clojure
 
@@ -51,23 +29,6 @@
   (with-current-buffer (cider-current-repl-buffer)
     (cider-interactive-eval
      "(reset)")))
-
-;; Rust
-
-(add-hook 'rust-mode-hook
-          (lambda ()
-            (setq-local flycheck-checker 'rust-clippy)
-            (setq-local flycheck-check-syntax-automatically '(mode-enabled save))))
-
-;; Go
-
-(after! go-mode
-  (setq gomft-command "goimports"))
-
-;; Python
-
-(custom-set-variables
- '(conda-anaconda-home "~/.conda"))
 
 ;; Misc.
 

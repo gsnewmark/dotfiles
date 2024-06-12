@@ -14,7 +14,6 @@
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        hydra
        ligatures         ; ligatures and symbols to make your code pretty again
-       minimap           ; show a map of the code on the side
        (modeline         ; snazzy, Atom-inspired modeline, plus API
         +light)
        nav-flash         ; blink the current line after jumping
@@ -22,7 +21,8 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       treemacs          ; a project drawer, like neotree but cooler
+       (treemacs         ; a project drawer, like neotree but cooler
+        +lsp)
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        workspaces        ; tab emulation, persistence & separate workspaces
@@ -31,17 +31,12 @@
        :editor
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
-       fold              ; (nigh) universal code folding
        (format +onsave)  ; automated prettiness
        rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
-       (dired            ; making dired pretty [functional]
-        +ranger          ; bringing the goodness of ranger to dired
-        +icons           ; colorful icons for dired-mode
-        )
        electric          ; smarter, keyword-based electric-indent
        (undo +tree)      ; persistent, smarter undo for your inevitable mistakes
        vc                ; version-control and Emacs, sitting in a tree
@@ -52,18 +47,17 @@
        (spell            ; tasing you for misspelling mispelling
         +everywhere
         +flyspell)
-       grammar           ; tasing grammar mistake every you make
 
        :tools
        (debug            ; stepping through code, to help you add bugsger
         +lsp)
        direnv
-       docker
        eval              ; run code, run (also, repls)
        lookup            ; helps you navigate your code and documentation
        (lsp              ; M-x vscode
         +peek)
        magit             ; a git porcelain for Emacs
+       rgb
        tree-sitter       ; syntax and parsing, sitting in a tree...
 
        :os
@@ -75,41 +69,35 @@
        data              ; config/data formats
        emacs-lisp        ; drown in parentheses
        (go               ; the hipster dialect
+        +lsp
         +tree-sitter)
-       json              ; At least it ain't XML
+       (json              ; At least it ain't XML
+        +lsp
+        +tree-sitter)
        (java             ; the poster child for carpal tunnel syndrome
         +lsp
         +tree-sitter)
        (javascript       ; all(hope(abandon(ye(who(enter(here))))))
+        +lsp
         +tree-sitter)
        markdown          ; writing docs for people to ignore
-       (nix              ; I hereby declare "nix geht mehr!"
-        +tree-sitter)
-       (org              ; organize your plain life in plain text
-        +pandoc          ; pandoc integration into org's exporter
-        +present         ; Emacs for presentations
-        +roam2)
        (python           ; beautiful is better than ugly
         +lsp
         +pyright
         +tree-sitter)
-       (ruby             ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
-        +rails
+       (sh               ; she sells {ba,z,fi}sh shells on the C xor
+        +fish
+        +lsp
         +tree-sitter)
-       (rust             ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
-        +tree-sitter)
-       (scala            ; java, but good
-        +tree-sitter)
-       (sh +fish +bash)  ; she sells {ba,z,fi}sh shells on the C xor
        (web              ; the tubes
+        +lsp
         +tree-sitter)
-       yaml              ; JSON, but readable
+       (yaml              ; JSON, but readable
+        +lsp
+        +tree-sitter)
 
        :os
        (:if IS-MAC macos); improve compatibility with macOS
-
-       :app
-       everywhere        ; *leave* Emacs!? You must be joking
 
        :config
        ;; The default module sets reasonable defaults for Emacs. It also
