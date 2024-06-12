@@ -97,19 +97,28 @@ sudo zypper dist-upgrade --from packman --allow-vendor-change --auto-agree-with-
 
 # codecs
 sudo zypper install --from packman --auto-agree-with-licenses ffmpeg gstreamer-plugins-{good,bad,ugly,libav} libavcodec vlc-codecs
+# native packages
 install_packages "${core[@]}"
 install_packages "${shell[@]}"
 install_packages "${desktop[@]}"
 
-
-flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 
+# flatpak packages
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak update
 install_flatpak_packages "${flatpak[@]}"
 
-#mkdir -p ~/{bin,.config}
+# bootstrap dotfiles
+mkdir -p ~/{bin,.config}
 stow --target=/home/gsnewmark/bin bin
 stow --dir=config --target=/home/gsnewmark browser
 stow --dir=config --target=/home/gsnewmark desktop
 stow --dir=config --target=/home/gsnewmark dev
 stow --dir=config --target=/home/gsnewmark emacs
 stow --dir=config --target=/home/gsnewmark shell
+
+# install font
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IosevkaTerm.zip \
+    && cd ~/.local/share/fonts \
+    && unzip IosevkaTerm.zip \
+    && rm IosevkaTerm.zip \
+    && fc-cache -fv

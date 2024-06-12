@@ -7,7 +7,7 @@
 
 (setq doom-theme 'doom-gruvbox)
 
-(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 13.0))
+(setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 13.0))
 
 (setq which-key-idle-delay 0.4)
 

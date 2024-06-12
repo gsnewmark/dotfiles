@@ -14,7 +14,7 @@ end
 -- This is where you actually apply your config choices
 config.color_scheme = 'Gruvbox Material (Gogh)'
 
-config.font = wezterm.font('Iosevka Nerd Font', { weight = 'Bold' })
+config.font = wezterm.font('IosevkaTerm Nerd Font', { weight = 'Bold' })
 config.font_size = 13.0
 config.line_height = 0.8
 
