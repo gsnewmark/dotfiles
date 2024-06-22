@@ -122,3 +122,6 @@ wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/do
     && unzip IosevkaTerm.zip \
     && rm IosevkaTerm.zip \
     && fc-cache -fv
+
+# change shell
+chsh -s /usr/bin/fish
