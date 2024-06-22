@@ -36,13 +36,12 @@ core=(
     wget
 )
 
-# TODO iosevka-nerd gnome-tweaks yubikey-personalization-gui obsidian veracrypt zotero
+# TODO yubikey-personalization-gui veracrypt zotero
 desktop=(
     bitwarden
     calibre
     emacs
     extension-manager
-    iosevka-fonts
     mpv
     protonvpn-gui
     transmission
@@ -85,6 +84,7 @@ flatpak=(
     com.dropbox.Client
     com.slack.Slack
     com.spotify.Client
+    md.obsidian.Obsidian
     org.signal.Signal
 )
 
