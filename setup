@@ -40,6 +40,7 @@ core=(
 desktop=(
     bitwarden
     calibre
+    code
     emacs
     extension-manager
     mpv
@@ -90,6 +91,8 @@ flatpak=(
 
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
 sudo zypper addrepo https://download.opensuse.org/repositories/editors/openSUSE_Tumbleweed/editors.repo
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
 
 sudo zypper ref
 sudo zypper dup --auto-agree-with-licenses
