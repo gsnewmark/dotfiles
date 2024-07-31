@@ -24,31 +24,17 @@
       "space g g": [
         "workspace::SendKeystrokes",
         ": new center terminal enter lazygit enter"
-      ]
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space s i": "outline::Toggle"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space p p": "projects::OpenRecent"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space o p": "project_panel::ToggleFocus"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space s p": "workspace::NewSearch"
+      ],
+      "space s i": "outline::Toggle",
+      "space s p": "workspace::NewSearch",
+      "space p p": "projects::OpenRecent",
+      "space o p": "project_panel::ToggleFocus",
+      "space w v": "pane::SplitRight",
+      "space w s": "pane::SplitDown",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
     }
   }
 ]
