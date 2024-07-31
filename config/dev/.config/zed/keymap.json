@@ -17,5 +17,14 @@
     "bindings": {
       "j k": "vim::NormalBefore" // remap jk in insert mode to escape.
     }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space g g": [
+        "workspace::SendKeystrokes",
+        ": new center terminal enter lazygit enter"
+      ]
+    }
   }
 ]
