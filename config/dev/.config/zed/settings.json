@@ -12,12 +12,12 @@
     "metrics": false
   },
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 14,
+  "ui_font_size": 13,
+  "buffer_font_size": 13,
   "buffer_font_family": "IosevkaTerm Nerd Font",
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Gruvbox Material",
     "dark": "Gruvbox Material"
   },
   "buffer_font_weight": 500,
