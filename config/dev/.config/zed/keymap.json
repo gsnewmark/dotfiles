@@ -26,5 +26,11 @@
         ": new center terminal enter lazygit enter"
       ]
     }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space s i": "outline::Toggle"
+    }
   }
 ]
