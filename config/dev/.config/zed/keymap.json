@@ -38,5 +38,17 @@
     "bindings": {
       "space p p": "projects::OpenRecent"
     }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space o p": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space s p": "workspace::NewSearch"
+    }
   }
 ]
