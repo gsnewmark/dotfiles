@@ -32,5 +32,11 @@
     "bindings": {
       "space s i": "outline::Toggle"
     }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space p p": "projects::OpenRecent"
+    }
   }
 ]
