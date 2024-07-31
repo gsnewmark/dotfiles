@@ -82,6 +82,7 @@ shell=(
 )
 
 flatpak=(
+    dev.zed.Zed
     com.dropbox.Client
     com.slack.Slack
     com.spotify.Client
