@@ -1,0 +1,21 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: Open Default Keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space space": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore" // remap jk in insert mode to escape.
+    }
+  }
+]
