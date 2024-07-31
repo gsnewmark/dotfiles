@@ -24,6 +24,13 @@
   "buffer_line_height": {
     "custom": 1.0
   },
+  // todo(gsnewmark): figure out ligatures
+  "terminal": {
+    "font_weight": 500,
+    "line_height": {
+      "custom": 0.8
+    }
+  },
   "cursor_blink": false,
   "relative_line_numbers": true,
   "vertical_scroll_margin": 0
