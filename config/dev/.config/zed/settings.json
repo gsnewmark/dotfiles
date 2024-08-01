@@ -31,7 +31,7 @@
   "terminal": {
     "font_weight": 500,
     "line_height": {
-      "custom": 0.8
+      "custom": 1.0
     }
   },
   "cursor_blink": false,
