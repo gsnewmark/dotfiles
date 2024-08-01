@@ -31,6 +31,7 @@
       "space o p": "project_panel::ToggleFocus",
       "space w v": "pane::SplitRight",
       "space w s": "pane::SplitDown",
+      "space b b": "tab_switcher::Toggle",
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
