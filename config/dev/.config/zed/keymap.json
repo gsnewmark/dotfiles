@@ -29,6 +29,7 @@
       "space s p": "workspace::NewSearch",
       "space p p": "projects::OpenRecent",
       "space o p": "project_panel::ToggleFocus",
+      "space o a": "assistant::ToggleFocus",
       "space w v": "pane::SplitRight",
       "space w s": "pane::SplitDown",
       "space b b": "tab_switcher::Toggle",
@@ -36,7 +37,8 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "shift-h": "editor::Hover"
     }
   }
 ]
