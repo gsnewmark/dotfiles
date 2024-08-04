@@ -88,6 +88,7 @@ flatpak=(
     com.spotify.Client
     md.obsidian.Obsidian
     org.signal.Signal
+    com.slack.Slack
 )
 
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
