@@ -25,6 +25,7 @@
         "workspace::SendKeystrokes",
         ": new center terminal enter lazygit enter"
       ],
+      "space g b": "editor::ToggleGitBlame",
       "space s i": "outline::Toggle",
       "space s p": "workspace::NewSearch",
       "space p p": "projects::OpenRecent",
