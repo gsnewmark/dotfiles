@@ -26,6 +26,8 @@
         ": new center terminal enter lazygit enter"
       ],
       "space g b": "editor::ToggleGitBlame",
+      "space g o": "editor::OpenPermalinkToLine",
+      "space g y": "editor::CopyPermalinkToLine",
       "space s i": "outline::Toggle",
       "space s p": "workspace::NewSearch",
       "space p p": "projects::OpenRecent",
