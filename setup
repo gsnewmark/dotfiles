@@ -51,30 +51,25 @@ core=(
     wget
 )
 
-# TODO iosevka-nerd yubikey-personalization-gui veracrypt zotero
+# TODO iosevka-nerd protonvpn-gui
 desktop=(
-    bitwarden
     calibre
-    extension-manager
     mpv
-    protonvpn-gui
     steam
     transmission
     ubuntu-restricted-extras
+    veracrypt
     yubikey-personalization
     zathura
 )
 
-# TODO bandwhich joshuto
+# TODO bandwhich joshuto bottom dog hyperfine procs viddy
 shell=(
     wezterm
 
-    atuin
     bat
-    bottom
     direnv
-    dog
-    dust
+    du-dust
     duf
     eza
     fd-find
@@ -82,38 +77,49 @@ shell=(
     gnupg
     htop
     httpie
-    hyperfine
     jq
-    lazygit
     links
-    procs
     ripgrep
     rsync
     tcpdump
     tokei
     tree
-    viddy
     zoxide
 )
 
 flatpak=(
     dev.zed.Zed
+    com.bitwarden.desktop
     com.dropbox.Client
     com.mojang.Minecraft
     com.slack.Slack
     com.spotify.Client
     md.obsidian.Obsidian
     org.signal.Signal
-    com.slack.Slack
+    org.zotero.Zotero
 )
 
 sudo apt update
 sudo apt upgrade
 flatpak update
 
-install_apt_packages "${core[@]}"
+# WezTerm
+curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+# Eza
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --yes --dearmor -o /usr/share/keyrings/gierens.gpg
+echo "deb [signed-by=/usr/share/keyring/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
 setup_ppas "${ppas[@]}"
+
+install_apt_packages "${core[@]}"
 install_apt_packages "${shell[@]}"
+bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh) # atuin
+# Lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+
 install_apt_packages "${desktop[@]}"
 install_flatpak_packages "${flatpak[@]}"
 
