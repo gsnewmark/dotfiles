@@ -45,4 +45,5 @@
   "cursor_blink": false,
   "relative_line_numbers": true,
   "vertical_scroll_margin": 0
+  //,"tab_bar": { "show": false }
 }
