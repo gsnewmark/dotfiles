@@ -31,7 +31,6 @@ To remove a particular configuration module use stow's `-D` option:
 
 ``` shell
 stow --target=~/bin -D bin
-stow --dir=config --target=~ -D browser
 stow --dir=config --target=~ -D desktop
 stow --dir=config --target=~ -D dev
 stow --dir=config --target=~ -D emacs
