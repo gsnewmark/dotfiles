@@ -19,6 +19,17 @@
     }
   },
   {
+    "context": "Terminal",
+    "bindings": {
+      "space b b": "tab_switcher::Toggle",
+      "space b k": "pane::CloseActiveItem",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
     "bindings": {
       "space t": "workspace::NewCenterTerminal",
@@ -39,6 +50,8 @@
       "space w s": "pane::SplitDown",
       "space b b": "tab_switcher::Toggle",
       "space b k": "pane::CloseActiveItem",
+      "space b s": "workspace::Save",
+      "space b S": "workspace::SaveWithoutFormat",
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
