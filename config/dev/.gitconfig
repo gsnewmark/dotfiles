@@ -18,6 +18,4 @@
 [magit]
   hideCampaign = true
 [pull]
-  rebase = false
-[includeIf "gitdir:~/projects/work/hopin/"]
-  path = ~/projects/work/hopin/.gitconfig
+  rebase = true
