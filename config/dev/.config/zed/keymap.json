@@ -32,7 +32,6 @@
   {
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
     "bindings": {
-      "space t": "workspace::NewCenterTerminal",
       "space g g": [
         "workspace::SendKeystrokes",
         ": new center terminal enter lazygit enter"
@@ -46,6 +45,7 @@
       "space p p": ["projects::OpenRecent", { "create_new_window": false }],
       "space o p": "project_panel::ToggleFocus",
       "space o a": "assistant::ToggleFocus",
+      "space o t": "workspace::NewCenterTerminal",
       "space w v": "pane::SplitRight",
       "space w s": "pane::SplitDown",
       "space b b": "tab_switcher::Toggle",
