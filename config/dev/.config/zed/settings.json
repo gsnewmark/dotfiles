@@ -15,6 +15,7 @@
       "model": "claude-3-5-sonnet-20240620"
     }
   },
+  "autosave": "on_focus_change",
   "features": {
     "inline_completion_provider": "none"
   },
