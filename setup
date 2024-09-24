@@ -88,7 +88,6 @@ shell=(
 )
 
 flatpak=(
-    dev.zed.Zed
     com.bitwarden.desktop
     com.dropbox.Client
     com.mojang.Minecraft
@@ -106,6 +105,7 @@ flatpak update
 # WezTerm
 curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
 echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+
 # Eza
 wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --yes --dearmor -o /usr/share/keyrings/gierens.gpg
 echo "deb [signed-by=/usr/share/keyring/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
@@ -114,6 +114,7 @@ setup_ppas "${ppas[@]}"
 install_apt_packages "${core[@]}"
 install_apt_packages "${shell[@]}"
 bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh) # atuin
+
 # Lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
@@ -122,6 +123,9 @@ sudo install lazygit /usr/local/bin
 
 install_apt_packages "${desktop[@]}"
 install_flatpak_packages "${flatpak[@]}"
+
+# Zed
+curl -f https://zed.dev/install.sh | sh
 
 sudo apt clean
 sudo apt autoremove --purge
