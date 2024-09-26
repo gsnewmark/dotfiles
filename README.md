@@ -18,7 +18,6 @@ I use [GNU Stow](https://www.gnu.org/software/stow/) to manage the dotfiles:
 ```shell
 mkdir -p ~/{bin,.config}
 stow --target=~/bin bin
-stow --dir=config --target=~ browser
 stow --dir=config --target=~ desktop
 stow --dir=config --target=~ dev
 stow --dir=config --target=~ emacs

@@ -51,7 +51,7 @@ core=(
     wget
 )
 
-# TODO iosevka-nerd protonvpn-gui
+# TODO protonvpn-gui
 desktop=(
     calibre
     mpv
@@ -63,13 +63,12 @@ desktop=(
     zathura
 )
 
-# TODO bandwhich joshuto bottom dog hyperfine procs viddy
+# TODO bandwhich joshuto bottom dog hyperfine procs viddy du-dust tokei
 shell=(
     wezterm
 
     bat
     direnv
-    du-dust
     duf
     eza
     fd-find
@@ -82,7 +81,6 @@ shell=(
     ripgrep
     rsync
     tcpdump
-    tokei
     tree
     zoxide
 )
@@ -107,10 +105,11 @@ curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/sh
 echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
 
 # Eza
-wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --yes --dearmor -o /usr/share/keyrings/gierens.gpg
-echo "deb [signed-by=/usr/share/keyring/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
-setup_ppas "${ppas[@]}"
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 
+setup_ppas "${ppas[@]}"
 install_apt_packages "${core[@]}"
 install_apt_packages "${shell[@]}"
 bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh) # atuin
@@ -122,7 +121,6 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
 install_apt_packages "${desktop[@]}"
-install_flatpak_packages "${flatpak[@]}"
 
 # Zed
 curl -f https://zed.dev/install.sh | sh
@@ -130,10 +128,11 @@ curl -f https://zed.dev/install.sh | sh
 sudo apt clean
 sudo apt autoremove --purge
 
+install_flatpak_packages "${flatpak[@]}"
+
 # bootstrap dotfiles
 mkdir -p ~/{bin,.config}
 stow --target=/home/gsnewmark/bin bin
-stow --dir=config --target=/home/gsnewmark browser
 stow --dir=config --target=/home/gsnewmark desktop
 stow --dir=config --target=/home/gsnewmark dev
 stow --dir=config --target=/home/gsnewmark emacs
