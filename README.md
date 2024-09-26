@@ -1,11 +1,6 @@
 # My dotfiles
 
-A set of configuration files for Emacs ([Doom
-Emacs](https://github.com/hlissner/doom-emacs/tree/develop)), [Fish
-shell](https://fishshell.com/),
-[Firefox](https://www.mozilla.org/en-US/firefox/new/)/[Tridactyl](https://github.com/tridactyl/tridactyl),
-[alacritty](https://github.com/alacritty/alacritty),
-[zathura](https://pwmt.org/projects/zathura/), and other tools.
+A set of configuration files for Emacs ([Zed](https://zed.dev)), [Fish shell](https://fishshell.com/), [Wezterm](https://wezfurlong.org/wezterm/index.html), [zathura](https://pwmt.org/projects/zathura/), and other tools.
 
 Setup script installs all the tools I use and meant to be used under the [Pop!_OS](https://pop.system76.com/).
 
