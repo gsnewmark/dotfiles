@@ -12,7 +12,7 @@
     "default_open_ai_model": "gpt-4o-mini",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest"
     }
   },
   "autosave": "on_focus_change",
