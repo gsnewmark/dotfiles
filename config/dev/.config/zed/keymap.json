@@ -38,8 +38,7 @@
       ],
       "space g b": "editor::ToggleGitBlame",
       "space g d": "editor::ToggleHunkDiff",
-      "space g o": "editor::OpenPermalinkToLine",
-      "space g y": "editor::CopyPermalinkToLine",
+      "space g r": "editor::RevertSelectedHunks",
       "space s i": "outline::Toggle",
       "space s p": "workspace::NewSearch",
       "space p p": ["projects::OpenRecent", { "create_new_window": false }],
@@ -65,7 +64,9 @@
       "w": "vim::NextSubwordStart",
       "b": "vim::PreviousSubwordStart",
       "e": "vim::NextSubwordEnd",
-      "g e": "vim::PreviousSubwordEnd"
+      "g e": "vim::PreviousSubwordEnd",
+      "space g o": "editor::OpenPermalinkToLine",
+      "space g y": "editor::CopyPermalinkToLine"
     }
   },
   {
