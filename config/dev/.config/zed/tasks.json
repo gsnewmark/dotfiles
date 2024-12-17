@@ -1,0 +1,13 @@
+// Static tasks configuration.
+//
+// Example:
+[
+  {
+    "label": "Lazygit",
+    "command": "lazygit",
+    "args": [],
+    "env": {},
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false
+  }
+]
