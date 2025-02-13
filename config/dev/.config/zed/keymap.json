@@ -32,10 +32,6 @@
   {
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
     "bindings": {
-      "space g g": [
-        "task::Spawn",
-        { "task_name": "Lazygit", "target": "center" }
-      ],
       "space g b": "editor::ToggleGitBlame",
       "space g d": "editor::ToggleHunkDiff",
       "space g r": "editor::RevertSelectedHunks",
@@ -66,7 +62,15 @@
       "e": "vim::NextSubwordEnd",
       "g e": "vim::PreviousSubwordEnd",
       "space g o": "editor::OpenPermalinkToLine",
-      "space g y": "editor::CopyPermalinkToLine"
+      "space g y": "editor::CopyPermalinkToLine",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "start lazygit", "reveal_target": "center" }
+      ],
+      "space g f": [
+        "task::Spawn",
+        { "task_name": "start lazygit file log", "reveal_target": "center" }
+      ]
     }
   },
   {
