@@ -63,14 +63,13 @@
       "g e": "vim::PreviousSubwordEnd",
       "space g o": "editor::OpenPermalinkToLine",
       "space g y": "editor::CopyPermalinkToLine",
-      // fix, currently opens task spawn menu
       "space g g": [
         "task::Spawn",
-        { "task_name": "start_lazygit", "reveal_target": "center" }
+        { "task_name": "lazygit", "reveal_target": "center" }
       ],
       "space g f": [
         "task::Spawn",
-        { "task_name": "start_lazygit_file_log", "reveal_target": "center" }
+        { "task_name": "lazygit_file_log", "reveal_target": "center" }
       ]
     }
   },

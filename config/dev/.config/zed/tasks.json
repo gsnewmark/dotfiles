@@ -3,7 +3,7 @@
 // Example:
 [
   {
-    "label": "start lazygit",
+    "label": "lazygit",
     "command": "lazygit -p $ZED_WORKTREE_ROOT",
     "hide": "on_success",
     "shell": {
@@ -11,7 +11,7 @@
     }
   },
   {
-    "label": "start lazygit file log",
+    "label": "lazygit_file_log",
     "command": "lazygit",
     "args": ["-f", "\"$ZED_RELATIVE_FILE\""],
     "hide": "on_success",
