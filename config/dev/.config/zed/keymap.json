@@ -23,10 +23,10 @@
     "bindings": {
       "space b b": "tab_switcher::Toggle",
       "space b k": "pane::CloseActiveItem",
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   },
   {
@@ -47,10 +47,10 @@
       "space b k": "pane::CloseActiveItem",
       "space b s": "workspace::Save",
       "space b S": "workspace::SaveWithoutFormat",
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
       "shift-k": "editor::Hover"
     }
   },
@@ -63,30 +63,31 @@
       "g e": "vim::PreviousSubwordEnd",
       "space g o": "editor::OpenPermalinkToLine",
       "space g y": "editor::CopyPermalinkToLine",
+      // fix, currently opens task spawn menu
       "space g g": [
         "task::Spawn",
-        { "task_name": "start lazygit", "reveal_target": "center" }
+        { "task_name": "start_lazygit", "reveal_target": "center" }
       ],
       "space g f": [
         "task::Spawn",
-        { "task_name": "start lazygit file log", "reveal_target": "center" }
+        { "task_name": "start_lazygit_file_log", "reveal_target": "center" }
       ]
     }
   },
   {
     "context": "vim_mode == normal || vim_mode == visual",
     "bindings": {
-      "s": ["vim::PushOperator", { "Sneak": {} }],
-      "S": ["vim::PushOperator", { "SneakBackward": {} }]
+      "s": ["vim::PushSneak", {}],
+      "S": ["vim::PushSneakBackward", {}]
     }
   },
   {
     "context": "Dock",
     "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   }
 ]
