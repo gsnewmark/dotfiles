@@ -32,9 +32,9 @@
   {
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
     "bindings": {
-      "space g b": "editor::ToggleGitBlame",
-      "space g d": "editor::ToggleHunkDiff",
-      "space g r": "editor::RevertSelectedHunks",
+      "space g b": "git::Blame",
+      "space g d": "editor::ToggleSelectedDiffHunks",
+      "space g r": "git::Restore",
       "space s i": "outline::Toggle",
       "space s p": "workspace::NewSearch",
       "space p p": ["projects::OpenRecent", { "create_new_window": false }],
