@@ -21,7 +21,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "space b b": "tab_switcher::Toggle",
+      "space b b": "tab_switcher::ToggleAll",
       "space b k": "pane::CloseActiveItem",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -43,7 +43,7 @@
       "space o t": "workspace::NewCenterTerminal",
       "space w v": "pane::SplitRight",
       "space w s": "pane::SplitDown",
-      "space b b": "tab_switcher::Toggle",
+      "space b b": "tab_switcher::ToggleAll",
       "space b k": "pane::CloseActiveItem",
       "space b s": "workspace::Save",
       "space b S": "workspace::SaveWithoutFormat",
