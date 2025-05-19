@@ -20,7 +20,7 @@ config.line_height = 0.8
 
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 10
-config.window_decorations = 'RESIZE|INTEGRATED_BUTTONS'
+config.window_decorations = 'TITLE | RESIZE'
 
 config.native_macos_fullscreen_mode = true
 
