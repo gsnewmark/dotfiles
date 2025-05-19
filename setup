@@ -33,6 +33,7 @@ core=(
     podman
     stow
     wget
+    unrar
     unzip
 )
 
@@ -91,19 +92,21 @@ sudo dnf upgrade -y
 echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
 sudo dnf -y install dnf-plugins-core
 
-sudo dnf install dnf-automatic -y
-sudo sed -i 's/apply_updates = no/apply_updates = yes/' /etc/dnf/automatic.conf
-systemctl enable --now dnf-automatic.timer
-
 sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf group update core -y
+sudo dnf group upgrade core -y
 
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
-sudo dnf update @sound-and-video -y
 
 sudo dnf -y install intel-media-driver
+
+# video hardware acceleration
+sudo dnf install -y ffmpeg-libs libva libva-utils
+sudo dnf swap -y libva-intel-media-driver intel-media-driver --allowerasing
+sudo dnf install -y libva-intel-driver
+sudo dnf install -y openh264 gstreamer1-plugin-openh264 mozilla-openh264
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 
 sudo dnf install -y @virtualization
 
@@ -115,17 +118,18 @@ sudo dnf -y copr enable atim/bandwhich
 sudo dnf -y copr enable atim/bottom
 sudo dnf -y copr enable atim/joshuto
 sudo dnf -y copr enable atim/lazygit
+sudo dnf -y copr enable alternateved/eza
 
-install_apt_packages "${core[@]}"
-install_apt_packages "${shell[@]}"
-install_apt_packages "${desktop[@]}"
+install_dnf_packages "${core[@]}"
+install_dnf_packages "${shell[@]}"
+install_dnf_packages "${desktop[@]}"
 
 # Zed
 curl -f https://zed.dev/install.sh | sh
 
 # VeraCrypt
 wget https://launchpad.net/veracrypt/trunk/1.26.20/+download/veracrypt-1.26.20-Fedora-40-x86_64.rpm
-dnf install -y ./veracrypt-1.26.20-Fedora-40-x86_64.rpm
+sudo dnf install -y ./veracrypt-1.26.20-Fedora-40-x86_64.rpm
 rm -f ./veracrypt-1.26.20-Fedora-40-x86_64.rpm
 
 sudo dnf install -y flatpak
@@ -154,6 +158,10 @@ wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/do
     && unzip IosevkaTerm.zip \
     && rm IosevkaTerm.zip \
     && fc-cache -fv
+
+# disabling redundant stuff
+sudo systemctl disable NetworkManager-wait-online.service
+sudo rm /etc/xdg/autostart/org.gnome.Software.desktop
 
 # change shell
 chsh -s /usr/bin/fish
