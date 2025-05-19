@@ -7,8 +7,8 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
-  "show_inline_completions": false,
-  "assistant": {
+  "show_edit_predictions": false,
+  "agent": {
     "version": "2",
     "default_open_ai_model": "gpt-4o-mini",
     "default_model": {
@@ -18,7 +18,7 @@
   },
   "autosave": "on_focus_change",
   "features": {
-    "inline_completion_provider": "zed"
+    "edit_prediction_provider": "zed"
   },
   "telemetry": {
     "diagnostics": false,
