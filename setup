@@ -121,6 +121,7 @@ sudo dnf -y copr enable atim/joshuto
 sudo dnf -y copr enable atim/lazygit
 sudo dnf -y copr enable alternateved/eza
 
+
 install_dnf_packages "${core[@]}"
 install_dnf_packages "${shell[@]}"
 install_dnf_packages "${desktop[@]}"
@@ -132,6 +133,11 @@ curl -f https://zed.dev/install.sh | sh
 wget https://launchpad.net/veracrypt/trunk/1.26.20/+download/veracrypt-1.26.20-Fedora-40-x86_64.rpm
 sudo dnf install -y ./veracrypt-1.26.20-Fedora-40-x86_64.rpm
 rm -f ./veracrypt-1.26.20-Fedora-40-x86_64.rpm
+
+# Tailscale
+sudo dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+sudo dnf install -y tailscale
+sudo systemctl enable --now tailscaled
 
 sudo dnf install -y flatpak
 flatpak remote-delete fedora --force || true
