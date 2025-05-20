@@ -2,7 +2,7 @@
 
 set -gx TERM xterm-256color
 
-set -gx PATH ~/bin ~/.cargo/bin ~/.emacs.d/bin ~/go/bin $PATH
+set -gx PATH ~/bin ~/.cargo/bin ~/.emacs.d/bin ~/go/bin ~/.local/bin $PATH
 
 set -l TE "emacs -nw"
 set -gx VISUAL emacs
