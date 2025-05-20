@@ -83,6 +83,7 @@ flatpak=(
     com.slack.Slack
     com.spotify.Client
     md.obsidian.Obsidian
+    me.proton.Pass
     org.signal.Signal
     org.zotero.Zotero
 )
