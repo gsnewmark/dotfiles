@@ -2,10 +2,10 @@
 
 set -gx TERM xterm-256color
 
-set -gx PATH ~/bin ~/.cargo/bin ~/.emacs.d/bin ~/go/bin ~/.local/bin $PATH
+set -gx PATH ~/bin ~/.cargo/bin ~/go/bin ~/.local/bin $PATH
 
-set -l TE "emacs -nw"
-set -gx VISUAL emacs
+set -l TE "nvim"
+set -gx VISUAL "zed"
 set -gx EDITOR $TE
 
 set -gx CARGO_HOME ~/.cargo
@@ -13,12 +13,6 @@ set -gx CARGO_HOME ~/.cargo
 set -gx XDG_DATA_HOME "$HOME/.local/share"
 
 ## Aliases
-
-# shortcut for terminal emacs
-alias e $TE
-
-# shortcut for terminal emacs with sudo
-alias E "env SUDO_EDITOR=\"emacs -nw\" sudoedit"
 
 alias top-10-size "du -hcx --max-depth=1 | sort -rh | head -10"
 
@@ -72,3 +66,18 @@ atuin init fish --disable-up-arrow | source
 ## Prompt
 
 set fish_greeting
+
+## asdf
+
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+# Do not use fish_add_path (added in Fish 3.2) because it
+# potentially changes the order of items in PATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims

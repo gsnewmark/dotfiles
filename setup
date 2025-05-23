@@ -156,7 +156,6 @@ mkdir -p ~/{bin,.config}
 stow --target=/home/gsnewmark/bin bin
 stow --dir=config --target=/home/gsnewmark desktop
 stow --dir=config --target=/home/gsnewmark dev
-stow --dir=config --target=/home/gsnewmark emacs
 stow --dir=config --target=/home/gsnewmark shell
 
 # install font
