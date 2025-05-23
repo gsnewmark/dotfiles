@@ -51,6 +51,7 @@ shell=(
     wezterm
 
     atuin
+    awscli2
     bat
     bandwhich
     bottom
