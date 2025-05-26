@@ -31,6 +31,8 @@ core=(
     gnupg2
     neovim
     podman
+    podman-compose
+    podman-docker
     stow
     wget
     unrar
