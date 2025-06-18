@@ -15,7 +15,7 @@ end
 config.color_scheme = 'Gruvbox Material (Gogh)'
 
 config.font = wezterm.font('IosevkaTerm Nerd Font', { weight = 'Bold' })
-config.font_size = 12.0
+config.font_size = 14.0
 config.line_height = 0.8
 
 config.window_background_opacity = 0.9
