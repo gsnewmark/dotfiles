@@ -18,5 +18,13 @@
     "shell": {
       "program": "sh"
     }
+  },
+  {
+    "label": "Claude Code",
+    "command": "claude",
+    "hide": "on_success",
+    "shell": {
+      "program": "fish"
+    }
   }
 ]

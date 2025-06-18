@@ -14,9 +14,8 @@ set -gx XDG_DATA_HOME "$HOME/.local/share"
 
 ## Aliases
 
-alias top-10-size "du -hcx --max-depth=1 | sort -rh | head -10"
-
-alias cached-writes "rg -e Dirty: -e Writeback: /proc/meminfo"
+alias vim "nvim"
+alias claude="~/.claude/local/claude"
 
 ## vi mode
 

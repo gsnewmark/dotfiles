@@ -71,6 +71,10 @@
       "space g f": [
         "task::Spawn",
         { "task_name": "lazygit_file_log", "reveal_target": "center" }
+      ],
+      "space o c": [
+        "task::Spawn",
+        { "task_name": "Claude Code", "reveal_target": "dock" }
       ]
     }
   },
