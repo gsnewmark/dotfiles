@@ -9,11 +9,11 @@
 {
   "show_edit_predictions": false,
   "agent": {
+    "default_profile": "ask",
     "version": "2",
-    "default_open_ai_model": "gpt-4o-mini",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-sonnet-4-latest"
     }
   },
   "autosave": "on_focus_change",
@@ -37,8 +37,8 @@
   "buffer_line_height": {
     "custom": 1.0
   },
-  // todo(gsnewmark): figure out ligatures
   "terminal": {
+    "dock": "right",
     "font_weight": 500,
     "line_height": {
       "custom": 1.0
