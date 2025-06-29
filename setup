@@ -116,6 +116,10 @@ sudo dnf install -y @virtualization
 
 # WezTerm
 sudo dnf -y copr enable wezfurlong/wezterm-nightly
+for i in $(seq 1 9);
+do
+    gsettings set org.gnome.shell.keybindings switch-to-application-$i '[]'
+done
 
 # CLI tools
 sudo dnf -y copr enable atim/bandwhich
