@@ -10,7 +10,6 @@
   "show_edit_predictions": false,
   "agent": {
     "default_profile": "ask",
-    "version": "2",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4-latest"
