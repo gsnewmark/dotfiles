@@ -39,6 +39,7 @@
       "space s i": "outline::Toggle",
       "space s p": "workspace::NewSearch",
       "space p p": ["projects::OpenRecent", { "create_new_window": false }],
+      "space p i": "project_symbols::Toggle",
       "space o p": "project_panel::ToggleFocus",
       "space o a": "agent::ToggleFocus",
       "space o t": "workspace::NewCenterTerminal",
