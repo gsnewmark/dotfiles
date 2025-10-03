@@ -84,7 +84,6 @@ flatpak=(
     com.mattjakeman.ExtensionManager
     com.mojang.Minecraft
     com.protonvpn.www
-    com.slack.Slack
     com.spotify.Client
     md.obsidian.Obsidian
     me.proton.Pass

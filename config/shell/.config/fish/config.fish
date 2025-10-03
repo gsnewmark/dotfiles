@@ -15,7 +15,6 @@ set -gx XDG_DATA_HOME "$HOME/.local/share"
 ## Aliases
 
 alias vim "nvim"
-alias claude="~/.claude/local/claude"
 
 ## vi mode
 
