@@ -1,0 +1,21 @@
+theme = Gruvbox Material Dark
+
+font-family = IosevkaTerm Nerd Font
+font-style = Bold
+font-size = 12
+adjust-cell-height = -20%
+background-opacity = 0.9
+gtk-titlebar-style = tabs
+
+# Keybindings
+keybind = super+t=new_tab
+keybind = super+w=close_surface
+keybind = super+1=goto_tab:1
+keybind = super+2=goto_tab:2
+keybind = super+3=goto_tab:3
+keybind = super+4=goto_tab:4
+keybind = super+5=goto_tab:5
+keybind = super+6=goto_tab:6
+keybind = super+7=goto_tab:7
+keybind = super+8=goto_tab:8
+keybind = super+9=goto_tab:9

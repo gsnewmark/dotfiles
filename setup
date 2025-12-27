@@ -50,7 +50,7 @@ desktop=(
 
 # TODO dog viddy
 shell=(
-    wezterm
+    ghostty
 
     atuin
     awscli2
@@ -114,12 +114,13 @@ sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
 
 sudo dnf install -y @virtualization
 
-# WezTerm
-sudo dnf -y copr enable wezfurlong/wezterm-nightly
+# Ghostty
+sudo dnf -y copr enable scottames/ghostty
 for i in $(seq 1 9);
 do
     gsettings set org.gnome.shell.keybindings switch-to-application-$i '[]'
 done
+
 
 # CLI tools
 sudo dnf -y copr enable atim/bandwhich

@@ -1,4 +1,4 @@
 xcode-select --install
 brew tap homebrew/cask-fonts
-brew install --cask arc wezterm raycast slack veracrypt protonvpn dropbox visualvm spotify bluesnooze font-iosevka-term-nerd-font zed
+brew install --cask arc ghostty raycast slack veracrypt protonvpn dropbox visualvm spotify bluesnooze font-iosevka-term-nerd-font zed
 brew install git openssh stow vim wget bat bandwhich bottom dog dust duf eza fd gnupg htop httpie hyperfine jq links procs ripgrep rsync sd tcpdump tokei tree viddy zoxide node fish direnv openjdk openjdk@17 fzf pinentry-mac jesseduffield/lazygit/lazygit joshuto atuin
